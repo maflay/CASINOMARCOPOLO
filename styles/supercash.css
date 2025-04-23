@@ -1,0 +1,175 @@
+.container-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #fff;
+    padding: 70px;
+  }
+  
+  .container-box .box-content {
+    display: flex;
+    width: 80%;
+    max-width: 1500px;
+    height: 600px;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); */
+  }
+  
+  
+  .container-box .box-left {
+    padding: 110px 0px 0px 85px;
+    flex: 0.5;
+    /* background: linear-gradient(
+        to bottom,
+        rgb(128, 0, 255),
+        rgb(110, 60, 150)
+      ); */
+    background: white;
+  }
+  
+  .container-box .box-left h1 {
+    color: #2c16b0;
+    font-size: 40px;
+    font-weight: 1000;
+    line-height: 2.2rem;
+    font-family: 'TT Interphases Pro Variable', sans-serif;
+  }
+  
+  .container-box .box-right {
+    flex: 0.5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .container-box .box-right img {
+    width: 82%;
+  }
+  
+  .container-box .box-right h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .container-box .contact-form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .container-box .contact-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .container-box .purple-button {
+    background-color: #5100ff;
+  
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container-box .purple-button:hover {
+    background-color: #31018a;
+    background-image: url();
+  
+  }
+  
+  .container-box .datos-form {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -10px 42px 15px;
+    color: gray;
+  }
+  
+  .contact-form .btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 1180px) {
+  
+    .container-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      background-color: #fff;
+      padding: 1%;
+    }
+  
+  
+    .container-box .box-content {
+      display: inline-table;
+      width: 100%;
+      max-width: 1500px;
+      height: 600px;
+      overflow: hidden;
+    }
+  
+    .container-box .box-left {
+      position: relative;
+      padding: 35px;
+      color: #fff;
+    }
+  
+    .container-box .box-left p {
+      color: black;
+      font-size: 14px;
+    }
+  
+  
+    .container-box .box-right {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+  
+    .container-box .box-left h1 {
+      color: #2c16b0;
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1.4rem;
+      font-family: 'TT Interphases Pro Variable', sans-serif;
+  
+    }
+  
+    .container-box .box-right h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  
+    .container-box .box-right img {
+      width: 70%;
+    }
+    
+  
+    .container-box .datos-form {
+      display: flex;
+      justify-content: space-around;
+      font-size: 12.5px;
+      margin: -10px 40px 15px;
+    }
+  
+  }
