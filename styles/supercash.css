@@ -32,13 +32,14 @@
   .container-box .box-left h1 {
     color: #2c16b0;
     font-size: 40px;
-    font-weight: 1000;
+    font-weight: 900;
     line-height: 2.2rem;
     font-family: 'TT Interphases Pro Variable', sans-serif;
   }
 
   .container-box .box-left p {
     font-family: 'TT Interphases Pro Variable', sans-serif;
+    color: #1f253a;
   }
   
   .container-box .box-right {

@@ -5,262 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino Marco Polo</title>
-    <!-- Agrega aquí tus enlaces a hojas de estilo o scripts -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/supercash.css">
-    <link rel="stylesheet" href="styles/tarjetamymawi.css">
-    <link rel="stylesheet" href="styles/promociones.css">
-    <link rel="stylesheet" href="styles/slider.css">
-    <link rel="stylesheet" href="styles/asociados.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/fuentes.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/components/header/header.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+    <link rel="stylesheet" href="/components/casinos/casinos.css">
 </head>
 
 <body>
-    <header>
-        <div class="hero-section">
-            <section class="Navbar">
-                <a href="#">
-                  <img class="logo-menu" src="resources/marcopolo.png" alt="logo" />
-                </a>
-              
-                <nav class="nav-items" id="navItems">
-                  <a href="/home">Inicio</a>
-                  <a href="/servicios">Casinos</a>
-                  <a href="/intereses">Promociones</a>
-                  <a href="/nosotros">Club navegantes</a>
-                  <a href="/login">Contacto</a>
-                </nav>
-              
-                <div class="nav-toggle" id="navToggle">
-                  <div class="bar"></div>
-                </div>
-              </section>
+    <header id="main-header"></header>
+
+    <main class="main-content">
+        <div id="content-area">
+            <h1>Página de Inicio</h1>
+            <p>Este es el contenido inicial de la página de inicio.</p>
         </div>
-    </header>
-
-    <main>
-        <!-- SUPERCASH -->
-        <section class="container-box">
-            <div class="box-content">
-                <div class="box-left">
-                    <h1>Regístrate<br />
-                        y obtén un bono<br />
-                        Super cash<br />
-                        de $40.000 pesos<br />
-                        para que comiences<br />
-                        a disfrutar de casino<br />
-                        Marco Polo.</h1>
-                    <br />
-                    <p>
-                        En Casino Marco Polo encuéntras más que<br />
-                        casino, encuentras diversión, <br />
-                        entretenimiento, amigos y muchos espacios<br />
-                        para que la emoción nunca se detenga.
-                    </p>
-                </div>
-                <div class="box-right">
-                    <img src="resources/Recurso-7@2x.png" alt="logo"></img>
-                    <br />
-                    <br />
-                    <form class="contact-form">
-                        <input type="email" placeholder="Correo electrónico" required />
-                        <input type="tel" placeholder="Teléfono" required />
-                        <div class="datos-form">
-                            <input type="checkbox" />
-                            <label>
-                                Acepto tratamientos de datos
-                            </label>
-                        </div>
-                        <div class='btn-form'>
-                            <button class="purple-button">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- TARJETA-MYMAWI -->
-        <div class="container-tarjeta">
-            <div class='box-container-tarjeta'>
-                <div class='box-left-tarjeta'>
-                    <div class='box-left-tarjeta-content'>
-                        <h1>Obtén<br />
-                            tu tarjeta<br />
-                            Mymawi</h1>
-                        <br />
-                        <p>Con la Mymawi card siempre ganas,<br />
-                            regístrate y obtén beneficios exclusivos para<br />
-                            que tengas una experiencia completa en<br />
-                            casino Marco Polo.</p>
-                        <br />
-                        <button class='btn-tarjeta'>Quiero mi tarjeta</button>
-                    </div>
-                </div>
-                <div class='box-rigth-tarjeta'>
-                    <img class='' src="resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
-                </div>
-            </div>
-        </div>
-
-        <!-- SLIDER -->
-
-        <section class="contenidoslider">
-            <div class="slider-wrapper">
-                <div class="slide bg1"></div>
-                <div class="slide bg2"></div>
-                <div class="slide bg3"></div>
-            </div>
-        
-            <input type="radio" name="slider" id="trigger1" checked>
-            <label for="trigger1"><span class="sr-only">Slide 1</span></label>
-        
-            <input type="radio" name="slider" id="trigger2">
-            <label for="trigger2"><span class="sr-only">Slide 2</span></label>
-        
-            <input type="radio" name="slider" id="trigger3">
-            <label for="trigger3"><span class="sr-only">Slide 3</span></label>
-        </section>
-
-
-        <!-- PROMOCIONES -->
-        <section class="promocion-container">
-            <div class="promo">
-                <h1>PROMOCIONES</h1>
-            </div>
-            <section class="card-view">
-                <article class="card">
-                    <div class="card-image">
-                        <img src="resources/Recurso-4@2x.png" alt="Imagen 1" />
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="card-content">
-                        <h1>Ruleta de premios</h1>
-                        <p>
-                            En Casino Marco Polo encuentras
-                            más que casino, encuentras
-                            diversión, entretenimiento, amigos
-                            y muchos espacios para que la
-                            emoción nunca se detenga.
-                        </p>
-                        <button class="purple-button">Ver más</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-image">
-                        <img src="resources/Recurso-5@2x.png" alt="Imagen 2" />
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="card-content">
-                        <h1>
-                            Mr. Bonus
-                        </h1>
-                        <p>
-                            En Casino Marco Polo encuentras
-                            más que casino, encuentras
-                            diversión, entretenimiento, amigos
-                            y muchos espacios para que la
-                            emoción nunca se detenga.
-                        </p>
-                        <button class="purple-button">Ver más</button>
-                    </div>
-                </article>
-            </section>
-        </section>
-
-
-        <!-- ASOCIADOS -->
-
-        <section>
-            <div class="container-asociar">
-                <div class="box-container-asociar">
-                    <div class="box-left-asociar">
-                        <div class="box-left-asociar-content">
-                            <img class="img-club" src="resources/Recurso-8@2x.png" alt="img-asociar">
-                            <br><br><br>
-                            <h2>
-                                Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
-                                como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
-                                ahora.
-                            </h2>
-                            <br><br><br>
-                            <div class="club-content">
-                                <button class="btn-asociar">Quiero asociarme</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-rigth-asociar">
-                        <img src="resources/Recurso-2@2x.png" alt="img-asociar">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Pie de página -->
-        <footer class="footer">
-            <div class="footer-subscriber">
-              <label>Suscríbete y recibe nuestras noticias</label>
-              <input type="text" id="email" placeholder="" />
-            </div>
-          
-            <div class="footer-content">
-              <div class="footer-logo">
-                <a href="#">
-                  <img src="resources/marcopolo.png" alt="logo" />
-                </a>
-                <br />
-                <label>Cali, Bogotá, Barranquilla</label>
-                <label>contacto@marcopolo.com</label>
-              </div>
-          
-              <div class="footer-section">
-                <ul>
-                  <li><a href="/equipo">Equipo</a></li>
-                  <li><a href="/estudios">Estudios</a></li>
-                  <li><a href="/novedades">Novedades</a></li>
-                  <li><a href="/casinos">Casinos</a></li>
-                  <li><a href="/sostenibilidad">Sostenibilidad</a></li>
-                </ul>
-              </div>
-          
-              <div class="footer-section">
-                <ul>
-                  <li><a href="/nosotros">Nosotros</a></li>
-                  <li><a href="/marcopolo">Marco Polo</a></li>
-                  <li><a href="/aladdin">Aladdin</a></li>
-                  <li><a href="/aprendeajugar">Aprende a jugar</a></li>
-                  <li><a href="/expasion">Expansión</a></li>
-                </ul>
-              </div>
-          
-              <div class="footer-section">
-                <ul>
-                  <li><a href="/dealerfluencer">Dealerfluencer</a></li>
-                  <li><a href="/globalambassadors">Global Ambassadors</a></li>
-                  <li><a href="/novedades">Novedades</a></li>
-                  <li><a href="/clubw">CLUBW</a></li>
-                </ul>
-              </div>
-            </div>
-          
-            <div class="footer-logos-legales">
-              <div><img src="resources/Recurso-10.png" alt="logo vigilado" /></div>
-              <div><img src="resources/Recurso-11.png" alt="logo aladdin" /></div>
-              <div><img src="resources/Recurso-12.png" alt="logo coljuegos" /></div>
-            </div>
+    <footer id="main-footer"></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.Navbar .nav-items a[data-target]');
+            const contentArea = document.getElementById('content-area');
+            const mainFooter = document.getElementById('main-footer'); // Obtén el contenedor del footer
 
-            <div class="footer-bottom">
-              <p>TODOS LOS DERECHOS RESERVADOS 2025.</p>
-            </div>
-          </footer>
-          
+            const loadContent = (url) => {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        contentArea.innerHTML = html;
+                        const scripts = contentArea.querySelectorAll('script');
+                        const navToggle = document.getElementById('navToggle'); // Obtén el botón de toggle
+                        const navItems = document.getElementById('navItems');
+                        scripts.forEach(script => {
+                            try {
+                                eval(script.textContent);
+                            } catch (error) {
+                                console.error('Error al ejecutar script:', error);
+                            }
+                        });
+                        if (navItems.classList.contains('open')) {
+                            navToggle.classList.remove('open');
+                            navItems.classList.remove('open');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar la página:', error);
+                        contentArea.innerHTML = '<p>Error al cargar el contenido.</p>';
+                    });
+            };
 
-    <!-- Agrega aquí tus scripts -->
-    <script src="functions.js"></script>
+            fetch('/components/header/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('main-header').innerHTML = html;
+                    // Inicializar los scripts del header AQUÍ, después de que el header esté en el DOM
+                    const navToggle = document.getElementById('navToggle');
+                    const navItems = document.getElementById('navItems');
+
+                    if (navToggle && navItems) {
+                        navToggle.addEventListener('click', () => {
+                            navToggle.classList.toggle('open');
+                            navItems.classList.toggle('open');
+                        });
+                    }
+
+                    window.addEventListener("scroll", function () {
+                        const navbar = document.querySelector(".Navbar");
+                        if (navbar) {
+                            if (window.scrollY > 0) {
+                                navbar.classList.add("navbar-scrolled");
+                            } else {
+                                navbar.classList.remove("navbar-scrolled");
+                            }
+                        }
+                    });
+
+                    const navLinks = document.querySelectorAll('.Navbar .nav-items a[data-target]');
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function (event) {
+                            event.preventDefault();
+                            const targetPage = this.getAttribute('data-target');
+                            loadContent(targetPage);
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar el header:', error);
+                    document.getElementById('main-header').innerHTML = '<p>Error al cargar el menú.</p>';
+                });
+
+            fetch('/components/footer/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    mainFooter.innerHTML = html;
+                    // Opcional: Inicializar scripts del footer aquí si los tienes
+                    const footerScripts = mainFooter.querySelectorAll('script');
+                    footerScripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        if (script.src) {
+                            newScript.src = script.src;
+                        }
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar el footer:', error);
+                    mainFooter.innerHTML = '<p>Error al cargar el footer.</p>';
+                });
+
+            loadContent('./components/home/inicio.html');
+        });
+
+    </script>
 </body>
 
 </html>

@@ -126,7 +126,7 @@
   
   @media (max-width :1104px) {
     .footer {
-      height: 800px;
+      height: 760px;
     }
   
     .footer .footer-content {
@@ -138,6 +138,9 @@
       list-style: none;
       padding: 0;
       line-height: 0.8rem;
+    }
+    .footer .footer-bottom {
+      margin-top: 20%;
     }
   
   }
@@ -198,12 +201,12 @@
     }
   
     .footer .footer-logos-legales img {
-      width: 60px;
+      width: 100%;
     }
   
     .footer .footer-bottom {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 60%;
     }
   }
   
