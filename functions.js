@@ -1,23 +1,67 @@
-// let index = 1;
-//   const total = 5;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const slides = document.querySelector('.slider');
+//     const radios = document.querySelectorAll('input[name="slider"]');
+//     let currentIndex = 0;
 
-//   setInterval(() => {
-//     document.getElementById(`radio${index}`).checked = true;
-//     index = index % total + 1;
-//   }, 3000);
+//     setInterval(() => {
+//         currentIndex = (currentIndex + 1) % radios.length;
+//         radios[currentIndex].checked = true;
+//         slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+//     }, 3000); // Cambia cada 3 segundos
+// });
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slider = document.querySelector('.slider');
+//   const radios = document.querySelectorAll('input[name="slider"]');
+//   const slideCount = radios.length;
+//   let currentIndex = 0;
+//   let intervalId;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelector('.slider');
-    const radios = document.querySelectorAll('input[name="slider"]');
-    let currentIndex = 0;
+//   const nextSlide = () => {
+//       currentIndex = (currentIndex + 1) % slideCount;
+//       updateSlider();
+//   };
 
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % radios.length;
-        radios[currentIndex].checked = true;
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }, 3000); // Cambia cada 3 segundos
-});
+//   const updateSlider = () => {
+//       radios[currentIndex].checked = true;
+//       slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+//   };
+
+//   const startSlider = () => {
+//       intervalId = setInterval(nextSlide, 3000);
+//   };
+
+//   const stopSlider = () => {
+//       clearInterval(intervalId);
+//   };
+
+//   // Iniciar el slider automáticamente al cargar la página
+//   startSlider();
+
+//   // Opcional: Pausar el slider al interactuar con los radios
+//   radios.forEach(radio => {
+//       radio.addEventListener('change', () => {
+//           stopSlider();
+//           currentIndex = Array.from(radios).indexOf(radio);
+//           updateSlider();
+//           startSlider(); // Reiniciar el slider después de la interacción
+//       });
+//   });
+
+//   // Consideración sobre la visibilidad (opcional):
+//   // Pausar el slider si no está visible en la ventana para ahorrar recursos
+//   const observer = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//               startSlider();
+//           } else {
+//               stopSlider();
+//           }
+//       });
+//   });
+
+//   observer.observe(slider);
+// });
 
 const navToggle = document.getElementById('navToggle');
   const navItems = document.getElementById('navItems');
