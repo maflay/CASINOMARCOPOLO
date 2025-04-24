@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="styles/tarjetamymawi.css">
     <link rel="stylesheet" href="styles/promociones.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/asociados.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/fuentes.css">
 </head>
 
 <body>
@@ -19,24 +22,21 @@
         <div class="hero-section">
             <section class="Navbar">
                 <a href="#">
-                    <img class="logo-menu" src="resourse/marcopolo.png" alt="logo"></img>
+                  <img class="logo-menu" src="resources/marcopolo.png" alt="logo" />
                 </a>
-
-                <section class="nav-items">
-                    <a href="/home">Inicio</a>
-                    <a href="/servicios">Casinos</a>
-                    <a href="/intereses">Promociones</a>
-                    <a href="/nosotros">Club navegantes</a>
-                    <a href="/login">Contacto</a>
-                </section>
-                <div>
-                    <div class="overlay">
-                    </div>
+              
+                <nav class="nav-items" id="navItems">
+                  <a href="/home">Inicio</a>
+                  <a href="/servicios">Casinos</a>
+                  <a href="/intereses">Promociones</a>
+                  <a href="/nosotros">Club navegantes</a>
+                  <a href="/login">Contacto</a>
+                </nav>
+              
+                <div class="nav-toggle" id="navToggle">
+                  <div class="bar"></div>
                 </div>
-                <div class="nav-toggle">
-                    <div class="bar"></div>
-                </div>
-            </section>
+              </section>
         </div>
     </header>
 
@@ -61,7 +61,7 @@
                     </p>
                 </div>
                 <div class="box-right">
-                    <img src="resourse/Recurso-7@2x.png" alt="logo"></img>
+                    <img src="resources/Recurso-7@2x.png" alt="logo"></img>
                     <br />
                     <br />
                     <form class="contact-form">
@@ -80,6 +80,8 @@
                 </div>
             </div>
         </section>
+
+        
         <!-- TARJETA-MYMAWI -->
         <div class="container-tarjeta">
             <div class='box-container-tarjeta'>
@@ -98,31 +100,35 @@
                     </div>
                 </div>
                 <div class='box-rigth-tarjeta'>
-                    <img class='' src="resourse/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
+                    <img class='' src="resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
                 </div>
             </div>
         </div>
 
         <!-- SLIDER -->
 
-        <section>
-            <div class="slider-container">
-                <input type="radio" name="slider" id="slide1" checked />
-                <div class="slide bg1"></div>
+        <section class="contenidoslider">
+            <input type="radio" name="slider" id="trigger1" checked>
+            <label for="trigger1"><span class="sr-only">Slide 1</span></label>
+            <div class="slide bg1"></div>
 
-                <input type="radio" name="slider" id="slide2" />
-                <div class="slide bg2"></div>
+            <input type="radio" name="slider" id="trigger2">
+            <label for="trigger2"><span class="sr-only">Slide 2</span></label>
+            <div class="slide bg2"></div>
 
-                <input type="radio" name="slider" id="slide3" />
-                <div class="slide bg3"></div>
+            <input type="radio" name="slider" id="trigger3">
+            <label for="trigger3"><span class="sr-only">Slide 3</span></label>
+            <div class="slide bg3"></div>
 
-                <div class="nav-dots">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-            </div>
+            <!-- <input type="radio" name="slider" id="trigger4">
+            <label for="trigger4"><span class="sr-only">Slide 4</span></label>
+            <div class="slide bg4"></div>
+          
+            <input type="radio" name="slider" id="trigger5">
+            <label for="trigger5"><span class="sr-only">Slide 5</span></label>
+            <div class="slide bg5"></div> -->
         </section>
+
 
         <!-- PROMOCIONES -->
         <section class="promocion-container">
@@ -132,7 +138,7 @@
             <section class="card-view">
                 <article class="card">
                     <div class="card-image">
-                        <img src="resourse/Recurso-4@2x.png" alt="Imagen 1" />
+                        <img src="resources/Recurso-4@2x.png" alt="Imagen 1" />
                     </div>
                     <div class="card-divider"></div>
                     <div class="card-content">
@@ -150,7 +156,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="resourse/Recurso-5@2x.png" alt="Imagen 2" />
+                        <img src="resources/Recurso-5@2x.png" alt="Imagen 2" />
                     </div>
                     <div class="card-divider"></div>
                     <div class="card-content">
@@ -170,20 +176,93 @@
             </section>
         </section>
 
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Explora los mejores juegos de casino en línea.</p>
-        </section>
-        <section id="juegos">
-            <h2>Juegos</h2>
-            <p>Descubre nuestra amplia selección de juegos.</p>
+
+        <!-- ASOCIADOS -->
+
+        <section>
+            <div class="container-asociar">
+                <div class="box-container-asociar">
+                    <div class="box-left-asociar">
+                        <div class="box-left-asociar-content">
+                            <img class="img-club" src="resources/Recurso-8@2x.png" alt="img-asociar">
+                            <br><br><br>
+                            <h2>
+                                Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
+                                como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
+                                ahora.
+                            </h2>
+                            <br><br><br>
+                            <div class="club-content">
+                                <button class="btn-asociar">Quiero asociarme</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-rigth-asociar">
+                        <img src="resources/Recurso-2@2x.png" alt="img-asociar">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2025 Casino Marco Polo. Todos los derechos reservados.</p>
-    </footer>
+        <footer class="footer">
+            <div class="footer-subscriber">
+              <label>Suscríbete y recibe nuestras noticias</label>
+              <input type="text" id="email" placeholder="" />
+            </div>
+          
+            <div class="footer-content">
+              <div class="footer-logo">
+                <a href="#">
+                  <img src="resources/marcopolo.png" alt="logo" />
+                </a>
+                <br />
+                <label>Cali, Bogotá, Barranquilla</label>
+                <label>contacto@marcopolo.com</label>
+              </div>
+          
+              <div class="footer-section">
+                <ul>
+                  <li><a href="/equipo">Equipo</a></li>
+                  <li><a href="/estudios">Estudios</a></li>
+                  <li><a href="/novedades">Novedades</a></li>
+                  <li><a href="/casinos">Casinos</a></li>
+                  <li><a href="/sostenibilidad">Sostenibilidad</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-section">
+                <ul>
+                  <li><a href="/nosotros">Nosotros</a></li>
+                  <li><a href="/marcopolo">Marco Polo</a></li>
+                  <li><a href="/aladdin">Aladdin</a></li>
+                  <li><a href="/aprendeajugar">Aprende a jugar</a></li>
+                  <li><a href="/expasion">Expansión</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-section">
+                <ul>
+                  <li><a href="/dealerfluencer">Dealerfluencer</a></li>
+                  <li><a href="/globalambassadors">Global Ambassadors</a></li>
+                  <li><a href="/novedades">Novedades</a></li>
+                  <li><a href="/clubw">CLUBW</a></li>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="footer-logos-legales">
+              <div><img src="resources/Recurso-10.png" alt="logo vigilado" /></div>
+              <div><img src="resources/Recurso-11.png" alt="logo aladdin" /></div>
+              <div><img src="resources/Recurso-12.png" alt="logo coljuegos" /></div>
+            </div>
+
+            <div class="footer-bottom">
+              <p>TODOS LOS DERECHOS RESERVADOS 2025.</p>
+            </div>
+          </footer>
+          
 
     <!-- Agrega aquí tus scripts -->
     <script src="functions.js"></script>

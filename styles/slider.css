@@ -1,137 +1,165 @@
-.slider-container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+.contenidoslider {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.contenidoslider * {
+  box-sizing: border-box;
+}
+
+.contenidoslider .sr-only {
+  position: absolute;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: transparent;
+}
+
+.contenidoslider input {
+  position: absolute;
+  opacity: 0;
+  margin-top: 95vh;
+  cursor: pointer;
+}
+
+.contenidoslider label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid 2px white;
+  border-radius: 999px;
+  background-color: transparent;
+  margin: 95vh 6px 0 6px;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 0 20px 0 #000;
+}
+
+.contenidoslider input:checked + label {
+  background-color: white;
+}
+
+.contenidoslider input + label::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  background-size: 80px 80px;
+  line-height: 100vh;
+  transition: background-size 200ms;
+  position: absolute;
+  color: white;
+  height: calc(95vh - 12px);
+  width: 80px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+}
+
+.contenidoslider input + label:hover::after {
+  background-size: 90px 90px;
+}
+
+.contenidoslider input:checked + label::after {
+  background-image: none;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+}
+
+.contenidoslider input:checked + label + .slide ~ input + label::after {
+  display: none;
+}
+
+.contenidoslider input:checked + label + .slide + input + label::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
+  display: block;
+  width: 80px;
+  right: 0;
+  left: auto;
+  display: none;
+}
+
+.contenidoslider input:focus + label {
+  box-shadow: 0 0 0 2px teal, 0 0 18px white;
+}
+
+.contenidoslider .slide {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  transform: translateX(-100%);
+  transition-duration: 0.4s;
+  opacity: 1;
+}
+
+.contenidoslider input:checked ~ .slide {
+  transform: translateX(100%);
+}
+
+.contenidoslider input:checked + label + .slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Fondo de cada slide */
+.contenidoslider .bg1 {
+  background-image: url(../resources/s1.jpg);
+}
+.contenidoslider .bg2 {
+  background-image: url(../resources/s2.jpg);
+}
+.contenidoslider .bg3 {
+  background-image: url(../resources/s3.jpg);
+}
+/* .contenidoslider .bg4 {
+  background-image: url(https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=92d2cae094fb24e5266221828ee251e2);
+}
+.contenidoslider .bg5 {
+  background-image: url(https://images.unsplash.com/reserve/wPCyys8TPCHY3GXm2N2D_ssp_inthewoods_1.jpg?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=654d988a19f43ca9ac27f2eacbe2a554);
+} */
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contenidoslider label {
+    width: 10px;
+    height: 10px;
+    margin: 90vh 4px 0 4px;
   }
 
-  .slider-container input {
-    position: absolute;  
-    opacity: 0;
-    margin-top: 95vh;
-    cursor: pointer;
-  }
-
-  .slider-container input {
-    position: absolute;  
-    opacity: 0;
-    margin-top: 95vh;
-    cursor: pointer;
-  }
-
-  label {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: solid 2px white;
-    border-radius: 999px;
-    background-color: transparent;
-    margin: 95vh 6px 0 6px;
-    z-index: 2;
-    cursor: pointer;
-    transition-duration: .4s;
-    box-shadow: 0 0 20px 0 #000;
-  }
-  
-  input:checked + label{
-    background-color: white;
-  }
-  
-  input + label::after{
-    content: '';
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center 55%;
-    background-size: 80px 80px;
-    line-height: 100vh;
-    transition: background-size 200ms;
-    position: absolute;
-    color: white;
-    height: calc(95vh - 12px);
-    width: 80px;
-    top: 0;
-    left: 0;
-    z-index: 20;
-  }
-  
-  input + label:hover::after {
-    background-size: 90px 90px;
-  }
-  
-  input:checked + label::after {
-    background-image: none;
-    width: 100vw;
-    left: 0;
-    z-index: 10;
-  }
-  
-  input:checked + label + .slide ~ input + label::after {
+  .contenidoslider input + label::after {
+    background-size: 60px 60px;
+    width: 60px;
     display: none;
   }
-  
-  input:checked + label + .slide + input + label::after {
+
+  .contenidoslider input + label:hover::after {
+    background-size: 70px 70px;
+  }
+
+  .contenidoslider input:checked + label + .slide + input + label::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
     display: block;
     width: 80px;
     right: 0;
     left: auto;
+    display: none;
   }
-
-  .slider-container input:focus + label{
-    box-shadow: 0 0 0 2px teal, 0 0 18px white;
-  }
-
-  .slider-container .slide {
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    transform: translateX(-100%);
-    transition-duration: .4s;
-    opacity: 1;
-  }
-
-  .slider-container input:checked ~ .slide {
-    transform: translateX(100%);
-  }
-
-  .slider-container input:checked + label + .slide {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  .slider-container .nav-dots {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-  }
-
-
-
-  .slider-container input#slide1:checked ~ .nav-dots label[for="slide1"],
-  .slider-container input#slide2:checked ~ .nav-dots label[for="slide2"],
-  .slider-container input#slide3:checked ~ .nav-dots label[for="slide3"] {
-    background: black;
-  }
-
-
-  .bg1 { background-image: url(/resourse/s1.jpg); }
-  .bg2 { background-image: url(/resourse/s2.jpg); }
-  .bg3 { background-image: url(/resourse/s3.jpg); }
-
-  @media (max-width: 768px) {
-    .nav-dots label {
-      width: 10px;
-      height: 10px;
-    }
-  }
-
-
+}

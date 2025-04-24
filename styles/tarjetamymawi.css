@@ -34,6 +34,10 @@
 
 }
 
+.container-tarjeta .box-left-tarjeta .box-left-tarjeta-content p{
+    font-family: 'TT Interphases Pro Variable', sans-serif;
+}
+
 .container-tarjeta .box-rigth-tarjeta {
     flex: 0.5;
 }

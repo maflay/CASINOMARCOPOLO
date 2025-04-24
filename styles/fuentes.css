@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'TT Interphases';
+    src: url('fonts/TT Interphases Pro Trial Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Interphases Pro';
+    src: url('fonts/TT Interphases Pro Trial DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Interphases Pro Variable';
+    src: url('fonts/TT Interphases Pro Trial Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+  }
+  
