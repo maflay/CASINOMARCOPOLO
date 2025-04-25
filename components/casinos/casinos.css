@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Fauna+One);
+
 .hero-casinos {
     background-image:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
@@ -9,7 +12,6 @@
     justify-content: center;
     align-items: center;
     color: white;
-
 }
 
 .hero-content {
@@ -23,6 +25,8 @@
 .game-list {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .game-card {
@@ -36,115 +40,75 @@
 }
 
 .con-cas h1,
-h2,
-p,
-a {
+.con-cas h2,
+.con-cas p,
+.con-cas a {
     font-family: 'TT Interphases Pro Variable', sans-serif;
 }
 
+
 .types-casinos {
-    opacity: 100%;
-    background-image:
-        linear-gradient(#1f253aee, #1f253a),
-        url(../../resources/s2.jpg);
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 60px;
     padding: 30px;
-    gap: 30%;
+    background: 
+        linear-gradient(#1f253aee, #1f253a),
+        url(../../resources/s2.jpg) center/cover no-repeat;
+    color: white;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-@import url(https://fonts.googleapis.com/css?family=Fauna+One);
-
-.types-casinos .snip1482 {
-    font-family: 'Fauna One', Arial, sans-serif;
-    position: relative;
-    margin: 10px 20px;
-    /* min-width: 230px; */
-    max-width: 50%;
-    /* min-height: 220px; */
-    width: 100%;
-    color: #ffffff;
-    text-align: right;
-    line-height: 1.4em;
-    background-color: transparent;
-    font-size: 16px;
-    padding: 15%;
+.snip1482 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 1000px;
+    background: transparent;
+    font-family: 'Fauna One', sans-serif;
+    padding: 20px;
+    text-align: left;
 }
 
-.types-casinos .snip1482 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-}
-
-.types-casinos .snip1482 img {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 50%;
-    opacity: 1;
-    width: 100%;
-    -webkit-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.055);
-}
-
-.types-casinos .snip1482 figcaption {
-    position: absolute;
+.snip1482 img {
     width: 50%;
-    top: 50%;
-    left: -50px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 20px 0 20px 20px;
+    height: auto;
+    object-fit: contain; /* asegura que se vea toda la imagen sin recorte */
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    z-index: 10;
 }
 
-.types-casinos .snip1482 h2,
-.types-casinos .snip1482 p {
-    margin: 0;
-    width: 100%;
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-    opacity: 0;
-    font-size: 30px;
+.snip1482 figcaption {
+    width: 50%;
 }
 
-.types-casinos .snip1482 h2 {
-    font-family: 'Playfair Display', Arial, sans-serif;
+.snip1482 h2 {
+    font-family: 'Playfair Display', serif;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    line-height: 2.2rem;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translateX(650px);
+    position: relative;
+    transition: transform 0.6s ease;
 }
 
-.types-casinos .snip1482 p {
+.snip1482 p {
+    transform: translateX(650px);
     font-size: 1rem;
+    line-height: 1.5;
+    transition: transform 0.6s ease;
+
 }
 
-.types-casinos .snip1482 a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
 
-.types-casinos .snip1482:hover img,
-.types-casinos .snip1482.hover img {
-    width: 100%;
-    left: 30%;
-}
 
-.types-casinos .snip1482:hover figcaption h2,
-.types-casinos .snip1482.hover figcaption h2,
-.types-casinos .snip1482:hover figcaption p,
-.types-casinos .snip1482.hover figcaption p {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+.snip1482:hover h2,
+.snip1482:hover p {
+    transform: translateX(-10%);
     opacity: 1;
 }
 
@@ -156,28 +120,54 @@ a {
     height: 100vh;
 }
 
-.staff-casinos .content-casinos{
+.staff-casinos .content-casinos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.staff-casinos .staff-casinos-img{
     margin-top: 10%;
 }
 
 .staff-casinos .marco-polo-image {
-    /* transform: translateX(8%); */
     width: 100%;
 }
 
 .staff-casinos .marco-polo-text {
     padding: 15px;
-    transform: translate(-40%, -100px);
     width: 40%;
     background: white;
     height: 150px;
+    transform: none;
 }
 
 .staff-casinos .marco-polo-text h2 {
     color: #1f253a;
     font-family: 'TT Interphases Pro Variable', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .game-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .types-casinos .snip1482 {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .staff-casinos .marco-polo-text {
+        width: 80%;
+        transform: none;
+        height: auto;
+    }
+
+    .types-casinos {
+        gap: 50px;
+        padding: 20px;
+    }
 }
