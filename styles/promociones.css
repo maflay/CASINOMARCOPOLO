@@ -9,7 +9,6 @@
 
 .promo h1 {
   color: white;
-  font-family: 'TT Interphases Pro Variable', sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
   text-align: center;
@@ -69,7 +68,6 @@
 }
 
 .card-content h1 {
-  font-family: 'TT Interphases Pro Variable', sans-serif;
   font-weight: 900;
   margin-bottom: 10px;
   font-size: 1.3rem;
@@ -79,7 +77,6 @@
   font-size: 16px;
   color: #1f253a;
   font-weight: 600;
-  font-family: 'TT Interphases Pro Variable', sans-serif;
   margin-bottom: 20px;
 }
 

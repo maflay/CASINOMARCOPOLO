@@ -1,0 +1,107 @@
+.container-promo .section-start {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.container-promo .section-start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../resources/bg-home.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container-promo .section-start .content-start {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-promo .section-start .content-start h1 {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: movimiento-gradiente 2s linear infinite alternate;
+}
+
+.container-promo .section-start .content-start p {
+    color: #fff;
+    font-size: 40px;
+}
+
+@keyframes movimiento-gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container-promo .section-promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-promo .section-promo .promo-content {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #fff;
+    font-size: 50px;
+}
+
+.container-promo .card-divider-promo {
+    height: 2px;
+    background-color: white;
+    width: 100%;
+}
+
+.container-promo .section-promo .promo-list {
+    padding: 5%;
+}
+
+.container-promo .section-promo .promo-list .promo-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container-promo .section-start {
+        margin-top: 18%;
+    }
+    .container-promo .section-promo .promo-content {
+        margin-top: 20%;
+        margin-bottom: 2%;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .container-promo .section-start .content-start h1 {
+        font-size: 40px;
+    }
+
+    .container-promo .section-start .content-start p {
+        font-size: 20px;
+    }
+}

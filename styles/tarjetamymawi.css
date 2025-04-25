@@ -28,14 +28,9 @@
 
 .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h1 {
     font-size: 100px;
-    font-family: 'TT Interphases Pro Variable', sans-serif;
     font-weight: 900;
     line-height: 6rem;
 
-}
-
-.container-tarjeta .box-left-tarjeta .box-left-tarjeta-content p{
-    font-family: 'TT Interphases Pro Variable', sans-serif;
 }
 
 .container-tarjeta .box-rigth-tarjeta {

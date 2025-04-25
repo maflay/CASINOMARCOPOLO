@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @import url(https://fonts.googleapis.com/css?family=Fauna+One);
 
-.hero-casinos {
+/* HERO FULLSCREEN */
+.con-cas .hero-casinos {
     background-image:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-        url(../../resources/s3.jpg);
+        url(../../resources/Marco-Polo-3.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -14,160 +15,270 @@
     color: white;
 }
 
-.hero-content {
+.con-cas .hero-content {
     text-align: center;
 }
 
-.games-section {
+.con-cas .hero-casinos .hero-content h1
+.con-cas .hero-casinos .hero-content p {
+    opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.con-cas .hero-casinos.aparecer .hero-content h1,
+.con-cas .hero-casinos.aparecer .hero-content p {
+  opacity: 1; 
+}
+
+.con-cas .games-section {
     margin-top: 20px;
 }
 
-.game-list {
+.con-cas .game-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.game-card {
+.con-cas .game-card {
     width: 200px;
     text-align: center;
 }
 
-.promotions-casinos {
+.con-cas .promotions-casinos {
     margin-top: 20px;
     text-align: center;
 }
 
-.con-cas h1,
-.con-cas h2,
-.con-cas p,
-.con-cas a {
-    font-family: 'TT Interphases Pro Variable', sans-serif;
-}
 
-
-.types-casinos {
-    height: 100vh;
+/* HORARIO DE CASINO */
+.horario-casinos {
+    background:
+    linear-gradient(#9b273828, #1f253af6);
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    color: white;
+   
+}
+
+.horario-casinos .horario-content {
+    margin-top: 20px;
+
+}
+
+
+.horario-casinos .horario-ciudades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.horario-casinos .horario-casinos-img {
+    width: 100%;
+}
+
+.horario-casinos .horario-casinos-img .horario-box-left {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 22.5px;
+}
+
+.horario-casinos .horario-casinos-img .horario-box-rigth{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 22.5px;
+
+}
+
+.horario-casinos .horario-casinos-img .horario-image {
+    width: 40%;
+    transition: transform 0.3s ease;
+}
+
+.horario-casinos .horario-casinos-img .horario-image:hover {
+    transform: scale(1.12);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+
+/* TIPOS DE CASINOS */
+.con-cas .types-casinos {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 60px; */
     padding: 30px;
-    background: 
+    background:
         linear-gradient(#1f253aee, #1f253a),
         url(../../resources/s2.jpg) center/cover no-repeat;
     color: white;
 }
 
-.snip1482 {
+.con-cas .snip1482 {
     display: flex;
     align-items: center;
-    gap: 20px;
     width: 80%;
     max-width: 1000px;
     background: transparent;
-    font-family: 'Fauna One', sans-serif;
     padding: 20px;
     text-align: left;
 }
 
-.snip1482 img {
-    width: 50%;
+.con-cas .snip1482 img {
+    width: 60%;
     height: auto;
-    object-fit: contain; /* asegura que se vea toda la imagen sin recorte */
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-    z-index: 10;
+    object-fit: contain;
 }
 
-.snip1482 figcaption {
-    width: 50%;
+.con-cas .snip1482 figcaption {
+    width: 40%;
+    padding: 20px;
 }
 
-.snip1482 h2 {
-    font-family: 'Playfair Display', serif;
+.con-cas .snip1482 h2 {
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 10px;
-    transform: translateX(650px);
     position: relative;
     transition: transform 0.6s ease;
+    color: #F6921E;
 }
 
-.snip1482 p {
-    transform: translateX(650px);
+.con-cas .snip1482 p {
     font-size: 1rem;
     line-height: 1.5;
     transition: transform 0.6s ease;
-
 }
 
 
-
-.snip1482:hover h2,
-.snip1482:hover p {
+/* .con-cas .snip1482:hover h2,
+.con-cas .snip1482:hover p {
     transform: translateX(-10%);
     opacity: 1;
-}
+} */
 
-
-.staff-casinos {
+/* STAFF */
+.con-cas .staff-casinos {
     background-image:
         linear-gradient(#1f253a, #1f253ada),
         url(../../resources/s1.jpg);
-    height: 100vh;
+    height: auto;
 }
 
-.staff-casinos .content-casinos {
+.con-cas .staff-casinos .content-casinos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.staff-casinos .staff-casinos-img{
+.con-cas .staff-casinos .staff-casinos-img {
     margin-top: 10%;
 }
 
-.staff-casinos .marco-polo-image {
+.con-cas .staff-casinos .marco-polo-image {
     width: 100%;
 }
 
-.staff-casinos .marco-polo-text {
+.con-cas .staff-casinos .marco-polo-text {
     padding: 15px;
     width: 40%;
     background: white;
-    height: 150px;
-    transform: none;
+    height: auto;
+    transform: translate(-10%, -50%);
 }
 
-.staff-casinos .marco-polo-text h2 {
-    color: #1f253a;
-    font-family: 'TT Interphases Pro Variable', sans-serif;
+.con-cas .staff-casinos .marco-polo-text h2 {
+    color: #9B2738;
+}
+
+
+.con-cas .staff-casinos .marco-polo-text p{
+    color: #27314f;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .game-list {
+    .con-cas .game-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .types-casinos .snip1482 {
+    .con-cas .types-casinos .snip1482 {
+        display: contents;
         max-width: 90%;
         padding: 20px;
     }
 
-    .staff-casinos .marco-polo-text {
-        width: 80%;
-        transform: none;
+    .con-cas .snip1482 figcaption {
+        width: 100%;
+    }
+    .con-cas .snip1482 img {
+        width: 100%;
         height: auto;
+        object-fit: contain;
     }
 
-    .types-casinos {
-        gap: 50px;
+    .con-cas .staff-casinos .content-casinos{
+        height: auto;
+    }
+    .con-cas .staff-casinos .staff-casinos-img {
+        padding: 30px;
+    }
+
+
+    
+    .con-cas .staff-casinos .marco-polo-text {
+        width: 80%;
+        height: auto;
+        transform: translateY(-40%);
+    }
+
+    .con-cas .types-casinos {
+        gap: 10px;
         padding: 20px;
     }
+    
+    .con-cas .horario-casinos .horario-content img{
+        width: 100%;
+        object-fit: cover;
+    }
+ 
+
+    .horario-casinos .horario-casinos-img .horario-box-left {
+        display: grid;
+    }
+    
+    .horario-casinos .horario-casinos-img .horario-box-rigth{
+        display: grid;
+    }
+
+    .horario-casinos .horario-casinos-img .horario-image {
+    width: 100%;
+    }
+
+    .horario-casinos .horario-content h1{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    
+    
+
 }

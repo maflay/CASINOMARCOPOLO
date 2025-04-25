@@ -1,0 +1,14 @@
+.container-clubnavegantes .section-club-start {
+    background: transparent;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .container-clubnavegantes .section-club-start .content-club-start {
+        text-align: center;
+    }

@@ -1,0 +1,138 @@
+.container-contact{
+    background-image: linear-gradient(to bottom, #27314F, #2C16B0); /* Ejemplo de degradado */
+  
+}
+
+.container-contact .contact-form {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 5%;
+
+    }
+    
+    .container-contact .container-formulario {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .container-contact h1 {
+        text-align: center;
+        color: #351C6B;
+        margin-bottom: 20px;
+    }
+    
+    .container-contact .formulario-contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container-contact .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .container-contact label {
+        display: block;
+        margin-bottom: 5px;
+        color: #351C6B;
+        font-weight: bold;
+    }
+    
+    .container-contact input[type="text"],
+    .container-contact input[type="email"],
+    .container-contact input[type="tel"],
+    .container-contact input[type="date"],
+    .container-contact textarea {
+        width: calc(100% - 12px);
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    .container-contact textarea {
+        resize: vertical;
+    }
+    
+    .container-contact .checkbox-group {
+        display: flex;
+        align-items: center;
+    }
+    
+    .container-contact .checkbox-group input[type="checkbox"] {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .container-contact .btn-contact-send{
+        text-align: center;
+        margin-top: 20px;
+      }
+    
+      .container-contact .boton-enviar {
+        display: inline-block;
+        background-color: #5100ff;
+        padding: 10px 15px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 900;
+        transition: background-color 0.3s ease;
+    }
+    
+    .container-contact .boton-enviar:hover {
+        background-color: #fff;
+        color: #5100ff;
+    }
+    
+    .container-contact .registro-invitacion {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .container-contact .registro-invitacion p {
+        color: #9B2738;
+        margin-bottom: 5px;
+    }
+    
+    .container-contact .boton-registro {
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .container-contact .boton-registro:hover {
+        background-color: #1e7e34;
+    }
+    
+    /* Estilos Responsive */
+    @media (max-width: 768px) {
+        .container-contact{
+          padding: 100px 10px 100px 10px;
+        }
+        
+        .container-contact .container-formulario {
+            padding: 10%;
+            width: 100%;
+        }
+    
+        .container-contact .boton-enviar,
+        .container-contact .boton-registro {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+    }
