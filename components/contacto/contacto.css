@@ -1,143 +1,214 @@
-.container-contact{
-    /* background-image: linear-gradient(to bottom, #27314F, #2C16B0); Ejemplo de degradado */
-  background-image: url(../../resources/recurso-fondo.png);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container-contact {
+
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact .banner-start {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.container-contact .banner-start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../resources/bg-home-02.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container-contact .banner-start .banner-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-contact .banner-start .banner-content h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: movimiento-gradiente 2s linear infinite alternate;
+}
+
+.container-contact .section-start .content-start p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@keyframes movimiento-gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .container-contact .contact-form {
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.container-contact .container-formulario {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container-contact h1 {
+    text-align: center;
+    color: #F6921E;
+    margin-bottom: 20px;
+}
+
+.container-contact .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+.container-contact .form-group {
+    margin-bottom: 15px;
+}
+
+.container-contact label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container-contact input[type="text"],
+.container-contact input[type="email"],
+.container-contact input[type="tel"],
+.container-contact input[type="date"],
+.container-contact textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container-contact textarea {
+    resize: vertical;
+}
+
+.container-contact .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.container-contact .checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.container-contact .btn-contact-send {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-contact .boton-enviar {
+    display: inline-block;
+    background-color: #5100ff;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    transition: background-color 0.3s ease;
+}
+
+.container-contact .boton-enviar:hover {
+    background-color: #fff;
+    color: #5100ff;
+}
+
+.container-contact .registro-invitacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-contact .registro-invitacion p {
+    color: #9B2738;
+    margin-bottom: 5px;
+}
+
+.container-contact .boton-registro {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.container-contact .boton-registro:hover {
+    background-color: #1e7e34;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .container-contact .banner-start {
+        margin-top: 18%;
+        height: auto;
+    }
+
+    .container-contact .content-contact {
+        height: auto;
+    }
+
+    .container-contact .banner-start {
+        position: relative;
+        height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
-        margin-top: 5%;
-
-    }
-    
-    .container-contact .container-formulario {
-        background-color: transparent;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    
-    .container-contact h1 {
-        text-align: center;
-        color: #F6921E;
-        margin-bottom: 20px;
-    }
-    
-    .container-contact .formulario-contacto {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .container-contact .form-group {
-        margin-bottom: 15px;
-    }
-    
-    .container-contact label {
-        display: block;
-        margin-bottom: 5px;
-        color: #fff;
-        font-weight: bold;
-    }
-    
-    .container-contact input[type="text"],
-    .container-contact input[type="email"],
-    .container-contact input[type="tel"],
-    .container-contact input[type="date"],
-    .container-contact textarea {
-        width: calc(100% - 12px);
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-    
-    .container-contact textarea {
-        resize: vertical;
-    }
-    
-    .container-contact .checkbox-group {
-        display: flex;
-        align-items: center;
-    }
-    
-    .container-contact .checkbox-group input[type="checkbox"] {
-        width: auto;
-        margin-right: 10px;
+        overflow: hidden;
     }
 
-    .container-contact .btn-contact-send{
-        text-align: center;
-        margin-top: 20px;
-      }
-    
-      .container-contact .boton-enviar {
-        display: inline-block;
-        background-color: #5100ff;
-        padding: 10px 15px;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 900;
-        transition: background-color 0.3s ease;
-    }
-    
-    .container-contact .boton-enviar:hover {
-        background-color: #fff;
-        color: #5100ff;
-    }
-    
-    .container-contact .registro-invitacion {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .container-contact .registro-invitacion p {
-        color: #9B2738;
-        margin-bottom: 5px;
-    }
-    
+    /* .container-contact .container-formulario {
+        width: 10%;
+    } */
+
+     .container-contact .formulario-contacto {
+        width: 300px;
+    } 
+
+    .container-contact .boton-enviar,
     .container-contact .boton-registro {
-        display: inline-block;
-        background-color: #28a745;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        text-decoration: none;
         font-size: 16px;
-        transition: background-color 0.3s ease;
+        padding: 10px 15px;
     }
-    
-    .container-contact .boton-registro:hover {
-        background-color: #1e7e34;
-    }
-    
-    /* Estilos Responsive */
-    @media (max-width: 768px) {
-        .container-contact{
-          padding: 100px 10px 100px 10px;
-        }
-        
-        .container-contact .container-formulario {
-            padding: 10%;
-            width: 100%;
-        }
-    
-        .container-contact .boton-enviar,
-        .container-contact .boton-registro {
-            font-size: 16px;
-            padding: 10px 15px;
-        }
-    }
+}

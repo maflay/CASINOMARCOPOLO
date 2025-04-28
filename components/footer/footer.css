@@ -82,6 +82,10 @@
     height: 100px;
   }
   
+  .footer-subscriber-email {
+   display: flex;
+  }
+
   .footer .footer-subscriber label {
     justify-self: center;
     padding-bottom: 10px;
@@ -92,11 +96,30 @@
     color: #5000fc;
     width: 600px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     border: 0;
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
+  }
+  .footer .footer-subscriber button {
+    background-color: #5000fc; 
+    color: white;
+    width: auto;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0; 
+    font-size: 20px;
+    cursor: pointer;
+    height: 60px; 
+   justify-self: start; 
+   transition: background-color 0.3s, color 0.3s; 
+  }
+
+  .footer .footer-subscriber button:hover {
+    background-color: #fff;
+    color: #5000fc;
+
   }
   
   .footer .footer-logos-legales {
@@ -127,6 +150,10 @@
       height: 760px;
     }
   
+    .footer .footer-subscriber button {
+      height: auto;
+    }
+    
     .footer .footer-content {
       display: flex;
       font-size: 100%;

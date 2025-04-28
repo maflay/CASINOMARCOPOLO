@@ -29,7 +29,7 @@
 }
 
 .container-promo .section-start .content-start h1 {
-    font-size: 80px;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 10px;
     background-image: linear-gradient(to right, #f3ec78, #af4261);
@@ -41,7 +41,7 @@
 
 .container-promo .section-start .content-start p {
     color: #fff;
-    font-size: 40px;
+    font-size: 1.2rem;
 }
 
 @keyframes movimiento-gradiente {
@@ -80,7 +80,13 @@
     margin-top: 2%;
     margin-bottom: 2%;
     color: #fff;
-    font-size: 50px;
+}
+
+.container-promo .section-promo .promo-content h1{
+    color: white;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .container-promo .card-divider-promo {
@@ -130,8 +136,13 @@
     width: 60%;
     height: auto;
     object-fit: contain;
-}
-
+    transition: border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .container-promo .snip1482 img:hover {
+    box-shadow: 0px 0px 15px 5px #fff; 
+    -webkit-box-shadow: 0px 0px 15px 5px #fff; 
+  }
 .container-promo .snip1482 figcaption {
     width: 40%;
     padding: 20px;
@@ -143,7 +154,6 @@
     margin-bottom: 10px;
     position: relative;
     transition: transform 0.6s ease;
-    color: #F6921E;
 }
 
 .container-promo .snip1482 p {

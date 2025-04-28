@@ -3,31 +3,57 @@
 
 /* HERO FULLSCREEN */
 .con-cas .hero-casinos {
-    background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-        url(../../resources/Marco-Polo-3.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    position: relative;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.con-cas .hero-casinos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../resources/Marco-Polo-3.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
 }
 
 .con-cas .hero-content {
     text-align: center;
 }
 
-.con-cas .hero-casinos .hero-content h1
-.con-cas .hero-casinos .hero-content p {
-    opacity: 0;
-  transition: opacity 1s ease-in-out;
+.con-cas .hero-casinos .hero-content h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: movimiento-gradiente 2s linear infinite alternate;
 }
 
-.con-cas .hero-casinos.aparecer .hero-content h1,
-.con-cas .hero-casinos.aparecer .hero-content p {
-  opacity: 1; 
+@keyframes movimiento-gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.con-cas .hero-casinos .hero-content p {
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 .con-cas .games-section {
@@ -64,7 +90,7 @@
         linear-gradient(#1f253aee, #1f253a),
         url(../../resources/s2.jpg) center/cover no-repeat;
     color: white;
-}
+    margin-top: 5%;}
 
 .con-cas .snip1482 {
     display: flex;
@@ -100,7 +126,6 @@
     margin-bottom: 10px;
     position: relative;
     transition: transform 0.6s ease;
-    color: #F6921E;
 }
 
 .con-cas .snip1482 p {
@@ -132,9 +157,6 @@
     
 }
 
-.con-cas .mapas-casinos h1{
-    color: #9B2738;
-}
 
 .con-cas .mapas-casinos .map-casinos h1{
     color: #F6921E;
@@ -221,10 +243,12 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .horario-casinos .horario-casinos-img {
-    width: 100%;
+    width: 50%;
 }
 
 .horario-casinos .horario-casinos-img .horario-box-left {
@@ -233,20 +257,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     margin-bottom: 22.5px;
 }
 
-.horario-casinos .horario-casinos-img .horario-box-rigth{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 22.5px;
-
-}
 
 .horario-casinos .horario-casinos-img .horario-image {
     width: 40%;
@@ -261,6 +274,15 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+
+    .con-cas .hero-casinos{
+        margin-top: 18%;
+    }
+
+    .con-cas .hero-casinos .hero-content h1{
+        font-size: 40px;
+    }
+
     .con-cas .game-list {
         flex-direction: column;
         align-items: center;
@@ -333,15 +355,13 @@
         object-fit: cover;
     }
 
+    .horario-casinos .horario-casinos-img {
+        width: 100%;
+    }
 
     .horario-casinos .horario-casinos-img .horario-box-left {
         display: grid;
     }
-
-    .horario-casinos .horario-casinos-img .horario-box-rigth {
-        display: grid;
-    }
-
     .horario-casinos .horario-casinos-img .horario-image {
         width: 100%;
     }
