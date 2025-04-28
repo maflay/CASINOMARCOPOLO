@@ -27,12 +27,7 @@ html {
   display: inline-block; /* Para que no ocupe todo el ancho */
 }
 
-@media (max-width: 768px) {
-  .linea-horizontal {
-  }
-  
-  .linea-vertical {
-}
+
 
 /* HTML: <div class="loader"></div> */
 .loader {
