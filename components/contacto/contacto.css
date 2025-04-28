@@ -1,6 +1,11 @@
 .container-contact{
-    background-image: linear-gradient(to bottom, #27314F, #2C16B0); /* Ejemplo de degradado */
-  
+    /* background-image: linear-gradient(to bottom, #27314F, #2C16B0); Ejemplo de degradado */
+  background-image: url(../../resources/recurso-fondo.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-contact .contact-form {
@@ -16,14 +21,14 @@
     }
     
     .container-contact .container-formulario {
-        background-color: #fff;
+        background-color: transparent;
         padding: 10px;
         border-radius: 10px;
     }
     
     .container-contact h1 {
         text-align: center;
-        color: #351C6B;
+        color: #F6921E;
         margin-bottom: 20px;
     }
     
@@ -39,7 +44,7 @@
     .container-contact label {
         display: block;
         margin-bottom: 5px;
-        color: #351C6B;
+        color: #fff;
         font-weight: bold;
     }
     

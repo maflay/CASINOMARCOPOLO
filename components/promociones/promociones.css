@@ -61,6 +61,21 @@
     flex-direction: column;
 }
 
+.linea-horizontal {
+    width: 100%; /* Ocupa todo el ancho de su contenedor padre */
+    height: 2px;   /* Grosor de la línea */
+    background-color: #F6921E; /* Color de la línea */
+    margin: 20px 0; /* Espacio arriba y abajo de la línea (opcional) */
+  }
+
+  .linea-vertical {
+    width: 2px;      /* Grosor de la línea */
+    height: 390px;    /* Altura de la línea (ajusta según necesites) */
+    background-color: #F6921E; /* Color de la línea */
+    margin: 0 10px;  /* Espacio a la izquierda y derecha de la línea (opcional) */
+    display: inline-block; /* Para que no ocupe todo el ancho */
+  }
+
 .container-promo .section-promo .promo-content {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -86,6 +101,57 @@
     transition: transform 0.3s ease;
 }
 
+
+.container-promo .promo-details{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 60px; */
+    padding: 30px;
+    background:
+        linear-gradient(#1f253ade, #1f253a),
+        url(../../resources/IMG_0167.jpg) center/cover no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.container-promo .snip1482 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    background: transparent;
+    padding: 20px;
+    text-align: left;
+}
+
+.container-promo .snip1482 img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container-promo .snip1482 figcaption {
+    width: 40%;
+    padding: 20px;
+}
+
+.container-promo .snip1482 h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.6s ease;
+    color: #F6921E;
+}
+
+.container-promo .snip1482 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: transform 0.6s ease;
+}
+
 @media (max-width: 768px) {
     .container-promo .section-start {
         margin-top: 18%;
@@ -104,4 +170,24 @@
     .container-promo .section-start .content-start p {
         font-size: 20px;
     }
+
+    .container-promo .promo-details{
+        gap: 10px;
+        padding: 20px;
+    }
+    .container-promo .snip1482 {
+        display: contents;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .container-promo .snip1482 figcaption {
+        width: 100%;
+    }
+    .container-promo.snip1482 img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
 }

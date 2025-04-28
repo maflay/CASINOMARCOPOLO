@@ -52,10 +52,154 @@
 }
 
 
+/* TIPOS DE CASINOS */
+.con-cas .types-casinos {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 60px; */
+    padding: 30px;
+    background:
+        linear-gradient(#1f253aee, #1f253a),
+        url(../../resources/s2.jpg) center/cover no-repeat;
+    color: white;
+}
+
+.con-cas .snip1482 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    background: transparent;
+    padding: 20px;
+    text-align: left;
+}
+
+.con-cas .types-casinos .snip1482 .types-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.con-cas .snip1482 img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
+.con-cas .snip1482 figcaption {
+    width: 100%;
+    padding: 20px;
+}
+
+.con-cas .snip1482 h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: transform 0.6s ease;
+    color: #F6921E;
+}
+
+.con-cas .snip1482 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: transform 0.6s ease;
+}
+
+
+/* .con-cas .snip1482:hover h2,
+.con-cas .snip1482:hover p {
+    transform: translateX(-10%);
+    opacity: 1;
+} */
+
+/* LOCALIZACIONES */
+
+.con-cas .mapas-casinos{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.con-cas .mapas-casinos .map-casinos iframe {
+    border-radius: 10px;
+    
+}
+
+.con-cas .mapas-casinos h1{
+    color: #9B2738;
+}
+
+.con-cas .mapas-casinos .map-casinos h1{
+    color: #F6921E;
+}
+
+.con-cas .map-casinos {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+
+
+
+/* STAFF */
+.con-cas .staff-casinos {
+    background-image:
+        linear-gradient(#1f253a, #1f253ada),
+        url(../../resources/s1.jpg);
+    height: auto;
+}
+
+.con-cas .staff-casinos .content-casinos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.con-cas .staff-casinos .staff-casinos-img {
+    margin-top: 10%;
+}
+
+.con-cas .staff-casinos .marco-polo-image {
+    width: 100%;
+}
+
+.con-cas .staff-casinos .marco-polo-text {
+    padding: 15px;
+    width: 40%;
+    background: white;
+    height: auto;
+    transform: translate(-10%, -50%);
+}
+
+.con-cas .staff-casinos .marco-polo-text h2 {
+    color: #9B2738;
+}
+
+
+.con-cas .staff-casinos .marco-polo-text p{
+    color: #27314f;
+}
+
+
+
 /* HORARIO DE CASINO */
 .horario-casinos {
     background:
-    linear-gradient(#9b273828, #1f253af6);
+    linear-gradient(#1f253a, #1f253ae3),
+    url(../../resources/bg-home.jpg) center/cover no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -115,104 +259,6 @@
     border-radius: 10px;
 }
 
-
-/* TIPOS DE CASINOS */
-.con-cas .types-casinos {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 60px; */
-    padding: 30px;
-    background:
-        linear-gradient(#1f253aee, #1f253a),
-        url(../../resources/s2.jpg) center/cover no-repeat;
-    color: white;
-}
-
-.con-cas .snip1482 {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    max-width: 1000px;
-    background: transparent;
-    padding: 20px;
-    text-align: left;
-}
-
-.con-cas .snip1482 img {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
-}
-
-.con-cas .snip1482 figcaption {
-    width: 40%;
-    padding: 20px;
-}
-
-.con-cas .snip1482 h2 {
-    text-transform: uppercase;
-    font-size: 24px;
-    margin-bottom: 10px;
-    position: relative;
-    transition: transform 0.6s ease;
-    color: #F6921E;
-}
-
-.con-cas .snip1482 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: transform 0.6s ease;
-}
-
-
-/* .con-cas .snip1482:hover h2,
-.con-cas .snip1482:hover p {
-    transform: translateX(-10%);
-    opacity: 1;
-} */
-
-/* STAFF */
-.con-cas .staff-casinos {
-    background-image:
-        linear-gradient(#1f253a, #1f253ada),
-        url(../../resources/s1.jpg);
-    height: auto;
-}
-
-.con-cas .staff-casinos .content-casinos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.con-cas .staff-casinos .staff-casinos-img {
-    margin-top: 10%;
-}
-
-.con-cas .staff-casinos .marco-polo-image {
-    width: 100%;
-}
-
-.con-cas .staff-casinos .marco-polo-text {
-    padding: 15px;
-    width: 40%;
-    background: white;
-    height: auto;
-    transform: translate(-10%, -50%);
-}
-
-.con-cas .staff-casinos .marco-polo-text h2 {
-    color: #9B2738;
-}
-
-
-.con-cas .staff-casinos .marco-polo-text p{
-    color: #27314f;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
     .con-cas .game-list {
@@ -229,21 +275,23 @@
     .con-cas .snip1482 figcaption {
         width: 100%;
     }
+
     .con-cas .snip1482 img {
         width: 100%;
         height: auto;
         object-fit: contain;
     }
 
-    .con-cas .staff-casinos .content-casinos{
+    .con-cas .staff-casinos .content-casinos {
         height: auto;
     }
+
     .con-cas .staff-casinos .staff-casinos-img {
         padding: 30px;
     }
 
 
-    
+
     .con-cas .staff-casinos .marco-polo-text {
         width: 80%;
         height: auto;
@@ -254,31 +302,56 @@
         gap: 10px;
         padding: 20px;
     }
-    
-    .con-cas .horario-casinos .horario-content img{
+
+    .con-cas .mapas-casinos h1{
+        font-size: 18px;
+    }
+
+
+    .con-cas .mapas-casinos .map-casinos {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .con-cas .mapas-casinos .map-casinos iframe {
+        border-radius: 20px;
+        padding: 15px;
+        width: auto;
+
+    }
+
+    .con-cas .mapas-casinos .map-casinos h1 {
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .con-cas .horario-casinos .horario-content img {
         width: 100%;
         object-fit: cover;
     }
- 
+
 
     .horario-casinos .horario-casinos-img .horario-box-left {
         display: grid;
     }
-    
-    .horario-casinos .horario-casinos-img .horario-box-rigth{
+
+    .horario-casinos .horario-casinos-img .horario-box-rigth {
         display: grid;
     }
 
     .horario-casinos .horario-casinos-img .horario-image {
-    width: 100%;
+        width: 100%;
     }
 
-    .horario-casinos .horario-content h1{
+    .horario-casinos .horario-content h1 {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    
-    
-    
+
+
+
 
 }
