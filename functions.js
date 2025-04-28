@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(url)
           .then(response => response.text())
           .then(html => {
-              console.log('Contenido cargado:'); // Verifica el contenido cargado
+              console.log('Contenido cargado:');
                // Verifica el contenido cargado
               contentArea.innerHTML = html;
               const scripts = contentArea.querySelectorAll('script');
