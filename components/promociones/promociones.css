@@ -335,7 +335,7 @@ height: auto;
 /* ENTRADA */
 
 .promo-container {
-  background-color: #01002e;
+  background-color: #03032c;
   color: white;
   display: flex;
   align-items: center;
@@ -394,8 +394,8 @@ align-items: center;
 }
 
 .container-experiences .experiences-section{
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .container-experiences .experiences-section h2 {
@@ -411,7 +411,7 @@ align-items: center;
 }
 
 .container-experiences .restaurant-card {
-  width: 220px;
+  width: 300px;
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -420,7 +420,7 @@ align-items: center;
 
 .container-experiences .restaurant-card img {
   width: 100%;
-  height: 160px;
+  height: 270px;
   object-fit: cover;
 }
 
