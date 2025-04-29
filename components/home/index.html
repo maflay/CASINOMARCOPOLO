@@ -10,28 +10,24 @@
     <div class="container-ini" >
 
         <!-- PRIMERA SECTION -->
-        <section class="section-ini">
-            <div class="slider-wrapper">
-                <div class="slide bg1"></div>
-                <div class="slide bg2"></div>
-                <div class="slide bg3"></div>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+              <div class="slide slide1"></div>
+              <div class="slide slide2"></div>
+              <div class="slide slide3"></div>
             </div>
         
-            <div class="slider-controls">
-                <a href="#slide1" class="slider-arrow prev">&#8249;</a>
-                <div class="slider-navigation">
-                    <input type="radio" name="slider" id="slide1" checked>
-                    <label for="slide1"><span class="sr-only">Slide 1</span></label>
+            <button class="arrow left" id="prevBtn">&#8249;</button>
+            <button class="arrow right" id="nextBtn">&#8250;</button>
         
-                    <input type="radio" name="slider" id="slide2">
-                    <label for="slide2"><span class="sr-only">Slide 2</span></label>
-        
-                    <input type="radio" name="slider" id="slide3">
-                    <label for="slide3"><span class="sr-only">Slide 3</span></label>
-                </div>
-                <a href="#slide2" class="slider-arrow next">&#8250;</a>
+            <div class="dots" id="dotsContainer">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
             </div>
-        </section>
+          </div>
+          
+          
 
         <section class="container-box">
             <div class="box-content">
@@ -98,22 +94,31 @@
 
         <!-- SLIDER -->
 
-        <section class="contenidoslider">
-            <div class="slider-wrapper">
-                <div class="slide bg1"></div>
-                <div class="slide bg2"></div>
-                <div class="slide bg3"></div>
+        <section class="slider-muestras">
+            <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
+              <div class="slide-muestras bg1-muestra"></div>
+              <div class="slide-muestras bg2-muestra"></div>
+              <div class="slide-muestras bg3-muestra"></div>
             </div>
+        
+            <!-- Radios -->
+            <div class="navigation-muestras">
+              <input type="radio" name="slider-muestras" id="trigger1-muestra" checked>
+              <label for="trigger1-muestra"></label>
+        
+              <input type="radio" name="slider-muestras" id="trigger2-muestra">
+              <label for="trigger2-muestra"></label>
+        
+              <input type="radio" name="slider-muestras" id="trigger3-muestra">
+              <label for="trigger3-muestra"></label>
+            </div>
+        
+            <!-- Flechas -->
+            <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
+            <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
+          </section>
 
-            <input type="radio" name="slider" id="trigger1" checked>
-            <label for="trigger1"><span class="sr-only">Slide 1</span></label>
-
-            <input type="radio" name="slider" id="trigger2">
-            <label for="trigger2"><span class="sr-only">Slide 2</span></label>
-
-            <input type="radio" name="slider" id="trigger3">
-            <label for="trigger3"><span class="sr-only">Slide 3</span></label>
-        </section>
+        
 
         <!-- PROMOCIONES -->
 
@@ -190,7 +195,116 @@
         </section>
 
     </div>
+    <script>
+        // Slider Principal
+        const track = document.getElementById("sliderTrack");
+        const dots = document.querySelectorAll(".dot");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+    
+        let currentIndex = 0;
+        const totalSlides = dots.length;
+        let interval;
+    
+        function goToSlide(index) {
+          track.style.transform = `translateX(-${index * 100}vw)`;
+          dots.forEach(dot => dot.classList.remove("active"));
+          dots[index].classList.add("active");
+          currentIndex = index;
+        }
+    
+        function nextSlide() {
+          let index = (currentIndex + 1) % totalSlides;
+          goToSlide(index);
+        }
+    
+        function prevSlide() {
+          let index = (currentIndex - 1 + totalSlides) % totalSlides;
+          goToSlide(index);
+        }
+    
+        function resetInterval() {
+          clearInterval(interval);
+          interval = setInterval(nextSlide, 5000);
+        }
+    
+        // Botones
+        nextBtn.addEventListener("click", () => {
+          nextSlide();
+          resetInterval();
+        });
+    
+        prevBtn.addEventListener("click", () => {
+          prevSlide();
+          resetInterval();
+        });
+    
+        // Dots
+        dots.forEach(dot => {
+          dot.addEventListener("click", () => {
+            let index = parseInt(dot.dataset.index);
+            goToSlide(index);
+            resetInterval();
+          });
+        });
+    
+        // Auto Slide
+        interval = setInterval(nextSlide, 5000);
 
+
+        // Slider Muestras
+        const trackMuestras = document.getElementById("sliderTrackMuestras");
+    const radiosMuestras = document.querySelectorAll('input[name="slider-muestras"]');
+    const labelsMuestras = document.querySelectorAll(".navigation-muestras label");
+    const prevBtnMuestra = document.getElementById("prevBtnMuestra");
+    const nextBtnMuestra = document.getElementById("nextBtnMuestra");
+
+    let currentIndexMuestra = 0;
+    const totalSlidesMuestra = radiosMuestras.length;
+    let intervalMuestra;
+
+    function goToSlideMuestra(index) {
+      trackMuestras.style.transform = `translateX(-${index * 100}vw)`;
+      radiosMuestras[index].checked = true;
+      currentIndexMuestra = index;
+    }
+
+    function nextSlideMuestra() {
+      let index = (currentIndexMuestra + 1) % totalSlidesMuestra;
+      goToSlideMuestra(index);
+    }
+
+    function prevSlideMuestra() {
+      let index = (currentIndexMuestra - 1 + totalSlidesMuestra) % totalSlidesMuestra;
+      goToSlideMuestra(index);
+    }
+
+    function resetIntervalMuestra() {
+      clearInterval(intervalMuestra);
+      intervalMuestra = setInterval(nextSlideMuestra, 3000);
+    }
+
+    nextBtnMuestra.addEventListener("click", () => {
+      nextSlideMuestra();
+      resetIntervalMuestra();
+    });
+
+    prevBtnMuestra.addEventListener("click", () => {
+      prevSlideMuestra();
+      resetIntervalMuestra();
+    });
+
+    labelsMuestras.forEach((label, index) => {
+      label.addEventListener("click", () => {
+        goToSlideMuestra(index);
+        resetIntervalMuestra();
+      });
+    });
+
+    intervalMuestra = setInterval(nextSlideMuestra, 3000);
+      </script>
+      
+      
 </body>
 
 </html>

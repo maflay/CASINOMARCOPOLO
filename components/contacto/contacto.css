@@ -63,6 +63,7 @@
 }
 
 .container-contact .contact-form {
+    background-color: rgba(221, 221, 221, 0.747);
     background-size: cover;
     background-position: center;
     height: auto;

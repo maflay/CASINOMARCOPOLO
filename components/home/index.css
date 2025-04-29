@@ -17,148 +17,82 @@
   box-sizing: border-box;
 } */
 
-.section-ini .sr-only {
-  position: absolute;
-  pointer-events: none;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  color: transparent;
-}
+.slider-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-.section-ini input {
-  position: absolute;
-  opacity: 0;
-  margin-top: 95vh;
-  cursor: pointer;
-  z-index: 3; 
-}
+    .slider-container  .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
 
-.section-ini label {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: solid 2px white;
-  border-radius: 999px;
-  background-color: transparent;
-  margin: 95vh 6px 0 6px;
-  z-index: 2;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  box-shadow: 0 0 20px 0 #000;
-}
+    .slider-container .slide {
+      min-width: 100vw;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
 
-.section-ini input:checked + label {
-  background-color: white;
-}
+    .slider-container .slide1 {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+      url(../../resources/fondo.png);
+    }
+    .slider-container .slide2{
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+      url(../../resources/bg-home-02.jpg);
+    }
+    .slider-container .slide3 {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+      url(../../resources/bg-home.jpg);
+    }
 
-.section-ini input + label::after {
-  /* ... tus estilos para las flechas (si las quieres mantener) ... */
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center 55%;
-  background-size: 80px 80px;
-  line-height: 100vh;
-  transition: background-size 200ms;
-  position: absolute;
-  color: white;
-  height: calc(95vh - 12px);
-  width: 80px;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  display: none; /* O block si quieres las flechas siempre visibles */
-}
+    .slider-container .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+      padding: 10px 15px;
+      border-radius: 50%;
+    }
 
-.section-ini input + label:hover::after {
-  background-size: 90px 90px;
-}
+    .slider-container .arrow.left {
+      left: 20px;
+    }
 
-.section-ini input:checked + label::after {
-  background-image: none;
-  width: 100vw;
-  left: 0;
-  z-index: 10;
-}
+    .slider-container .arrow.right {
+      right: 20px;
+    }
 
-.section-ini input:checked + label + .slide ~ input + label::after {
-  display: none;
-}
+    .slider-container .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
 
-.section-ini input:checked + label + .slide + input + label::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
-  display: block;
-  width: 80px;
-  right: 0;
-  left: auto;
-  display: none; /* O block si quieres las flechas siempre visibles */
-}
+    .slider-container .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: transparent;
+      cursor: pointer;
+    }
 
-.section-ini input:focus + label {
-  box-shadow: 0 0 0 2px teal, 0 0 18px white;
-}
-
-.section-ini .slider-wrapper { /* Contenedor para los slides */
-  display: flex;
-  width: calc(100vw * 3); /* Ancho total de los slides */
-  height: 100%;
-  transform: translateX(0); /* Posición inicial */
-  animation: cambioAutomatico 12s infinite; /* Duración total y repetición */
-  transition: transform 0.6s ease-in-out; /* Para la transición suave con los clicks */
-}
-
-.section-ini .slide {
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100%;
-  flex-shrink: 0; /* Evita que los slides se encojan */
-  z-index: -10;
-  /* transform: translateX(-100%); Eliminado para que la animación controle */
-  opacity: 1;
-}
-
-/* Fondo de cada slide */
-.section-ini .bg1 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-  url(../../resources/fondo.png);
-}
-.section-ini .bg2 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-  url(../../resources/bg-home-02.jpg);
-}
-.section-ini .bg3 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-  url(../../resources/bg-home.jpg);
-}
-
-/* Detener la animación cuando un radio está checked */
-.section-ini input:checked ~ .slider-wrapper {
-  animation-play-state: paused;
-  transform: translateX(calc(-100vw * (var(--slide-index) - 1))); /* Ajuste para mostrar la slide correcta */
-}
-
-/* Estilo para asociar el índice del radio al --slide-index */
-#trigger4 { --slide-index: 1; }
-#trigger5 { --slide-index: 2; }
-#trigger6 { --slide-index: 3; }
-
-@keyframes cambioAutomatico {
-  0% { transform: translateX(0); }       /* Mostrar el primer slide */
-  28% { transform: translateX(0); }    /* Mantener el primer slide */
-  33% { transform: translateX(-100vw); } /* Transicionar al segundo slide */
-  61% { transform: translateX(-100vw); } /* Mantener el segundo slide */
-  66% { transform: translateX(-200vw); } /* Transicionar al tercer slide */
-  94% { transform: translateX(-200vw); }  /* Mantener el tercer slide */
-  100% { transform: translateX(0); }       /* Volver al primer slide */
-}
-
-
-
-
+    .slider-container .dot.active {
+      background: white;
+    }
 
 
 
@@ -456,159 +390,94 @@
 }
 
 /* SLIDER */
+.slider-muestras {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
-.contenidoslider {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    user-select: none;
-    /*scroll-behavior: smooth;*/
-  }
-  
-  /* .contenidoslider * {
-    box-sizing: border-box;
-  } */
-  
-  .contenidoslider .sr-only {
-    position: absolute;
-    pointer-events: none;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    color: transparent;
-  }
-  
-  .contenidoslider input {
-    position: absolute;
-    opacity: 0;
-    margin-top: 95vh;
-    cursor: pointer; /* Asegúrate de que el cursor sea pointer */
-    z-index: 3; /* Asegúrate de que estén por encima del slider */
-  }
-  
-  .contenidoslider label {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: solid 2px white;
-    border-radius: 999px;
-    background-color: transparent;
-    margin: 95vh 6px 0 6px;
-    z-index: 2;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    box-shadow: 0 0 20px 0 #000;
-  }
-  
-  .contenidoslider input:checked + label {
-    background-color: white;
-  }
-  
-  .contenidoslider input + label::after {
-    /* ... tus estilos para las flechas (si las quieres mantener) ... */
-    content: '';
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center 55%;
-    background-size: 80px 80px;
-    line-height: 100vh;
-    transition: background-size 200ms;
-    position: absolute;
-    color: white;
-    height: calc(95vh - 12px);
-    width: 80px;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    display: none; /* O block si quieres las flechas siempre visibles */
-  }
-  
-  .contenidoslider input + label:hover::after {
-    background-size: 90px 90px;
-  }
-  
-  .contenidoslider input:checked + label::after {
-    background-image: none;
-    width: 100vw;
-    left: 0;
-    z-index: 10;
-  }
-  
-  .contenidoslider input:checked + label + .slide ~ input + label::after {
-    display: none;
-  }
-  
-  .contenidoslider input:checked + label + .slide + input + label::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
-    display: block;
-    width: 80px;
-    right: 0;
-    left: auto;
-    display: none; /* O block si quieres las flechas siempre visibles */
-  }
-  
-  .contenidoslider input:focus + label {
-    box-shadow: 0 0 0 2px teal, 0 0 18px white;
-  }
-  
-  .contenidoslider .slider-wrapper { /* Contenedor para los slides */
-    display: flex;
-    width: calc(100vw * 3); /* Ancho total de los slides */
-    height: 100%;
-    transform: translateX(0); /* Posición inicial */
-    animation: cambioAutomatico 15s infinite; /* Duración total y repetición */
-    transition: transform 0.6s ease-in-out; /* Para la transición suave con los clicks */
-  }
-  
-  .contenidoslider .slide {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100%;
-    flex-shrink: 0; /* Evita que los slides se encojan */
-    z-index: -10;
-    /* transform: translateX(-100%); Eliminado para que la animación controle */
-    opacity: 1;
-  }
-  
-  /* Fondo de cada slide */
-  .contenidoslider .bg1 {
-    background-image: url(../../resources/s1.jpg);
-  }
-  .contenidoslider .bg2 {
-    background-image: url(../../resources/s2.jpg);
-  }
-  .contenidoslider .bg3 {
-    background-image: url(../../resources/s3.jpg);
-  }
-  
-  /* Detener la animación cuando un radio está checked */
-  .contenidoslider input:checked ~ .slider-wrapper {
-    animation-play-state: paused;
-    transform: translateX(calc(-100vw * (var(--slide-index) - 1))); /* Ajuste para mostrar la slide correcta */
-  }
-  
-  /* Estilo para asociar el índice del radio al --slide-index */
-  #trigger1 { --slide-index: 1; }
-  #trigger2 { --slide-index: 2; }
-  #trigger3 { --slide-index: 3; }
-  
-  @keyframes cambioAutomatico {
-    0% { transform: translateX(0); }       /* Mostrar el primer slide */
-    28% { transform: translateX(0); }    /* Mantener el primer slide */
-    33% { transform: translateX(-100vw); } /* Transicionar al segundo slide */
-    61% { transform: translateX(-100vw); } /* Mantener el segundo slide */
-    66% { transform: translateX(-200vw); } /* Transicionar al tercer slide */
-    94% { transform: translateX(-200vw); }  /* Mantener el tercer slide */
-    100% { transform: translateX(0); }       /* Volver al primer slide */
-  }
+.slider-muestras .slider-wrapper-muestras {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
 
+.slider-muestras .slide-muestras {
+  min-width: 100vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-muestras .bg1-muestra {
+  background-image: url('/resources/s1.jpg');
+}
+
+.slider-muestras .bg2-muestra {
+  background-image: url('/resources/s2.jpg');
+}
+
+.slider-muestras .bg3-muestra {
+  background-image: url('/resources/s3.jpg');
+}
+
+/* Radios ocultos */
+.slider-muestras input[type="radio"] {
+  display: none;
+}
+
+/* Botones de navegación (radios visuales) */
+.slider-muestras label {
+  position: relative;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+/* Contenedor de los puntos */
+.slider-muestras .navigation-muestras {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Cuando esté seleccionado */
+.slider-muestras input[type="radio"]:checked + label {
+  background: white;
+}
+
+/* Flechas */
+.slider-muestras .arrow-muestra {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.slider-muestras .arrow-left-muestra {
+  left: 20px;
+}
+
+.slider-muestras .arrow-right-muestra {
+  right: 20px;
+}
 
   /* PROMOCIONES */
   .promocion-container {
