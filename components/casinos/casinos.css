@@ -56,27 +56,79 @@
     font-size: 1.2rem;
 }
 
-.con-cas .games-section {
-    margin-top: 20px;
+/* SEGUNDA SECTION VIDA DE ALTO NIVEL */
+
+.second-section{
+    padding: 10%;
+    background-color: white;
 }
 
-.con-cas .game-list {
+.second-section .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+  }
+  
+  .second-section .hero h1 {
+    font-size: 48px;
+    color: #27314F;
+    margin-bottom: 20px;
+  }
+  
+  .second-section .hero p {
+    font-size: 16px;
+    color: #27314F;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .second-section .caspian-section {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-}
-
-.con-cas .game-card {
-    width: 200px;
-    text-align: center;
-}
-
-.con-cas .promotions-casinos {
-    margin-top: 20px;
-    text-align: center;
-}
-
+    background-color: #111;
+    color: #fff;
+    height: auto;
+    padding-top: 30px;
+  }
+  
+  .second-section .caspian-content {
+    flex: 1;
+    padding: 60px 40px;
+    min-width: 300px;
+  }
+  
+  .second-section .caspian-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .second-section .caspian-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .second-section .caspian-content button {
+    background-color: #fff;
+    color: #27314F;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .second-section .caspian-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .second-section .caspian-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
 /* TIPOS DE CASINOS */
 .con-cas .types-casinos {
@@ -90,7 +142,7 @@
         linear-gradient(#1f253aee, #1f253a),
         url(../../resources/s2.jpg) center/cover no-repeat;
     color: white;
-    margin-top: 5%;}
+}
 
 .con-cas .snip1482 {
     display: flex;
@@ -143,44 +195,106 @@
     opacity: 1;
 } */
 
-/* LOCALIZACIONES */
+/* SECTINO DE NOCHE */
 
-.con-cas .mapas-casinos{
-    margin-top: 15px;
+.section-noche{
+    background-color: white;
+}
+
+.section-noche .nightlife-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+  }
+  
+  .section-noche .nightlife-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #27314F;
+  }
+  
+  .section-noche .nightlife-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #27314F;
+  }
+  
+  .section-noche .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 40px 20px;
+    justify-content: center;
+  }
+  
+  .section-noche .card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.con-cas .mapas-casinos .map-casinos iframe {
-    border-radius: 10px;
-    
-}
-
-
-.con-cas .mapas-casinos .map-casinos h1{
-    color: #F6921E;
-}
-
-.con-cas .map-casinos {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    height: auto;
+  }
+  
+  .section-noche .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .section-noche .card-content {
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .section-noche .card-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #27314F;
+  }
+  
+  .section-noche .card-content small {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .section-noche .card-content p {
+    font-size: 14px;
+    color: #444;
+    flex-grow: 1;
+  }
+  
+  .section-noche .card-footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: white;
-    gap: 20px;
-}
-
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  .section-noche .card-footer a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .section-noche .card-footer span {
+    font-size: 18px;
+    color: #777;
+  }
 
 
 /* STAFF */
 .con-cas .staff-casinos {
     background-image:
-        linear-gradient(#1f253a, #1f253ada),
+        linear-gradient(#1f253ad7, #1f253a),
         url(../../resources/s1.jpg);
     height: auto;
 }
@@ -215,6 +329,151 @@
 
 .con-cas .staff-casinos .marco-polo-text p{
     color: #27314f;
+}
+
+/* TODA LA NOCHE MARCOPOLO */
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: white;
+  }
+  
+  .black-box {
+    position: relative;
+    background-color: #111;
+    width: 80%;
+    height: 80vh;
+    color: white;
+    padding: 20px;
+    overflow: visible; /* para permitir que la imagen se desborde */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  .floating-image {
+    position: relative;
+    padding: 20px;
+    top: -10%; /* se desborda hacia arriba */
+    right: -10%; /* se sale hacia la derecha */
+    width: 100%;
+    height: 75vh;
+    z-index: 2;
+    background-size: cover;
+  }
+  
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    width: 95%;
+    gap:30px
+  }
+  
+  .text-content h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+  
+  .text-content p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .text-content button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    height: 5%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+    
+  .text-content button:hover {
+    color: white;
+    background-color: black;
+  }
+
+  @media (max-width: 768px) {
+    .black-box {
+        width: 95%;
+        min-height: auto; /* La altura se ajusta al contenido */
+        height: 60vh;
+        padding: 15px;
+    }
+
+    .floating-image {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .text-content {
+        flex-direction: column; /* Apilar el texto y el botón en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+        bottom: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        gap: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 1.2em;
+    }
+
+    .text-content p {
+        font-size: 0.85em;
+    }
+
+    .text-content button {
+        font-size: 0.8em;
+        padding: 8px 15px;
+        width: fit-content; /* El botón ocupa el ancho de su contenido */
+    }
+}
+
+
+/* LOCALIZACIONES */
+
+.con-cas .mapas-casinos{
+    background-image:
+        linear-gradient(#ffffff, #ffffffb6),
+        url(../../resources/s1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #27314F;
+}
+
+.con-cas .mapas-casinos .map-casinos iframe {
+    border-radius: 10px;
+    
+}
+
+
+.con-cas .mapas-casinos .map-casinos h1{
+    color: #F6921E;
+}
+
+.con-cas .map-casinos {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
 }
 
 

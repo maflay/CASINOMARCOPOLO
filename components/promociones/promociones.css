@@ -23,6 +23,8 @@
 }
 
 
+
+/* OFERTA */
 .container-promo  .deals-section {
     padding: 40px;
     background: #fff;
@@ -37,6 +39,7 @@
     font-size: 3rem;
     margin-bottom: 10px;
     letter-spacing: 2px;
+    color: #273142;
   }
   
   .container-promo .deals-header p {
@@ -156,21 +159,6 @@
     flex-direction: column;
 }
 
-.linea-horizontal {
-    width: 100%; /* Ocupa todo el ancho de su contenedor padre */
-    height: 2px;   /* Grosor de la línea */
-    background-color: #F6921E; /* Color de la línea */
-    margin: 20px 0; /* Espacio arriba y abajo de la línea (opcional) */
-  }
-
-  .linea-vertical {
-    width: 2px;      /* Grosor de la línea */
-    height: 390px;    /* Altura de la línea (ajusta según necesites) */
-    background-color: #F6921E; /* Color de la línea */
-    margin: 0 10px;  /* Espacio a la izquierda y derecha de la línea (opcional) */
-    display: inline-block; /* Para que no ocupe todo el ancho */
-  }
-
 .container-promo .section-promo .promo-content {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -202,6 +190,8 @@
     transition: transform 0.3s ease;
 }
 
+
+/* PROMO DETALLE */
 
 .container-promo .promo-details{
     height: auto;
