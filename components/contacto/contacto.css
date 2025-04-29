@@ -122,6 +122,7 @@
 
 .container-contact .checkbox-group {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -153,7 +154,7 @@
     color: #5100ff;
 }
 
-.container-contact .registro-invitacion {
+/* .container-contact .registro-invitacion {
     text-align: center;
     margin-top: 20px;
 }
@@ -177,6 +178,12 @@
 
 .container-contact .boton-registro:hover {
     background-color: #1e7e34;
+}  */
+
+.checks-cliente-terminos{
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 /* Estilos Responsive */

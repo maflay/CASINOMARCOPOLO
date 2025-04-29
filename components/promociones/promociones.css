@@ -1,288 +1,541 @@
 .container-promo .section-start {
-    position: relative;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    overflow: hidden;
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  overflow: hidden;
 }
 
 .container-promo .section-start::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../resources/bg-home.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../resources/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 
 
 /* OFERTA */
-.container-promo  .deals-section {
-    padding: 40px;
-    background: #fff;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container-promo .deals-header {
-    margin-bottom: 30px;
-  }
-  
-  .container-promo .deals-header h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    color: #273142;
-  }
-  
-  .container-promo .deals-header p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
-    max-width: 600px;
-  }
-  
-  .container-promo .deals-header a {
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .container-promo .deals-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .container-promo .deal-card {
-    background: #fafafa;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 300px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .container-promo .deal-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .container-promo .deal-content {
-    padding: 15px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .container-promo .deal-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-  }
-  
-  .container-promo .deal-content .subtitle {
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #555;
-  }
-  
-  .container-promo .deal-content p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .container-promo .deal-content button {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-    text-transform: uppercase;
-  }
-  
-  .container-promo .deal-content button:hover {
-    background: #333;
-  }
-  
+.container-promo .deals-section {
+  padding: 40px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container-promo .deals-header {
+  margin-bottom: 30px;
+}
+
+.container-promo .deals-header h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #273142;
+}
+
+.container-promo .deals-header p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.container-promo .deals-header a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.container-promo .deals-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.container-promo .deal-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-promo .deal-card img {
+  width: 100%;
+  height: auto;
+}
+
+.container-promo .deal-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-promo .deal-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.container-promo .deal-content .subtitle {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.container-promo .deal-content p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container-promo .deal-content button {
+  background-color: #27314F;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.container-promo .deal-content button:hover {
+  color: #fff;
+  background-color: #2C16B0;
+  transition: background-color 0.3s ease;
+}
+
 
 .container-promo .section-start .content-start {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .container-promo .section-start .content-start h1 {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-image: linear-gradient(to right, #f3ec78, #af4261);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: movimiento-gradiente 2s linear infinite alternate;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: movimiento-gradiente 2s linear infinite alternate;
 }
 
 .container-promo .section-start .content-start p {
-    color: #fff;
-    font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 @keyframes movimiento-gradiente {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    100% {
-        background-position: 100% 50%;
-    }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .container-promo .section-promo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-promo .section-promo .promo-content {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    color: #fff;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #fff;
 }
 
-.container-promo .section-promo .promo-content h1{
-    color: white;
-    font-weight: 900;
-    font-size: 2.5rem;
-    text-align: center;
+.container-promo .section-promo .promo-content h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .container-promo .card-divider-promo {
-    height: 2px;
-    background-color: white;
-    width: 100%;
+  height: 2px;
+  background-color: white;
+  width: 100%;
 }
 
 .container-promo .section-promo .promo-list {
-    padding: 5%;
+  padding: 5%;
 }
 
 .container-promo .section-promo .promo-list .promo-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
+/* OFERTAS CASINO EXCLUSIVAS */
+.container-ofertas{
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ofertas-promo{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.ofertas-promo  img{
+width: 10%;
+height: auto;
+
+}
 
 /* PROMO DETALLE */
 
-.container-promo .promo-details{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 60px; */
-    padding: 30px;
-    background:
-        linear-gradient(#1f253ade, #1f253a),
-        url(../../resources/IMG_0167.jpg) center/cover no-repeat;
-    background-size: cover;
-    color: white;
+.container-promo .promo-details {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 30px;
+  background:
+    linear-gradient(#1f253ade, #1f253a),
+    url(../../resources/IMG_0167.jpg) center/cover no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 .container-promo .snip1482 {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    max-width: 1000px;
-    background: transparent;
-    padding: 20px;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  background: transparent;
+  text-align: left;
+  background-color: #2b344d;
+}
+
+.container-promo .snip1482 figcaption {
+  width: 40%;
+  padding: 20px;
+}
+
+.container-promo .snip1482 figcaption .button-container {
+  display: flex; /* Para colocar los botones uno al lado del otro */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 40%;
+}
+
+
+.book-now {
+  background-color: #6622F8; /* Rojo similar al de la imagen */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.book-now:hover {
+  background-color: #2C16B0; /* Un tono de rojo más oscuro al pasar el ratón */
+}
+
+.learn-more {
+  background-color: transparent; /* Fondo transparente */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative; /* Para poder posicionar el pseudo-elemento del subrayado */
+  transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.learn-more::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5px; /* Ajusta la distancia del subrayado al texto */
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transform: scaleX(0); /* El subrayado inicialmente no es visible */
+  transform-origin: left center;
+  transition: transform 0.3s ease; /* Transición suave para la aparición del subrayado */
+}
+
+.learn-more:hover {
+  color: #6622F8; /* Un tono de gris al pasar el ratón */
+}
+
+.learn-more:hover::after {
+  transform: scaleX(1); /* El subrayado se expande al pasar el ratón */
 }
 
 .container-promo .snip1482 img {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
-    transition: border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .container-promo .snip1482 img:hover {
-    box-shadow: 0px 0px 15px 5px #fff; 
-    -webkit-box-shadow: 0px 0px 15px 5px #fff; 
-  }
-.container-promo .snip1482 figcaption {
-    width: 40%;
-    padding: 20px;
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  transition: border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
 .container-promo .snip1482 h2 {
-    text-transform: uppercase;
-    font-size: 24px;
-    margin-bottom: 10px;
-    position: relative;
-    transition: transform 0.6s ease;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: relative;
+  transition: transform 0.6s ease;
 }
 
 .container-promo .snip1482 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: transform 0.6s ease;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: transform 0.6s ease;
 }
 
+
+/* ENTRADA */
+
+.promo-container {
+  background-color: #01002e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.promo-container .promo-text {
+  max-width: 50%;
+}
+
+.promo-container .promo-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.promo-container .promo-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.promo-container .promo-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.promo-container .promo-text button {
+  padding: 10px 20px;
+  background-color: #01002e;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-container .promo-text button:hover {
+background-color: #fff;
+color: #01002e;
+transition: background-color 0.3s ease;
+}
+
+.promo-container .promo-image img {
+  width: 300px;
+  border-radius: 6px;
+}
+
+/* ULTIMA SECTION */
+
+.container-experiences{
+  background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container-experiences .experiences-section{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.container-experiences .experiences-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #06113C;
+}
+
+.container-experiences .experiences-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.container-experiences .restaurant-card {
+  width: 220px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container-experiences .restaurant-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.container-experiences .card-content {
+  padding: 12px;
+}
+
+.container-experiences .card-content h3 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #06113C;
+}
+
+.container-experiences .card-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.container-experiences .status.closed {
+  color: red;
+}
+
+.container-experiences .status.open {
+  color: green;
+}
+
+.container-experiences .status span {
+  color: #555;
+}
+
+.container-experiences .info {
+  font-size: 13px;
+  color: #555;
+}
+
+.container-experiences .member-card {
+  width: 220px;
+  background: linear-gradient(135deg, #2C16B0, #6622F8);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-experiences .member-content .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.container-experiences .member-content p {
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.container-experiences .member-content button {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.container-experiences .member-content button:hover{
+  background-color: white;
+  color: #0a0c4f;
+  transition: background-color 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
-    .container-promo .section-start {
-        margin-top: 18%;
-    }
-    .container-promo .section-promo .promo-content {
-        margin-top: 20%;
-        margin-bottom: 2%;
-        color: #fff;
-        font-size: 20px;
-    }
+  .container-promo .section-start {
+    margin-top: 18%;
+  }
 
-    .container-promo .section-start .content-start h1 {
-        font-size: 40px;
-    }
+  .container-promo .section-promo .promo-content {
+    margin-top: 20%;
+    margin-bottom: 2%;
+    color: #fff;
+    font-size: 20px;
+  }
 
-    .container-promo .section-start .content-start p {
-        font-size: 20px;
-    }
+  .container-promo .section-start .content-start h1 {
+    font-size: 40px;
+  }
 
-    .container-promo .promo-details{
-        gap: 10px;
-        padding: 20px;
-    }
-    .container-promo .snip1482 {
-        display: contents;
-        max-width: 90%;
-        padding: 20px;
-    }
+  .container-promo .section-start .content-start p {
+    font-size: 20px;
+  }
 
-    .container-promo .snip1482 figcaption {
-        width: 100%;
-    }
-    .container-promo.snip1482 img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
+  .container-promo .promo-details {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .container-promo .snip1482 {
+    display: contents;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .container-promo .snip1482 figcaption {
+    width: 100%;
+  }
+
+  .container-promo.snip1482 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 
 }

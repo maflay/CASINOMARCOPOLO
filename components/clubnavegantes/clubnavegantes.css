@@ -80,7 +80,7 @@
     padding-right: 20px;
 }
 
- .section-sports-club {
+.section-sports-club {
     position: relative;
     display: flex;
     justify-content: center;
@@ -98,38 +98,178 @@
     gap: 40px;
     padding: 40px;
     font-family: Arial, sans-serif;
-  }
-  
-  .info-box {
+}
+
+.info-box {
     flex: 1;
     color: #222;
-  }
-  
-  .info-box h3 {
+}
+
+.info-box h3 {
     color: #2b2d42;
     font-size: 1rem;
     margin-bottom: 15px;
     text-transform: uppercase;
-  }
-  
-  .info-box p {
+}
+
+.info-box p {
     margin: 5px 0;
     line-height: 1.5;
     font-size: 0.95rem;
-  }
-  
-  .info-box a {
+}
+
+.info-box a {
     text-decoration: none;
     font-weight: bold;
     color: #222;
-  }
-  
-  .info-box a:hover {
+}
+
+.info-box a:hover {
     text-decoration: underline;
-  }
-  
+}
 
 
+/* APUESTAS DEPORTIVAS */
+
+.container-apuesta {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.container-apuesta .apuesta-deportiva {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container-apuesta .apuesta-deportiva .apuesta-left {
+    padding: 5%;
+    flex: 0 0 50%;
+}
+
+.container-apuesta .apuesta-deportiva .apuesta-left h1,
+.container-apuesta .apuesta-deportiva .apuesta-left p {
+    color: #27314F;
+}
+
+.container-apuesta .apuesta-deportiva .apuesta-buttons {
+    display: flex;
+    /* Para colocar los botones uno al lado del otro */
+    gap: 20px;
+    /* Espacio entre los botones */
+    margin-top: 20%;
+}
+
+.container-apuesta .book-now {
+    background-color: #6622F8;
+    /* Rojo similar al de la imagen */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave al pasar el ratón */
+}
+
+.container-apuesta .book-now:hover {
+    background-color: #2C16B0;
+    /* Un tono de rojo más oscuro al pasar el ratón */
+}
+
+.container-apuesta .learn-more {
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #2C16B0;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    /* Para poder posicionar el pseudo-elemento del subrayado */
+    transition: color 0.3s ease;
+    /* Transición suave al pasar el ratón */
+}
+
+.container-apuesta .learn-more::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    /* Ajusta la distancia del subrayado al texto */
+    width: 100%;
+    height: 1px;
+    background-color: #2C16B0;
+    transform: scaleX(0);
+    /* El subrayado inicialmente no es visible */
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+    /* Transición suave para la aparición del subrayado */
+}
+
+.container-apuesta .learn-more:hover {
+    color: #6622F8;
+    /* Un tono de gris al pasar el ratón */
+}
+
+.container-apuesta .learn-more:hover::after {
+    transform: scaleX(1);
+    /* El subrayado se expande al pasar el ratón */
+}
+
+
+
+.container-apuesta .apuesta-deportiva .apuesta-rigth {
+    flex: 0 0 50%;
+}
+
+.container-apuesta .apuesta-deportiva .apuesta-rigth img {
+    width: 100%;
+    height: auto;
+}
+
+.container-apuesta-sitio {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(/resources/fondo-apuestas.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-apuesta-sitio .apuesta-sitio {
+    width: 40%;
+    height: auto;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.container-apuesta-sitio .apuesta-sitio h1,
+.container-apuesta-sitio .apuesta-sitio p {
+    color: #fff;
+    text-align: center;
+}
 
 
 

@@ -117,6 +117,11 @@
     font-weight: bold;
     letter-spacing: 1px;
   }
+
+  .second-section .caspian-content button:hover{
+    color: #fff;
+    background-color: #27314F;
+  }
   
   .second-section .caspian-image {
     flex: 1;
@@ -481,7 +486,7 @@
 /* HORARIO DE CASINO */
 .horario-casinos {
     background:
-    linear-gradient(#1f253a, #1f253ae3),
+    linear-gradient(#1f253ad7, #1f253a),
     url(../../resources/bg-home.jpg) center/cover no-repeat;
     background-position: center;
     display: flex;

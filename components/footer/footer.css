@@ -103,8 +103,8 @@
     font-style: italic;
   }
   .footer .footer-subscriber button {
-    background-color: #5000fc; 
-    color: white;
+    background-color: #fff;
+    color: #5000fc;
     width: auto;
     border: 0;
     padding: 10px 20px;
@@ -119,7 +119,8 @@
   .footer .footer-subscriber button:hover {
     background-color: #fff;
     color: #5000fc;
-
+    background-color: #5000fc; 
+    color: white;
   }
   
   .footer .footer-logos-legales {
