@@ -25,10 +25,14 @@
 
 
 /* OFERTA */
+
+.container-promo .deals-padre{
+  background-color: #fff;
+}
+
 .container-promo .deals-section {
-  padding: 40px;
-  background: #fff;
-  font-family: Arial, sans-serif;
+  margin: 0 10% 0 10%;
+  padding: 20px;
 }
 
 .container-promo .deals-header {
@@ -37,6 +41,7 @@
 
 .container-promo .deals-header h2 {
   font-size: 3rem;
+  margin-top: 10px;
   margin-bottom: 10px;
   letter-spacing: 2px;
   color: #273142;
@@ -65,7 +70,6 @@
 .container-promo .deal-card {
   background: #fafafa;
   border: 1px solid #e0e0e0;
-  border-radius: 5px;
   overflow: hidden;
   width: 300px;
   flex-grow: 1;
@@ -75,7 +79,14 @@
 
 .container-promo .deal-card img {
   width: 100%;
-  height: auto;
+  height: 60%;
+  transition: transform 0.3s ease;
+}
+
+.container-promo .deal-card img:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .container-promo .deal-content {
