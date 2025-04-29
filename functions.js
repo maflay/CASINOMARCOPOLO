@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+    const loading = document.getElementById('loading');
+    loading.style.display = 'none'; // Ocultar el loading después de cargar la página
+  });
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.Navbar .nav-items a[data-target]');
   const contentArea = document.getElementById('content-area');
