@@ -53,15 +53,19 @@
           <br />
 
           <form class="contact-form" id="cash-unico">
-            <input type="email" placeholder="Correo electrónico" required />
-            <input type="tel" placeholder="Teléfono" required />
+            <input type="email" name="correo" placeholder="Correo electrónico" required />
+            <input type="tel" name="telefono" placeholder="Teléfono" required />
             <div class="datos-form">
-              <input type="checkbox" id="acepto-datos" /> <label for="acepto-datos">Acepto tratamientos de datos</label>
+              <input type="checkbox" id="acepto-datos" name="acepto_datos" value="1" required/>
+              <label for="acepto-datos">Acepto tratamientos de datos</label>
             </div>
-            <div class='btn-form'>
+            <div class="btn-form">
               <button type="submit" class="purple-button">Enviar</button>
             </div>
           </form>
+          <div id="form-message"></div> <!-- Aquí se muestra el mensaje -->
+
+
         </div>
       </div>
     </section>
@@ -193,7 +197,6 @@
     </section>
 
   </div>
-
   <script>
     // Slider Principal
     const track = document.getElementById("sliderTrack");
@@ -305,37 +308,69 @@
 
     // ENVIO DE CASH
 
-    const formularioContacto = document.getElementById('cash-unico');
+    const form = document.getElementById("cash-unico");
+    const message = document.getElementById("form-message");
 
-    if (formularioContacto) {
-      console.log('¡Formulario con ID "cash-unico" encontrado!');
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevenir redirección
 
-      formularioContacto.addEventListener('submit', function (event) {
-        event.preventDefault();
-        console.log('Formulario enviado (pero la página no se recargará).');
+        const formData = new FormData(form);
 
-        // Aquí va tu lógica para obtener los datos del formulario
-        const emailInput = formularioContacto.querySelector('input[type="email"]');
-        const telefonoInput = formularioContacto.querySelector('input[type="tel"]');
-        const aceptaDatosInput = formularioContacto.querySelector('input[type="checkbox"]');
+        fetch("components/home/guardar.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then(response => response.text())
+          .then(data => {
+            message.innerHTML = '<div class="success-message">' +
+                                '<strong>¡Éxito!</strong> Datos enviados correctamente.</div>';
+            form.reset();
+            window.history.replaceState({}, document.title, window.location.pathname);
+            setTimeout(() => {
+              message.innerHTML = "";
+            }, 5000);
 
-        if (emailInput && telefonoInput && aceptaDatosInput) {
-          const email = emailInput.value;
-          const telefono = telefonoInput.value;
-          const aceptaDatos = aceptaDatosInput.checked;
-
-          console.log('Correo electrónico:', email);
-          console.log('Teléfono:', telefono);
-          console.log('Acepta tratamiento de datos:', aceptaDatos);
-
-          // Aquí puedes agregar la lógica para enviar los datos a un servidor, etc.
-        } else {
-          console.error('No se encontraron todos los campos del formulario.');
-        }
+          })
+          .catch(error => {
+            console.error("Error al enviar:", error);
+            message.innerHTML = "<p style='color: red;'>Hubo un error al enviar el formulario.</p>";
+          });
       });
-    } else {
-      console.error('¡El formulario no fue encontrado después de cargar el DOM!');
     }
+
+
+    // const formularioContacto = document.getElementById('cash-unico');
+
+    // if (formularioContacto) {
+    //   // console.log('¡Formulario con ID "cash-unico" encontrado!');
+
+    //   formularioContacto.addEventListener('submit', function (event) {
+    //     event.preventDefault();
+    //     console.log('Formulario enviado (pero la página no se recargará).');
+
+    //     // Aquí va tu lógica para obtener los datos del formulario
+    //     const emailInput = formularioContacto.querySelector('input[type="email"]');
+    //     const telefonoInput = formularioContacto.querySelector('input[type="tel"]');
+    //     const aceptaDatosInput = formularioContacto.querySelector('input[type="checkbox"]');
+
+    //     if (emailInput && telefonoInput && aceptaDatosInput) {
+    //       const email = emailInput.value;
+    //       const telefono = telefonoInput.value;
+    //       const aceptaDatos = aceptaDatosInput.checked;
+
+    //       console.log('Correo electrónico:', email);
+    //       console.log('Teléfono:', telefono);
+    //       console.log('Acepta tratamiento de datos:', aceptaDatos);
+
+    //       // Aquí puedes agregar la lógica para enviar los datos a un servidor, etc.
+    //     } else {
+    //       console.error('No se encontraron todos los campos del formulario.');
+    //     }
+    //   });
+    // } else {
+    //   console.error('¡El formulario no fue encontrado después de cargar el DOM!');
+    // }
 
   </script>
 </body>

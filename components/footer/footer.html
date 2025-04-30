@@ -1,12 +1,14 @@
 <footer class="footer">
     <section>
-    <div class="footer-subscriber">
-        <label>Suscríbete y recibe nuestras noticias</label>
-        <div class="footer-subscriber-email">
-            <input type="text" id="email-footer" placeholder="" />
-            <button type="submit" class="boton-suscribete">Suscríbete</button>
+        <div class="footer-subscriber">
+            <label>Suscríbete y recibe nuestras noticias</label>
+            <form id="footer-form-action">
+                <div class="footer-subscriber-email">
+                    <input type="email" id="email-footer" placeholder="" required />
+                    <button type="submit" class="boton-suscribete" >Suscríbete</button>
+                </div>
+            </form>
         </div>
-    </div>
 
     <div class="footer-content">
         <div class="footer-logo">
@@ -58,4 +60,6 @@
         <p>TODOS LOS DERECHOS RESERVADOS 2025.</p>
     </div>
 </section>
+<script src="/components/footer/footer.js"></script>
+
 </footer>

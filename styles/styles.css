@@ -27,6 +27,18 @@ html {
   display: inline-block; /* Para que no ocupe todo el ancho */
 }
 
+.success-message {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 12px 16px;
+  border-left: 6px solid #198754;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
 
  /* Estilo para el div del loading */
  .loading {

@@ -5,6 +5,8 @@ window.addEventListener('load', function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
   const navLinks = document.querySelectorAll('.Navbar .nav-items a[data-target]');
   const contentArea = document.getElementById('content-area');
   const mainFooter = document.getElementById('main-footer'); 
@@ -97,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
   loadContent('./components/home/index.html');
+
+
+
+
+
 });
   
 
@@ -106,3 +113,4 @@ function scrollToTop() {
       behavior: 'smooth' // hace que el scroll sea suave
     });
   }
+
