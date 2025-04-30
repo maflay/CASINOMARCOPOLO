@@ -2,258 +2,257 @@
 <html>
 
 <head>
-    <title>Página de inicio</title>
+  <title>Página de inicio</title>
 </head>
 
-<body >
+<body>
 
-    <div class="container-ini" >
+  <div class="container-ini">
 
-        <!-- PRIMERA SECTION -->
-        <div class="slider-container" id="inicio">
-            <div class="slider-track" id="sliderTrack">
-              <div class="slide slide1"></div>
-              <div class="slide slide2"></div>
-              <div class="slide slide3"></div>
+    <!-- PRIMERA SECTION -->
+    <div class="slider-container" id="inicio">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+      </div>
+
+      <button class="arrow left" id="prevBtn">&#8249;</button>
+      <button class="arrow right" id="nextBtn">&#8250;</button>
+
+      <div class="dots" id="dotsContainer">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+      </div>
+    </div>
+
+
+
+    <section class="container-box">
+      <div class="box-content">
+        <div class="box-left">
+          <h1>Regístrate<br />
+            y obtén un bono<br />
+            Super cash<br />
+            de $40.000 pesos<br />
+            para que comiences<br />
+            a disfrutar de casino<br />
+            Marco Polo.</h1>
+          <br />
+          <p>
+            En Casino Marco Polo encuéntras más que<br />
+            casino, encuentras diversión, <br />
+            entretenimiento, amigos y muchos espacios<br />
+            para que la emoción nunca se detenga.
+          </p>
+        </div>
+        <div class="box-right">
+          <img src="resources/Recurso-7@2x.png" alt="logo"></img>
+          <br />
+          <br />
+
+          <form class="contact-form" id="cash-unico">
+            <input type="email" placeholder="Correo electrónico" required />
+            <input type="tel" placeholder="Teléfono" required />
+            <div class="datos-form">
+              <input type="checkbox" id="acepto-datos" /> <label for="acepto-datos">Acepto tratamientos de datos</label>
             </div>
-        
-            <button class="arrow left" id="prevBtn">&#8249;</button>
-            <button class="arrow right" id="nextBtn">&#8250;</button>
-        
-            <div class="dots" id="dotsContainer">
-              <div class="dot active" data-index="0"></div>
-              <div class="dot" data-index="1"></div>
-              <div class="dot" data-index="2"></div>
+            <div class='btn-form'>
+              <button type="submit" class="purple-button">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TARJETA-MYMAWI -->
+    <section class="container-tarjeta">
+      <div class='box-container-tarjeta'>
+        <div class='box-left-tarjeta'>
+          <div class='box-left-tarjeta-content'>
+            <h1>Obtén<br />
+              tu tarjeta<br />
+              Mymawi</h1>
+            <br />
+            <p>Con la Mymawi card siempre ganas,<br />
+              regístrate y obtén beneficios exclusivos para<br />
+              que tengas una experiencia completa en<br />
+              casino Marco Polo.</p>
+            <br />
+            <button class='btn-tarjeta'>Quiero mi tarjeta</button>
+          </div>
+        </div>
+        <div class='box-rigth-tarjeta'>
+          <img class='' src="resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDER -->
+
+    <section class="slider-muestras">
+      <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
+        <div class="slide-muestras bg1-muestra"></div>
+        <div class="slide-muestras bg2-muestra"></div>
+        <div class="slide-muestras bg3-muestra"></div>
+      </div>
+
+      <!-- Radios -->
+      <div class="navigation-muestras">
+        <input type="radio" name="slider-muestras" id="trigger1-muestra" checked>
+        <label for="trigger1-muestra"></label>
+
+        <input type="radio" name="slider-muestras" id="trigger2-muestra">
+        <label for="trigger2-muestra"></label>
+
+        <input type="radio" name="slider-muestras" id="trigger3-muestra">
+        <label for="trigger3-muestra"></label>
+      </div>
+
+      <!-- Flechas -->
+      <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
+      <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
+    </section>
+
+
+
+    <!-- PROMOCIONES -->
+
+    <section class="promocion-container">
+      <div class="promo">
+        <h1>PROMOCIONES</h1>
+      </div>
+      <section class="card-view">
+        <article class="card">
+          <div class="card-image">
+            <img src="resources/Recurso-4@2x.png" alt="Imagen 1" />
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-content">
+            <h1>Ruleta de premios</h1>
+            <p>
+              En Casino Marco Polo encuentras
+              más que casino, encuentras
+              diversión, entretenimiento, amigos
+              y muchos espacios para que la
+              emoción nunca se detenga.
+            </p>
+            <button class="purple-button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="resources/Recurso-5@2x.png" alt="Imagen 2" />
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-content">
+            <h1>
+              Mr. Bonus
+            </h1>
+            <p>
+              En Casino Marco Polo encuentras
+              más que casino, encuentras
+              diversión, entretenimiento, amigos
+              y muchos espacios para que la
+              emoción nunca se detenga.
+            </p>
+            <button class="purple-button">Ver más</button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!-- ASOCIADOS -->
+
+    <section>
+      <div class="container-asociar">
+        <div class="box-container-asociar">
+          <div class="box-left-asociar">
+            <div class="box-left-asociar-content">
+              <img class="img-club" src="../../resources/Recurso-8@2x.png" alt="img-asociar">
+              <br><br><br>
+              <h2>
+                Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
+                como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
+                ahora.
+              </h2>
+              <br><br><br>
+              <div class="club-content">
+                <button class="btn-asociar">Quiero asociarme</button>
+              </div>
             </div>
           </div>
-          
-          
+          <div class="box-rigth-asociar">
+            <img src="../../resources/Recurso-2@2x.png" alt="img-asociar">
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="container-box">
-            <div class="box-content">
-                <div class="box-left">
-                    <h1>Regístrate<br />
-                        y obtén un bono<br />
-                        Super cash<br />
-                        de $40.000 pesos<br />
-                        para que comiences<br />
-                        a disfrutar de casino<br />
-                        Marco Polo.</h1>
-                    <br />
-                    <p>
-                        En Casino Marco Polo encuéntras más que<br />
-                        casino, encuentras diversión, <br />
-                        entretenimiento, amigos y muchos espacios<br />
-                        para que la emoción nunca se detenga.
-                    </p>
-                </div>
-                <div class="box-right">
-                    <img src="resources/Recurso-7@2x.png" alt="logo"></img>
-                    <br />
-                    <br />
-                    <form class="contact-form">
-                        <input type="email" placeholder="Correo electrónico" required />
-                        <input type="tel" placeholder="Teléfono" required />
-                        <div class="datos-form">
-                            <input type="checkbox" />
-                            <label>
-                                Acepto tratamientos de datos
-                            </label>
-                        </div>
-                        <div class='btn-form'>
-                            <button class="purple-button">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+  </div>
 
+  <script>
+    // Slider Principal
+    const track = document.getElementById("sliderTrack");
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-        <!-- TARJETA-MYMAWI -->
-        <section class="container-tarjeta">
-            <div class='box-container-tarjeta'>
-                <div class='box-left-tarjeta'>
-                    <div class='box-left-tarjeta-content'>
-                        <h1>Obtén<br />
-                            tu tarjeta<br />
-                            Mymawi</h1>
-                        <br />
-                        <p>Con la Mymawi card siempre ganas,<br />
-                            regístrate y obtén beneficios exclusivos para<br />
-                            que tengas una experiencia completa en<br />
-                            casino Marco Polo.</p>
-                        <br />
-                        <button class='btn-tarjeta'>Quiero mi tarjeta</button>
-                    </div>
-                </div>
-                <div class='box-rigth-tarjeta'>
-                    <img class='' src="resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
-                </div>
-            </div>
-        </section>
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+    let interval;
 
-        <!-- SLIDER -->
+    function goToSlide(index) {
+      track.style.transform = `translateX(-${index * 100}vw)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+      currentIndex = index;
+    }
 
-        <section class="slider-muestras">
-            <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
-              <div class="slide-muestras bg1-muestra"></div>
-              <div class="slide-muestras bg2-muestra"></div>
-              <div class="slide-muestras bg3-muestra"></div>
-            </div>
-        
-            <!-- Radios -->
-            <div class="navigation-muestras">
-              <input type="radio" name="slider-muestras" id="trigger1-muestra" checked>
-              <label for="trigger1-muestra"></label>
-        
-              <input type="radio" name="slider-muestras" id="trigger2-muestra">
-              <label for="trigger2-muestra"></label>
-        
-              <input type="radio" name="slider-muestras" id="trigger3-muestra">
-              <label for="trigger3-muestra"></label>
-            </div>
-        
-            <!-- Flechas -->
-            <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
-            <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
-          </section>
+    function nextSlide() {
+      let index = (currentIndex + 1) % totalSlides;
+      goToSlide(index);
+    }
 
-        
+    function prevSlide() {
+      let index = (currentIndex - 1 + totalSlides) % totalSlides;
+      goToSlide(index);
+    }
 
-        <!-- PROMOCIONES -->
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 5000);
+    }
 
-        <section class="promocion-container">
-            <div class="promo">
-                <h1>PROMOCIONES</h1>
-            </div>
-            <section class="card-view">
-                <article class="card">
-                    <div class="card-image">
-                        <img src="resources/Recurso-4@2x.png" alt="Imagen 1" />
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="card-content">
-                        <h1>Ruleta de premios</h1>
-                        <p>
-                            En Casino Marco Polo encuentras
-                            más que casino, encuentras
-                            diversión, entretenimiento, amigos
-                            y muchos espacios para que la
-                            emoción nunca se detenga.
-                        </p>
-                        <button class="purple-button">Ver más</button>
-                    </div>
-                </article>
+    // Botones
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetInterval();
+    });
 
-                <article class="card">
-                    <div class="card-image">
-                        <img src="resources/Recurso-5@2x.png" alt="Imagen 2" />
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="card-content">
-                        <h1>
-                            Mr. Bonus
-                        </h1>
-                        <p>
-                            En Casino Marco Polo encuentras
-                            más que casino, encuentras
-                            diversión, entretenimiento, amigos
-                            y muchos espacios para que la
-                            emoción nunca se detenga.
-                        </p>
-                        <button class="purple-button">Ver más</button>
-                    </div>
-                </article>
-            </section>
-        </section>
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetInterval();
+    });
 
-        <!-- ASOCIADOS -->
+    // Dots
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        let index = parseInt(dot.dataset.index);
+        goToSlide(index);
+        resetInterval();
+      });
+    });
 
-        <section>
-            <div class="container-asociar">
-                <div class="box-container-asociar">
-                    <div class="box-left-asociar">
-                        <div class="box-left-asociar-content">
-                            <img class="img-club" src="../../resources/Recurso-8@2x.png" alt="img-asociar">
-                            <br><br><br>
-                            <h2>
-                                Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
-                                como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
-                                ahora.
-                            </h2>
-                            <br><br><br>
-                            <div class="club-content">
-                                <button class="btn-asociar">Quiero asociarme</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-rigth-asociar">
-                        <img src="../../resources/Recurso-2@2x.png" alt="img-asociar">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-    <script>
-        // Slider Principal
-        const track = document.getElementById("sliderTrack");
-        const dots = document.querySelectorAll(".dot");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-    
-        let currentIndex = 0;
-        const totalSlides = dots.length;
-        let interval;
-    
-        function goToSlide(index) {
-          track.style.transform = `translateX(-${index * 100}vw)`;
-          dots.forEach(dot => dot.classList.remove("active"));
-          dots[index].classList.add("active");
-          currentIndex = index;
-        }
-    
-        function nextSlide() {
-          let index = (currentIndex + 1) % totalSlides;
-          goToSlide(index);
-        }
-    
-        function prevSlide() {
-          let index = (currentIndex - 1 + totalSlides) % totalSlides;
-          goToSlide(index);
-        }
-    
-        function resetInterval() {
-          clearInterval(interval);
-          interval = setInterval(nextSlide, 5000);
-        }
-    
-        // Botones
-        nextBtn.addEventListener("click", () => {
-          nextSlide();
-          resetInterval();
-        });
-    
-        prevBtn.addEventListener("click", () => {
-          prevSlide();
-          resetInterval();
-        });
-    
-        // Dots
-        dots.forEach(dot => {
-          dot.addEventListener("click", () => {
-            let index = parseInt(dot.dataset.index);
-            goToSlide(index);
-            resetInterval();
-          });
-        });
-    
-        // Auto Slide
-        interval = setInterval(nextSlide, 5000);
+    // Auto Slide
+    interval = setInterval(nextSlide, 5000);
 
 
-        // Slider Muestras
-        const trackMuestras = document.getElementById("sliderTrackMuestras");
+    // Slider Muestras
+    const trackMuestras = document.getElementById("sliderTrackMuestras");
     const radiosMuestras = document.querySelectorAll('input[name="slider-muestras"]');
     const labelsMuestras = document.querySelectorAll(".navigation-muestras label");
     const prevBtnMuestra = document.getElementById("prevBtnMuestra");
@@ -302,9 +301,43 @@
     });
 
     intervalMuestra = setInterval(nextSlideMuestra, 3000);
-      </script>
-      
-      
+
+
+    // ENVIO DE CASH
+
+    const formularioContacto = document.getElementById('cash-unico');
+
+    if (formularioContacto) {
+      console.log('¡Formulario con ID "cash-unico" encontrado!');
+
+      formularioContacto.addEventListener('submit', function (event) {
+        event.preventDefault();
+        console.log('Formulario enviado (pero la página no se recargará).');
+
+        // Aquí va tu lógica para obtener los datos del formulario
+        const emailInput = formularioContacto.querySelector('input[type="email"]');
+        const telefonoInput = formularioContacto.querySelector('input[type="tel"]');
+        const aceptaDatosInput = formularioContacto.querySelector('input[type="checkbox"]');
+
+        if (emailInput && telefonoInput && aceptaDatosInput) {
+          const email = emailInput.value;
+          const telefono = telefonoInput.value;
+          const aceptaDatos = aceptaDatosInput.checked;
+
+          console.log('Correo electrónico:', email);
+          console.log('Teléfono:', telefono);
+          console.log('Acepta tratamiento de datos:', aceptaDatos);
+
+          // Aquí puedes agregar la lógica para enviar los datos a un servidor, etc.
+        } else {
+          console.error('No se encontraron todos los campos del formulario.');
+        }
+      });
+    } else {
+      console.error('¡El formulario no fue encontrado después de cargar el DOM!');
+    }
+
+  </script>
 </body>
 
 </html>

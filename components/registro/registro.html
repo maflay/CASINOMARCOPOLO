@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div>
+        <div class="container-register">
+            <form id="registro-form" action="/submit-registro" method="POST" class="form-register">
+                <h1>Registro</h1>
+                <input type="text" id="nombre-register" name="nombre" placeholder="Nombre" required autocomplete="current-password">
+
+                <input type="email" id="email-register" name="email" placeholder="Email" required autocomplete="current-password">
+
+                <input type="password" id="contraseña-register" name="contraseña" placeholder="Contraseña" required autocomplete="current-password">
+
+                <button type="submit" class="purple-button">Registrar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const formularioRegistro = document.getElementById('registro-form');
+
+
+        if(formularioRegistro){
+
+       console.log("formulario");
+
+        formularioRegistro.addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+           
+
+            const nombreInput = formularioRegistro.querySelector('input[id="nombre-register"]');
+            const emailInput = formularioRegistro.querySelector('input[id="email-register"]');
+            const contraseñaInput = formularioRegistro.querySelector('input[id="password-register"]');
+
+            if(nombre && email && contraseña) {
+                
+                const nombre = nombreInput.value;
+                const email = emailInput.value;
+                const contraseña = contraseñaInput.value;
+
+                console.log('Nombre:', nombre);
+                console.log('Email:', email);  
+                console.log('Contraseña:', contraseña);
+
+            }
+
+
+            // const formData = new FormData(formularioRegistro);
+            // const data = Object.fromEntries(formData.entries());
+            // fetch('/submit-registro', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify(data)
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     if (data.success) {
+            //         alert('Registro exitoso!');
+            //         window.location.href = '/login'; // Redirigir a la página de inicio de sesión
+            //     } else {
+            //         alert('Error en el registro: ' + data.message);
+            //     }
+            // })
+            // .catch(error => console.error('Error:', error));
+
+
+        });
+    }
+    </script>
+</body>
+
+</html>
