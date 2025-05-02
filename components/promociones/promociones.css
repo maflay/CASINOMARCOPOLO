@@ -453,31 +453,5 @@
     object-fit: contain;
   }
 
-  /* EXPERIENCIAS */
-
-  .container-experiences .experiences-section {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-
-  }
-  .container-experiences .experiences-section .experiences-grid{
-    padding: 10%;
-  }
-  
-  .container-experiences .experiences-section h2 {
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #06113C;
-  }
-
-  .container-experiences .restaurant-card {
-    width: 100%;
-  }
-
-  .container-experiences .member-card {
-    width: 100%;
-  }
 
 }
