@@ -12,6 +12,76 @@ html {
 }
 
 
+/* DISEÑO DE BOTONES */
+.purple-button {
+  padding: 10px 20px;
+  background-color: #5100ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  width: auto;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.purple-button:hover {
+  background-color: #31018a;
+}
+
+.btn-design1 {
+  padding: 8px 16px;
+  background-color: #5000fc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  font-size: 14px;
+  font-weight: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.btn-design1:hover {
+  background-color: white;
+  color: #5000fc;
+}
+
+
+.btn-design2 {
+  padding: 8px 16px;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.btn-design2:hover {
+  background-color: #5000fc;
+  color: white;
+}
+
+
+/* TRANSICION DE ITEMS */
+
+
+.titulo {
+  opacity: 0; /* Empieza oculto */
+  transform: translateY(50px); /* Opcional: empieza más abajo */
+  transition: transform 1.5s ease-out, opacity 0.2s ease-out;
+}
+
+
+/* DISEÑO DE LINEAS */
+
+
 .linea-horizontal {
   width: 100%; /* Ocupa todo el ancho de su contenedor padre */
   height: 2px;   /* Grosor de la línea */
@@ -27,6 +97,8 @@ html {
   display: inline-block; /* Para que no ocupe todo el ancho */
 }
 
+
+/* MENSAJE DE EXITO */
 .success-message {
   background-color: #d1e7dd;
   color: #0f5132;
@@ -92,3 +164,14 @@ html {
     transform: rotate(45deg);
   }
   @keyframes l10 {to{transform: rotate(.5turn)}}
+
+
+
+  @media  (max-width: 768px){
+    .purple-button {
+      font-size: 13px;
+      width: auto;
+      text-align: center;
+    }
+
+  }

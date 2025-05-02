@@ -119,6 +119,15 @@
     display: block;
   }
 
+  
+
+@media (max-width: 768px) {
+    .second-section{
+        padding: 0px 0px 0px 0px;
+        background-color: white;
+    }
+}
+
 /* TIPOS DE CASINOS */
 .con-cas .types-casinos {
     height: auto;
@@ -232,11 +241,11 @@
     overflow: hidden;
     transition: transform 0.5s ease;
   }
-  .section-noche .card-noche img:hover
-{
-    -webkit-transform:scale(1.3);
-    transform:scale(1.3);
-    transition: transform 0.5s ease;
+
+  .section-noche .card-noche img:hover{
+    transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
   
   .section-noche .card-content {
@@ -286,8 +295,19 @@
     color: #777;
   }
 
-  
-
+@media screen and (max-width: 768px) {
+    .section-noche .card-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .section-noche .card-noche {
+        min-width: 100%;
+      }
+      
+    
+}
 
 /* STAFF */
 .con-cas .staff-casinos {

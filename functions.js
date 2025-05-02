@@ -101,7 +101,32 @@ document.addEventListener('DOMContentLoaded', () => {
   loadContent('./components/home/index.html');
 
 
+  window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.titulo');
+    const scrollY = window.scrollY;
 
+    elements.forEach(el => {
+        const opacity = Math.min(scrollY / 500, 1); // de 0 a 1
+        const translateY = Math.max(50 - scrollY * 0.1, 0); // desde 50px hasta 0px
+
+        el.style.transform = `translateY(${translateY}px)`;
+        el.style.opacity = opacity;
+    });
+});
+
+    
+    const scrollToTopButton = document.getElementById('scrollToTopButton');
+    scrollToTopButton.addEventListener('click', () => {
+        scrollToTop();
+    });
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+        scrollToTopButton.style.display = 'block'; // Muestra el botón
+        } else {
+        scrollToTopButton.style.display = 'none'; // Oculta el botón
+        }
+    });
 
 
 });

@@ -38,27 +38,9 @@
 .container-clubnavegantes .section-club-start .content-club-start p {
     color: #fff;
     font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-.container-clubnavegantes .section-club-start .content-club-start button {
-    margin-top: 15px;
-    background-color: #5100ff;
-    padding: 8px 16px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 50%;
-    font-size: 14px;
-    font-weight: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.container-clubnavegantes .section-club-start .content-club-start button:hover {
-    background-color: #fff;
-    color: #5100ff;
-    transition: background-color 0.3s ease;
-}
 
 .container-clubnavegantes .sports-club {
     position: relative;
@@ -78,26 +60,35 @@
     width: 20%;
     height: 20%;
     padding-right: 20px;
+    margin-left: 10%;
 }
+
+.container-clubnavegantes .sports-club p {
+    padding-left: 20px;
+    margin-right: 10%;
+}
+
+/* SEGUNDA SECTION */
 
 .section-sports-club {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
     color: rgb(27, 27, 27);
     background-color: rgb(221, 221, 221);
     width: 100%;
     height: 40vh;
 }
 
+.title-sports-club {
+    width: 70%;
+}
+
 .info-section {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    padding: 40px;
-    font-family: Arial, sans-serif;
 }
 
 .info-box {
@@ -137,7 +128,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
     width: 100%;
     height: auto;
 }
@@ -147,11 +137,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 5%;
+    width: 80%;
+    gap: 20px;
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-left {
-    padding: 5%;
     flex: 0 0 50%;
 }
 
@@ -285,4 +276,34 @@
     .container-clubnavegantes .section-club-start .content-club-start p {
         font-size: 20px;
     }
+
+    .container-clubnavegantes .sports-club {
+        flex-wrap: wrap;
+    }
+
+    .container-clubnavegantes .sports-club img {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 20px;
+    }
+
+    .container-clubnavegantes .sports-club p {
+        width: 80%;
+    }
+
+    /* INFORMACION */
+    .info-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-sports-club{
+
+    }
+
+    .info-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }
