@@ -103,30 +103,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const elements = document.querySelectorAll('.titulo');
-    const scrollY = window.scrollY;
 
     elements.forEach(el => {
-        const opacity = Math.min(scrollY / 500, 1); // de 0 a 1
-        const translateY = Math.max(50 - scrollY * 0.1, 0); // desde 50px hasta 0px
+        // Si el elemento ya está marcado como "hecho", saltamos
+        if (el.dataset.animated === 'true') {
+            return;
+        }
+
+        const scrollY = window.scrollY;
+        const opacity = Math.min(scrollY / 500, 1);
+        const translateY = Math.max(50 - scrollY * 0.1, 0);
 
         el.style.transform = `translateY(${translateY}px)`;
         el.style.opacity = opacity;
+
+        // Cuando la animación ya llegó al máximo, marcamos como terminado
+        if (opacity >= 1) {
+            el.dataset.animated = 'true'; // esto evita seguir actualizando
+        }
     });
 });
 
     
-    const scrollToTopButton = document.getElementById('scrollToTopButton');
-    scrollToTopButton.addEventListener('click', () => {
-        scrollToTop();
-    });
+    // const scrollToTopButton = document.getElementById('scrollToTopButton');
+    // scrollToTopButton.addEventListener('click', () => {
+    //     scrollToTop();
+    // });
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-        scrollToTopButton.style.display = 'block'; // Muestra el botón
-        } else {
-        scrollToTopButton.style.display = 'none'; // Oculta el botón
-        }
-    });
+    // window.addEventListener('scroll', () => {
+    //     if (window.scrollY > 300) {
+    //     scrollToTopButton.style.display = 'block'; // Muestra el botón
+    //     } else {
+    //     scrollToTopButton.style.display = 'none'; // Oculta el botón
+    //     }
+    // });
 
 
 });
