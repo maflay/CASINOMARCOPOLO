@@ -101,7 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadContent('./components/home/index.html');
 
 
-  window.addEventListener('scroll', () => {
+//   ANIMACIONES
+
+
+
+window.addEventListener('scroll', () => {
     const elements = document.querySelectorAll('.titulo');
 
     elements.forEach(el => {
@@ -110,19 +114,86 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-        const translateY = Math.max(50 - scrollY * 0.1, 0);
+        // Verificar si está en el viewport
+        const rect = el.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
 
-        el.style.transform = `translateY(${translateY}px)`;
-        el.style.opacity = opacity;
+        if (inViewport) {
+            const scrollY = window.scrollY;
+            const opacity = Math.min(scrollY / 500, 1);
+            const translateY = Math.max(50 - scrollY * 0.1, 0);
 
-        // Cuando la animación ya llegó al máximo, marcamos como terminado
-        if (opacity >= 1) {
-            el.dataset.animated = 'true'; // esto evita seguir actualizando
+            el.style.transform = `translateY(${translateY}px)`;
+            el.style.opacity = opacity;
+
+            // Cuando la animación ya llegó al máximo, marcamos como terminado
+            if (opacity >= 1) {
+                el.dataset.animated = 'true';
+            }
         }
     });
 });
+
+
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.titulor');
+
+    elements.forEach(el => {
+        if (el.dataset.animated === 'true') {
+            return;
+        }
+
+        // Comprobamos si el elemento está en el viewport
+        const rect = el.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inViewport) {
+            const scrollY = window.scrollY;
+            const opacity = Math.min(scrollY / 500, 1);
+
+            // Horizontal: desde +100px a 0px
+            const translateX = Math.max(50 - scrollY * 0.1, 0);
+
+            el.style.transform = `translateX(${translateX}px)`;
+            el.style.opacity = opacity;
+
+            if (opacity >= 1) {
+                el.dataset.animated = 'true';
+            }
+        }
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.titulol');
+
+    elements.forEach(el => {
+        if (el.dataset.animated === 'true') {
+            return;
+        }
+
+        // Comprobamos si el elemento está en el viewport
+        const rect = el.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inViewport) {
+            const scrollY = window.scrollY;
+            const opacity = Math.min(scrollY / 500, 1);
+
+            // Horizontal: desde -100px a 0px (hacia la izquierda)
+            const translateX = Math.min(-50 + scrollY * 0.1, 0);
+
+            el.style.transform = `translateX(${translateX}px)`;
+            el.style.opacity = opacity;
+
+            if (opacity >= 1) {
+                el.dataset.animated = 'true';
+            }
+        }
+    });
+});
+
+
 
     
     // const scrollToTopButton = document.getElementById('scrollToTopButton');
@@ -148,4 +219,3 @@ function scrollToTop() {
       behavior: 'smooth' // hace que el scroll sea suave
     });
   }
-

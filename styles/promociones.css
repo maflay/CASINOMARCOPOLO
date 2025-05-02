@@ -80,7 +80,7 @@
   margin-bottom: 20px;
 }
 
-.purple-button {
+/* .purple-button {
   padding: 10px 20px;
   background-color: #5100ff;
   color: white;
@@ -95,7 +95,7 @@
 
 .purple-button:hover {
   background-color: #31018a;
-}
+} */
 
 /* ✅ Responsive Breakpoints */
 @media (max-width: 768px) {

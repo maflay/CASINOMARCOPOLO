@@ -14,6 +14,7 @@ html {
 
 /* DISEÑO DE BOTONES */
 .purple-button {
+  display: inline-block;
   padding: 10px 20px;
   background-color: #5100ff;
   color: white;
@@ -28,7 +29,8 @@ html {
 }
 
 .purple-button:hover {
-  background-color: #31018a;
+  background-color: #2C16B0;
+  transition: background-color 0.3s ease;
 }
 
 .btn-design1 {
@@ -76,6 +78,33 @@ html {
   opacity: 0; /* Empieza oculto */
   transform: translateY(50px); /* Opcional: empieza más abajo */
   transition: transform 1.5s ease-out, opacity 0.2s ease-out;
+}
+
+.titulor {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 0.9s ease-out, opacity 0.5s ease-out;
+}
+
+.titulol {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 0.9s ease-out, opacity 0.5s ease-out;
+}
+
+.item {
+  animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 

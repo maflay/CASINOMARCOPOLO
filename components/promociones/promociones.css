@@ -15,13 +15,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../resources/bg-home.jpg);
+  background-image: url(../../resources/promo1.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0.3;
   z-index: -1;
 }
-
 
 
 /* OFERTA */
@@ -227,17 +226,19 @@
 
 .container-promo .snip1482 {
   display: flex;
-  align-items: center;
-  width: 80%;
-  max-width: 1000px;
-  background: transparent;
-  text-align: left;
-  background-color: #2b344d;
+    width: 1000px;  /* ancho fijo */
+    height: 50vh;  /* alto fijo */
+    background-color: #2b344d;
+    overflow: hidden;
 }
 
 .container-promo .snip1482 figcaption {
   width: 40%;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
 }
 
 .container-promo .snip1482 figcaption .button-container {
@@ -245,12 +246,11 @@
   /* Para colocar los botones uno al lado del otro */
   gap: 20px;
   /* Espacio entre los botones */
-  margin-top: 40%;
+  margin-top: 60%;
 }
 
-.book-now {
+/* .book-now {
   background-color: #6622F8;
-  /* Rojo similar al de la imagen */
   color: white;
   border: none;
   padding: 12px 24px;
@@ -261,19 +261,16 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  /* Bordes ligeramente redondeados */
   transition: background-color 0.3s ease;
-  /* Transición suave al pasar el ratón */
 }
 
 .book-now:hover {
   background-color: #2C16B0;
-  /* Un tono de rojo más oscuro al pasar el ratón */
-}
+  transition: background-color 0.3s ease;
+} */
 
 .learn-more {
   background-color: transparent;
-  /* Fondo transparente */
   color: white;
   border: none;
   padding: 12px 24px;
@@ -283,9 +280,7 @@
   font-size: 16px;
   cursor: pointer;
   position: relative;
-  /* Para poder posicionar el pseudo-elemento del subrayado */
   transition: color 0.3s ease;
-  /* Transición suave al pasar el ratón */
 }
 
 .learn-more::after {
@@ -293,15 +288,12 @@
   position: absolute;
   left: 0;
   bottom: 5px;
-  /* Ajusta la distancia del subrayado al texto */
   width: 100%;
   height: 1px;
   background-color: white;
   transform: scaleX(0);
-  /* El subrayado inicialmente no es visible */
   transform-origin: left center;
   transition: transform 0.3s ease;
-  /* Transición suave para la aparición del subrayado */
 }
 
 .learn-more:hover {
@@ -316,9 +308,8 @@
 
 .container-promo .snip1482 img {
   width: 60%;
-  height: auto;
-  object-fit: contain;
-  transition: border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 100%;
+  object-fit: cover; /* Para que siempre llene sin deformarse */
 }
 
 
@@ -335,6 +326,7 @@
   line-height: 1.5;
   transition: transform 0.6s ease;
 }
+
 
 @media (max-width: 768px) {}
 
@@ -424,6 +416,8 @@
   }
 
   .container-promo .snip1482 {
+    width: 100%;
+    height: auto;
     display: contents;
     flex-direction: row-reverse;
     max-width: 100%;
@@ -449,7 +443,7 @@
 
   .container-promo .snip1482 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
   }
 

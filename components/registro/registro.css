@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    /* background-image: url(/resources/fondo-registro.jpg); */
+    background-image: url(/resources/fondo-registro.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;

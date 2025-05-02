@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <title>Registro</title>
 </head>
 
 <body>
-    <div>
+    <div id="registro">
         <div class="container-register">
             <form id="registro-form" class="form-register">
                 <h1>Registro</h1>
-                <input type="text" id="nombre-register" name="nombre" placeholder="Nombre" required autocomplete="current-password">
-                <input type="correo" id="correo-register" name="correo" placeholder="Correo" required autocomplete="current-password">
-                <input type="number" id="telefono-register" name="telefono" placeholder="Teléfono" required autocomplete="current-password">
-                <input type="direccion" id="direccion-register" name="direccion" placeholder="Dirección" required autocomplete="current-password">
-                <input type="password" id="contraseña-register" name="contraseña" placeholder="Contraseña" required autocomplete="current-password">
-                <input type="password" id="confirmar-contraseña-register" name="confirmar-contraseña" placeholder="Confirmar Contraseña" required autocomplete="current-password">
-                <label >Fecha de nacimiento:</label>
+                <input type="text" id="nombre-register" name="nombre" placeholder="Nombre" required
+                    autocomplete="current-password">
+                <input type="correo" id="correo-register" name="correo" placeholder="Correo" required
+                    autocomplete="current-password">
+                <input type="number" id="telefono-register" name="telefono" placeholder="Teléfono" required
+                    autocomplete="current-password">
+                <input type="direccion" id="direccion-register" name="direccion" placeholder="Dirección" required
+                    autocomplete="current-password">
+                <input type="password" id="contraseña-register" name="contraseña" placeholder="Contraseña" required
+                    autocomplete="current-password">
+                <input type="password" id="confirmar-contraseña-register" name="confirmar-contraseña"
+                    placeholder="Confirmar Contraseña" required autocomplete="current-password">
+                <label>Fecha de nacimiento:</label>
                 <input type="date" id="fecha-nacimiento" name="fecha" placeholder="Fecha de nacimiento" required>
                 <button type="submit" class="purple-button">Registrar</button>
             </form>
@@ -27,35 +35,37 @@
     <script>
         document.getElementById("registro-form").addEventListener("submit", function (e) {
             e.preventDefault();
-        
+
             const form = e.target;
             const formData = new FormData(form);
-        
+
             const contraseña = formData.get("contraseña");
             const confirmar = formData.get("confirmar-contraseña");
-        console.log("entro a la funcion");
+            console.log("entro a la funcion");
             if (contraseña !== confirmar) {
                 alert("Las contraseñas no coinciden.");
                 return;
             }
-        
+
             fetch("/components/registro/registro-cliente.php", {
                 method: "POST",
                 body: formData,
             })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                form.reset();
-                history.replaceState(null, "", location.pathname); // Limpia la URL
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("Ocurrió un error al registrar.");
-            });
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                    form.reset();
+                    window.location.href = '../../';
+                    history.replaceState(null, "", location.pathname); // Limpia la URL
+                    // window.history.replaceState({}, document.title, window.location.pathname);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Ocurrió un error al registrar.");
+                });
         });
-        </script>
-        
+    </script>
+
 </body>
 
 </html>

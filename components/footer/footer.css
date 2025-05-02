@@ -101,7 +101,7 @@
     font-weight: bold;
     font-style: italic;
   }
-  .footer .footer-subscriber button {
+  .footer .footer-subscriber .boton-suscribete {
     background-color: #fff;
     color: #5000fc;
     width: auto;
@@ -113,9 +113,12 @@
     height: 60px; 
    justify-self: start; 
    transition: background-color 0.3s, color 0.3s; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
   }
 
-  .footer .footer-subscriber button:hover {
+  .footer .footer-subscriber .boton-suscribete:hover {
     background-color: #fff;
     color: #5000fc;
     background-color: #5000fc; 
