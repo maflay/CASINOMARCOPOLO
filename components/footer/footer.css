@@ -180,6 +180,7 @@
       padding: 40px 20px;
     }
   
+   
     .footer .footer-subscriber {
       margin-bottom: 30px;
       height: auto;
@@ -188,6 +189,10 @@
     .footer .footer-subscriber input {
       font-size: 20px;
       height: 50px;
+    }
+
+    .footer .footer-subscriber .boton-suscribete {
+      height: 50px; 
     }
   
     .footer .footer-content {

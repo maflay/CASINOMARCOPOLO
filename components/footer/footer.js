@@ -4,12 +4,12 @@ const formularioFooter = document.getElementById('footer-form-action');
       formularioFooter.addEventListener('submit', function (event) {
           event.preventDefault(); // Evita el envío del formulario por defecto
 
-          const emailInput = formularioFooter.querySelector('input[id="email-footer"]');
-          const email = emailInput.value;
+        //   const emailInput = formularioFooter.querySelector('input[id="email-footer"]');
+        //   const email = emailInput.value;
 
-          console.log('Email:', email);
-          window.location.href = '/components/registro/registro.html';
-
+        //   console.log('Email:', email);
+        //   window.location.href = '/components/registro/registro.html';
+        navegarA('/components/registro/registro.html');
           // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
       });
   }

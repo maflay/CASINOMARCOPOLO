@@ -1,0 +1,7 @@
+.banner-promo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}

@@ -47,17 +47,27 @@
                     </div>
                 </div>
 
-                <div class="member-card item">
+                <form class="member-card item" id="member-card">
                     <div class="member-content">
                         <div class="icon">​💳​</div>
                         <p><strong>Los miembros disfrutan de recomendaciones gastronómicas únicas</strong></p>
-                        <button>Registrate</button>
+                        <button type="submit">Registrate</button>
                     </div>
-                </div>
+                </form>
 
             </div>
         </div>
     </section>
+    <script>
+        const formularioMember = document.getElementById('member-card');
+        if (formularioMember) {
+            formularioMember.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita el envío del formulario por defecto
+                window.location.href = '/components/registro/registro.html';
+                // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
+            });
+        }
+    </script>
 </body>
 
 </html>

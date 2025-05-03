@@ -297,13 +297,28 @@
         flex-wrap: wrap;
     }
 
-    .section-sports-club{
-
+    .section-sports-club {
+        height: 60vh;
     }
 
-    .info-section{
+    .info-section {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    /* APUESTA */
+    .container-apuesta .apuesta-deportiva {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    /* ANUNCIO */
+
+    .container-apuesta-sitio .apuesta-sitio {
+        width: 80%;
     }
 
 }

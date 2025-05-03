@@ -26,7 +26,7 @@
           <h2>OFERTAS</h2>
           <p>Es tu momento de consentirte en MARCO POLO. Con estas magníficas ofertas en hoteles,
             tienes más motivos para quedarte y relajarte como un buen MARCO POLO..</p>
-          <a href="#" >Ver todas las ofertas &rsaquo;</a>
+          <a href="#">Ver todas las ofertas &rsaquo;</a>
         </div>
 
         <div class="deals-cards">
@@ -65,33 +65,36 @@
     </section>
 
     <!-- PROMO DETALLE -->
-
     <section>
       <div class="promo-details">
         <figure class="snip1482">
-            <figcaption>
+          <figcaption>
+            <form id="promosnip">
               <h2>Trato exclusivo</h2>
               <p>Siente un competidor VIP, con un trato especial y esclusivo
                 de parte de nuestros dealers
                 sientete comodo al planificar tus jugadas, siempre que juegues
                 tendras un placer abundante de atencion.</p>
               <div class="button-container titulor">
-                <button class="purple-button">REGISTRATE</button>
+                <button type="submit" class="purple-button">REGISTRATE</button>
                 <button class="learn-more">CONOCER MAS</button>
               </div>
-            </figcaption>
-            <img src="/../../resources/casino-en-vivo-2.png" alt="Casino Marco Polo 1" />
+            </form>
+          </figcaption>
+          <img src="/../../resources/casino-en-vivo-2.png" alt="Casino Marco Polo 1" />
         </figure>
         <figure class="snip1482">
           <figcaption>
-            <h2>CASINO MARCO POLO</h2>
-            <p>Gira, tira o sortea para conseguir tu próxima victoria.
-              Desde clásicos estratégicos como la ruleta americana hasta
-              el juego Blackjack, queremos que todos se sientan como en casa.</p>
-            <div class="button-container titulor">
-              <button class="purple-button">REGISTRATE</button>
-              <button class="learn-more">CONOCER MAS</button>
-            </div>
+            <form id="promosnip2">
+              <h2>CASINO MARCO POLO</h2>
+              <p>Gira, tira o sortea para conseguir tu próxima victoria.
+                Desde clásicos estratégicos como la ruleta americana hasta
+                el juego Blackjack, queremos que todos se sientan como en casa.</p>
+              <div class="button-container titulor">
+                <button type="submit" class="purple-button">REGISTRATE</button>
+                <button class="learn-more">CONOCER MAS</button>
+              </div>
+            </form>
           </figcaption>
           <img src="/../../resources/IMG_0170.jpg" alt="Casino Marco Polo 1" />
         </figure>
@@ -99,10 +102,28 @@
     </section>
 
     <!-- ULTIMA SECTION PROMOCION -->
-    
+
   </div>
 
-  <script src="/promociones.js"></script>
+  <script>
+    const registerPromo = document.getElementById('promosnip');
+    if (registerPromo) {
+      registerPromo.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+        window.location.href = '/components/registro/registro.html';
+        // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
+      });
+    }
+
+    const registerPromo2 = document.getElementById('promosnip2');
+    if (registerPromo2) {
+      registerPromo2.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+        window.location.href = '/components/registro/registro.html';
+        // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
+      });
+    }
+  </script>
 </body>
 
 </html>

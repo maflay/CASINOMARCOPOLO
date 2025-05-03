@@ -6,9 +6,7 @@
 </head>
 
 <body>
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-</div>
+  
   <div class="container-ini">
 
     <!-- PRIMERA SECTION -->
@@ -52,7 +50,7 @@
           </div>
         </div>
         <div class="box-right titulo">
-          <img src="resources/Recurso-7@2x.png" alt="logo"></img>
+          <img src="/resources/Recurso-7@2x.png" alt="logo"></img>
           <br />
           <br />
 
@@ -67,8 +65,7 @@
               <button type="submit" class="purple-button">Enviar</button>
             </div>
           </form>
-          <div id="form-message"></div> <!-- Aquí se muestra el mensaje -->
-
+          <div id="form-message"></div>
 
         </div>
       </div>
@@ -79,7 +76,7 @@
     <section class="container-tarjeta">
       <div class='box-container-tarjeta'>
         <div class='box-left-tarjeta'>
-          <div class='box-left-tarjeta-content titulor'>
+          <div class='box-left-tarjeta-content titulor' id="get-tarjeta">
             <h1>Obtén<br />
               tu tarjeta<br />
               Mymawi</h1>
@@ -89,11 +86,11 @@
               que tengas una experiencia completa en<br />
               casino Marco Polo.</p>
             <br />
-            <button class='btn-design1'>Quiero mi tarjeta</button>
+            <button class='btn-design1' onclick="ObtenerTarjeta()">Quiero mi tarjeta</button>
           </div>
         </div>
         <div class='box-rigth-tarjeta'>
-          <img class='' src="resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
+          <img class='' src="/resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
         </div>
       </div>
     </section>
@@ -135,7 +132,7 @@
       <section class="card-view titulo">
         <article class="card">
           <div class="card-image">
-            <img src="resources/Recurso-4@2x.png" alt="Imagen 1" />
+            <img src="/resources/Recurso-4@2x.png" alt="Imagen 1" />
           </div>
           <div class="card-divider"></div>
           <div class="card-content">
@@ -147,13 +144,13 @@
               y muchos espacios para que la
               emoción nunca se detenga.
             </p>
-            <button class="purple-button">Ver más</button>
+            <button class="purple-button" onclick="saberMasPromo1()">Ver más</button>
           </div>
         </article>
 
         <article class="card">
           <div class="card-image">
-            <img src="resources/Recurso-5@2x.png" alt="Imagen 2" />
+            <img src="/resources/Recurso-5@2x.png" alt="Imagen 2" />
           </div>
           <div class="card-divider"></div>
           <div class="card-content">
@@ -167,7 +164,7 @@
               y muchos espacios para que la
               emoción nunca se detenga.
             </p>
-            <button class="purple-button">Ver más</button>
+            <button class="purple-button" onclick="saberMasPromo2()">Ver más</button>
           </div>
         </article>
       </section>
@@ -180,7 +177,7 @@
         <div class="box-container-asociar">
           <div class="box-left-asociar">
             <div class="box-left-asociar-content titulol">
-              <img class="img-club" src="../../resources/Recurso-8@2x.png" alt="img-asociar">
+              <img class="img-club" src="/resources/Recurso-8@2x.png" alt="img-asociar">
               <br><br><br>
               <h2>
                 Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
@@ -194,7 +191,7 @@
             </div>
           </div>
           <div class="box-rigth-asociar">
-            <img src="../../resources/Recurso-2@2x.png" alt="img-asociar">
+            <img src="/resources/Recurso-2@2x.png" alt="img-asociar">
           </div>
         </div>
       </div>
@@ -202,6 +199,7 @@
 
   </div>
   <script>
+
     // Slider Principal
     const track = document.getElementById("sliderTrack");
     const dots = document.querySelectorAll(".dot");
@@ -310,6 +308,7 @@
     intervalMuestra = setInterval(nextSlideMuestra, 3000);
 
 
+
     // ENVIO DE CASH
 
     const form = document.getElementById("cash-unico");
@@ -343,43 +342,8 @@
       });
     }
 
-    // TARJETA-MYMAWI
-
-
-
-    // const formularioContacto = document.getElementById('cash-unico');
-
-    // if (formularioContacto) {
-    //   // console.log('¡Formulario con ID "cash-unico" encontrado!');
-
-    //   formularioContacto.addEventListener('submit', function (event) {
-    //     event.preventDefault();
-    //     console.log('Formulario enviado (pero la página no se recargará).');
-
-    //     // Aquí va tu lógica para obtener los datos del formulario
-    //     const emailInput = formularioContacto.querySelector('input[type="email"]');
-    //     const telefonoInput = formularioContacto.querySelector('input[type="tel"]');
-    //     const aceptaDatosInput = formularioContacto.querySelector('input[type="checkbox"]');
-
-    //     if (emailInput && telefonoInput && aceptaDatosInput) {
-    //       const email = emailInput.value;
-    //       const telefono = telefonoInput.value;
-    //       const aceptaDatos = aceptaDatosInput.checked;
-
-    //       console.log('Correo electrónico:', email);
-    //       console.log('Teléfono:', telefono);
-    //       console.log('Acepta tratamiento de datos:', aceptaDatos);
-
-    //       // Aquí puedes agregar la lógica para enviar los datos a un servidor, etc.
-    //     } else {
-    //       console.error('No se encontraron todos los campos del formulario.');
-    //     }
-    //   });
-    // } else {
-    //   console.error('¡El formulario no fue encontrado después de cargar el DOM!');
-    // }
-
   </script>
+
 </body>
 
 </html>

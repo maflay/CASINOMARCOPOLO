@@ -1,0 +1,7 @@
+.banner-obten-tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}

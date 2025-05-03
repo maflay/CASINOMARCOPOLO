@@ -166,6 +166,9 @@
   @media (max-width: 768px) {
 
   /* EXPERIENCIAS */
+  .first-section{
+    margin-top: 18%;
+  }
 
   .container-experiences .experiences-section {
     margin-top: 0;
