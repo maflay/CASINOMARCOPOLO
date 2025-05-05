@@ -63,7 +63,11 @@
         if (formularioMember) {
             formularioMember.addEventListener('submit', function (event) {
                 event.preventDefault(); // Evita el envío del formulario por defecto
-                window.location.href = '/components/registro/registro.html';
+                loading.style.display = "flex";
+                setTimeout(() => {
+                    window.location.href = '/components/registro/registro.html';
+                }, 1000);
+
                 // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
             });
         }

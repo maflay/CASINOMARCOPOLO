@@ -9,6 +9,7 @@ if ($conexion->connect_error) {
 
 $nombre = $_POST['nombre'] ?? '';
 $correo = $_POST['correo'] ?? '';
+$documento = $_POST['documento'] ?? '';
 $contraseña = $_POST['contraseña'] ?? '';
 $telefono = $_POST['telefono'] ?? '';
 $direccion = $_POST['direccion'] ?? '';
@@ -22,11 +23,11 @@ if (empty($nombre) || empty($correo) || empty($contraseña) || empty($fecha_naci
 
 $contraseña_hash = password_hash($contraseña, PASSWORD_BCRYPT);
 
-$sql = "INSERT INTO usuarios_registro (Nombre, Correo, Direccion, Telefono, Contraseña, Fecha_nacimiento, Fecha_creacion)
-        VALUES (?, ?, ?, ?, ?, ?,NOW())";
+$sql = "INSERT INTO usuarios_register (Nombre, Correo, Documento, Direccion, Telefono, Contraseña, Fecha_nacimiento, Fecha_creacion)
+        VALUES (?, ?, ?, ?, ?, ?, ?,NOW())";
 
 $stmt = $conexion->prepare($sql);
-$stmt->bind_param("ssssss", $nombre, $correo, $direccion ,$telefono,$contraseña_hash, $fecha_nacimiento);
+$stmt->bind_param("sssssss", $nombre, $correo, $documento, $direccion ,$telefono,$contraseña_hash, $fecha_nacimiento);
 
 if ($stmt->execute()) {
     echo "Registro exitoso.";

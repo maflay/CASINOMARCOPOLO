@@ -11,19 +11,27 @@
 
 <body>
     <div id="registro">
+
         <div class="container-register">
+            <div class="registro-logo">
+                <a href="../../" data-target="/components/home/index.html">
+                    <img class="logo-menu" src="/resources/marcopolo.png" />
+                </a>
+            </div>
             <form id="registro-form" class="form-register">
                 <h1>Registrate</h1>
                 <input type="text" id="nombre-register" name="nombre" placeholder="Nombre" required
-                    autocomplete="current-password">
+                    autocomplete="current-password" />
                 <input type="correo" id="correo-register" name="correo" placeholder="Correo" required
-                    autocomplete="current-password">
+                    autocomplete="current-password" />
+                <input type="documento" id="documento-register" name="documento" placeholder="# de documento" required
+                    autocomplete="current-password" />
                 <input type="number" id="telefono-register" name="telefono" placeholder="Teléfono" required
-                    autocomplete="current-password">
+                    autocomplete="current-password" />
                 <input type="direccion" id="direccion-register" name="direccion" placeholder="Dirección" required
-                    autocomplete="current-password">
+                    autocomplete="current-password" />
                 <input type="password" id="contraseña-register" name="contraseña" placeholder="Contraseña" required
-                    autocomplete="current-password">
+                    autocomplete="current-password" />
                 <input type="password" id="confirmar-contraseña-register" name="confirmar-contraseña"
                     placeholder="Confirmar Contraseña" required autocomplete="current-password">
                 <label>Fecha de nacimiento:</label>
@@ -32,48 +40,66 @@
                     <button class="btn-design1" id="inicio" onclick="iniciopage()">Regresar</button>
                     <button type="submit" class="btn-design1">Registrar</button>
                 </div>
-
+                <div id="usercreate"></div>
             </form>
         </div>
     </div>
     <script>
-        document
-            .getElementById("registro-form")
-            .addEventListener("submit", function (e) {
-                e.preventDefault();
+        window.addEventListener("DOMContentLoaded", () => {
+            const loading = document.getElementById("loading");
 
-                const form = e.target;
-                const formData = new FormData(form);
+            const form = document.getElementById("registro-form");
 
-                const contraseña = formData.get("contraseña");
-                const confirmar = formData.get("confirmar-contraseña");
-                console.log("entro a la funcion");
-                if (contraseña !== confirmar) {
-                    alert("Las contraseñas no coinciden.");
-                    return;
-                }
+            const params = new URLSearchParams(window.location.search);
+            const correo = params.get("email");
+            const inputCorreo = document.getElementById("correo-register");
+            const loader = document.getElementById("loading");
 
-                fetch("/components/registro/registro-cliente.php", {
-                    method: "POST",
-                    body: formData,
-                })
-                    .then((response) => response.text())
-                    .then((data) => {
-                        alert(data);
-                        form.reset();
-                        window.location.href = "../../";
-                        history.replaceState(null, "", location.pathname); // Limpia la URL
-                        // window.history.replaceState({}, document.title, window.location.pathname);
+            if (correo && inputCorreo) {
+                inputCorreo.value = decodeURIComponent(correo);
+            }
+
+
+
+            if (form) {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const form = e.target;
+                    const formData = new FormData(form);
+                    const mensaje = document.getElementById("usercreate");
+
+
+                    const contraseña = formData.get("contraseña");
+                    const confirmar = formData.get("confirmar-contraseña");
+                    console.log("entro a la funcion");
+                    if (contraseña !== confirmar) {
+                        alert("Las contraseñas no coinciden.");
+                        return;
+                    }
+                    fetch("/components/registro/registro-cliente.php", {
+                        method: "POST",
+                        body: formData,
                     })
-                    .catch((error) => {
-                        console.error("Error:", error);
-                        alert("Ocurrió un error al registrar.");
-                    });
-            });
+                        .then((response) => response.text())
+                        .then((data) => {
+                            alert(data);
+                            form.reset();
+                            window.location.href = "../../";
+                            history.replaceState(null, "", location.pathname); // Limpia la URL
+                            // window.history.replaceState({}, document.title, window.location.pathname);
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            alert("Ocurrió un error al registrar.");
+                        });
+                });
+            }
+            function iniciopage() {
+                window.location.href = "../../";
+            }
+        });
 
-        function iniciopage() {
-            window.location.href = "../../";
-        }
     </script>
 
 

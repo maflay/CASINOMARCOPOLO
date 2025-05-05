@@ -110,8 +110,10 @@
     if (registerPromo) {
       registerPromo.addEventListener('submit', function (event) {
         event.preventDefault(); // Evita el envío del formulario por defecto
-        window.location.href = '/components/registro/registro.html';
-        // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
+        loading.style.display = "flex";
+        setTimeout(() => {
+          window.location.href = '/components/registro/registro.html';
+        }, 1000);// Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
       });
     }
 
@@ -119,7 +121,11 @@
     if (registerPromo2) {
       registerPromo2.addEventListener('submit', function (event) {
         event.preventDefault(); // Evita el envío del formulario por defecto
-        window.location.href = '/components/registro/registro.html';
+        loading.style.display = "flex";
+        setTimeout(() => {
+          window.location.href = '/components/registro/registro.html';
+        }, 1000);
+        // navegarA('/components/registro/registro.html');
         // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
       });
     }

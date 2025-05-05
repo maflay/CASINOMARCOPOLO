@@ -1,0 +1,176 @@
+.container-marco{
+}
+
+.container-marcopolovip {
+    height: 100vh;
+    background-image: url(/resources/cancheroVIP.png);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.content-marcopolovip {
+    text-align: center;
+
+}
+
+.content-marcopolovip h1 {
+    color: #F6921E;
+    text-shadow: 0 0 10px #F6921E;
+}
+
+.content-section{
+    background-color: white;
+}
+
+.container-marco .section-benefit {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-marco .section-benefit h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6622F8;
+    text-shadow: 0 0 10px #6622F8;
+}
+
+.container-marco .section-level {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-marco .section-level h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6622F8;
+    text-shadow: 0 0 10px #6622F8;
+}
+
+
+.container-marco .benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container-marco .benefit {
+    flex: 1 1 250px;
+    background: linear-gradient(145deg, #222, #111);
+    color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container-marco .benefit:hover {
+    transform: translateY(-10px);
+    border-color: #6622F8;
+}
+
+.container-marco .benefit h3 {
+    color: #6622F8;
+    margin-bottom: 15px;
+}
+
+.container-marco .levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container-marco .level-card {
+    flex: 1 1 280px;
+    background: linear-gradient(145deg, #222, #111);
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    border: 1px solid #444;
+}
+
+.container-marco .level-card.gold {
+    border-color: #6622F8;
+}
+
+.container-marco .level-card.platinum {
+    border-color: #e5e4e2;
+}
+
+.container-marco .level-card.diamond {
+    border-color: #b9f2ff;
+}
+
+.container-marco .level-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.container-marco .level-card p {
+    font-size: 0.95rem;
+}
+
+.container-marco .cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container-marco .cta button {
+    background: #6622F8;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 0 12px #6622F8;
+}
+
+.container-marco .cta button:hover {
+    background: #fff;
+    color: #6622f8;
+}
+
+.vip-cta {
+    background-color: #000;
+    color: #F6921E;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .vip-cta button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #F6921E;
+    color: black;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .vip-cta button:hover {
+    background-color: #6622f8;
+  }
+
+@media (max-width: 768px) {
+    .container-marco .section h2 {
+        font-size: 2rem;
+    }
+}

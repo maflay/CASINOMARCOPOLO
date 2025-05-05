@@ -1,17 +1,18 @@
-// PARA ENVIAR DESDE EL FOOTER EL EMAIL PARA REDIRECCIONAR
-const formularioFooter = document.getElementById('footer-form-action');
-  if (formularioFooter) {
-      formularioFooter.addEventListener('submit', function (event) {
-          event.preventDefault(); // Evita el envío del formulario por defecto
+const formularioFooter = document.getElementById("footer-form-action");
 
-        //   const emailInput = formularioFooter.querySelector('input[id="email-footer"]');
-        //   const email = emailInput.value;
+if (formularioFooter) {
+  formularioFooter.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
 
-        //   console.log('Email:', email);
-        //   window.location.href = '/components/registro/registro.html';
-        navegarA('/components/registro/registro.html');
-          // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
-      });
-  }
+    const emailInput = formularioFooter.querySelector('#email-footer');
+    const email = encodeURIComponent(emailInput.value); // Codificar el correo para la URL
 
- 
+    // Mostrar loader
+    loading.style.display = "flex";
+
+    // Espera un momento para mostrar el loader antes de redirigir
+    setTimeout(() => {
+      window.location.href = `/components/registro/registro.html?email=${email}`;
+    }, 1000);
+  });
+}

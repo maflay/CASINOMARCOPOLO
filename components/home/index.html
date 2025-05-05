@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  
+
   <div class="container-ini">
 
     <!-- PRIMERA SECTION -->
@@ -186,7 +186,7 @@
               </h2>
               <br><br><br>
               <div class="club-content">
-                <button class="btn-design2">Quiero asociarme</button>
+                <button class="btn-design2" onclick="asociarse()">Quiero asociarme</button>
               </div>
             </div>
           </div>
@@ -313,21 +313,26 @@
 
     const form = document.getElementById("cash-unico");
     const message = document.getElementById("form-message");
+    const loading = document.getElementById("loading");
 
     if (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault(); // Prevenir redirección
 
         const formData = new FormData(form);
-
+        loading.style.display = "flex";
         fetch("components/home/guardar.php", {
           method: "POST",
           body: formData,
         })
           .then(response => response.text())
           .then(data => {
-            message.innerHTML = '<div class="success-message">' +
-              '<strong>¡Éxito!</strong> Datos enviados correctamente.</div>';
+            setTimeout(() => {
+              loading.style.display = "none"; //Oculta el loader
+              message.innerHTML = '<div class="success-message">' +
+                '<strong>¡Éxito!</strong> Datos enviados correctamente.</div>';
+            }, 1000);
+            
             form.reset();
             window.history.replaceState({}, document.title, window.location.pathname);
             setTimeout(() => {

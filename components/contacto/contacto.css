@@ -124,11 +124,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .container-contact .checkbox-group input[type="checkbox"] {
     width: auto;
-    margin-right: 10px;
 }
 
 .container-contact .btn-contact-send {
@@ -154,13 +154,22 @@
     color: #5100ff;
 }
 
-.checks-cliente-terminos{
-display: flex;
-justify-content: center;
-align-items: center;
+.contact-form .thechecks {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
 }
-.checks-cliente-terminos a{
-    color: red;
+
+.checks-cliente-terminos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.checks-cliente-terminos a {
+    color: #6622F8;
 }
 
 /* Estilos Responsive */
@@ -187,9 +196,9 @@ align-items: center;
         width: 10%;
     } */
 
-     .container-contact .formulario-contacto {
+    .container-contact .formulario-contacto {
         width: 300px;
-    } 
+    }
 
     .container-contact .boton-enviar,
     .container-contact .boton-registro {

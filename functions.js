@@ -5,6 +5,41 @@ window.addEventListener("load", function () {
 }, 900); 
 });
 
+const PageLoader = {
+  cargarPagina: function(url, contenedorId = 'content-area') {
+      const loading = document.getElementById("loading");
+      const mainContent = document.getElementById(contenedorId);
+
+      // Mostrar el loader
+      loading.style.display = "flex";
+
+      fetch(url)
+          .then(response => response.text())
+          .then(html => {
+              setTimeout(() => {
+                  mainContent.innerHTML = html;
+                  loading.style.display = "none";
+              }, 1500);
+          })
+          .catch(error => {
+              console.error('Error al cargar la página:', error);
+              mainContent.innerHTML = '<p>Ocurrió un error cargando la página.</p>';
+              loading.style.display = "none";
+          });
+  }
+};
+
+function navegarA(url) {
+  // Verifica si es un enlace interno que quieres cargar dinámico
+  if (url.startsWith('/components/')) {
+      PageLoader.cargarPagina(url);
+  } else {
+      // Si es un enlace externo o diferente, haces la navegación normal
+      window.location.href = url;
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
   const navLinks = document.querySelectorAll(
@@ -30,9 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al ejecutar script:", error);
           }
         });
-        if (navItems.classList.contains("open")) {
-          navToggle.classList.remove("open");
-          navItems.classList.remove("open");
+        if (navItems && navToggle) {
+          if (navItems.classList.contains("open")) {
+            navToggle.classList.remove("open");
+            navItems.classList.remove("open");
+          }
         }
       })
       .catch((error) => {
@@ -195,39 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const PageLoader = {
-    cargarPagina: function(url, contenedorId = 'main-content') {
-        const loading = document.getElementById("loading");
-        const mainContent = document.getElementById(contenedorId);
-
-        // Mostrar el loader
-        loading.style.display = "flex";
-
-        fetch(url)
-            .then(response => response.text())
-            .then(html => {
-                setTimeout(() => {
-                    mainContent.innerHTML = html;
-                    loading.style.display = "none";
-                }, 1500);
-            })
-            .catch(error => {
-                console.error('Error al cargar la página:', error);
-                mainContent.innerHTML = '<p>Ocurrió un error cargando la página.</p>';
-                loading.style.display = "none";
-            });
-    }
-};
-
-function navegarA(url) {
-    // Verifica si es un enlace interno que quieres cargar dinámico
-    if (url.startsWith('/components/')) {
-        PageLoader.cargarPagina(url);
-    } else {
-        // Si es un enlace externo o diferente, haces la navegación normal
-        window.location.href = url;
-    }
-}
 
 
 function scrollToTop() {
@@ -236,4 +240,3 @@ function scrollToTop() {
     behavior: "smooth", // hace que el scroll sea suave
   });
 }
-

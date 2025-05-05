@@ -16,7 +16,7 @@
             <div class="content-contact">
                 <div class="container-formulario">
                     <h1>Contáctanos</h1>
-                    <form action="#" method="POST" class="formulario-contacto">
+                    <form method="POST" class="formulario-contacto" id="formulario-contacto">
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                         </div>
@@ -40,17 +40,19 @@
                             <label for="descripcion">Descripción de la Solicitud:</label>
                             <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
                         </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="es_cliente" name="es_cliente" value="si">
-                            <label for="es_cliente">Soy cliente actual</label>
-                        </div>
-                        <div class="checks-cliente-terminos">
-                            <input type="checkbox" id="aceptoTerminos" name="acepto_terminos" value="acepto">
-                            <label for="aceptoTerminos">Acepto los
-                                <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones</a>
-                                y la
-                                <a href="/politica-de-privacidad" target="_blank">Política de Privacidad</a>
-                                .</label>
+                        <div class="thechecks">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="es_cliente" name="es_cliente" value="si">
+                                <label for="es_cliente">Soy cliente actual</label>
+                            </div>
+                            <div class="checks-cliente-terminos">
+                                <input type="checkbox" id="aceptoTerminos" name="acepto_terminos" value="acepto">
+                                <label for="aceptoTerminos">Acepto los
+                                    <a href="/terminos-y-condiciones" target="_blank">Términos y Condiciones</a>
+                                    y la
+                                    <a href="/politica-de-privacidad" target="_blank">Política de Privacidad</a>
+                                    .</label>
+                            </div>
                         </div>
                         <div class="btn-contact-send">
                             <button type="submit" class="boton-enviar">Enviar / Registrar</button>
@@ -60,10 +62,49 @@
                             <a href="/registro" class="boton-registro">Regístrate aquí</a>
                         </div> -->
                     </form>
+                    <div id="mensaje-contacto"></div>
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        const form = document.getElementById("formulario-contacto");
+        const mensaje = document.getElementById("mensaje-contacto");
+        const loading = document.getElementById("loading");
+
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            loading.style.display = "flex";
+
+            fetch("components/contacto/guardar_contacto.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(res => res.text())
+                .then(data => {
+                    setTimeout(() => {
+                        loading.style.display = "none"; //Oculta el loader
+                        mensaje.innerHTML = '<div class="success-message">' +
+                            '<strong>¡Éxito!</strong> Datos enviados correctamente.</div>';
+                    }, 1000);
+                    form.reset();
+                    setTimeout(() => {
+                        mensaje.innerHTML = "";
+                    }, 5000);
+                    //   if (data.success) {
+                    // } else if (data.error) {
+                    //   mensaje.innerHTML = `<div style="color: red;">${data.error}</div>`;
+                    // }
+                })
+                .catch(err => {
+                    mensaje.innerHTML = `<div style="color: red;">Error de red al enviar.</div>`;
+                    console.error(err);
+                });
+        });
+    </script>
 
 </body>
 
