@@ -2,8 +2,9 @@ window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
     loading.style.display = "none";
-}, 900); 
+  }, 900); // Tiempo para que la transición se vea suave
 });
+
 
 const PageLoader = {
   cargarPagina: function(url, contenedorId = 'content-area') {
@@ -49,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainFooter = document.getElementById("main-footer");
 
   const loadContent = (url) => {
+    window.scrollTo(0, 0);
+
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
@@ -109,6 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
           event.preventDefault();
+          // Remueve 'active' de todos los enlaces
+    navLinks.forEach((l) => l.classList.remove("active"));
+    // Agrega 'active' al enlace clicado
+    this.classList.add("active");
           const targetPage = this.getAttribute("data-target");
           loadContent(targetPage);
         });

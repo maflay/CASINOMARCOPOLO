@@ -1,6 +1,28 @@
 .container-marco{
 }
 
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+}
+
 .container-marcopolovip {
     height: 100vh;
     background-image: url(/resources/cancheroVIP.png);
@@ -168,9 +190,66 @@
   .vip-cta button:hover {
     background-color: #6622f8;
   }
+ 
+  .split-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-@media (max-width: 768px) {
-    .container-marco .section h2 {
-        font-size: 2rem;
+  .split-section .split-left, .split-right {
+    flex: 1 1 50%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .split-section .split-left {
+    background-color: #1f253a; /* Fondo oscuro */
+  }
+
+  .split-section .split-right {
+    background-color: #f5f5f5; /* Fondo claro */
+    color: #1f253a;
+  }
+
+  .split-section .split-right h2, .split-right p {
+    color: #1f253a;
+  }
+
+  .split-section .split-left h2, .split-left p {
+    color: white;
+  }
+
+  .dealers-help {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    color: #1f253a;
+  }
+
+
+  .dealers-help h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .dealers-help p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+
+  
+  @media (max-width: 768px) {
+      .container-marco .section h2 {
+          font-size: 2rem;
+        }
+        .split-section {
+          flex-direction: column;
+        }
     }
-}

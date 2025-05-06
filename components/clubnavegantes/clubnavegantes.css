@@ -316,10 +316,15 @@
     }
 
     .container-clubnavegantes .sports-club p {
-        width: 80%;
+        width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .container-clubnavegantes .sports-club .sports-club-content{
+        display: block;
+        width: 80%;
+    }
+    
 
     /* INFORMACION */
     .info-section {
@@ -361,6 +366,11 @@
         height: auto;
         padding: 5%;
         background-color: rgba(0, 0, 0, 0.89);
+    }
+
+
+    .container-apuesta-tv .apuesta-tv{
+        width: 100%;
     }
 
 }

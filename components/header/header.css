@@ -36,6 +36,18 @@
     opacity: 0.9;
 }
 
+.Navbar > .nav-items > a.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: all 0.4s;
+}
+
+
 .Navbar>.nav-items>a:hover {
     opacity: 1;
 }

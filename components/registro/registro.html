@@ -6,44 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/components/registro/registro.css">
     <link rel="stylesheet" href="/styles/styles.css">
-    <title>Registro</title>
+    <title>Registro-Marco polo</title>
 </head>
 
 <body>
-    <div id="registro">
-
-        <div class="container-register">
-            <div class="registro-logo">
-                <a href="../../" data-target="/components/home/index.html">
-                    <img class="logo-menu" src="/resources/marcopolo.png" />
-                </a>
-            </div>
-            <form id="registro-form" class="form-register">
-                <h1>Registrate</h1>
-                <input type="text" id="nombre-register" name="nombre" placeholder="Nombre" required
-                    autocomplete="current-password" />
-                <input type="correo" id="correo-register" name="correo" placeholder="Correo" required
-                    autocomplete="current-password" />
-                <input type="documento" id="documento-register" name="documento" placeholder="# de documento" required
-                    autocomplete="current-password" />
-                <input type="number" id="telefono-register" name="telefono" placeholder="Teléfono" required
-                    autocomplete="current-password" />
-                <input type="direccion" id="direccion-register" name="direccion" placeholder="Dirección" required
-                    autocomplete="current-password" />
-                <input type="password" id="contraseña-register" name="contraseña" placeholder="Contraseña" required
-                    autocomplete="current-password" />
-                <input type="password" id="confirmar-contraseña-register" name="confirmar-contraseña"
-                    placeholder="Confirmar Contraseña" required autocomplete="current-password">
-                <label>Fecha de nacimiento:</label>
-                <input type="date" id="fecha-nacimiento" name="fecha" placeholder="Fecha de nacimiento" required>
-                <div style="display: flex; justify-content: space-between;">
-                    <button class="btn-design1" id="inicio" onclick="iniciopage()">Regresar</button>
-                    <button type="submit" class="btn-design1">Registrar</button>
-                </div>
-                <div id="usercreate"></div>
-            </form>
+    <div id="registro" class="register">
+        <div class="registro-logo">
+          <a href="../../" data-target="/components/home/index.html">
+            <img class="logo-menu" src="/resources/marcopolo.png" />
+          </a>
         </div>
-    </div>
+      
+        <div class="container-register">
+          <form id="registro-form" class="form-register">
+            <h1>Regístrate</h1>
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="correo" placeholder="Correo" required />
+            <input type="text" name="documento" placeholder="# de documento" required />
+            <input type="tel" name="telefono" placeholder="Teléfono" required />
+            <input type="text" name="direccion" placeholder="Dirección" required />
+            <input type="password" name="contraseña" placeholder="Contraseña" required />
+            <input type="password" name="confirmar-contraseña" placeholder="Confirmar Contraseña" required />
+            <label>Fecha de nacimiento:</label>
+            <input type="date" name="fecha" required />
+            <div style="display: flex; justify-content: space-between;">
+              <button type="button" class="btn-design1" id="inicio" onclick="iniciopage()">Regresar</button>
+              <button type="submit" class="btn-design1">Registrar</button>
+            </div>
+            <div id="usercreate"></div>
+          </form>
+        </div>
+      </div>
+      
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const loading = document.getElementById("loading");
@@ -95,10 +89,13 @@
                         });
                 });
             }
-            function iniciopage() {
+           
+        });
+
+        function iniciopage() {
+                console.log("prueba regreso");
                 window.location.href = "../../";
             }
-        });
 
     </script>
 
