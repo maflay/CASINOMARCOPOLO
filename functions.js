@@ -8,35 +8,37 @@ window.addEventListener("load", function () {
 
 const PageLoader = {
   cargarPagina: function(url, contenedorId = 'content-area') {
-      const loading = document.getElementById("loading");
-      const mainContent = document.getElementById(contenedorId);
+    const loading = document.getElementById("loading");
+    const mainContent = document.getElementById(contenedorId);
 
-      // Mostrar el loader
-      loading.style.display = "flex";
+    loading.style.display = "flex";
 
-      fetch(url)
-          .then(response => response.text())
-          .then(html => {
-              setTimeout(() => {
-                  mainContent.innerHTML = html;
-                  loading.style.display = "none";
-              }, 1500);
-          })
-          .catch(error => {
-              console.error('Error al cargar la página:', error);
-              mainContent.innerHTML = '<p>Ocurrió un error cargando la página.</p>';
-              loading.style.display = "none";
-          });
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        setTimeout(() => {
+          mainContent.innerHTML = html;
+          loading.style.display = "none";
+
+          // Ejecutar lógica adicional si se cargó una página específica
+          if (url.includes("registro.html") && typeof inicializarRegistro === "function") {
+            inicializarRegistro(); // Llama al script del registro
+          }
+        }, 500);
+      })
+      .catch(error => {
+        console.error('Error al cargar la página:', error);
+        mainContent.innerHTML = '<p>Ocurrió un error cargando la página.</p>';
+        loading.style.display = "none";
+      });
   }
 };
 
 function navegarA(url) {
-  // Verifica si es un enlace interno que quieres cargar dinámico
   if (url.startsWith('/components/')) {
-      PageLoader.cargarPagina(url);
+    PageLoader.cargarPagina(url);
   } else {
-      // Si es un enlace externo o diferente, haces la navegación normal
-      window.location.href = url;
+    window.location.href = url;
   }
 }
 
@@ -239,7 +241,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+function toRegister(){
+  // Mostrar loader
+  loading.style.display = "flex";
+ 
+  // Espera un momento para mostrar el loader antes de redirigir
+  setTimeout(() => {
+    window.location.href = `/components/registro/registro.html`;
+  }, 1000);
+ }
 
 function scrollToTop() {
   window.scrollTo({

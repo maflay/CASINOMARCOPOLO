@@ -2,12 +2,12 @@
     <section>
         <div class="footer-subscriber">
             <label>Suscríbete y recibe nuestras noticias</label>
-            <form id="footer-form-action">
+            <!-- <form id="footer-form-action"> -->
                 <div class="footer-subscriber-email">
                     <input type="email" id="email-footer" placeholder="" required />
-                    <button type="submit" class="boton-suscribete" >Suscríbete</button>
+                    <button type="submit" class="boton-suscribete" onclick="footerRegister()">Suscríbete</button>
                 </div>
-            </form>
+            <!-- </form> -->
         </div>
 
     <div class="footer-content">
@@ -61,5 +61,17 @@
     </div>
 </section>
 <script src="/components/footer/footer.js"></script>
-
+<script>
+    
+function footerRegister(){
+  console.log("prueba");
+  loading.style.display = "flex";
+  const emailInput = formularioFooter.querySelector('#email-footer');
+  const email = encodeURIComponent(emailInput.value); // Codificar el correo para la URL
+ // Espera un momento para mostrar el loader antes de redirigir
+ setTimeout(() => {
+   window.location.href = `/components/registro/registro.html?email=${email}`;
+ }, 1000);
+}
+</script>
 </footer>

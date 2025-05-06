@@ -14,7 +14,6 @@ function Aexperience() {
       .then((response) => response.text())
       .then((html) => {
         experiencecontainer.innerHTML = html;
-        screenTop();
       })
       .catch((err) => console.log("Error al cargar la pagina:", err));
   } else {

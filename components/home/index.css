@@ -568,7 +568,7 @@
 }
 
 .container-asociar .box-left-asociar {
-    background-image: url(../../resources/Recurso-3@2x.png);
+    background-image: url(/resources/Recurso-3@2x.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;

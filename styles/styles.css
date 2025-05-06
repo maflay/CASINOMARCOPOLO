@@ -11,6 +11,14 @@ html {
     scroll-behavior: auto;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px; /* ancho máximo */
+  margin: 0 auto;     /* centra horizontalmente */
+  padding: 0 20px;    /* espacio a los lados */
+}
+
+
 
 /* DISEÑO DE BOTONES */
 .purple-button {
@@ -196,5 +204,7 @@ html {
       width: auto;
       text-align: center;
     }
-
+    .container {    /* centra horizontalmente */
+      padding: 0;    /* espacio a los lados */
+    }
   }

@@ -21,43 +21,48 @@
         </section> -->
     <!-- OFERTAS -->
     <section class="deals-padre">
-      <div class=" deals-section">
-        <div class="deals-header">
-          <h2>OFERTAS</h2>
-          <p>Es tu momento de consentirte en MARCO POLO. Con estas magníficas ofertas en hoteles,
+      <div class="deals-header">
+        <div class=" deals-section">
+          <h3 class="item">OFERTAS</h3>
+          <p class="item">Es tu momento de consentirte en MARCO POLO. Con estas magníficas ofertas en hoteles,
             tienes más motivos para quedarte y relajarte como un buen MARCO POLO..</p>
-          <a href="#">Ver todas las ofertas &rsaquo;</a>
         </div>
 
         <div class="deals-cards">
           <div class="deal-card">
-            <img src="/resources/casino-en-vivo.jpg" alt="Hotel Room">
+            <div class="deal-card-img">
+              <img src="/resources/casino-en-vivo.jpg" alt="Hotel Room">
+            </div>
             <div class="deal-content">
               <h3>HASTA UN 20 % DE DESCUENTO</h3>
               <p class="subtitle">Oferta semestral</p>
               <p>Ahorra en tu próxima jugada de MARCO POLO® desde ahora hasta el 1 de mayo de 2025.</p>
-              <button class="purple-button titulo">RESERVA AHORA</button>
             </div>
           </div>
 
           <div class="deal-card">
-            <img src="/resources/s2.jpg" alt="Couple Shopping">
+            <div class="deal-card-img">
+              <img src="/resources/s2.jpg" alt="Couple Shopping">
+            </div>
             <div class="deal-content">
               <h3>AHORROS POR COMPRA ANTICIPADA</h3>
               <p class="subtitle">Hasta un 30% de descuento</p>
               <p>Planifica con antelación y obtén hasta un 30% de descuento en estancias del casino haciendo uso de la
                 tarjeta MYMAWI..</p>
-              <button class="purple-button titulo">RESERVA AHORA</button>
             </div>
           </div>
 
           <div class="deal-card">
-            <img src="/resources/bg-home.jpg" alt="Caesars Sportsbook">
+            <div class="deal-card-img">
+              <img src="/resources/bg-home.jpg" alt="Caesars Sportsbook">
+            </div>
             <div class="deal-content">
               <h3>JUEGA Y GiRA... COMO UNA RULETA</h3>
               <p>Estancias en hoteles, experiencias gastronómicas y de entretenimiento: cada apuesta suma para estos
                 beneficios exclusivos y mucho más con CASINO MARCO POLO®.</p>
-              <button class="purple-button titulo">DESCARGA AHORA</button>
+              <a href="/document/CASINO-MARCO-POLO.pdf" download>
+                <button class="purple-button titulo">DESCARGA AHORA</button>
+              </a>
             </div>
           </div>
         </div>
@@ -69,67 +74,64 @@
       <div class="promo-details">
         <figure class="snip1482">
           <figcaption>
-            <form id="promosnip">
-              <h2>Trato exclusivo</h2>
-              <p>Siente un competidor VIP, con un trato especial y esclusivo
-                de parte de nuestros dealers
-                sientete comodo al planificar tus jugadas, siempre que juegues
-                tendras un placer abundante de atencion.</p>
+            <div id="promosnip">
+              <div>
+                <h2>Trato exclusivo</h2>
+                <p>Siente un competidor VIP, con un trato especial y esclusivo
+                  de parte de nuestros dealers
+                  sientete comodo al planificar tus jugadas, siempre que juegues
+                  tendras un placer abundante de atencion.</p>
+              </div>
               <div class="button-container titulor">
-                <button type="submit" class="purple-button">REGISTRATE</button>
+                <button class="purple-button" onclick="toRegister()">REGISTRATE</button>
                 <button class="learn-more">CONOCER MAS</button>
               </div>
-            </form>
+            </div>
           </figcaption>
-          <img src="/../../resources/casino-en-vivo-2.png" alt="Casino Marco Polo 1" />
+          <div class="content-img titulo">
+            <img src="/resources/casino-en-vivo-2.png" alt="Casino Marco Polo 1" />
+          </div>
         </figure>
         <figure class="snip1482">
           <figcaption>
-            <form id="promosnip2">
+            <div id="promosnip2">
               <h2>CASINO MARCO POLO</h2>
               <p>Gira, tira o sortea para conseguir tu próxima victoria.
                 Desde clásicos estratégicos como la ruleta americana hasta
                 el juego Blackjack, queremos que todos se sientan como en casa.</p>
-              <div class="button-container titulor">
-                <button type="submit" class="purple-button">REGISTRATE</button>
+              <div class="button-container titulol">
+                <button class="purple-button" onclick="toRegister()">REGISTRATE</button>
                 <button class="learn-more">CONOCER MAS</button>
               </div>
-            </form>
+            </div>
           </figcaption>
-          <img src="/../../resources/IMG_0170.jpg" alt="Casino Marco Polo 1" />
+          <div class="content-img titulol">
+            <img src="/resources/IMG_0170.jpg" alt="Casino Marco Polo 1" />
+          </div>
         </figure>
       </div>
     </section>
 
     <!-- ULTIMA SECTION PROMOCION -->
-
+    <section>
+      <div class="promo-title">
+        <div class="container">
+          <div class="content-title">
+            <div class="content-img titulo">
+              <img src="/resources/promo-title.png" />
+            </div>
+            <div class="content-text titulo">
+              <h1>🎉 ¡La suerte está de tu lado en Casino Marco Polo!
+                Este mes, participa en nuestras jornadas de juego y gana premios exclusivos: bonos en fichas, bebidas
+                premium, y acceso VIP a nuestras salas privadas.
+                Solo por jugar, puedes ser el próximo ganador de experiencias inolvidables.
+                ¡No esperes más, ven y reclama tu premio hoy mismo!</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-
-  <script>
-    const registerPromo = document.getElementById('promosnip');
-    if (registerPromo) {
-      registerPromo.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita el envío del formulario por defecto
-        loading.style.display = "flex";
-        setTimeout(() => {
-          window.location.href = '/components/registro/registro.html';
-        }, 1000);// Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
-      });
-    }
-
-    const registerPromo2 = document.getElementById('promosnip2');
-    if (registerPromo2) {
-      registerPromo2.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita el envío del formulario por defecto
-        loading.style.display = "flex";
-        setTimeout(() => {
-          window.location.href = '/components/registro/registro.html';
-        }, 1000);
-        // navegarA('/components/registro/registro.html');
-        // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
-      });
-    }
-  </script>
 </body>
 
 </html>

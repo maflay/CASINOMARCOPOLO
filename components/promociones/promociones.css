@@ -26,16 +26,29 @@
 /* OFERTA */
 
 .container-promo .deals-padre {
-  background-color: #fff;
+  /* background: linear-gradient(0deg, #27314F 50%, #fff 50%); */
+background-color: white;
 }
 
 .container-promo .deals-section {
-  margin: 0 10% 0 10%;
-  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.container-promo .deals-section h3{
+  color: #27314F;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 2.2rem;
+  margin: 10px;
 }
 
 .container-promo .deals-header {
-  margin-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .container-promo .deals-header h2 {
@@ -61,31 +74,36 @@
 }
 
 .container-promo .deals-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .container-promo .deal-card {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
+  background: white;
   overflow: hidden;
-  width: 300px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
+.container-promo .deal-card .deal-card-img {
+  overflow: hidden;
+  height: 250px;
+}
+
 .container-promo .deal-card img {
   width: 100%;
-  height: 60%;
-  transition: transform 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
 }
 
 .container-promo .deal-card img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .container-promo .deal-content {
@@ -99,6 +117,7 @@
 .container-promo .deal-content h3 {
   font-size: 1.1rem;
   margin-bottom: 5px;
+  color: #27314F;
 }
 
 .container-promo .deal-content .subtitle {
@@ -226,19 +245,21 @@
 
 .container-promo .snip1482 {
   display: flex;
-    width: 1000px;  /* ancho fijo */
-    height: 50vh;  /* alto fijo */
-    background-color: #2b344d;
-    overflow: hidden;
+  width: 1000px;
+  /* ancho fijo */
+  height: 50vh;
+  /* alto fijo */
+  /* background-color: #2b344d; */
+  overflow: hidden;
 }
 
 .container-promo .snip1482 figcaption {
   width: 40%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
 }
 
 .container-promo .snip1482 figcaption .button-container {
@@ -248,6 +269,8 @@
   /* Espacio entre los botones */
   margin-top: 60%;
 }
+
+
 
 /* .book-now {
   background-color: #6622F8;
@@ -306,10 +329,22 @@
   /* El subrayado se expande al pasar el ratón */
 }
 
-.container-promo .snip1482 img {
-  width: 60%;
+.container-promo .snip1482 .content-img{
+  overflow: hidden;
+  height: auto;
+}
+
+.container-promo .snip1482 .content-img img {
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Para que siempre llene sin deformarse */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+}
+.container-promo .snip1482 .content-img img:hover{
+
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -328,12 +363,11 @@
 }
 
 
-@media (max-width: 768px) {}
 
 
 /* ENTRADA */
 
-.promo-container {
+/* .promo-container {
   background-color: #03032c;
   color: white;
   display: flex;
@@ -381,8 +415,38 @@
 .promo-container .promo-image img {
   width: 300px;
   border-radius: 6px;
+} */
+
+.promo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(32deg, #27314F 80%, #ffffff 10%);
 }
 
+.promo-title .content-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding: 5%;
+  gap: 30px;
+}
+
+.promo-title .content-img {
+  flex: 1;
+}
+.promo-title .content-text {
+  flex: 1;
+  color: white;
+}
+
+.promo-title .content-img img {
+  width: 100%;
+  height: 100%;
+}
 
 @media (max-width: 768px) {
   .container-promo .section-start {
@@ -407,7 +471,7 @@
   /* OFERTA */
 
   .container-promo .deals-section {
-    margin: 0 0 0 0;
+padding: 20px;
   }
 
   .container-promo .promo-details {
@@ -447,5 +511,13 @@
     object-fit: contain;
   }
 
+  /* SECTION IMAGEN */
+  .promo-title .content-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
 
 }
