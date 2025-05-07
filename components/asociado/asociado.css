@@ -1,4 +1,78 @@
-.container-asociado{
+.item-fondo1{
+    background: linear-gradient(202deg, #27314F 80%, #ffffff 10%);
+}
+
+.item-fondo1 .content-asociado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+
+.item-fondo2{
+    background: linear-gradient(148deg, #27314F 80%, #ffffff 10%);
+}
+
+.item-fondo2 .content-asociado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+
+.item-fondo2 .solicitud-tarjeta-asociado {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(to left, #27314F, #1b2136, #1d243a);
+    color: white;
+}
+
+.item-fondo2 .formulario-asociado {
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-fondo2 .formulario-asociado h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.item-fondo2 .formulario-asociado form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-fondo2 .formulario-asociado input,
+.item-fondo2 .formulario-asociado select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffffdd;
+    color: #333;
+}
+
+.item-fondo2 .formulario-asociado input::placeholder {
+    color: #555;
+}
+
+
+.item-fondo-asociado3 {
+    background: linear-gradient(202deg, #27314F 80%, #ffffff 10%);
+
+  }
+
+  .item-fondo-asociado3 .content-asociado{
     display: flex;
     justify-content: center;
     align-items: center;

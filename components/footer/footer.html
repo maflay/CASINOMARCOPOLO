@@ -3,75 +3,78 @@
         <div class="footer-subscriber">
             <label>Suscríbete y recibe nuestras noticias</label>
             <!-- <form id="footer-form-action"> -->
-                <div class="footer-subscriber-email">
-                    <input type="email" id="email-footer" placeholder="" required />
-                    <button type="submit" class="boton-suscribete" onclick="footerRegister()">Suscríbete</button>
-                </div>
+            <div class="footer-subscriber-email">
+                <input type="email" id="email-footer" placeholder="" required />
+                <button type="submit" class="boton-suscribete" onclick="footerRegister()">Suscríbete</button>
+            </div>
             <!-- </form> -->
         </div>
 
-    <div class="footer-content">
-        <div class="footer-logo">
-            <a href="#">
-                <img src="/resources/marcopolo.png" alt="logo" />
-            </a>
-            <br />
-            <label>Cali, Bogotá, Barranquilla</label>
-            <label>contacto@marcopolo.com</label>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#">
+                    <img src="/resources/marcopolo.png" alt="logo" />
+                </a>
+                <br />
+                <label>Cali, Bogotá, Barranquilla</label>
+                <label>contacto@marcopolo.com</label>
+            </div>
+
+            <div class="footer-section">
+                <ul>
+                    <li><a href="/equipo">Equipo</a></li>
+                    <li><a href="/estudios">Estudios</a></li>
+                    <li><a href="/novedades">Novedades</a></li>
+                    <li><a href="/casinos">Casinos</a></li>
+                    <li><a href="/sostenibilidad">Sostenibilidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <ul>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/marcopolo">Marco Polo</a></li>
+                    <li><a href="/aladdin">Aladdin</a></li>
+                    <li><a href="/aprendeajugar">Aprende a jugar</a></li>
+                    <li><a href="/expasion">Expansión</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <ul>
+                    <li><a href="/dealerfluencer">Dealerfluencer</a></li>
+                    <li><a href="/globalambassadors">Global Ambassadors</a></li>
+                    <li><a href="/novedades">Novedades</a></li>
+                    <li><a href="/clubw">CLUBW</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer-section">
-            <ul>
-                <li><a href="/equipo">Equipo</a></li>
-                <li><a href="/estudios">Estudios</a></li>
-                <li><a href="/novedades">Novedades</a></li>
-                <li><a href="/casinos">Casinos</a></li>
-                <li><a href="/sostenibilidad">Sostenibilidad</a></li>
-            </ul>
+        <div class="footer-logos-legales">
+            <div><img src="/resources/Recurso-10.png" alt="logo vigilado" /></div>
+            <div><img src="/resources/Recurso-11.png" alt="logo aladdin" /></div>
+            <div><img src="/resources/Recurso-12.png" alt="logo coljuegos" /></div>
         </div>
 
-        <div class="footer-section">
-            <ul>
-                <li><a href="/nosotros">Nosotros</a></li>
-                <li><a href="/marcopolo">Marco Polo</a></li>
-                <li><a href="/aladdin">Aladdin</a></li>
-                <li><a href="/aprendeajugar">Aprende a jugar</a></li>
-                <li><a href="/expasion">Expansión</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>TODOS LOS DERECHOS RESERVADOS 2025.</p>
         </div>
-
-        <div class="footer-section">
-            <ul>
-                <li><a href="/dealerfluencer">Dealerfluencer</a></li>
-                <li><a href="/globalambassadors">Global Ambassadors</a></li>
-                <li><a href="/novedades">Novedades</a></li>
-                <li><a href="/clubw">CLUBW</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-logos-legales">
-        <div><img src="/resources/Recurso-10.png" alt="logo vigilado" /></div>
-        <div><img src="/resources/Recurso-11.png" alt="logo aladdin" /></div>
-        <div><img src="/resources/Recurso-12.png" alt="logo coljuegos" /></div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>TODOS LOS DERECHOS RESERVADOS 2025.</p>
-    </div>
-</section>
-<script src="/components/footer/footer.js"></script>
-<script>
-    
-function footerRegister(){
+    </section>
+    <script src="/components/footer/footer.js"></script>
+    <script>
+        function footerRegister() {
   console.log("prueba");
-  loading.style.display = "flex";
-  const emailInput = formularioFooter.querySelector('#email-footer');
-  const email = encodeURIComponent(emailInput.value); // Codificar el correo para la URL
- // Espera un momento para mostrar el loader antes de redirigir
- setTimeout(() => {
-   window.location.href = `/components/registro/registro.html?email=${email}`;
- }, 1000);
+  const emailInput = document.getElementById('email-footer');
+  const email = encodeURIComponent(emailInput.value); // Codifica el correo
+
+  if (!email) {
+    alert("Por favor ingresa un correo válido.");
+    return;
+  }
+
+  setTimeout(() => {
+    window.location.href = `/components/registro/registro.html?email=${email}`;
+  }, 1000);
 }
-</script>
+    </script>
 </footer>
