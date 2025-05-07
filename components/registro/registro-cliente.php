@@ -1,5 +1,7 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "marcopolo");
+// $conexion = new mysqli("localhost", "root", "", "marcopolo");
+require_once("../../conexion.php");
+
 
 if ($conexion->connect_error) {
     http_response_code(500);

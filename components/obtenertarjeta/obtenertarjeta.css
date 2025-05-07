@@ -12,7 +12,7 @@
 }
 
 .content-image {
-    width: 750px;
+    width: 600px;
     height: 400px;
 }
 
@@ -40,6 +40,34 @@
     padding: 60px 20px;
 }
 
+
+.img-test-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-test{
+  position: absolute;
+  left:0;
+   width: 40%;
+   object-fit: cover;
+}
+
+.img-test-container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-test2{
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  width: 15%;
+  object-fit: cover;
+}
+
 .item-fondo2 {
     background: linear-gradient(-32deg, #27314F 80%, #ffffff 10%);
 }
@@ -62,6 +90,7 @@
     padding: 60px 20px;
     background: linear-gradient(to right, #27314F, #1b2136, #1d243a);
     color: white;
+    z-index: 1;
 }
 
 .formulario {

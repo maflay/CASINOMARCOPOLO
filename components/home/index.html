@@ -176,19 +176,23 @@
       <div class="container-asociar">
         <div class="box-container-asociar">
           <div class="box-left-asociar">
-            <div class="box-left-asociar-content titulol">
-              <img class="img-club" src="/resources/Recurso-8@2x.png" alt="img-asociar">
-              <br><br><br>
-              <h2>
-                Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
-                como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
-                ahora.
-              </h2>
-              <br><br><br>
-              <div class="club-content">
-                <button class="btn-design2" onclick="asociarse()">Quiero asociarme</button>
+            <div class="box-img-asociar">
+              <img src="/resources/fondo-asociado.png" alt="fondo-club" class="img-fondo-asociar">
+              <div class="box-left-asociar-content titulol">
+                <img class="img-club" src="/resources/Recurso-8@2x.png" alt="img-asociar">
+                <br><br><br>
+                <h2>
+                  Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
+                  como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
+                  ahora.
+                </h2>
+                <br><br><br>
+                <div class="club-content">
+                  <button class="btn-design2" onclick="asociarse()">Quiero asociarme</button>
+                </div>
               </div>
             </div>
+
           </div>
           <div class="box-rigth-asociar">
             <img src="/resources/Recurso-2@2x.png" alt="img-asociar">
@@ -332,7 +336,7 @@
               message.innerHTML = '<div class="success-message">' +
                 '<strong>¡Éxito!</strong> Datos enviados correctamente.</div>';
             }, 1000);
-            
+
             form.reset();
             window.history.replaceState({}, document.title, window.location.pathname);
             setTimeout(() => {

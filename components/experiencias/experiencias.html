@@ -52,13 +52,13 @@
                     </div>
                 </div>
 
-                <form class="member-card item" id="member-card">
+                <div class="member-card item" id="member-card">
                     <div class="member-content">
                         <div class="icon">​💳​</div>
                         <p><strong>Los miembros disfrutan de recomendaciones gastronómicas únicas</strong></p>
-                        <button type="submit">Registrate</button>
+                        <button type="button" onclick="toRegister()">Registrate</button>
                     </div>
-                </form>
+                </div>
 
             </div>
         </div>
@@ -134,7 +134,7 @@
         <div class="experiences-title container">
             <div class="text1">
                 <h1 class="titulol">Descubre el lado exclusivo del entretenimiento.
-                    En Casino Marco Polo, cada experiencia está diseñada para que 
+                    En Casino Marco Polo, cada experiencia está diseñada para que
                     sientas la emoción, <br />
                     el lujo y la adrenalina de ser parte de algo único.<br />
                     🍷 bebidas premium y 🃏 juegos de alto nivel te esperan.<br />
@@ -156,10 +156,9 @@
             formularioMember.addEventListener('submit', function (event) {
                 event.preventDefault(); // Evita el envío del formulario por defecto
                 loading.style.display = "flex";
-                setTimeout(() => {
-                    window.location.href = '/components/registro/registro.html';
-                }, 1000);
-
+                window.scrollTo(0, 0);
+                navegarA(`/components/contacto/contacto.html`);
+                window.location.hash = '';
                 // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
             });
         }

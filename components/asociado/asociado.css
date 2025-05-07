@@ -1,4 +1,4 @@
-.item-fondo1{
+.item-fondo1 {
     background: linear-gradient(202deg, #27314F 80%, #ffffff 10%);
 }
 
@@ -10,7 +10,20 @@
     height: 100vh;
 }
 
-.item-fondo2{
+.img-test-container-aso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-test-aso {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    object-fit: cover;
+}
+
+.item-fondo2 {
     background: linear-gradient(148deg, #27314F 80%, #ffffff 10%);
 }
 
@@ -66,13 +79,26 @@
     color: #555;
 }
 
+.img-test-container-aso2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-test-aso2 {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    object-fit: cover;
+}
+
+
 
 .item-fondo-asociado3 {
     background: linear-gradient(202deg, #27314F 80%, #ffffff 10%);
+}
 
-  }
-
-  .item-fondo-asociado3 .content-asociado{
+.item-fondo-asociado3 .content-asociado {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,8 +1,6 @@
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
-  setTimeout(() => {
     loading.style.display = "none";
-  }, 900); // Tiempo para que la transición se vea suave
 });
 
 
@@ -18,12 +16,12 @@ const PageLoader = {
       .then(html => {
         setTimeout(() => {
           mainContent.innerHTML = html;
+          capturarCorreoDesdeURL();
           loading.style.display = "none";
-
           // Ejecutar lógica adicional si se cargó una página específica
-          if (url.includes("registro.html") && typeof inicializarRegistro === "function") {
-            inicializarRegistro(); // Llama al script del registro
-          }
+          // if (url.includes("registro.html") && typeof inicializarRegistro === "function") {
+          //   inicializarRegistro(); // Llama al script del registro
+          // }
         }, 500);
       })
       .catch(error => {
@@ -37,6 +35,7 @@ const PageLoader = {
 function navegarA(url) {
   if (url.startsWith('/components/')) {
     PageLoader.cargarPagina(url);
+    history.pushState(null, '', url);
   } else {
     window.location.href = url;
   }
@@ -246,9 +245,11 @@ function toRegister(){
   loading.style.display = "flex";
  
   // Espera un momento para mostrar el loader antes de redirigir
-  setTimeout(() => {
-    window.location.href = `/components/registro/registro.html`;
-  }, 1000);
+  // setTimeout(() => {
+  //   window.location.href = `/components/registro/registro.html`;
+  // }, 1000);
+  window.scrollTo(0, 0);
+  navegarA(`/components/contacto/contacto.html`);
  }
 
 function scrollToTop() {
@@ -256,4 +257,14 @@ function scrollToTop() {
     top: 0,
     behavior: "smooth", // hace que el scroll sea suave
   });
+}
+
+function capturarCorreoDesdeURL() {
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+  const inputCorreo = document.getElementById("correo");
+
+  if (email && inputCorreo) {
+      inputCorreo.value = decodeURIComponent(email);
+  }
 }

@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "marcopolo");
+require_once("../../conexion.php");
 
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);

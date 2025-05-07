@@ -2,79 +2,86 @@
 <html>
 
 <head>
-    <title>Página de obtener tarjeta - Casino Marco Polo</title>
+  <title>Página de obtener tarjeta - Casino Marco Polo</title>
 </head>
 
 <body>
-    <div>
+  <div>
     <section class="fondo">
-        <div class="container">
-            <div class="banner-obten-tarjeta">
-                <div>
-                    <div class="content-image item">
+      <div class="container">
+        <div class="banner-obten-tarjeta">
+          <div>
+            <div class="content-image item">
 
-                        <img src="/resources/tarjeta-mymawi.png" />
-                    </div>
-                </div>
-                <div class="frases-tarjeta item">
-
-                    <h1>PUEDES TENER TU TARJETA</h1>
-                    <h1>OBTENIENDO BEFENECIOS EXCLUSIVOS.</h1>
-                    <h1>LA ENVIDIA DE CUALQUIER JUGADOR</h1>
-                    <h1>OBTEN TÚ TARJETA Y SE TU LA ENVIDIA</h1>
-                </div>
+              <img src="/resources/tarjeta-mymawi.png" />
             </div>
+          </div>
+          <div class="frases-tarjeta item">
+
+            <h1>PUEDES TENER TU TARJETA</h1>
+            <h1>OBTENIENDO BEFENECIOS EXCLUSIVOS.</h1>
+            <h1>LA ENVIDIA DE CUALQUIER JUGADOR</h1>
+            <h1>OBTEN TÚ TARJETA Y SE TU LA ENVIDIA</h1>
+          </div>
         </div>
+      </div>
     </section>
+    <div class="img-test-container titulol">
+      <img class="img-test" src="/resources/ruleta.png" />
+    </div>
     <section class="item-fondo2">
-        <div class="container">
-            <div class="content-item2">
-                <div class="frases-tarjeta titulo">
-
-                    <h1>MAS CERCA DE TENERLA.</h1>
-                    <h1>AHORA TU PUEDES TENER UNA.</h1>
-                    <h1>LLENA LOS DATOS Y PODRAS OBTENERLA</h1>
-                    <h1>ESPERA QUE TE AVISAMOS Y TEN LA TUYA</h1>
-                </div>
-                <section class="solicitud-tarjeta titulo">
-                    <div class="formulario">
-                      <h2>Solicita tu tarjeta</h2>
-                      <form>
-                        <input type="text" name="nombre" placeholder="Nombre completo" required>
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono" required>
-                        <input type="text" name="direccion" placeholder="Dirección" required>
-                        <input type="text" name="ciudad" placeholder="Ciudad" required>
-                        <select name="tipo_tarjeta" required>
-                          <option value="">Selecciona un tipo de tarjeta</option>
-                          <option value="oro">Tarjeta Oro</option>
-                          <option value="platino">Tarjeta Platino</option>
-                          <option value="vip">Tarjeta VIP</option>
-                        </select>
-                        <button class="purple-button" type="submit">Solicitar</button>
-                      </form>
-                    </div>
-                  </section>
-            </div>
-        </div>
-    </section>
-    <section class="item-fondo3">
-        <div class="content-item3">
-          <div class="imagen-lateral izquierda titulol">
-            <img src="/resources/carta1.png" alt="Tarjeta izquierda" />
-          </div>
+      <div class="container">
+        <div class="content-item2">
           <div class="frases-tarjeta titulo">
-            <h1>LISTO, YA ES TUYA.</h1>
-            <h1>AHORA VISÍTANOS EN NUESTROS CASINOS.</h1>
-            <h1>MARCO POLO.</h1>
-            <h1>GANA Y DISFRUTA.</h1>
+
+            <h1>MAS CERCA DE TENERLA.</h1>
+            <h1>AHORA TU PUEDES TENER UNA.</h1>
+            <h1>LLENA LOS DATOS Y PODRAS OBTENERLA</h1>
+            <h1>ESPERA QUE TE AVISAMOS Y TEN LA TUYA</h1>
           </div>
-          <div class="imagen-lateral derecha titulor">
-            <img src="/resources/carta2.png" alt="Tarjeta derecha" />
-          </div>
+          <section class="solicitud-tarjeta titulo">
+            <div class="formulario">
+              <h2>Solicita tu tarjeta</h2>
+              <form id="form-tarjeta" onsubmit="return false;">
+                <input type="text" id="nombre-tarjeta" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email-tarjeta" name="email" placeholder="Correo electrónico" required>
+                <input type="tel" id="telefono-tarjeta" name="telefono" placeholder="Teléfono" required>
+                <input type="text" id="direccion-tarjeta" name="direccion" placeholder="Dirección" required>
+                <input type="text" id="ciudad-tarjeta" name="ciudad" placeholder="Ciudad" required>
+                <select name="tipo_tarjeta" required>
+                  <option value="">Selecciona un tipo de tarjeta</option>
+                  <option value="1">Tarjeta Oro</option>
+                  <option value="2">Tarjeta Platino</option>
+                  <option value="3">Tarjeta VIP</option>
+                </select>
+                <button class="purple-button" type="button" onclick="enviarFormularioTarjeta()">Solicitar</button>
+              </form>
+              <div id="form-message-tarjeta"></div>
+            </div>
+          </section>
         </div>
-      </section>
-</div>
+      </div>
+    </section>
+    <div class="img-test-container2 titulol">
+      <img class="img-test2" src="/resources/carta3.png" />
+    </div>
+    <section class="item-fondo3">
+      <div class="content-item3">
+        <div class="imagen-lateral izquierda titulol">
+          <img src="/resources/carta1.png" alt="Tarjeta izquierda" />
+        </div>
+        <div class="frases-tarjeta titulo">
+          <h1>LISTO, YA ES TUYA.</h1>
+          <h1>AHORA VISÍTANOS EN NUESTROS CASINOS.</h1>
+          <h1>MARCO POLO.</h1>
+          <h1>GANA Y DISFRUTA.</h1>
+        </div>
+        <div class="imagen-lateral derecha titulor">
+          <img src="/resources/carta2.png" alt="Tarjeta derecha" />
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>
