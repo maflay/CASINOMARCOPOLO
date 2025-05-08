@@ -1,86 +1,92 @@
-window.addEventListener("load", function () {
+// window.addEventListener("load", function () {
+//   const loading = document.getElementById("loading");
+//   loading.style.display = "none";
+// });
+
+function mostrarLoader() {
   const loading = document.getElementById("loading");
-    loading.style.display = "none";
-});
+  setTimeout(() => {
+  if (loading) loading.style.display = "flex";
+}, 800);
 
-
-const PageLoader = {
-  cargarPagina: function(url, contenedorId = 'content-area') {
-    const loading = document.getElementById("loading");
-    const mainContent = document.getElementById(contenedorId);
-
-    loading.style.display = "flex";
-
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        setTimeout(() => {
-          mainContent.innerHTML = html;
-          capturarCorreoDesdeURL();
-          loading.style.display = "none";
-          // Ejecutar lógica adicional si se cargó una página específica
-          // if (url.includes("registro.html") && typeof inicializarRegistro === "function") {
-          //   inicializarRegistro(); // Llama al script del registro
-          // }
-        }, 500);
-      })
-      .catch(error => {
-        console.error('Error al cargar la página:', error);
-        mainContent.innerHTML = '<p>Ocurrió un error cargando la página.</p>';
-        loading.style.display = "none";
-      });
-  }
-};
-
-function navegarA(url) {
-  if (url.startsWith('/components/')) {
-    PageLoader.cargarPagina(url);
-    history.pushState(null, '', url);
-  } else {
-    window.location.href = url;
-  }
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
-  const navLinks = document.querySelectorAll(
-    ".Navbar .nav-items a[data-target]"
-  );
-  const contentArea = document.getElementById("content-area");
-  const mainFooter = document.getElementById("main-footer");
-
-  const loadContent = (url) => {
+const PageLoader = {
+  cargarPagina: function (url, contenedorId = "content-area") {
+    const loading = document.getElementById("loading");
+    const mainContent = document.getElementById(contenedorId);
     window.scrollTo(0, 0);
+    loading.style.display = "flex";
 
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        console.log("Contenido cargado:");
-        // Verifica el contenido cargado
-        contentArea.innerHTML = html;
-        const scripts = contentArea.querySelectorAll("script");
-        const navToggle = document.getElementById("navToggle"); // Obtén el botón de toggle
-        const navItems = document.getElementById("navItems");
-        scripts.forEach((script) => {
-          try {
-            eval(script.textContent);
-          } catch (error) {
-            console.error("Error al ejecutar script:", error);
-          }
-        });
-        if (navItems && navToggle) {
-          if (navItems.classList.contains("open")) {
-            navToggle.classList.remove("open");
-            navItems.classList.remove("open");
-          }
-        }
+        setTimeout(() => {
+          mainContent.innerHTML = html;
+
+          // PARA EJECUTAR SCRIPTS DE LA VISTA CARGADA
+          const scripts = mainContent.querySelectorAll("script");
+          scripts.forEach((script) => {
+            const newScript = document.createElement("script");
+            if (script.src) {
+              newScript.src = script.src;
+              document.body.appendChild(newScript);
+            } else {
+              try {
+                eval(script.textContent);
+              } catch (err) {
+                console.error("Error ejecutando script:", err);
+              }
+            }
+          });
+
+          capturarCorreoDesdeURL();
+          loading.style.display = "none";
+          // window.history.replaceState({}, "", window.location.pathname);
+        }, 500);
       })
       .catch((error) => {
         console.error("Error al cargar la página:", error);
-        contentArea.innerHTML = "<p>Error al cargar el contenido.</p>";
+        mainContent.innerHTML = "<p>Ocurrió un error cargando la página.</p>";
+        loading.style.display = "none";
       });
-  };
+  },
+};
+
+function navegarA(ruta) {
+  const contentArea = document.getElementById("content-area");
+  const loading = document.getElementById("loading");
+  if (!contentArea) return;
+
+  loading.style.display = "flex";
+
+  fetch(ruta)
+    .then((res) => res.text())
+    .then((html) => {
+      setTimeout(() => {
+        contentArea.innerHTML = html;
+        loading.style.display = "none";
+        window.location.hash = ruta; // actualiza el hash
+      }, 500);
+    })
+    .catch((err) => {
+      loading.style.display = "none";
+      contentArea.innerHTML = "<p>Error al cargar el contenido.</p>";
+      console.error("Error al redirigir:", err);
+    });
+}
+
+window.addEventListener("hashchange", () => {
+  const nuevaRuta = window.location.hash.slice(1);
+  PageLoader.cargarPagina(nuevaRuta);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
+ 
+  const contentArea = document.getElementById("content-area");
+  const mainFooter = document.getElementById("main-footer");
+
   fetch("/components/header/header.html")
     .then((response) => response.text())
     .then((html) => {
@@ -88,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Inicializar los scripts del header AQUÍ, después de que el header esté en el DOM
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
+
 
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {
@@ -114,11 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", function (event) {
           event.preventDefault();
           // Remueve 'active' de todos los enlaces
-    navLinks.forEach((l) => l.classList.remove("active"));
-    // Agrega 'active' al enlace clicado
-    this.classList.add("active");
+          navLinks.forEach((l) => l.classList.remove("active"));
+          // Agrega 'active' al enlace clicado
+          this.classList.add("active");
           const targetPage = this.getAttribute("data-target");
-          loadContent(targetPage);
+          // loadContent(targetPage);
         });
       });
     })
@@ -147,8 +154,18 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al cargar el footer:", error);
       mainFooter.innerHTML = "<p>Error al cargar el footer.</p>";
     });
-
-  loadContent("./components/home/index.html");
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest(".Navbar .nav-items a[data-target]");
+    if (link) {
+      event.preventDefault();
+      const ruta = link.getAttribute("data-target");
+      window.location.hash = ruta; // esto actualiza la URL sin recargar
+    }
+  });
+  const ruta = window.location.hash
+    ? window.location.hash.slice(1)
+    : "/components/home/index.html";
+  PageLoader.cargarPagina(ruta);
 
   //   ANIMACIONES
 
@@ -240,17 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function toRegister(){
-  // Mostrar loader
-  loading.style.display = "flex";
- 
-  // Espera un momento para mostrar el loader antes de redirigir
-  // setTimeout(() => {
-  //   window.location.href = `/components/registro/registro.html`;
-  // }, 1000);
+function toRegister() {
   window.scrollTo(0, 0);
   navegarA(`/components/contacto/contacto.html`);
- }
+}
 
 function scrollToTop() {
   window.scrollTo({
@@ -260,11 +270,13 @@ function scrollToTop() {
 }
 
 function capturarCorreoDesdeURL() {
-  const params = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
+  const params = new URLSearchParams(url.search);
   const email = params.get("email");
   const inputCorreo = document.getElementById("correo");
 
   if (email && inputCorreo) {
-      inputCorreo.value = decodeURIComponent(email);
+    inputCorreo.value = decodeURIComponent(email);
   }
 }

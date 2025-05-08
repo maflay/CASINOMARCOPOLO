@@ -1,201 +1,298 @@
-.banner-obten-tarjeta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
-    gap: 70px;
+.fondo {
+  background: linear-gradient(180deg, #27314F 30%, #1E63D3 70%);
 }
 
-.fondo {
-    background: linear-gradient(32deg, #27314F 80%, #ffffff 10%);
+.banner-obten-tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  gap: 100px;
 }
 
 .content-image {
-    width: 600px;
-    height: 400px;
+  width: 600px;
+  height: 400px;
 }
 
 .banner-obten-tarjeta .content-image img {
-    width: 100%;
-    transition: transform 0.3s ease;
+  width: 100%;
+  transition: transform 0.3s ease;
+  transform: rotate(-6deg);
 }
 
 .banner-obten-tarjeta .content-image img:hover {
-    transform: scale(1.2);
+  transform: scale(1.1);
+}
 
+.card-marcopolo {
+  width: 600px;
+  height: 350px;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-marcopolo h1 {
+  font-size: 70px;
 }
 
 
 .frases-tarjeta h1 {
-    transform: rotate(-6deg);
-    /* Texto en diagonal */
-    color: #fff;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 2.2rem;
+  transform: rotate(-6deg);
+  /* Texto en diagonal */
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
 }
 
 .frases-tarjeta {
-    padding: 60px 20px;
+  padding: 60px 20px;
 }
 
 
-.img-test-container{
+.img-test-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-test{
+.img-test {
   position: absolute;
-  left:0;
-   width: 40%;
-   object-fit: cover;
+  left: 0;
+  width: 40%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform: translate(-280px);
 }
 
-.img-test-container2{
+.img-test:hover {
+  transform: translate(100px);
+}
+
+.img-test-container2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-test2{
+.img-test2 {
   position: absolute;
   bottom: 100px;
   right: 0;
   width: 15%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+  transform: translate(100px);
 }
 
 .item-fondo2 {
-    background: linear-gradient(-32deg, #27314F 80%, #ffffff 10%);
+  background: linear-gradient(180deg, #1E63D3 30%, #CE2441 70%);
 }
 
 .item-fondo2 .content-item2 {
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
-    color: white;
-    gap: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  gap: 70px;
 }
 
 
 .solicitud-tarjeta {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #27314F, #1b2136, #1d243a);
-    color: white;
-    z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px 20px;
+  background: transparent;
+  color: white;
+  z-index: 1;
 }
 
 .formulario {
-    max-width: 400px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  background: transparent;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .formulario h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .formulario form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .formulario input,
 .formulario select {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    background-color: #ffffffdd;
-    color: #333;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffffdd;
+  color: #333;
 }
 
 .formulario input::placeholder {
-    color: #555;
+  color: #555;
+}
+
+.item-fondo3 {
+  background: linear-gradient(180deg, #CE2441 30%, #6622F8 70%);
+
+}
+
+.content-item3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.imagen-lateral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-lateral img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.frases-tarjeta {
+  flex: 1 1 50%;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
 }
 
 
-.item-fondo3 {
-    background: linear-gradient(32deg, #27314F 80%, #ffffff 10%);
+/* Responsive */
+@media (max-width: 768px) {
+  .fondo {
+    background: linear-gradient(180deg, #27314F 30%, #1E63D3 70%);
+  }
+
+  .item-fondo2 {
+    background: linear-gradient(150deg, #1E63D3 30%, #CE2441 70%);
+  }
+  .item-fondo3 {
+    background: linear-gradient(32deg, #6622F8 30%, #CE2441 70%);
+  
+  }
+
+  .content-item3 {
+    flex-direction: column;
+  }
+
+  .imagen-lateral img {
+    height: auto;
+    width: 100%;
+  }
+
+  .frases-tarjeta {
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .frases-tarjeta h1 {
+    font-size: 1.8rem;
+  }
+
+  .solicitud-tarjeta {
+    justify-content: center;
+    padding: 40px 20px;
+    background: transparent;
+  }
+
+  .formulario {
+    width: 100%;
+    max-width: 90%;
+    background: #27314f8a;
 
   }
-  
-  .content-item3 {
+
+  .banner-obten-tarjeta {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .content-image {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding-top: 20%;
+  }
+
+  .banner-obten-tarjeta .content-image img {
+    width: 90%;
+    transform: rotate(-6deg);
   }
   
-  .imagen-lateral {
+  .banner-obten-tarjeta .content-image img:hover {
+    transform: scale(0);
+  }
+
+  
+  .img-test-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .imagen-lateral img {
-    width: 100%;
-    height: 40vh;
+  .img-test {
+    position: absolute;
+    left: 0;
+    width: 80%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    transform: translateY(0px);
   }
-  
-  .frases-tarjeta {
-    flex: 1 1 50%;
-    color: #fff;
-    text-align: center;
+
+  .item-fondo2 .content-item2 {
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 0px;
+  }
+
+  .imagen-lateral img {
     padding: 30px;
   }
-  
-  .frases-tarjeta h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px #000;
+
+  .img-test-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
   }
   
-  /* Responsive */
-  @media (max-width: 992px) {
-    .content-item3 {
-      flex-direction: column;
-    }
-  
-    .imagen-lateral img {
-      height: auto;
-      width: 100%;
-    }
-  
-    .frases-tarjeta {
-      padding: 20px;
-    }
-  
-    .frases-tarjeta h1 {
-      font-size: 1.8rem;
-    }
+  .img-test2 {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
-  
-
-@media screen and (max-width: 768px) {
-    .solicitud-tarjeta {
-        justify-content: center;
-        padding: 40px 20px;
-    }
-
-    .formulario {
-        width: 100%;
-        max-width: 90%;
-    }
 }

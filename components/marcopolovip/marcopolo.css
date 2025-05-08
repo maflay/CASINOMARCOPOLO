@@ -1,5 +1,3 @@
-.container-marco {}
-
 .video-bg {
   position: absolute;
   top: 0;
@@ -22,7 +20,7 @@
   text-align: center;
 }
 
-.content h1{
+.content h1 {
   color: white;
   text-shadow: 0 0 10px #fff;
 }
@@ -53,6 +51,46 @@
   text-shadow: 0 0 10px #F6921E;
 }
 
+.section-vip2 {
+  background: linear-gradient(90deg, #27314F 50%, #CE2441 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-vip3 {
+  background: #1E63D3;
+}
+
+.section-vip3 .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.section-vip3 .box-left-vip {
+  flex: 0.5;
+}
+
+.section-vip3 .box-left-vip .box-left-vip-content{
+  padding: 20%;
+}
+
+.section-vip3 .box-rigth-vip {
+  flex: 0.5;
+}
+
+.section-vip3 .box-rigth-vip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .content-section {
   background-color: white;
 }
@@ -65,10 +103,11 @@
 
 .container-marco .section-benefit h2 {
   text-align: center;
-  font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #6622F8;
-  text-shadow: 0 0 10px #6622F8;
+  color: #2c16b0;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 2.2rem;
 }
 
 .container-marco .section-level {
@@ -79,10 +118,11 @@
 
 .container-marco .section-level h2 {
   text-align: center;
-  font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #6622F8;
-  text-shadow: 0 0 10px #6622F8;
+  color: #2c16b0;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 2.2rem;
 }
 
 
@@ -110,7 +150,7 @@
 }
 
 .container-marco .benefit h3 {
-  color: #6622F8;
+  color: #fff;
   margin-bottom: 15px;
 }
 
@@ -182,17 +222,21 @@
   padding: 60px 20px;
 }
 
-.vip-cta h2{
+.vip-cta h2 {
   margin: 10px;
 }
 
 .split-section {
+  background: linear-gradient(90deg, #27314F 50%, #ececec 50%);
+
+}
+
+.split-section .split-content{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background: linear-gradient(90deg, #27314F 50%, #ececec 50%);
-  margin: 0 auto;    
- padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .split-section .split-left,

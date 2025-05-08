@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino Marco Polo</title>
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/components/home/index.css">
     <link rel="stylesheet" href="/components/header/header.css">
     <link rel="stylesheet" href="/components/footer/footer.css">
@@ -21,7 +20,7 @@
     <link rel="stylesheet" href="/components/vive-experience/viveex.css">
 </head>
 
-<body>
+<body onbeforeunload="mostrarLoader()">
     <div class="loading" id="loading">
         <div class="card-loader">
             <div class="card-face"><img src="/resources/loader.png" /></div> <!-- As de espadas unicode -->
@@ -50,6 +49,7 @@
     <script src="/components/vive-experience/viveex.js"></script>
     <script src="/components/asociado/asociado.js"></script>
     <script src="/components/contacto/contacto.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="functions.js"></script>
 </body>
 

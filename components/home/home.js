@@ -2,9 +2,6 @@
 
 function ObtenerTarjeta() {
   navegarA("/components/obtenertarjeta/obtenertarjeta.html");
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, 300);
 }
 
 // PROMOCIONES

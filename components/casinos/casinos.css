@@ -59,7 +59,7 @@
 /* SEGUNDA SECTION VIDA DE ALTO NIVEL */
 
 .second-section{
-    padding: 0 210px 50px 210px;
+    padding: 0 0px 50px 0px;
     background-color: white;
 }
 
@@ -67,6 +67,7 @@
     text-align: center;
     padding: 50px 20px;
     background-color: white;
+
   }
   
   .second-section .hero h1 {
@@ -88,6 +89,7 @@
     color: #fff;
     height: auto;
     padding-top: 30px;
+
   }
   
   .second-section .caspian-content {
@@ -220,8 +222,7 @@
   .section-noche .card-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    padding: 40px 20px;
+    padding: 40px 0px;
     justify-content: center;
   }
 
@@ -229,7 +230,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   
@@ -441,9 +442,10 @@
 
 /* HORARIO DE CASINO */
 .horario-casinos {
-    background:
+    /* background:
     linear-gradient(#1f253ad7, #1f253a),
-    url(../../resources/bg-home.jpg) center/cover no-repeat;
+    url(../../resources/bg-home.jpg) center/cover no-repeat; */
+    background: linear-gradient(90deg,#CE2441 50%, #27314F 50% );
     background-position: center;
     display: flex;
     flex-direction: column;
