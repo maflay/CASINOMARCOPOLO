@@ -1,11 +1,20 @@
 .first-section {
   position: relative;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
   overflow: hidden;
+}
+
+.first-section .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .first-section::before {
@@ -27,7 +36,7 @@
 }
 
 .first-section .first-content h1 {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 10px;
   background-image: linear-gradient(to right, #f3ec78, #af4261);
@@ -63,16 +72,15 @@
   align-items: center;
 }
 
-.container-experiences .experiences-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color: #06113C;
+.container-experiences .experiences-section .center-text {
+  padding: 20px;
+  text-align: center;
 }
 
 .container-experiences .experiences-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ¡Responsive! */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* ¡Responsive! */
   gap: 30px;
   width: 80%;
   margin: 0 auto;
@@ -86,7 +94,7 @@
   flex-direction: column;
 }
 
-.container-experiences .restaurant-card .restaurand-card-img{
+.container-experiences .restaurant-card .restaurand-card-img {
   overflow: hidden;
   height: 250px;
 }
@@ -195,7 +203,8 @@
 
 .cards-suerte {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ¡Responsive! */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* ¡Responsive! */
   gap: 30px;
   width: 80%;
   margin: 0 auto;
@@ -241,17 +250,13 @@
 
 }
 
-
-
-
-
 .diagonal-bg {
   height: auto;
   background: linear-gradient(165deg, #27314F 50%, #fff 50%);
 }
 
 
-.experiences-title{
+.experiences-title {
   position: relative;
   z-index: 1;
   color: white;
@@ -259,17 +264,17 @@
 
 }
 
-.experiences-title .text1{
+.experiences-title .text1 {
   width: 50%;
 }
 
-.experiences-title h1{
+.experiences-title h1 {
   font-size: 30px;
-    font-weight: 900;
-    line-height: 2.2rem;
+  font-weight: 900;
+  line-height: 2.2rem;
 }
 
-.experiences-title .text2{
+.experiences-title .text2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -277,7 +282,7 @@
   margin-left: 20%;
 }
 
-.experiences-title .text2 h1{
+.experiences-title .text2 h1 {
   color: #27314F;
   font-size: 2rem;
   width: 60%;
@@ -289,23 +294,17 @@
 @media (max-width: 768px) {
 
   /* EXPERIENCIAS */
-  .first-section {
-    margin-top: 18%;
-  }
-
   .container-experiences .experiences-section {
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .container-experiences .experiences-section .experiences-grid {
+  .first-section .video-bg {
+    display: none;
   }
 
-  .container-experiences .experiences-section h2 {
-    font-size: 28px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #06113C;
+  .container-experiences .experiences-section .experiences-grid {
+    width: 90%;
   }
 
   .container-experiences .restaurant-card {
@@ -318,6 +317,7 @@
 
   .cards-suerte {
     display: grid;
+    width: 100%;
   }
 
   .section-suerte .card-suerte {
@@ -328,35 +328,33 @@
     height: auto;
     background: linear-gradient(180deg, #27314F 55%, #fff 45%);
   }
-  
-  
-  .experiences-title{
+
+
+  .experiences-title {
     position: relative;
     z-index: 1;
     color: white;
     padding: 50px;
-  
+
   }
-  
-  .experiences-title .text1{
+
+  .experiences-title .text1 {
     width: 100%;
   }
-  
-  .experiences-title .text1 h1{
-  }
-  
-  .experiences-title .text2{
+
+  .experiences-title .text1 h1 {}
+
+  .experiences-title .text2 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 0;
     margin-left: 0%;
   }
-  
-  .experiences-title .text2 h1{
 
+  .experiences-title .text2 h1 {
     width: 100%;
   }
-  
+
 
 }

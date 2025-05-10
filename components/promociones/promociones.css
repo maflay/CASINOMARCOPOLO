@@ -1,10 +1,9 @@
 .container-promo .section-start {
   position: relative;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
   overflow: hidden;
 }
 
@@ -37,14 +36,6 @@ background-color: white;
   align-items: center;
   flex-direction: column;
   padding-top: 20px;
-}
-
-.container-promo .deals-section h3{
-  color: #27314F;
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 2.2rem;
-  margin: 10px;
 }
 
 .container-promo .deals-header {
@@ -349,7 +340,6 @@ background-color: white;
 
 
 .container-promo .snip1482 h2 {
-  text-transform: uppercase;
   font-size: 24px;
   margin-bottom: 10px;
   position: relative;
@@ -449,10 +439,6 @@ background-color: white;
 }
 
 @media (max-width: 768px) {
-  .container-promo .section-start {
-    margin-top: 18%;
-  }
-
   .container-promo .section-promo .promo-content {
     margin-top: 20%;
     margin-bottom: 2%;
@@ -472,6 +458,7 @@ background-color: white;
 
   .container-promo .deals-section {
 padding: 20px;
+text-align: center;
   }
 
   .container-promo .promo-details {

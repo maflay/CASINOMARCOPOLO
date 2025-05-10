@@ -4,11 +4,10 @@
 /* HERO FULLSCREEN */
 .con-cas .hero-casinos {
     position: relative;
-    height: 40vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
     overflow: hidden;
 }
 
@@ -30,7 +29,7 @@
     text-align: center;
 }
 
-.con-cas .hero-casinos .hero-content h1{
+.con-cas .hero-casinos .hero-content h1 {
     font-size: 50px;
     text-align: center;
     margin-bottom: 10px;
@@ -58,7 +57,7 @@
 
 /* SEGUNDA SECTION VIDA DE ALTO NIVEL */
 
-.second-section{
+.second-section {
     padding: 0 0px 50px 0px;
     background-color: white;
 }
@@ -68,63 +67,58 @@
     padding: 50px 20px;
     background-color: white;
 
-  }
-  
-  .second-section .hero h1 {
-    font-size: 50px;
-    color: #27314F;
-  }
-  
-  .second-section .hero p {
+}
+
+.second-section .hero p {
     font-size: 16px;
     color: #27314F;
     max-width: 700px;
     margin: 0 auto;
-  }
-  
-  .second-section .caspian-section {
+}
+
+.second-section .caspian-section {
     display: flex;
     flex-wrap: wrap;
-    background-color: #111;
+    background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%);
     color: #fff;
     height: auto;
     padding-top: 30px;
 
-  }
-  
-  .second-section .caspian-content {
+}
+
+.second-section .caspian-content {
     flex: 1;
     padding: 60px 40px;
     min-width: 300px;
-  }
-  
-  .second-section .caspian-content h2 {
+}
+
+.second-section .caspian-content h2 {
     font-size: 32px;
     margin-bottom: 20px;
-  }
-  
-  .second-section .caspian-content p {
+}
+
+.second-section .caspian-content p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
-  }
-  
-  .second-section .caspian-image {
+}
+
+.second-section .caspian-image {
     flex: 1;
     min-width: 300px;
-  }
-  
-  .second-section .caspian-image img {
+}
+
+.second-section .caspian-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-  }
+}
 
-  
+
 
 @media (max-width: 768px) {
-    .second-section{
+    .second-section {
         padding: 0px 0px 0px 0px;
         background-color: white;
     }
@@ -154,7 +148,7 @@
     text-align: left;
 }
 
-.con-cas .types-casinos .snip1482 .types-content{
+.con-cas .types-casinos .snip1482 .types-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,127 +191,132 @@
 
 /* SECTINO DE NOCHE */
 
-.section-noche{
+.section-noche {
     background-color: white;
 }
 
 .section-noche .nightlife-header {
     text-align: center;
     padding: 60px 20px 30px;
-  }
-  
-  .section-noche .nightlife-header h1 {
+}
+
+.section-noche .nightlife-header h1 {
+    color: #2c16b0;
     font-size: 40px;
-    margin-bottom: 20px;
-    color: #27314F;
-  }
-  
-  .section-noche .nightlife-header p {
+    font-weight: 900;
+    line-height: 2.2rem;
+}
+
+.section-noche .nightlife-header p {
     max-width: 700px;
     margin: 0 auto;
     font-size: 16px;
     color: #27314F;
-  }
-  
-  .section-noche .card-grid {
+}
+
+.section-noche .card-grid {
     display: flex;
     flex-wrap: wrap;
     padding: 40px 0px;
     justify-content: center;
-  }
+}
 
-  .section-noche .card-grid .card-grid-content{
+.section-noche .card-grid .card-grid-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     width: 100%;
     margin: 0 auto;
-  }
-  
-  .section-noche .card-noche {
+}
+
+.section-noche .card-noche {
     background: white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .section-noche .card-noche .card-noche-img{
+.section-noche .card-noche .card-noche-img {
     overflow: hidden;
     height: 250px;
-  }
-  
-  .section-noche .card-noche .card-noche-img img {
+}
+
+.section-noche .card-noche .card-noche-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
     -webkit-transition: -webkit-transform 0.4s ease;
-  }
+}
 
-  .section-noche .card-noche img:hover{
+.section-noche .card-noche img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-  
-  .section-noche .card-content {
+
+.section-noche .card-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-  }
-  
-  .section-noche .card-content h3 {
+}
+
+.section-noche .card-content h3 {
     margin: 0 0 10px;
     font-size: 18px;
     font-weight: 600;
     color: #27314F;
-  }
-  
-  .section-noche .card-content small {
+}
+
+.section-noche .card-content small {
     font-size: 12px;
     color: #888;
     margin-bottom: 15px;
     text-transform: uppercase;
-  }
-  
-  .section-noche .card-content p {
+}
+
+.section-noche .card-content p {
     font-size: 14px;
     color: #444;
     flex-grow: 1;
-  }
-  
-  .section-noche .card-footer {
+}
+
+.section-noche .card-footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-top: 15px;
     border-top: 1px solid #eee;
     font-size: 14px;
-  }
-  
-  .section-noche .card-footer a {
+}
+
+.section-noche .card-footer a {
     color: #0077cc;
     text-decoration: none;
     font-weight: 500;
-  }
-  
-  .section-noche .card-footer span {
+}
+
+.section-noche .card-footer span {
     font-size: 18px;
     color: #777;
-  }
+}
 
 @media screen and (max-width: 768px) {
     .section-noche .card-grid {
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      
-      .section-noche .card-noche {
+    }
+
+    .section-noche .card-noche {
         min-width: 100%;
-      }
-      
-    
+    }
+
+    .section-noche .card-grid .card-grid-content {
+        width: 90%;
+    }
+
+
 }
 
 /* STAFF */
@@ -356,17 +355,18 @@
 }
 
 
-.con-cas .staff-casinos .marco-polo-text p{
+.con-cas .staff-casinos .marco-polo-text p {
     color: #27314f;
 }
 
 /* TODA LA NOCHE MARCOPOLO */
 
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .black-box {
         width: 95%;
-        min-height: auto; /* La altura se ajusta al contenido */
+        min-height: auto;
+        /* La altura se ajusta al contenido */
         height: 60vh;
         padding: 15px;
     }
@@ -379,8 +379,10 @@
     }
 
     .text-content {
-        flex-direction: column; /* Apilar el texto y el botón en pantallas pequeñas */
-        align-items: flex-start; /* Alinear a la izquierda */
+        flex-direction: column;
+        /* Apilar el texto y el botón en pantallas pequeñas */
+        align-items: flex-start;
+        /* Alinear a la izquierda */
         bottom: 15px;
         left: 15px;
         width: calc(100% - 30px);
@@ -398,14 +400,15 @@
     .text-content button {
         font-size: 0.8em;
         padding: 8px 15px;
-        width: fit-content; /* El botón ocupa el ancho de su contenido */
+        width: fit-content;
+        /* El botón ocupa el ancho de su contenido */
     }
 }
 
 
 /* LOCALIZACIONES */
 
-.con-cas .mapas-casinos{
+.con-cas .mapas-casinos {
     background-image:
         linear-gradient(#ffffff, #ffffffb6),
         url(../../resources/s1.jpg);
@@ -419,11 +422,10 @@
 
 .con-cas .mapas-casinos .map-casinos iframe {
     border-radius: 10px;
-    
+
 }
 
-
-.con-cas .mapas-casinos .map-casinos h1{
+.con-cas .mapas-casinos .map-casinos h1 {
     color: #F6921E;
 }
 
@@ -445,14 +447,14 @@
     /* background:
     linear-gradient(#1f253ad7, #1f253a),
     url(../../resources/bg-home.jpg) center/cover no-repeat; */
-    background: linear-gradient(90deg,#CE2441 50%, #27314F 50% );
+    background: linear-gradient(90deg, #CE2441 30%, #27314F 70%);
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-   
+
 }
 
 .horario-casinos .horario-content {
@@ -499,11 +501,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
 
-    .con-cas .hero-casinos{
-        margin-top: 18%;
-    }
-
-    .con-cas .hero-casinos .hero-content h1{
+    .con-cas .hero-casinos .hero-content h1 {
         font-size: 40px;
     }
 
@@ -549,7 +547,7 @@
         padding: 20px;
     }
 
-    .con-cas .mapas-casinos h1{
+    .con-cas .mapas-casinos h1 {
         font-size: 18px;
     }
 
@@ -586,6 +584,7 @@
     .horario-casinos .horario-casinos-img .horario-box-left {
         display: grid;
     }
+
     .horario-casinos .horario-casinos-img .horario-image {
         width: 100%;
     }

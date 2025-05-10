@@ -1,5 +1,7 @@
 .fondo {
-  background: linear-gradient(180deg, #27314F 30%, #1E63D3 70%);
+   background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
+    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
+    #1F253A, #27314F, #1F253A 85%);
 }
 
 .banner-obten-tarjeta {
@@ -94,15 +96,16 @@
 }
 
 .item-fondo2 {
-  background: linear-gradient(180deg, #1E63D3 30%, #CE2441 70%);
+  background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
+    #1F253A, #27314F, #1F253A 85%);
 }
 
 .item-fondo2 .content-item2 {
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   color: white;
   gap: 70px;
 }
@@ -123,7 +126,6 @@
   width: 100%;
   background: transparent;
   padding: 30px;
-  border-radius: 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -154,7 +156,9 @@
 }
 
 .item-fondo3 {
-  background: linear-gradient(180deg, #CE2441 30%, #6622F8 70%);
+   background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
+    #1F253A, #27314F, #1F253A 85%);
 
 }
 
@@ -162,7 +166,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   flex-wrap: wrap;
 }
 
@@ -188,18 +192,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .fondo {
-    background: linear-gradient(180deg, #27314F 30%, #1E63D3 70%);
-  }
-
-  .item-fondo2 {
-    background: linear-gradient(150deg, #1E63D3 30%, #CE2441 70%);
-  }
-  .item-fondo3 {
-    background: linear-gradient(32deg, #6622F8 30%, #CE2441 70%);
-  
-  }
-
   .content-item3 {
     flex-direction: column;
   }
@@ -226,7 +218,6 @@
 
   .formulario {
     width: 100%;
-    max-width: 90%;
     background: #27314f8a;
 
   }
@@ -248,11 +239,11 @@
 
   .banner-obten-tarjeta .content-image img {
     width: 90%;
-    transform: rotate(-6deg);
+    transform: rotate(0deg);
   }
   
   .banner-obten-tarjeta .content-image img:hover {
-    transform: scale(0);
+    transform: scale(1);
   }
 
   

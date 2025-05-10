@@ -52,7 +52,7 @@
 }
 
 .section-vip2 {
-  background: linear-gradient(90deg, #27314F 50%, #CE2441 50%);
+  background: linear-gradient(180deg, #27314F 30%, #CE2441 70%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +92,7 @@
 }
 
 .content-section {
-  background-color: white;
+    background: linear-gradient(180deg, #CE2441 10%, #27314F 50%);
 }
 
 .container-marco .section-benefit {
@@ -196,23 +196,6 @@
 .container-marco .cta {
   text-align: center;
   margin-top: 60px;
-}
-
-.container-marco .cta button {
-  background: #6622F8;
-  color: #fff;
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 0 12px #6622F8;
-}
-
-.container-marco .cta button:hover {
-  background: #fff;
-  color: #6622f8;
 }
 
 .vip-cta {

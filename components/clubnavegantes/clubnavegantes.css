@@ -1,10 +1,9 @@
 .container-clubnavegantes .section-club-start {
     position: relative;
-    height: 60vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
     overflow: hidden;
 }
 
@@ -42,25 +41,25 @@
     margin-bottom: 20px;
 }
 
+.container-clubnavegantes .section-club-start2 {
+    background: linear-gradient(80deg, #2C16B0 40%, #6622F8 60%);
+
+}
 
 .container-clubnavegantes .sports-club {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
-    background-color: rgb(27, 27, 27);
     color: rgb(221, 221, 221);
     width: 100%;
-    height: auto;
+    height: 25vh;
 }
 
-.container-clubnavegantes .sports-club .sports-club-content{
+.container-clubnavegantes .sports-club .sports-club-content {
     display: flex;
-    width: 80%;
+    width: 100%;
 }
-
-
 
 .container-clubnavegantes .sports-club img {
     width: 20%;
@@ -75,18 +74,17 @@
 /* SEGUNDA SECTION */
 
 .section-sports-club {
+    background-color: rgb(221, 221, 221);
+}
+
+.title-sports-club {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(27, 27, 27);
-    background-color: rgb(221, 221, 221);
     width: 100%;
     height: 40vh;
-}
-
-.title-sports-club {
-    width: 70%;
 }
 
 .info-section {
@@ -127,13 +125,7 @@
 /* APUESTAS DEPORTIVAS */
 
 .container-apuesta {
-    position: relative;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
 }
 
 .container-apuesta .apuesta-deportiva {
@@ -141,18 +133,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2%;
-    width: 80%;
+    width: 100%;
     gap: 20px;
+
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-left {
     flex: 50%;
 }
 
-.container-apuesta .apuesta-deportiva .apuesta-left h1,
 .container-apuesta .apuesta-deportiva .apuesta-left p {
     color: #27314F;
+    margin-top: 10px;
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-buttons {
@@ -238,6 +230,8 @@
 .container-apuesta .apuesta-deportiva .apuesta-rigth img {
     width: 100%;
     height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .container-apuesta-sitio {
@@ -279,7 +273,7 @@
     height: 100vh;
 }
 
-.container-apuesta-tv .apuesta-tv{
+.container-apuesta-tv .apuesta-tv {
     width: 40%;
     height: auto;
     padding: 5%;
@@ -287,7 +281,7 @@
 }
 
 .container-apuesta-tv .apuesta-tv h1,
-.container-apuesta-tv .apuesta-tv p{
+.container-apuesta-tv .apuesta-tv p {
     color: white;
     text-align: center;
 }
@@ -295,10 +289,6 @@
 
 
 @media (max-width: 768px) {
-    .container-clubnavegantes .section-club-start {
-        margin-top: 18%;
-    }
-
     .container-clubnavegantes .section-club-start .content-club-start h1 {
         font-size: 40px;
     }
@@ -307,8 +297,13 @@
         font-size: 20px;
     }
 
+    .container-clubnavegantes .section-club-start2 {
+                background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%);
+    }
+
     .container-clubnavegantes .sports-club {
         flex-wrap: wrap;
+        height: auto;
     }
 
     .container-clubnavegantes .sports-club img {
@@ -320,11 +315,12 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .container-clubnavegantes .sports-club .sports-club-content{
+
+    .container-clubnavegantes .sports-club .sports-club-content {
         display: block;
         width: 80%;
     }
-    
+
 
     /* INFORMACION */
     .info-section {
@@ -339,11 +335,12 @@
     .title-sports-club {
         margin-top: 20px;
         margin-bottom: 20px;
+        height: auto;
     }
 
     .info-section {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        height: auto;
     }
 
     /* APUESTA */
@@ -369,7 +366,7 @@
     }
 
 
-    .container-apuesta-tv .apuesta-tv{
+    .container-apuesta-tv .apuesta-tv {
         width: 100%;
     }
 

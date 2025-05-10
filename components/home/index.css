@@ -36,17 +36,17 @@
 
 .slider-container .slide1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-    url(../../resources/fondo.png);
+    url(/resources/fondo.png);
 }
 
 .slider-container .slide2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-    url(../../resources/bg-home-02.jpg);
+    url(/resources/bg-home-02.jpg);
 }
 
 .slider-container .slide3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
-    url(../../resources/bg-home.jpg);
+    url(/resources/bg-home.jpg);
 }
 
 .slider-container .arrow {
@@ -645,7 +645,7 @@
     min-height: 100vh;
   }
 
-  .container-asociar .box-left-asociar .box-img-asociar{
+  .container-asociar .box-left-asociar .box-img-asociar {
     height: 100vh;
   }
 
@@ -660,6 +660,7 @@
     line-height: 1.5rem;
     font-weight: 900;
     width: 300px;
+    text-align: center;
   }
 
   .container-asociar .box-left-asociar .box-left-asociar-content {

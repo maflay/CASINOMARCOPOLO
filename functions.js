@@ -1,14 +1,16 @@
-// window.addEventListener("load", function () {
-//   const loading = document.getElementById("loading");
-//   loading.style.display = "none";
-// });
+window.addEventListener("load", function () {
+  const loading = document.getElementById("loading");
+  setTimeout(() => {
+  loading.style.display = "none";
+  }, 800);
+
+});
 
 function mostrarLoader() {
   const loading = document.getElementById("loading");
   setTimeout(() => {
   if (loading) loading.style.display = "flex";
-}, 800);
-
+  }, 800);
 }
 
 const PageLoader = {
@@ -48,7 +50,7 @@ const PageLoader = {
       .catch((error) => {
         console.error("Error al cargar la página:", error);
         mainContent.innerHTML = "<p>Ocurrió un error cargando la página.</p>";
-        loading.style.display = "none";
+        // loading.style.display = "none";
       });
   },
 };
@@ -65,12 +67,12 @@ function navegarA(ruta) {
     .then((html) => {
       setTimeout(() => {
         contentArea.innerHTML = html;
-        loading.style.display = "none";
+        // loading.style.display = "none";
         window.location.hash = ruta; // actualiza el hash
       }, 500);
     })
     .catch((err) => {
-      loading.style.display = "none";
+      // loading.style.display = "none";
       contentArea.innerHTML = "<p>Error al cargar el contenido.</p>";
       console.error("Error al redirigir:", err);
     });
@@ -83,7 +85,7 @@ window.addEventListener("hashchange", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
- 
+
   const contentArea = document.getElementById("content-area");
   const mainFooter = document.getElementById("main-footer");
 
@@ -94,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Inicializar los scripts del header AQUÍ, después de que el header esté en el DOM
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
-
 
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {
@@ -125,6 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
           // Agrega 'active' al enlace clicado
           this.classList.add("active");
           const targetPage = this.getAttribute("data-target");
+          if (navItems.classList.contains("open")) {
+            navToggle.classList.remove("open");
+            navItems.classList.remove("open");
+          }
           // loadContent(targetPage);
         });
       });
