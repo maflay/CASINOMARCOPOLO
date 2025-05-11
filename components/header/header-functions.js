@@ -19,4 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-  
+document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-target]");
+    if (link) {
+      event.preventDefault();
+      const ruta = link.getAttribute("data-target");
+      window.location.hash = ruta; // actualiza la URL
+    }
+  });

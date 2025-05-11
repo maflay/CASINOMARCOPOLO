@@ -1,7 +1,10 @@
 .item-fondo1 {
-    background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
+    /* background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global2.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .item-fondo1 .content-asociado {
@@ -26,9 +29,12 @@
 }
 
 .item-fondo2 {
-        background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+        /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global3.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .item-fondo2 .content-asociado {
@@ -97,10 +103,14 @@
 
 
 .item-fondo-asociado3 {
-        background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+        /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global2.png);
+    background-size: cover;
+    background-position: center;
 }
+
 
 .item-fondo-asociado3 .content-asociado {
     display: flex;

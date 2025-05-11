@@ -126,6 +126,7 @@
 
 .container-apuesta {
     background-color: #fff;
+    padding: 40px;
 }
 
 .container-apuesta .apuesta-deportiva {
@@ -139,7 +140,7 @@
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-left {
-    flex: 50%;
+    flex: 1;
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-left p {
@@ -224,66 +225,78 @@
 
 
 .container-apuesta .apuesta-deportiva .apuesta-rigth {
-    flex: 0 0 50%;
+    flex: 1;
+    overflow: hidden;
 }
 
 .container-apuesta .apuesta-deportiva .apuesta-rigth img {
     width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 100%;
+    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.container-apuesta .apuesta-deportiva .apuesta-rigth img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .container-apuesta-sitio {
     position: relative;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    background-image: url(/resources/fondo-apuestas.jpg);
+    background-image: url(/resources/fondo-apuestas.png);
     background-size: cover;
     background-position: center;
-    padding: 5%;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }
+
+.container-apuesta-sitio .apt-sitio{
+    display: flex;
+    justify-content: flex-end;
+} 
 
 .container-apuesta-sitio .apuesta-sitio {
     width: 40%;
     height: auto;
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.89);
+    padding: 2%;
+    background-color: rgba(20, 20, 20, 0.719);
 }
 
 .container-apuesta-sitio .apuesta-sitio h1,
 .container-apuesta-sitio .apuesta-sitio p {
     color: #fff;
-    text-align: center;
+    padding: 10px;
 }
 
 .container-apuesta-tv {
     position: relative;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    background-image: url(/resources/apuestas-tv.jpg);
+    background-image: url(/resources/fondo-apuestas2.png);
     background-size: cover;
     background-position: center;
-    padding: 5%;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+}
+
+.container-apuesta-tv .apt-tv{
+    display: flex;
+    justify-content: flex-start;
 }
 
 .container-apuesta-tv .apuesta-tv {
     width: 40%;
     height: auto;
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.89);
+    padding: 2%;
+    background-color: rgba(20, 20, 20, 0.719);
 }
 
 .container-apuesta-tv .apuesta-tv h1,
 .container-apuesta-tv .apuesta-tv p {
-    color: white;
-    text-align: center;
+    color: #fff;
+    padding: 10px;
 }
 
 
@@ -298,7 +311,7 @@
     }
 
     .container-clubnavegantes .section-club-start2 {
-                background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%);
+        background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%);
     }
 
     .container-clubnavegantes .sports-club {
@@ -314,6 +327,8 @@
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
+        padding-left: 0;
+        margin-right: 0;
     }
 
     .container-clubnavegantes .sports-club .sports-club-content {
@@ -330,6 +345,7 @@
 
     .section-sports-club {
         height: auto;
+        padding: 20px;
     }
 
     .title-sports-club {
@@ -344,6 +360,10 @@
     }
 
     /* APUESTA */
+    .container-apuesta {
+        padding: 0;
+    }
+
     .container-apuesta .apuesta-deportiva {
         display: flex;
         padding: 20px;
@@ -354,20 +374,67 @@
 
     /* ANUNCIO */
 
+    .container-apuesta-sitio {
+        height: auto;
+        background-image: url(/resources/blanco.jpg);
+    }
+
     .container-apuesta-sitio .apuesta-sitio {
         width: 80%;
+    }
+
+    .container-apuesta-sitio .apuesta-sitio .apuesta-sitio-img {
+        background-image: url(/resources/fondo-apuestas.png);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 30vh;
+        margin-bottom: 20px;
     }
 
     .container-apuesta-sitio .apuesta-sitio {
         width: 100%;
         height: auto;
         padding: 5%;
-        background-color: rgba(0, 0, 0, 0.89);
+        background-color: #fff;
     }
 
+    .container-apuesta-sitio .apuesta-sitio h1,
+    .container-apuesta-sitio .apuesta-sitio p {
+        color: #000;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .container-apuesta-tv {
+        background-image: url(/resources/blanco.jpg);
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container-apuesta-tv .apuesta-tv-img {
+        background-image: url(/resources/fondo-apuestas2.png);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 30vh;
+        margin-bottom: 20px;
+    }
 
     .container-apuesta-tv .apuesta-tv {
         width: 100%;
+        height: auto;
+        padding: 5%;
+        background-color: #fff;
+    }
+
+    .container-apuesta-tv .apuesta-tv h1,
+    .container-apuesta-tv .apuesta-tv p {
+        color: #000;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
 }

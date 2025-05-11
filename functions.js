@@ -2,16 +2,16 @@ window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
   loading.style.display = "none";
-  }, 800);
+}, 550);
 
 });
 
 function mostrarLoader() {
   const loading = document.getElementById("loading");
-  setTimeout(() => {
   if (loading) loading.style.display = "flex";
-  }, 800);
 }
+
+
 
 const PageLoader = {
   cargarPagina: function (url, contenedorId = "content-area") {
@@ -23,7 +23,6 @@ const PageLoader = {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        setTimeout(() => {
           mainContent.innerHTML = html;
 
           // PARA EJECUTAR SCRIPTS DE LA VISTA CARGADA
@@ -45,7 +44,6 @@ const PageLoader = {
           capturarCorreoDesdeURL();
           loading.style.display = "none";
           // window.history.replaceState({}, "", window.location.pathname);
-        }, 500);
       })
       .catch((error) => {
         console.error("Error al cargar la página:", error);

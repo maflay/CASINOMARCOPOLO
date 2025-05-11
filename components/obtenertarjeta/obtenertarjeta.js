@@ -2,7 +2,17 @@ function enviarFormularioTarjeta() {
   const form = document.getElementById("form-tarjeta");
   const message = document.getElementById("form-message-tarjeta");
   const loading = document.getElementById("loading");
+  const nombre = document.getElementById("nombre-tarjeta").value.trim();
+  const email = document.getElementById("email-tarjeta").value.trim();
+  const telefono = document.getElementById("telefono-tarjeta").value.trim();
+  const direccion = document.getElementById("direccion-tarjeta").value.trim();
+  const ciudad = document.getElementById("ciudad-tarjeta").value.trim();
+  const tipoTarjeta = form.querySelector('select[name="tipo_tarjeta"]').value;
 
+  if (!nombre || !email || !telefono || !direccion || !ciudad || !tipoTarjeta) {
+    alert("Por favor completa todos los campos y selecciona un tipo de tarjeta.");
+    return;
+  }
   if (!form) return;
 
   const formData = new FormData(form);

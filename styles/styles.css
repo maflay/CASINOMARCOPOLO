@@ -7,7 +7,7 @@
     font-family: 'TT Interphases Pro Variable', sans-serif !important; 
 }
 
-body, html {
+html {
     overflow-x: hidden;
     background-color: #1F253A;
     scroll-behavior: auto;
@@ -15,7 +15,7 @@ body, html {
 
 .container {
   width: 100%;
-  max-width: 1200px; /* ancho máximo */
+  max-width: 1300px; /* ancho máximo */
   margin: 0 auto;     /* centra horizontalmente */
   padding: 0 20px;    /* espacio a los lados */
 }
@@ -94,6 +94,13 @@ body, html {
 .type2-h1 {
   color: #fff;
   font-size: 40px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
+.type3-h1 {
+  color: #fff;
+  font-size: 30px;
   font-weight: 900;
   line-height: 2.2rem;
 }
@@ -219,6 +226,51 @@ body, html {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* Fondo del loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1F253A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Imagen sobre la barra */
+.loader-img img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Barra de fondo */
+.progress-bar {
+  width: 10%;
+  height: 10px;
+  background: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Barra que se llena */
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #000;
+  animation: fillBar 3s ease forwards; /* Puedes ajustar duración */
+}
+
+/* Animación de llenado */
+@keyframes fillBar {
+  to {
+    width: 100%;
+  }
+}
+
 
 
   @media  (max-width: 768px){
@@ -232,5 +284,8 @@ body, html {
     }
     .container {    /* centra horizontalmente */
       padding: 20px;    /* espacio a los lados */
+    }
+    .progress-bar {
+      width: 30%;
     }
   }

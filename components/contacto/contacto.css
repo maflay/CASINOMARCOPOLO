@@ -193,7 +193,7 @@
 
 .container-contact .img-test-ruleta {
   position: absolute;
-  left: -215px;
+  right: 1200px;
   width: 40%;
   object-fit: cover;
 }
@@ -206,7 +206,7 @@
 
 .container-contact .img-test-dados {
   position: absolute;
-  left: 0;
+  left: 400px;
   bottom: 450px;
   width: 15%;
   object-fit: cover;
@@ -220,7 +220,7 @@
 
 .container-contact .img-test-carta1 {
   position: absolute;
-  left: 1500px;
+  left: 1350px;
   width: 15%;
   object-fit: cover;
 }
@@ -233,7 +233,7 @@
 
 .container-contact .img-test-carta2 {
   position: absolute;
-  left: 1500px;
+  left: 1400px;
   bottom: 450px;
   width: 15%;
   object-fit: cover;
@@ -243,6 +243,12 @@
 
 /* Estilos Responsive */
 @media (max-width: 768px) {
+
+  
+body{
+  overflow-x: hidden;
+
+}
     .container-contact .formulario-contacto {
         width: auto;
     }
@@ -280,7 +286,8 @@
 
 .container-contact .img-test-ruleta {
   position: absolute;
-  left: -70px;
+  left: -170px;
+  bottom: 80px;
   width: 80%;
   object-fit: cover;
 }
@@ -308,6 +315,7 @@
 .container-contact .img-test-carta1 {
   position: absolute;
   left: 280px;
+  bottom: 80px;
   width: 45%;
   object-fit: cover;
   z-index: -1;

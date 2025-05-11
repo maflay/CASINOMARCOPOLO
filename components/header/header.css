@@ -108,6 +108,7 @@
 
 @media (max-width: 1320px) {
 
+
     .Navbar {
         transition: background-color 0.3s ease;
         background-color: transparent;
@@ -132,10 +133,13 @@
         transition: transform 0.3s ease-in-out;
     }
 
-    .Navbar>.nav-items>a {font-size: 20px;}
+    .Navbar>.nav-items>a {
+        font-size: 20px;
+    }
 
     .Navbar .nav-items.open {
         transform: translateX(0);
+        overflow-y: hidden;
     }
 
     .card-divider-menu {
@@ -220,4 +224,5 @@
         transform: rotate(-45deg);
         bottom: 0;
     }
+
 }

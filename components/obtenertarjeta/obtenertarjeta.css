@@ -1,7 +1,10 @@
 .fondo {
-   background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
+   /* background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .banner-obten-tarjeta {
@@ -22,6 +25,7 @@
   width: 100%;
   transition: transform 0.3s ease;
   transform: rotate(-6deg);
+  border-radius: 40px;
 }
 
 .banner-obten-tarjeta .content-image img:hover {
@@ -96,9 +100,12 @@
 }
 
 .item-fondo2 {
-  background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+  /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global2.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .item-fondo2 .content-item2 {
@@ -156,9 +163,12 @@
 }
 
 .item-fondo3 {
-   background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
+   /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%);
+    #1F253A, #27314F, #1F253A 85%); */
+    background-image: url(/resources/fondo-color-global3.jpg);
+    background-size: cover;
+    background-position: center;
 
 }
 
