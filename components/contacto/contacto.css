@@ -1,117 +1,117 @@
 .container-contact {
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-contact .banner-start {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container-contact .banner-start::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../resources/bg-home-02.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../resources/bg-home-02.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .container-contact .banner-start .banner-content {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .container-contact .banner-start .banner-content h1 {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-image: linear-gradient(to right, #f3ec78, #af4261);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: movimiento-gradiente 2s linear infinite alternate;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: movimiento-gradiente 2s linear infinite alternate;
 }
 
 .container-contact .section-start .content-start p {
-    color: #fff;
-    font-size: 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 @keyframes movimiento-gradiente {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    100% {
-        background-position: 100% 50%;
-    }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .container-contact .contact-form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 75px;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 75px;
+  gap: 10px;
 }
 
 .container-contact .contact-form .content-image {
-    /* background-image: url(/resources/dealer2-copia.png); */
-    width: 400px;
-    height: auto;
-    padding-top: 0%;
+  /* background-image: url(/resources/dealer2-copia.png); */
+  width: 400px;
+  height: auto;
+  padding-top: 0%;
 }
 
 .container-contact .contact-form .box-image img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 
 .container-contact .container-formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .container-contact .formulario-contacto {
-    display: flex;
-    flex-direction: column;
-    width: 550px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  margin: 20px;
 }
 
 .container-contact .form-group {
-    margin-bottom: 15px;
-    outline: none;
+  margin-bottom: 15px;
+  outline: none;
 }
 
 .container-contact label {
-    display: block;
-    margin-bottom: 5px;
-    color: #fff;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .container-contact input[type="text"],
@@ -119,70 +119,70 @@
 .container-contact input[type="tel"],
 .container-contact input[type="date"],
 .container-contact textarea {
-    width: calc(100% - 12px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 
 
 .container-contact textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .container-contact .checkbox-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .container-contact .checkbox-group input[type="checkbox"] {
-    width: auto;
+  width: auto;
 }
 
 .container-contact .btn-contact-send {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .container-contact .boton-enviar {
-    display: inline-block;
-    background-color: #5100ff;
-    padding: 10px 15px;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 900;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #5100ff;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+  transition: background-color 0.3s ease;
 }
 
 .container-contact .boton-enviar:hover {
-    background-color: #fff;
-    color: #5100ff;
+  background-color: #fff;
+  color: #5100ff;
 }
 
 .contact-form .thechecks {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
 }
 
 .checks-cliente-terminos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .checks-cliente-terminos a {
-    color: #6622F8;
+  color: #6622F8;
 }
 
 .container-contact .img-test-container-ruleta {
@@ -239,101 +239,157 @@
   object-fit: cover;
 }
 
+@media (max-width: 1370px) {
 
+  .container-contact .img-test-container-ruleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-contact .img-test-ruleta {
+    position: absolute;
+    right: 850px;
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .container-contact .img-test-container-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-contact .img-test-dados {
+    position: absolute;
+    left: 200px;
+    bottom: 450px;
+    width: 22%;
+    object-fit: cover;
+  }
+
+  .container-contact .img-test-container-carta1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-contact .img-test-carta1 {
+    position: absolute;
+    left: 950px;
+    width: 22%;
+    object-fit: cover;
+  }
+
+  .container-contact .img-test-container-carta2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-contact .img-test-carta2 {
+    position: absolute;
+    left: 950px;
+    bottom: 450px;
+    width: 22%;
+    object-fit: cover;
+  }
+}
 
 /* Estilos Responsive */
 @media (max-width: 768px) {
 
-  
-body{
-  overflow-x: hidden;
 
-}
-    .container-contact .formulario-contacto {
-        width: auto;
-    }
+  body {
+    overflow-x: hidden;
 
-    .container-contact .boton-enviar,
-    .container-contact .boton-registro {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
+  }
 
-    .container-contact .contact-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  .container-contact .formulario-contacto {
+    width: auto;
+  }
 
-    .container-contact .contact-form .box-image {
-        /* background-image: url(/resources/dealer2-copia.png); */
-        width: 100%;
-        height: 800px;
-    }
+  .container-contact .boton-enviar,
+  .container-contact .boton-registro {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 
-    .container-contact .contact-form .box-image img {
-        width: 100%;
-        height: 100%;
-    }
+  .container-contact .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    
-.container-contact .img-test-container-ruleta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .container-contact .contact-form .box-image {
+    /* background-image: url(/resources/dealer2-copia.png); */
+    width: 100%;
+    height: 800px;
+  }
 
-.container-contact .img-test-ruleta {
-  position: absolute;
-  left: -170px;
-  bottom: 80px;
-  width: 80%;
-  object-fit: cover;
-}
+  .container-contact .contact-form .box-image img {
+    width: 100%;
+    height: 100%;
+  }
 
-.container-contact .img-test-container-dados {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.container-contact .img-test-dados {
-  position: absolute;
-  left: -50px;
-  bottom: 450px;
-  width: 50%;
-  object-fit: cover;
-}
+  .container-contact .img-test-container-ruleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.container-contact .img-test-container-carta1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .container-contact .img-test-ruleta {
+    position: absolute;
+    left: -170px;
+    bottom: 80px;
+    width: 80%;
+    object-fit: cover;
+  }
 
-.container-contact .img-test-carta1 {
-  position: absolute;
-  left: 280px;
-  bottom: 80px;
-  width: 45%;
-  object-fit: cover;
-  z-index: -1;
-}
+  .container-contact .img-test-container-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.container-contact .img-test-container-carta2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .container-contact .img-test-dados {
+    position: absolute;
+    left: -50px;
+    bottom: 450px;
+    width: 50%;
+    object-fit: cover;
+  }
 
-.container-contact .img-test-carta2 {
-  position: absolute;
-  left: 300px;
-  bottom: 450px;
-  width: 45%;
-  object-fit: cover;
-}
+  .container-contact .img-test-container-carta1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    
+  .container-contact .img-test-carta1 {
+    position: absolute;
+    left: 280px;
+    bottom: 80px;
+    width: 45%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .container-contact .img-test-container-carta2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-contact .img-test-carta2 {
+    position: absolute;
+    left: 300px;
+    bottom: 450px;
+    width: 45%;
+    object-fit: cover;
+  }
+
+
 }

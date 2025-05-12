@@ -252,10 +252,10 @@
     height: 80vh;
 }
 
-.container-apuesta-sitio .apt-sitio{
+.container-apuesta-sitio .apt-sitio {
     display: flex;
     justify-content: flex-end;
-} 
+}
 
 .container-apuesta-sitio .apuesta-sitio {
     width: 40%;
@@ -281,7 +281,7 @@
     height: 80vh;
 }
 
-.container-apuesta-tv .apt-tv{
+.container-apuesta-tv .apt-tv {
     display: flex;
     justify-content: flex-start;
 }
@@ -399,9 +399,17 @@
         background-color: #fff;
     }
 
-    .container-apuesta-sitio .apuesta-sitio h1,
+    .container-apuesta-sitio .apuesta-sitio h1 {
+        color: #2c16b0;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 2.2rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .container-apuesta-sitio .apuesta-sitio p {
-        color: #000;
+        color: #1F253A;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -430,11 +438,19 @@
         background-color: #fff;
     }
 
-    .container-apuesta-tv .apuesta-tv h1,
-    .container-apuesta-tv .apuesta-tv p {
-        color: #000;
+    .container-apuesta-tv .apuesta-tv h1 {
+        color: #2c16b0;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 2.2rem;
         text-align: center;
         margin-bottom: 10px;
+    }
+
+    .container-apuesta-tv .apuesta-tv p {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #1F253A;
     }
 
 }

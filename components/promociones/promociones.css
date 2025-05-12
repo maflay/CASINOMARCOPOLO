@@ -226,7 +226,7 @@ background-color: white;
 /* NUEVO FORMA DE CUADRO  */
 
 
-.container-promo .container-apuesta {
+.container-promo .container-section-promo {
   height: auto;
   display: flex;
   justify-content: center;
@@ -234,6 +234,7 @@ background-color: white;
   align-items: center;
   gap: 60px;
   padding: 30px;
+  margin-top: 50px;
   background:
     linear-gradient(#1f253a, #1f253a00),
     url(/resources/fondo-color-global.png) center/cover no-repeat;
@@ -241,7 +242,7 @@ background-color: white;
   color: white;
 }
 
-.container-promo .container-apuesta .apuesta-deportiva {
+.container-promo .container-section-promo .apuesta-deportiva {
   height: auto;
   display: flex;
   justify-content: center;
@@ -251,16 +252,16 @@ background-color: white;
 
 }
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-left {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-left {
   flex: 50%;
 }
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-left p {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-left p {
   color: #fff;
   margin-top: 10px;
 }
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-buttons {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-buttons {
   display: flex;
   /* Para colocar los botones uno al lado del otro */
   gap: 20px;
@@ -268,7 +269,7 @@ background-color: white;
   margin-top: 20%;
 }
 
-.container-promo .container-apuesta .book-now {
+.container-promo .container-section-promo .book-now {
   background-color: #6622F8;
   /* Rojo similar al de la imagen */
   color: white;
@@ -286,12 +287,12 @@ background-color: white;
   /* Transición suave al pasar el ratón */
 }
 
-.container-promo .container-apuesta .book-now:hover {
+.container-promo .container-section-promo .book-now:hover {
   background-color: #2C16B0;
   /* Un tono de rojo más oscuro al pasar el ratón */
 }
 
-.container-promo .container-apuesta .learn-more {
+.container-promo .container-section-promo .learn-more {
   background-color: transparent;
   /* Fondo transparente */
   color: #2C16B0;
@@ -308,7 +309,7 @@ background-color: white;
   /* Transición suave al pasar el ratón */
 }
 
-.container-promo .container-apuesta .learn-more::after {
+.container-promo .container-section-promo .learn-more::after {
   content: '';
   position: absolute;
   left: 0;
@@ -324,34 +325,33 @@ background-color: white;
   /* Transición suave para la aparición del subrayado */
 }
 
-.container-promo .container-apuesta .learn-more:hover {
+.container-promo .container-section-promo .learn-more:hover {
   color: #6622F8;
   /* Un tono de gris al pasar el ratón */
 }
 
-.container-promo .container-apuesta .learn-more:hover::after {
+.container-promo .container-section-promo .learn-more:hover::after {
   transform: scaleX(1);
   /* El subrayado se expande al pasar el ratón */
 }
 
 
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-rigth {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-rigth {
   flex: 0 0 50%;
   overflow: hidden;
 
 }
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-rigth img {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-rigth img {
   width: 100%;
   height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+ 
   transition: transform 0.4s ease;
   -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-.container-promo .container-apuesta .apuesta-deportiva .apuesta-rigth img:hover {
+.container-promo .container-section-promo .apuesta-deportiva .apuesta-rigth img:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -419,7 +419,7 @@ background-color: white;
 
   /* OFERTA */
 
-  .container-promo .container-apuesta {
+  .container-promo .container-section-promo {
   height: auto;
   padding: 0;
   gap: 0;
