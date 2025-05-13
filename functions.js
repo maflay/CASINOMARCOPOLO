@@ -1,17 +1,14 @@
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
-  loading.style.display = "none";
-}, 550);
-
+    loading.style.display = "none";
+  }, 550);
 });
 
 function mostrarLoader() {
   const loading = document.getElementById("loading");
   if (loading) loading.style.display = "flex";
 }
-
-
 
 const PageLoader = {
   cargarPagina: function (url, contenedorId = "content-area") {
@@ -23,27 +20,27 @@ const PageLoader = {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-          mainContent.innerHTML = html;
+        mainContent.innerHTML = html;
 
-          // PARA EJECUTAR SCRIPTS DE LA VISTA CARGADA
-          const scripts = mainContent.querySelectorAll("script");
-          scripts.forEach((script) => {
-            const newScript = document.createElement("script");
-            if (script.src) {
-              newScript.src = script.src;
-              document.body.appendChild(newScript);
-            } else {
-              try {
-                eval(script.textContent);
-              } catch (err) {
-                console.error("Error ejecutando script:", err);
-              }
+        // PARA EJECUTAR SCRIPTS DE LA VISTA CARGADA
+        const scripts = mainContent.querySelectorAll("script");
+        scripts.forEach((script) => {
+          const newScript = document.createElement("script");
+          if (script.src) {
+            newScript.src = script.src;
+            document.body.appendChild(newScript);
+          } else {
+            try {
+              eval(script.textContent);
+            } catch (err) {
+              console.error("Error ejecutando script:", err);
             }
-          });
+          }
+        });
 
-          capturarCorreoDesdeURL();
-          loading.style.display = "none";
-          // window.history.replaceState({}, "", window.location.pathname);
+        capturarCorreoDesdeURL();
+        loading.style.display = "none";
+        // window.history.replaceState({}, "", window.location.pathname);
       })
       .catch((error) => {
         console.error("Error al cargar la página:", error);
@@ -274,7 +271,7 @@ function scrollToTop() {
 
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
-  const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
+  const url = new URL("http://anyurl.com" + hash.slice(1)); // usar un dominio falso
   const params = new URLSearchParams(url.search);
   const email = params.get("email");
   const inputCorreo = document.getElementById("correo");

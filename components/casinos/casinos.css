@@ -376,6 +376,12 @@
     justify-content: center;
     align-items: center;
 }
+   .con-cas .mapas-casinos h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
 
 .con-cas .mapas-casinos .map-casinos iframe {
     border-radius: 10px;
@@ -422,12 +428,13 @@
 
 .horario-casinos .horario-ciudades {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 30px;
     margin-right: 30px;
+    gap: 30px;
 }
 
 .horario-casinos .horario-casinos-img {
@@ -455,9 +462,66 @@
     border-radius: 10px;
 }
 
+.horario-casinos .card-horario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 350px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.horario-casinos .card-horario .card-horario-img {
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+  object-fit: cover;
+
+}
+
+.horario-casinos .card-horario .card-horario-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.horario-casinos .card-horario .card-horario-img img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.horario-casinos .card-horario .card-horario-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+}
+
+.horario-casinos .card-horario .card-horario-content h1{
+color: #2c16b0;
+}
+
+.horario-casinos .card-horario .card-horario-content h3 {
+ background: linear-gradient(45deg, #FFD700, #ffef11, #a58b09, #887400);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+}
+
+.horario-casinos .card-horario .card-horario-content p,
+.horario-casinos .card-horario .card-horario-content small {
+color: #1F253A;
+
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-
     .con-cas .hero-casinos .hero-content h1 {
         font-size: 40px;
     }
@@ -505,7 +569,9 @@
     }
 
     .con-cas .mapas-casinos h1 {
-        font-size: 18px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
     }
 
 

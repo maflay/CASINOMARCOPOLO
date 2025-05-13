@@ -32,6 +32,10 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-container .slide1 {
@@ -91,6 +95,28 @@
 
 .slider-container .dot.active {
   background: white;
+}
+
+@media (max-width :768px) {
+
+
+  .slider-container .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .slider-container .slide2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+      url(/resources/fondo-slider-movil-3.png);
+  }
+
+  .slider-container .slide3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+      url(/resources/fondo-slider-movil-2.png);
+  }
 }
 
 
@@ -320,9 +346,10 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  margin-left: 0;
+    margin-left: 0;
 
   }
+
   .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content {
     margin-left: 0;
   }
@@ -608,7 +635,7 @@
   height: 60%;
 }
 
-.container-asociar .box-left-asociar .box-left-asociar-content h2{
+.container-asociar .box-left-asociar .box-left-asociar-content h2 {
   width: 70%;
 }
 
@@ -665,6 +692,7 @@
     line-height: 5rem;
     font-weight: 900;
   }
+
   .container-asociar .box-left-asociar .box-left-asociar-content h2 {
     font-size: 20px;
     line-height: 1.5rem;
@@ -674,16 +702,16 @@
     text-align: center;
   }
 
-  
-.container-asociar .box-left-asociar .box-left-asociar-content {
-  padding: 0 0 0 0;
-  position: absolute;
-  margin-left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
+  .container-asociar .box-left-asociar .box-left-asociar-content {
+    padding: 0 0 0 0;
+    position: absolute;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .container-asociar .box-rigth-asociar {
     padding: 0px 0px 0px 0px;
