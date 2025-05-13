@@ -108,8 +108,10 @@ html {
   line-height: 2.2rem;
 }
 
-/* TRANSICION DE ITEMS */
+/* REVERTIR */
+.view-reverse {flex-direction: row-reverse;}
 
+/* TRANSICION DE ITEMS */
 
 .titulo {
   opacity: 0;
