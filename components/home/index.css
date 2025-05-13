@@ -297,12 +297,10 @@
   flex: 0.5;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
   align-items: center;
 }
 
 .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content {
-  margin-left: 30%;
 }
 
 .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h1 {
