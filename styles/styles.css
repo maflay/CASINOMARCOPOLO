@@ -190,65 +190,15 @@ html {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* SPINNER DE LOADER */
-/* .loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.circle-loader {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  animation: rotate 6s linear infinite;
-}
-
-.circle-loader span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: 0 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-}
-
-.circle-loader span:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
-.circle-loader span:nth-child(2) { transform: rotate(24deg) translate(100px) rotate(-24deg); }
-.circle-loader span:nth-child(3) { transform: rotate(48deg) translate(100px) rotate(-48deg); }
-.circle-loader span:nth-child(4) { transform: rotate(72deg) translate(100px) rotate(-72deg); }
-.circle-loader span:nth-child(5) { transform: rotate(96deg) translate(100px) rotate(-96deg); }
-.circle-loader span:nth-child(6) { transform: rotate(120deg) translate(100px) rotate(-120deg); }
-.circle-loader span:nth-child(7) { transform: rotate(144deg) translate(100px) rotate(-144deg); }
-.circle-loader span:nth-child(8) { transform: rotate(168deg) translate(100px) rotate(-168deg); }
-.circle-loader span:nth-child(9) { transform: rotate(192deg) translate(100px) rotate(-192deg); }
-.circle-loader span:nth-child(10) { transform: rotate(216deg) translate(100px) rotate(-216deg); }
-.circle-loader span:nth-child(11) { transform: rotate(240deg) translate(100px) rotate(-240deg); }
-.circle-loader span:nth-child(12) { transform: rotate(264deg) translate(100px) rotate(-264deg); }
-.circle-loader span:nth-child(13) { transform: rotate(288deg) translate(100px) rotate(-288deg); }
-.circle-loader span:nth-child(14) { transform: rotate(312deg) translate(100px) rotate(-312deg); }
-.circle-loader span:nth-child(15) { transform: rotate(336deg) translate(100px) rotate(-336deg); }
-
-@keyframes rotate {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
-/* Fondo del loader */
+/* LOADER */
 .loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1F253A;
+  background: linear-gradient(120deg, #1F253A, #27314F, #1F253A, #27314F, #1F253A,
+      #27314F, #1F253A, #27314F, #1F253A, #27314F);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -286,6 +236,7 @@ html {
     width: 100%;
   }
 }
+
 
 @media (max-width: 768px) {
   html {

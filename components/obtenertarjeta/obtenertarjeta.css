@@ -2,7 +2,7 @@
    /* background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-color-global.png);
+    background-image: url(/resources/fondo-prueba.png);
     background-size: cover;
     background-position: center;
 }
@@ -103,9 +103,10 @@
   /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-color-global2.png);
+    background-image: url(/resources/fondo-prueba2.png);
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 .item-fondo2 .content-item2 {
@@ -166,9 +167,10 @@
    /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
     #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
     #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-color-global3.jpg);
+    background-image: url(/resources/fondo-prueba.png);
     background-size: cover;
     background-position: center;
+    height: 100vh;
 
 }
 
@@ -296,4 +298,9 @@
     object-fit: cover;
     transition: transform 0.3s ease;
   }
+
+  .item-fondo3 {
+    height: auto;
+
+}
 }

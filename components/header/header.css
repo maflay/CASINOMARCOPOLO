@@ -113,6 +113,7 @@
         transition: background-color 0.3s ease;
         background-color: transparent;
         /* Fondo transparente al principio */
+        height: 35px;
     }
 
     .Navbar.navbar-scrolled {
@@ -166,10 +167,10 @@
     .Navbar .nav-toggle {
         display: flex;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 0;
+        right: 0px;
         width: 40px;
-        height: 40px;
+        height: 34px;
         justify-content: center;
         align-items: center;
         cursor: pointer;
@@ -185,7 +186,7 @@
     }
 
     .nav-toggle .bar {
-        width: 30px;
+        width: 20px;
         height: 3px;
         background: white;
         position: relative;

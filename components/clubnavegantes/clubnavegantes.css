@@ -28,13 +28,6 @@
     width: 80%;
 }
 
-.container-clubnavegantes .section-club-start .content-club-start h1 {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
 .container-clubnavegantes .section-club-start .content-club-start p {
     color: #fff;
     font-size: 1.2rem;
@@ -42,7 +35,7 @@
 }
 
 .container-clubnavegantes .section-club-start2 {
-    background: linear-gradient(80deg, #2C16B0 40%, #6622F8 60%);
+    background: linear-gradient(80deg, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F);
 
 }
 
@@ -311,16 +304,18 @@
     }
 
     .container-clubnavegantes .section-club-start2 {
-        background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%);
+        /* background: linear-gradient(90deg, #2C16B0 10%, #6622F8 90%); */
     }
 
     .container-clubnavegantes .sports-club {
         flex-wrap: wrap;
         height: auto;
+
     }
 
     .container-clubnavegantes .sports-club img {
-        width: 100%;
+        width: 80%;
+        padding: 20px;
     }
 
     .container-clubnavegantes .sports-club p {
@@ -334,6 +329,9 @@
     .container-clubnavegantes .sports-club .sports-club-content {
         display: block;
         width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
