@@ -108,6 +108,20 @@ html {
   line-height: 2.2rem;
 }
 
+.type4-h1 {
+  color: #2c16b0;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
+.type5-h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
 /* REVERTIR */
 .view-reverse {flex-direction: row-reverse;}
 
@@ -253,7 +267,7 @@ html {
 
   .container {
     /* centra horizontalmente */
-    padding: 20px;
+    padding: 0 20px;
     /* espacio a los lados */
   }
 

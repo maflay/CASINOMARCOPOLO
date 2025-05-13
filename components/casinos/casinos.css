@@ -69,6 +69,10 @@
 
 }
 
+.second-section .hero h1 {
+    margin-bottom: 20px;
+}
+
 .second-section .hero p {
     font-size: 16px;
     color: #27314F;
@@ -196,22 +200,24 @@
 .section-noche {
     background-color: white;
 }
-.section-noche .section-noche-content{
-position: relative;
+
+.section-noche .section-noche-content {
+    position: relative;
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-.section-noche .section-noche-content::before{
-   content: "";
+
+.section-noche .section-noche-content::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/resources/s2.jpg);
+    background-image: url(/resources/maquinas.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -330,6 +336,27 @@ position: relative;
     color: #777;
 }
 
+.con-cas .fondo-ley {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    height: 300px;
+}
+
+.con-cas .fondo-ley .game-ley {
+    padding: 20px;
+    text-align: center;
+}
+
+.con-cas .fondo-ley .game-ley h1 {
+    margin-bottom: 20px;
+}
+
+.con-cas .fondo-ley .game-ley p {
+    color: #1F253A;
+}
+
 @media screen and (max-width: 768px) {
     .section-noche .card-grid {
         display: flex;
@@ -343,6 +370,11 @@ position: relative;
 
     .section-noche .card-grid .card-grid-content {
         width: 90%;
+    }
+
+
+    .con-cas .fondo-ley {
+        height: auto;
     }
 
 
@@ -392,6 +424,8 @@ position: relative;
 }
 
 
+
+
 /* LOCALIZACIONES */
 
 .con-cas .mapas-casinos {
@@ -405,12 +439,12 @@ position: relative;
     justify-content: center;
     align-items: center;
 }
-   .con-cas .mapas-casinos h1 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        text-align: center;
-    }
 
+.con-cas .mapas-casinos h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
 
 .con-cas .mapas-casinos .map-casinos iframe {
     border-radius: 10px;
@@ -436,9 +470,6 @@ position: relative;
 
 /* HORARIO DE CASINO */
 .horario-casinos {
-    /* background:
-    linear-gradient(#1f253ad7, #1f253a),
-    url(../../resources/bg-home.jpg) center/cover no-repeat; */
     background: linear-gradient(60deg, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F);
     background-position: center;
     display: flex;
@@ -504,7 +535,7 @@ position: relative;
     overflow: hidden;
     width: 100%;
     height: 250px;
-  object-fit: cover;
+    object-fit: cover;
 
 }
 
@@ -517,8 +548,8 @@ position: relative;
 }
 
 .horario-casinos .card-horario .card-horario-img img:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .horario-casinos .card-horario .card-horario-content {
@@ -530,22 +561,21 @@ position: relative;
     padding: 20px;
 }
 
-.horario-casinos .card-horario .card-horario-content h1{
-color: #2c16b0;
+.horario-casinos .card-horario .card-horario-content h1 {
+    color: #2c16b0;
 }
 
 .horario-casinos .card-horario .card-horario-content h3 {
- background: linear-gradient(45deg, #FFD700, #ffef11, #a58b09, #887400);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1rem;
+    background: linear-gradient(45deg, #FFD700, #ffef11, #a58b09, #887400);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1rem;
 }
 
 .horario-casinos .card-horario .card-horario-content p,
 .horario-casinos .card-horario .card-horario-content small {
-color: #1F253A;
-
+    color: #1F253A;
 }
 
 /* Responsive styles */
@@ -560,9 +590,8 @@ color: #1F253A;
     }
 
     .con-cas .types-casinos .snip1482 {
-        display: contents;
-        max-width: 90%;
-        padding: 20px;
+        flex-direction: column;
+        width: 100%;
     }
 
     .con-cas .snip1482 figcaption {
@@ -582,8 +611,6 @@ color: #1F253A;
     .con-cas .staff-casinos .staff-casinos-img {
         padding: 30px;
     }
-
-
 
     .con-cas .staff-casinos .marco-polo-text {
         width: 80%;

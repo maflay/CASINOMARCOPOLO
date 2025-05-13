@@ -1,6 +1,6 @@
 .first-section {
   position: relative;
-  height: 60vh;
+  height: 73.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,7 @@
 .first-content {
   text-align: center;
 }
+
 /* 
 .first-section .first-content h1 {
   font-size: 40px;
@@ -59,7 +60,8 @@
 /* EXPERIENCIAS */
 
 .fondo-xp {
- background-color: white;
+  background: 
+    linear-gradient(to bottom, #fff 10%, #f0f0f0 90%);
 }
 
 .container-experiences {
@@ -69,7 +71,6 @@
 }
 
 .container-experiences .experiences-section {
-  /* background-color: white; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,6 +80,10 @@
 .container-experiences .experiences-section .center-text {
   padding: 20px;
   text-align: center;
+}
+
+.container-experiences .experiences-section .center-text h2 {
+  padding: 40px;
 }
 
 .container-experiences .experiences-grid {
@@ -152,7 +157,8 @@
 
 /* CARD */
 .section-card {
-  background-color: white;padding: 20px;
+  background-color: white;
+  padding: 20px;
 
 }
 
@@ -213,7 +219,6 @@
 .cards-suerte {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  /* ¡Responsive! */
   gap: 30px;
   width: 80%;
   margin: 0 auto;
@@ -221,7 +226,6 @@
 
 
 .section-suerte .card-suerte {
-  background: white;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -327,6 +331,7 @@
   .cards-suerte {
     display: grid;
     width: 100%;
+    gap: 0;
   }
 
   .section-suerte .card-suerte {
