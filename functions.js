@@ -1,81 +1,120 @@
+const rutasLimpias = {
+  home: {
+    html: "/components/home/index.html",
+    css: "/components/home/index.css",
+    js: "/components/home/home.js",
+  },
+  casino: {
+    html: "/components/casinos/casinos.html",
+    css: "/components/casinos/casinos.css",
+    js: "/components/casinos/casinos.js",
+  },
+  experiencias: {
+    html: "/components/experiencias/experiencias.html",
+    css: "/components/experiencias/experiencias.css",
+    js: "/components/experiencias/experiencias.js",
+  },
+  promociones: {
+    html: "/components/promociones/promociones.html",
+    css: "/components/promociones/promociones.css",
+    js: "/components/promociones/promociones.js",
+  },
+  clubnavegante: {
+    html: "/components/clubnavegantes/clubnavegantes.html",
+    css: "/components/clubnavegantes/clubnavegantes.css",
+    js: "/components/clubnavegantes/clubnavegantes.js",
+  },
+  contacto: {
+    html:"/components/contacto/contacto.html",
+    css:"/components/contacto/contacto.css",
+    js:"/components/contacto/contacto.js",
+  },
+  obtenertarjeta: {
+    html :"/components/obtenertarjeta/obtenertarjeta.html",
+    css :"/components/obtenertarjeta/obtenertarjeta.css",
+    js :"/components/obtenertarjeta/obtenertarjeta.js",
+  },
+  asociado: {
+    html:"/components/asociado/aosciado.html",
+    css:"/components/asociado/asociado.css",
+    js:"/components/asociado/asociado.js",
+  },
+};
+
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
     loading.style.display = "none";
   }, 550);
 });
+function cargarEstiloVista(cssUrl) {
+  const oldLink = document.getElementById("vista-css");
+  if (oldLink) oldLink.remove();
 
-function mostrarLoader() {
-  const loading = document.getElementById("loading");
-  if (loading) loading.style.display = "flex";
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = cssUrl;
+  link.id = "vista-css";
+  document.head.appendChild(link);
+}
+
+function cargarScriptVista(scriptUrl) {
+  const oldScript = document.getElementById("vista-script");
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement("script");
+  script.src = scriptUrl;
+  script.id = "vista-script";
+  script.defer = true;
+  document.body.appendChild(script);
 }
 
 const PageLoader = {
-  cargarPagina: function (url, contenedorId = "content-area") {
+  cargarPagina: function (clave, contenedorId = "content-area") {
     const loading = document.getElementById("loading");
     const mainContent = document.getElementById(contenedorId);
     window.scrollTo(0, 0);
     loading.style.display = "flex";
 
-    fetch(url)
+    const ruta = rutasLimpias[clave];
+    if (!ruta) {
+      mainContent.innerHTML = `<p>Ruta no encontrada: ${clave}</p>`;
+      loading.style.display = "none";
+      return;
+    }
+
+    fetch(ruta.html)
       .then((response) => response.text())
       .then((html) => {
         mainContent.innerHTML = html;
 
-        // PARA EJECUTAR SCRIPTS DE LA VISTA CARGADA
-        const scripts = mainContent.querySelectorAll("script");
-        scripts.forEach((script) => {
-          const newScript = document.createElement("script");
-          if (script.src) {
-            newScript.src = script.src;
-            document.body.appendChild(newScript);
-          } else {
-            try {
-              eval(script.textContent);
-            } catch (err) {
-              console.error("Error ejecutando script:", err);
-            }
-          }
-        });
+        if (ruta.css) cargarEstiloVista(ruta.css);
+        if (ruta.js) cargarScriptVista(ruta.js);
 
         capturarCorreoDesdeURL();
         loading.style.display = "none";
-        // window.history.replaceState({}, "", window.location.pathname);
       })
       .catch((error) => {
+        mainContent.innerHTML = "<p>Error al cargar la página.</p>";
         console.error("Error al cargar la página:", error);
-        mainContent.innerHTML = "<p>Ocurrió un error cargando la página.</p>";
-        // loading.style.display = "none";
       });
   },
 };
 
-function navegarA(ruta) {
-  const contentArea = document.getElementById("content-area");
-  const loading = document.getElementById("loading");
-  if (!contentArea) return;
+function navegarA(valor) {
+  const clave = valor.split("?")[0];
 
-  loading.style.display = "flex";
-
-  fetch(ruta)
-    .then((res) => res.text())
-    .then((html) => {
-      setTimeout(() => {
-        contentArea.innerHTML = html;
-        // loading.style.display = "none";
-        window.location.hash = ruta; // actualiza el hash
-      }, 500);
-    })
-    .catch((err) => {
-      // loading.style.display = "none";
-      contentArea.innerHTML = "<p>Error al cargar el contenido.</p>";
-      console.error("Error al redirigir:", err);
-    });
+  if (!rutasLimpias[clave]) {
+    console.error("Ruta no definida:", clave);
+    return;
+  }
+  window.location.hash = valor; 
 }
 
 window.addEventListener("hashchange", () => {
-  const nuevaRuta = window.location.hash.slice(1);
-  PageLoader.cargarPagina(nuevaRuta);
+  const hash = window.location.hash.slice(1); 
+  const clave = hash.split("?")[0];
+  PageLoader.cargarPagina(clave);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -83,12 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contentArea = document.getElementById("content-area");
   const mainFooter = document.getElementById("main-footer");
+  const hash = window.location.hash.slice(1) || "home";
+  const clave = hash.split("?")[0];
 
   fetch("/components/header/header.html")
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("main-header").innerHTML = html;
-      // Inicializar los scripts del header AQUÍ, después de que el header esté en el DOM
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
 
@@ -116,9 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
           event.preventDefault();
-          // Remueve 'active' de todos los enlaces
           navLinks.forEach((l) => l.classList.remove("active"));
-          // Agrega 'active' al enlace clicado
           this.classList.add("active");
           const targetPage = this.getAttribute("data-target");
           if (navItems.classList.contains("open")) {
@@ -139,7 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.text())
     .then((html) => {
       mainFooter.innerHTML = html;
-      // Opcional: Inicializar scripts del footer aquí si los tienes
       const footerScripts = mainFooter.querySelectorAll("script");
       footerScripts.forEach((script) => {
         const newScript = document.createElement("script");
@@ -162,10 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.hash = ruta; // esto actualiza la URL sin recargar
     }
   });
-  const ruta = window.location.hash
-    ? window.location.hash.slice(1)
-    : "/components/home/index.html";
-  PageLoader.cargarPagina(ruta);
+  PageLoader.cargarPagina(clave);
 
   //   ANIMACIONES
 
@@ -173,12 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".titulo");
 
     elements.forEach((el) => {
-      // Si el elemento ya está marcado como "hecho", saltamos
       if (el.dataset.animated === "true") {
         return;
       }
 
-      // Verificar si está en el viewport
       const rect = el.getBoundingClientRect();
       const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -206,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Comprobamos si el elemento está en el viewport
       const rect = el.getBoundingClientRect();
       const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -235,7 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Comprobamos si el elemento está en el viewport
       const rect = el.getBoundingClientRect();
       const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -259,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toRegister() {
   window.scrollTo(0, 0);
-  navegarA(`/components/contacto/contacto.html`);
+  navegarA(`contacto`);
 }
 
 function scrollToTop() {
@@ -272,8 +302,9 @@ function scrollToTop() {
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
   const url = new URL("http://anyurl.com" + hash.slice(1)); // usar un dominio falso
-  const params = new URLSearchParams(url.search);
-  const email = params.get("email");
+  const email = url.searchParams.get("email");
+
+
   const inputCorreo = document.getElementById("correo");
 
   if (email && inputCorreo) {

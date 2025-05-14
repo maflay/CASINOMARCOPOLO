@@ -48,20 +48,7 @@
 }
 
 
-.frases-tarjeta h1 {
-  transform: rotate(-6deg);
-  /* Texto en diagonal */
-  color: #fff;
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 2.2rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px #000;
-}
 
-.frases-tarjeta {
-  padding: 60px 20px;
-}
 
 
 .img-test-container {

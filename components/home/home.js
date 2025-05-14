@@ -1,18 +1,18 @@
 // TARJETA-MYMAWI
 
 function ObtenerTarjeta() {
-  navegarA("/components/obtenertarjeta/obtenertarjeta.html");
+  navegarA("obtenertarjeta");
 }
 
 // PROMOCIONES
 
 function saberMasPromo() {
   window.scrollTo(0, 0);
-  navegarA("/components/promociones/promociones.html");
+  navegarA("promociones");
 }
 
 function asociarse() {
-  navegarA("/components/asociado/aosciado.html")
+  navegarA("asociado")
   setTimeout(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, 300);

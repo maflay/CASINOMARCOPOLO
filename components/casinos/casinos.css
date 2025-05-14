@@ -138,7 +138,7 @@
     padding: 30px;
     background:
         linear-gradient(#1f253aee, #1f253a),
-        url(../../resources/s2.jpg) center/cover no-repeat;
+        url(/resources/s2.jpg) center/cover no-repeat;
     color: white;
 }
 
@@ -576,6 +576,25 @@
 .horario-casinos .card-horario .card-horario-content p,
 .horario-casinos .card-horario .card-horario-content small {
     color: #1F253A;
+}
+
+.con-cas .section-live-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.con-cas .section-live-result .sports-result{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.con-cas .section-live-result .sports-result .sports-result-content{
+text-align: center;
 }
 
 /* Responsive styles */

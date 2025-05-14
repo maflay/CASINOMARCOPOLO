@@ -1,5 +1,3 @@
-const loading = document.getElementById("loading");
-
 function Register() {
   loading.style.display = "flex";
   setTimeout(() => {
