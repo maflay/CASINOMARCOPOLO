@@ -114,6 +114,95 @@
     text-decoration: underline;
 }
 
+.numeros-progresivos {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #1F253A 50%, #9B2738 50%);
+    color: #1F253A;
+}
+
+.numeros-progresivos .content-progresivos {
+    width: 100%;
+    display: flex;
+}
+
+.numeros-progresivos .content-progresivos .content-progresivos-img {
+    width: 50%;
+    height: 100vh;
+}
+
+.numeros-progresivos .content-progresivos .content-progresivos-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.numeros-progresivos .content-progresivos .content-progresivos-text {
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.numeros-progresivos .content-progresivos .content-progresivos-text button {
+    transform: rotate(-6deg);
+}
+
+.excel-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
 
 /* APUESTAS DEPORTIVAS */
 
@@ -452,4 +541,43 @@
         color: #1F253A;
     }
 
+
+    .numeros-progresivos {
+        display: flex;
+        align-items: center;
+        height: auto;
+        background: linear-gradient(90deg, #1F253A 50%, #9B2738 50%);
+        color: #1F253A;
+    }
+
+    .numeros-progresivos .content-progresivos {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .numeros-progresivos .content-progresivos .content-progresivos-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .numeros-progresivos .content-progresivos .content-progresivos-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .numeros-progresivos .content-progresivos .content-progresivos-text {
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .numeros-progresivos .content-progresivos .content-progresivos-text button {
+        transform: rotate(0deg);
+    }
 }

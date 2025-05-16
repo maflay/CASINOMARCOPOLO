@@ -191,6 +191,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
   .content-item3 {
     flex-direction: column;
   }

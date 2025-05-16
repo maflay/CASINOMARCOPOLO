@@ -3,6 +3,7 @@
 
 <head>
     <title>Página de Casinos - Casino Marco Polo</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
@@ -69,9 +70,44 @@
         </div>
     </section>
 
+    <section id="section-progresivos" class="numeros-progresivos">
+        <div class="content-progresivos container">
+            <div class="content-progresivos-img">
+                <img src="/resources/progresivos.png" />
+            </div>
+            <div class="content-progresivos-text frases-tarjeta">
+                <br />
+                <h1>Premios gigantes te esperan</h1>
+                <p style="transform: rotate(-6deg);">Nuestros progresivos no paran de subir…
+                    ¿Estás listo para convertirte en el próximo gran ganador? ¡Es tu momento! </p>
+                <br />
+                <br />
+                <h1>¡Progresivos en modo explosivo!</h1>
+                <p style="transform: rotate(-6deg);">Los premios están alcanzando cifras históricas.
+                    ¡Acércate, juega y atrévete a ganar en grande! </p>
+                <br />
+                <br />
+                <div style="text-align: center;">
+                    <button class="purple-button" onclick="toprogresivos()">Ver los
+                        progresivos</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- MODAL -->
+    <div id="excelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Tabla de Progresivos</h2>
+            <div id="table-container">Cargando...</div>
+        </div>
+    </div>
+
     <!-- SECTION DE APUESTAS DEPORTIVAS -->
 
-    <section class="container-apuesta">
+    <!-- <section class="container-apuesta">
         <div class="container">
             <div class="apuesta-deportiva">
                 <div class="apuesta-left">
@@ -81,7 +117,7 @@
                         deportes y eventos, ¡la acción nunca se detiene!</p>
                     <div class="apuesta-buttons titulol">
                         <button class="purple-button" onclick="toRegister()">REGISTRATE</button>
-                        <!-- <button class="learn-more">CONOCER MAS</button> -->
+                        <button class="learn-more">CONOCER MAS</button>
                     </div>
 
                 </div>
@@ -90,9 +126,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="container-apuesta-sitio">
+    <!-- <section class="container-apuesta-sitio">
         <div class="apt-sitio container">
             <div class="apuesta-sitio titulo">
                 <div class="apuesta-sitio-img"></div>
@@ -106,8 +142,8 @@
                 </p>
             </div>
         </div>
-    </section>
-    <section class="container-apuesta-tv">
+    </section> -->
+    <!-- <section class="container-apuesta-tv">
         <div class="apt-tv container">
             <div class="apuesta-tv titulol">
                 <div class="apuesta-tv-img"></div>
@@ -119,7 +155,8 @@
                     una historia más en tu travesía por el juego, el lujo y la emoción.</p>
             </div>
         </div>
-    </section>
+    </section> -->
     </div>
 </body>
+
 </html>

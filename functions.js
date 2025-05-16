@@ -112,10 +112,27 @@ function navegarA(valor) {
 }
 
 window.addEventListener("hashchange", () => {
-  const hash = window.location.hash.slice(1); 
-  const clave = hash.split("?")[0];
+  const hash = window.location.hash.slice(1);
+  const [clave, query] = hash.split("?");
+
   PageLoader.cargarPagina(clave);
+
+  if (query) {
+    const params = new URLSearchParams(query);
+    const seccionId = params.get("id");
+
+    if (seccionId) {
+      // Espera a que se cargue la vista antes de hacer scroll
+      setTimeout(() => {
+        const elemento = document.getElementById(seccionId);
+        if (elemento) {
+          elemento.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // ajusta el tiempo según tu carga real
+    }
+  }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM

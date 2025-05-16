@@ -18,21 +18,21 @@
           <h1 class="type2-h1"> esperando!</h1>
         </div>
         <div class="slide slide2">
-          <h1 class="type2-h1">Donde</h1> 
+          <h1 class="type2-h1">Donde</h1>
           <h1 class="type2-h1">la adrenalina </h1>
-         <h1 class="type2-h1">nunca se detiene</h1>
+          <h1 class="type2-h1">nunca se detiene</h1>
         </div>
         <div class="slide slide3">
-           <h1 class="type2-h1">Lujo, </h1>
-           <h1 class="type2-h1">juego y diversión</h1> 
-           <h1 class="type2-h1">en un solo lugar</h1>
+          <h1 class="type2-h1">Lujo, </h1>
+          <h1 class="type2-h1">juego y diversión</h1>
+          <h1 class="type2-h1">en un solo lugar</h1>
         </div>
-      </div>
-
+      </div> -->
+      <!-- 
       <button class="arrow left" id="prevBtn">&#8249;</button>
-      <button class="arrow right" id="nextBtn">&#8250;</button>
+      <button class="arrow right" id="nextBtn">&#8250;</button> -->
 
-      <div class="dots" id="dotsContainer">
+      <!-- <div class="dots" id="dotsContainer">
         <div class="dot active" data-index="0"></div>
         <div class="dot" data-index="1"></div>
         <div class="dot" data-index="2"></div>
@@ -116,8 +116,28 @@
 
     <section class="slider-muestras">
       <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
-        <div class="slide-muestras bg1-muestra"></div>
-        <div class="slide-muestras bg2-muestra"></div>
+        <div class="slide-muestras bg1-muestra">
+
+          <div class="slider-progresivo-content container">
+            <div class="slider-progresivo">
+              <div class="slider-progresivos-actions">
+                <h1 class="type3-h1">Conoce nuestros progresivos.</h1>
+                <h1 class="type3-h1">¡Descubre los premios que están cambiando vidas!.</h1>
+                <h1 class="type3-h1">Progresivos que no paran de crecer.</h1>
+              </div>
+              <div>
+                <button class="purple-button" onclick="toprogresivos()">Saber más</button>
+              </div>
+              <!-- <div class="slider-progresivo-img">
+                <img src="/resources/progresivos2.png" />
+              </div> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="slide-muestras bg2-muestra">
+
+        </div>
         <div class="slide-muestras bg3-muestra"></div>
       </div>
 
@@ -132,6 +152,9 @@
         <input type="radio" name="slider-muestras" id="trigger3-muestra">
         <label for="trigger3-muestra"></label>
       </div>
+<!-- 
+      <button class="arrow left" id="prevBtn">&#8249;</button>
+      <button class="arrow right" id="nextBtn">&#8250;</button> -->
 
       <!-- Flechas -->
       <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
@@ -219,114 +242,6 @@
   </div>
   <script>
 
-    // Slider Principal
-    const track = document.getElementById("sliderTrack");
-    const dots = document.querySelectorAll(".dot");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    let currentIndex = 0;
-    const totalSlides = dots.length;
-    let interval;
-
-    function goToSlide(index) {
-      track.style.transform = `translateX(-${index * 100}vw)`;
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
-      currentIndex = index;
-    }
-
-    function nextSlide() {
-      let index = (currentIndex + 1) % totalSlides;
-      goToSlide(index);
-    }
-
-    function prevSlide() {
-      let index = (currentIndex - 1 + totalSlides) % totalSlides;
-      goToSlide(index);
-    }
-
-    function resetInterval() {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 5000);
-    }
-
-    // Botones
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetInterval();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetInterval();
-    });
-
-    // Dots
-    dots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        let index = parseInt(dot.dataset.index);
-        goToSlide(index);
-        resetInterval();
-      });
-    });
-
-    // Auto Slide
-    interval = setInterval(nextSlide, 5000);
-
-
-    // Slider Muestras
-    const trackMuestras = document.getElementById("sliderTrackMuestras");
-    const radiosMuestras = document.querySelectorAll('input[name="slider-muestras"]');
-    const labelsMuestras = document.querySelectorAll(".navigation-muestras label");
-    const prevBtnMuestra = document.getElementById("prevBtnMuestra");
-    const nextBtnMuestra = document.getElementById("nextBtnMuestra");
-
-    let currentIndexMuestra = 0;
-    const totalSlidesMuestra = radiosMuestras.length;
-    let intervalMuestra;
-
-    function goToSlideMuestra(index) {
-      trackMuestras.style.transform = `translateX(-${index * 100}vw)`;
-      radiosMuestras[index].checked = true;
-      currentIndexMuestra = index;
-    }
-
-    function nextSlideMuestra() {
-      let index = (currentIndexMuestra + 1) % totalSlidesMuestra;
-      goToSlideMuestra(index);
-    }
-
-    function prevSlideMuestra() {
-      let index = (currentIndexMuestra - 1 + totalSlidesMuestra) % totalSlidesMuestra;
-      goToSlideMuestra(index);
-    }
-
-    function resetIntervalMuestra() {
-      clearInterval(intervalMuestra);
-      intervalMuestra = setInterval(nextSlideMuestra, 3000);
-    }
-
-    nextBtnMuestra.addEventListener("click", () => {
-      nextSlideMuestra();
-      resetIntervalMuestra();
-    });
-
-    prevBtnMuestra.addEventListener("click", () => {
-      prevSlideMuestra();
-      resetIntervalMuestra();
-    });
-
-    labelsMuestras.forEach((label, index) => {
-      label.addEventListener("click", () => {
-        goToSlideMuestra(index);
-        resetIntervalMuestra();
-      });
-    });
-
-    intervalMuestra = setInterval(nextSlideMuestra, 3000);
-
-
 
     // ENVIO DE CASH
 
@@ -367,7 +282,7 @@
     }
 
   </script>
-<script src="/components/home/home.js"></script>
+  <script src="/components/home/home.js"></script>
 </body>
 
 </html>
