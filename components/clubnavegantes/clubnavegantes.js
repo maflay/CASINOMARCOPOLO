@@ -38,7 +38,7 @@ function Aexperience() {
 }
 
 function renderTable(data) {
-  console.log(data,"data");
+  // console.log(data,"data");
   const container = document.getElementById('table-container');
   let tableHTML = '<table><thead><tr>';
 
