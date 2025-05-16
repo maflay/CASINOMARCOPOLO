@@ -1,10 +1,21 @@
 .fondo {
-   /* background: linear-gradient(180deg, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-prueba.png);
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/mymawi-mitad.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+
 }
 
 .banner-obten-tarjeta {
@@ -17,19 +28,14 @@
 }
 
 .content-image {
-  width: 600px;
-  height: 400px;
+  width: 300px;
+  height: 500px;
 }
 
 .banner-obten-tarjeta .content-image img {
   width: 100%;
+  height: 100%;
   transition: transform 0.3s ease;
-  transform: rotate(-6deg);
-  border-radius: 40px;
-}
-
-.banner-obten-tarjeta .content-image img:hover {
-  transform: scale(1.1);
 }
 
 .card-marcopolo {
@@ -46,10 +52,6 @@
 .card-marcopolo h1 {
   font-size: 70px;
 }
-
-
-
-
 
 .img-test-container {
   display: flex;
@@ -87,13 +89,11 @@
 }
 
 .item-fondo2 {
-  /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
-    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-prueba2.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  /* background: linear-gradient(180deg, #27314fc7 15%, #27314F, #27314F,
+      #000, #27314F, #000 85%); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 .item-fondo2 .content-item2 {
@@ -151,13 +151,11 @@
 }
 
 .item-fondo3 {
-   /* background: linear-gradient(180deg, #1F253A 15%, #27314F, #27314F,
-    #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F,
-    #1F253A, #27314F, #1F253A 85%); */
-    background-image: url(/resources/fondo-prueba.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  /* background: linear-gradient(180deg, #000 15%, #27314F, #27314F,
+      #1F253A, #27314F, #000 85%); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 
 }
 
@@ -192,7 +190,7 @@
 /* Responsive */
 @media (max-width: 768px) {
 
-  body{
+  body {
     overflow-x: hidden;
   }
 
@@ -230,6 +228,7 @@
     flex-direction: column;
     height: auto;
     gap: 10px;
+    height: 100vh;
   }
 
   .content-image {
@@ -238,27 +237,36 @@
     align-items: center;
     width: 100%;
     height: auto;
-    padding-top: 20%;
+    position: relative;
+    z-index: 1;
   }
 
   .banner-obten-tarjeta .content-image img {
-    width: 90%;
+    width: 100%;
     transform: rotate(0deg);
+    border-radius: 0;
   }
-  
+
+  .banner-obten-tarjeta .content-text {
+    display: none;
+  }
+
+  .container {
+    padding: 0 0;
+  }
+
   .banner-obten-tarjeta .content-image img:hover {
     transform: scale(1);
   }
 
-  
+
   .img-test-container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .img-test {
-    position: absolute;
     left: 0;
     width: 80%;
     object-fit: cover;
@@ -282,7 +290,7 @@
     align-items: center;
     display: none;
   }
-  
+
   .img-test2 {
     position: absolute;
     right: 0;
@@ -294,5 +302,5 @@
   .item-fondo3 {
     height: auto;
 
-}
+  }
 }

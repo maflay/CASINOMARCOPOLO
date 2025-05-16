@@ -224,7 +224,6 @@
   margin: 0 auto;
 }
 
-
 .section-suerte .card-suerte {
   overflow: hidden;
   display: flex;
@@ -301,8 +300,47 @@
   width: 60%;
 }
 
+.contenido-prueba{
+  height: 100vh;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  animation:slide 3s ease-in-out infinite alternate;
+
+}
 
 
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
 
 @media (max-width: 768px) {
 
