@@ -121,6 +121,10 @@
 }
 
 @media (max-width: 1150px) {
+  body {
+    overflow-x: hidden;
+  }
+
     .item-fondo2 .content-asociado {
         display: flex;
         flex-direction: column;

@@ -403,7 +403,8 @@ background-size: cover; */
   }
 
   .item-fondo2 .content-item2 {
-    flex-direction: column-reverse;
+    padding: 30px;
+    flex-direction: column;
     height: auto;
     gap: 0px;
   }
