@@ -57,6 +57,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .img-test {
@@ -91,9 +93,13 @@
 .item-fondo2 {
   /* background: linear-gradient(180deg, #27314fc7 15%, #27314F, #27314F,
       #000, #27314F, #000 85%); */
+      background-image: url(/resources/tarjeta-mymawi-prueba-fondo.png);
   background-size: cover;
   background-position: center;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-fondo2 .content-item2 {
@@ -101,7 +107,6 @@
   justify-content: flex-end;
   align-items: center;
   height: 70vh;
-  color: white;
   gap: 70px;
 }
 
@@ -151,8 +156,6 @@
 }
 
 .item-fondo3 {
-  /* background: linear-gradient(180deg, #000 15%, #27314F, #27314F,
-      #1F253A, #27314F, #000 85%); */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -187,6 +190,130 @@
 }
 
 
+/* SLIDER */
+.slider-muestras {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-progresivo-content {}
+
+.slider-progresivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+.slider-progresivos-actions {}
+
+/* 
+.slider-progresivo .slider-progresivo-img{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-progresivo .slider-progresivo-img img{
+height: 100%;
+border-radius: 10px;
+} */
+
+.slider-muestras .slider-wrapper-muestras {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slider-muestras .slide-muestras {
+  min-width: 100vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-muestras .bg1-muestra {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+    url(/resources/slider-mymawi1.png);
+
+}
+
+.slider-muestras .bg2-muestra {
+  background-image: url(/resources/slider-mymawi3.png);
+}
+
+.slider-muestras .bg3-muestra {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+  url(/resources/slider-mymawi2.png);
+}
+.slider-muestras .bg4-muestra {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0)),
+  url(/resources/fondo-rojo.jpg);
+}
+
+/* Radios ocultos */
+.slider-muestras input[type="radio"] {
+  display: none;
+}
+
+/* Botones de navegación (radios visuales) */
+.slider-muestras label {
+  position: relative;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+/* Contenedor de los puntos */
+.slider-muestras .navigation-muestras {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Cuando esté seleccionado */
+.slider-muestras input[type="radio"]:checked+label {
+  background: white;
+}
+
+/* Flechas */
+.slider-muestras .arrow-muestra {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.slider-muestras .arrow-left-muestra {
+  left: 80px;
+}
+
+.slider-muestras .arrow-right-muestra {
+  right: 80px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 
@@ -220,8 +347,9 @@
 
   .formulario {
     width: 100%;
-    background: #27314f8a;
-
+    /* background-image:url(/resources/tarjeta-mymawi-prueba.png);
+background-repeat: no-repeat;
+background-size: cover; */
   }
 
   .banner-obten-tarjeta {
@@ -303,4 +431,20 @@
     height: auto;
 
   }
+
+  .slider-muestras .bg1-muestra {
+  background-image: url(/resources/slider-mymawi1-movil.png);
+}
+
+  
+.slider-muestras .bg2-muestra {
+  background-image: url(/resources/slider-mymawi2-movil.png);
+}
+
+.slider-muestras .bg3-muestra {
+  background-image: url(/resources/mymawi-new.jpg);
+}
+.slider-muestras .bg4-muestra {
+  background-image: url(/resources/fondo-rojo.jpg);
+}
 }

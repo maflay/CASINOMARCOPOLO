@@ -40,3 +40,64 @@ function enviarFormularioTarjeta() {
       alert("Ocurrió un error al enviar tus datos.");
     });
 }
+
+
+function slidertarjeta(){
+ const trackMuestras = document.getElementById("sliderTrackMuestras");
+  const radiosMuestras = document.querySelectorAll(
+    'input[name="slider-muestras"]'
+  );
+  const labelsMuestras = document.querySelectorAll(
+    ".navigation-muestras label"
+  );
+  const prevBtnMuestra = document.getElementById("prevBtnMuestra");
+  const nextBtnMuestra = document.getElementById("nextBtnMuestra");
+
+  let currentIndexMuestra = 0;
+  const totalSlidesMuestra = radiosMuestras.length;
+  let intervalMuestra;
+
+  function goToSlideMuestra(index) {
+    trackMuestras.style.transform = `translateX(-${index * 100}vw)`;
+    radiosMuestras[index].checked = true;
+    currentIndexMuestra = index;
+  }
+
+  function nextSlideMuestra() {
+    let index = (currentIndexMuestra + 1) % totalSlidesMuestra;
+    goToSlideMuestra(index);
+  }
+
+  function prevSlideMuestra() {
+    let index =
+      (currentIndexMuestra - 1 + totalSlidesMuestra) % totalSlidesMuestra;
+    goToSlideMuestra(index);
+  }
+
+  function resetIntervalMuestra() {
+    clearInterval(intervalMuestra);
+    intervalMuestra = setInterval(nextSlideMuestra, 3000);
+  }
+
+  nextBtnMuestra.addEventListener("click", () => {
+    nextSlideMuestra();
+    resetIntervalMuestra();
+  });
+
+  prevBtnMuestra.addEventListener("click", () => {
+    prevSlideMuestra();
+    resetIntervalMuestra();
+  });
+
+  labelsMuestras.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlideMuestra(index);
+      resetIntervalMuestra();
+    });
+  });
+  intervalMuestra = setInterval(nextSlideMuestra, 3000);
+
+}
+
+
+slidertarjeta();
