@@ -229,7 +229,6 @@
   align-items: center;
   width: 100%;
   gap: 20px;
-
 }
 
 .container-promo .container-section-promo .apuesta-deportiva .apuesta-left {
@@ -409,6 +408,8 @@
 
   .container-promo .container-section-promo .apuesta-deportiva {
     flex-direction: column-reverse;
+margin-bottom: 20px;
+
   }
 
 
