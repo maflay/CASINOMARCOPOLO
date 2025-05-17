@@ -101,3 +101,7 @@ function slidertarjeta(){
 
 
 slidertarjeta();
+
+function toprogresivos() {
+  navegarA("clubnavegante?id=section-progresivos");
+}

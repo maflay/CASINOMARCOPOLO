@@ -111,6 +111,16 @@
   gap: 70px;
 }
 
+.content-item2 .content-tarjeta{
+  width: auto;
+  height: auto;
+}
+
+.content-item2 .content-tarjeta img{
+width: 100%;
+height: 100%;
+border-radius: 30px;
+}
 
 .solicitud-tarjeta {
   display: flex;
@@ -274,6 +284,12 @@ border-radius: 10px;
   background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
     url(/resources/fondo-rojo.jpg);
 }
+
+.slider-muestras .bg5-muestra {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mymawi5.png);
+}
+
 
 /* Radios ocultos */
 .slider-muestras input[type="radio"] {
@@ -449,6 +465,10 @@ background-size: cover; */
     width: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
+  }
+
+  .item-fondo2 {
+height: auto;
   }
 
   .item-fondo3 {
