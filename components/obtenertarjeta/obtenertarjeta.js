@@ -7,10 +7,9 @@ function enviarFormularioTarjeta() {
   const telefono = document.getElementById("telefono-tarjeta").value.trim();
   const direccion = document.getElementById("direccion-tarjeta").value.trim();
   const ciudad = document.getElementById("ciudad-tarjeta").value.trim();
-  const tipoTarjeta = form.querySelector('select[name="tipo_tarjeta"]').value;
 
-  if (!nombre || !email || !telefono || !direccion || !ciudad || !tipoTarjeta) {
-    alert("Por favor completa todos los campos y selecciona un tipo de tarjeta.");
+  if (!nombre || !email || !telefono || !direccion || !ciudad) {
+    alert("Por favor completa todos los campos.");
     return;
   }
   if (!form) return;
@@ -102,6 +101,84 @@ function slidertarjeta(){
 
 slidertarjeta();
 
+
+
+
+function slidergrid(){
+ const trackGrid = document.getElementById("sliderTrackGrid");
+  const radiosGrid = document.querySelectorAll(
+    'input[name="slider-grid"]'
+  );
+  const labelsGrid = document.querySelectorAll(
+    ".navigation-grid label"
+  );
+  const prevBtnGrid = document.getElementById("prevBtnGrid");
+  const nextBtnGrid = document.getElementById("nextBtnGrid");
+
+  let currentIndexGrid = 0;
+  const totalSlidesGrid = radiosGrid.length;
+  let intervalGrid;
+
+  function goToSlideGrid(index) {
+    trackGrid.style.transform = `translateX(-${index * 100}%)`;
+    radiosGrid[index].checked = true;
+    currentIndexGrid = index;
+  }
+
+  function nextSlideGrid() {
+    let index = (currentIndexGrid + 1) % totalSlidesGrid;
+    goToSlideGrid(index);
+  }
+
+  function prevSlideGrid() {
+    let index =
+      (currentIndexGrid - 1 + totalSlidesGrid) % totalSlidesGrid;
+    goToSlideGrid(index);
+  }
+
+  function resetIntervalGrid() {
+    clearInterval(intervalGrid);
+    intervalGrid = setInterval(nextSlideGrid, 4000);
+  }
+
+  nextBtnGrid.addEventListener("click", () => {
+    nextSlideGrid();
+    resetIntervalGrid();
+  });
+
+  prevBtnGrid.addEventListener("click", () => {
+    prevSlideGrid();
+    resetIntervalGrid();
+  });
+
+  labelsGrid.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlideGrid(index);
+      resetIntervalGrid();
+    });
+  });
+  intervalGrid = setInterval(nextSlideGrid, 4000);
+
+}
+
+
+slidergrid();
+
 function toprogresivos() {
   navegarA("clubnavegante?id=section-progresivos");
 }
+
+
+document.getElementById("cambiarFondoBtn").addEventListener("click", () => {
+  const img = document.getElementById("miImagen");
+  const btn = document.getElementById("cambiarFondoBtn");
+  if (img.src.includes("tarjeta-mymawi-negraV2.png")) {
+    img.src = "/resources/tarjeta-mymawi-rojaV2.png";
+    btn.textContent = "Negro";
+  } else {
+    img.src = "/resources/tarjeta-mymawi-negraV2.png";
+     btn.textContent = "Rojo";
+  }
+});
+
+

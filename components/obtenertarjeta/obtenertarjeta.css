@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to top, #1F253A, rgba(0, 0, 0, 0)),
-   url(/resources/mymawi-mitad.jpg);
+    url(/resources/mymawi-mitad.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0.3;
@@ -111,15 +111,15 @@
   gap: 70px;
 }
 
-.content-item2 .content-tarjeta{
-  width: auto;
-  height: auto;
+.content-item2 .content-tarjeta {
+  width: 550px;
+  text-align: center;
 }
 
-.content-item2 .content-tarjeta img{
-width: 100%;
-height: 100%;
-border-radius: 30px;
+.content-item2 .content-tarjeta img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
 }
 
 .solicitud-tarjeta {
@@ -182,9 +182,10 @@ border-radius: 30px;
   height: 100vh;
 
 }
+
 @keyframes animation {
-   100%{
-    background-position:0px -3000px;
+  100% {
+    background-position: 0px -3000px;
   }
 }
 
@@ -232,11 +233,12 @@ border-radius: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
   gap: 30px;
 }
 
-.slider-progresivos-actions {}
+.slider-progresivos-actions {
+  z-index: 2;
+}
 
 /* 
 .slider-progresivo .slider-progresivo-img{
@@ -271,8 +273,8 @@ border-radius: 10px;
 }
 
 .slider-muestras .bg2-muestra {
-   background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
-   url(/resources/slider-mymawi3.png);
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mymawi3.png);
 }
 
 .slider-muestras .bg3-muestra {
@@ -283,6 +285,9 @@ border-radius: 10px;
 .slider-muestras .bg4-muestra {
   background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
     url(/resources/fondo-rojo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-muestras .bg5-muestra {
@@ -348,12 +353,406 @@ border-radius: 10px;
   right: 80px;
 }
 
+.fondo-grid {
+  background-color: linear-gradient(60deg, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F);
+}
+
+.parent {
+  height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.parent .div1 {
+  grid-area: 1 / 1 / 3 / 3;
+  background-color: #6622F8;
+}
+
+
+/* SLIDER */
+.div1 .slider-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.div1 .slider-wrapper-grid {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+
+}
+
+.div1 .slide-grid {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.div1 .bg1-grid {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mymawi5.png);
+}
+
+.div1 .bg2-grid {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mimawi-rojo.png);
+}
+
+.div1 .bg3-grid {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mimawi-negro.png);
+}
+
+.div1 .bg4-grid {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/fondo-rojo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div1 .bg5-grid {
+  background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
+    url(/resources/slider-mymawi5.png);
+}
+
+
+/* Radios ocultos */
+.div1 input[type="radio"] {
+  display: none;
+}
+
+/* Botones de navegación (radios visuales) */
+.div1 label {
+  position: relative;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+/* Contenedor de los puntos */
+.div1 .navigation-grid {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Cuando esté seleccionado */
+.div1 input[type="radio"]:checked+label {
+  background: white;
+}
+
+/* Flechas */
+.div1 .arrow-grid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.div1 .arrow-left-grid {
+  left: 80px;
+}
+
+.div1 .arrow-right-grid {
+  right: 80px;
+}
+
+.parent .div2 {
+  position: relative;
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.parent .div2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/comida3.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+.div2 .content-div2 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.div2 .content-div2 h1 {
+  color: white;
+}
+
+.div2 .content-div2 a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.div2 .content-div2 a:hover {
+  color: rgb(199, 199, 199);
+}
+
+
+
+.parent .div3 {
+  position: relative;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+
+.parent .div3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/Recurso-5@2x.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+.div3 .content-div3 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.div3 .content-div3 h1 {
+  color: white;
+}
+
+.div3 .content-div3 a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.div3 .content-div3 a:hover {
+  color: rgb(199, 199, 199);
+}
+
+
+
+.parent .div4 {
+  position: relative;
+  grid-area: 3 / 3 / 4 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent .div4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/fondo-rojo.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+
+
+.parent .div5 {
+  position: relative;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.parent .div5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/super-cash.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+.div5 .content-div5 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.div5 .content-div5 h1 {
+  color: white;
+}
+
+.div5 .content-div5 a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.div5 .content-div5 a:hover {
+  color: rgb(199, 199, 199);
+}
+
+.parent .div6 {
+  position: relative;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.parent .div6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/maquinas.jpeg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+.div6 .content-div6 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.div6 .content-div6 h1 {
+  color: white;
+}
+
+.div6 .content-div6 a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.div6 .content-div6 a:hover {
+  color: rgb(199, 199, 199);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 
   body {
     overflow-x: hidden;
   }
+
+  .parent {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .parent .div1 {
+    height: 50vh;
+  }
+
+  .parent .div2::before {
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .parent .div2 .content-div2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parent .div3::before {
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .parent .div3 .content-div3 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parent .div4 {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .parent .div4::before {
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .parent .div4 .content-div4 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parent .div5 {
+    width: 100%;
+  }
+
+  .parent .div5::before {
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .parent .div5 .content-div5 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parent .div6::before {
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .parent .div6 .content-div6 {
+    position: relative;
+    z-index: 2;
+  }
+
 
   .content-item3 {
     flex-direction: column;
@@ -381,9 +780,6 @@ border-radius: 10px;
 
   .formulario {
     width: 100%;
-    /* background-image:url(/resources/tarjeta-mymawi-prueba.png);
-background-repeat: no-repeat;
-background-size: cover; */
   }
 
   .banner-obten-tarjeta {
@@ -433,8 +829,13 @@ background-size: cover; */
     width: 80%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    transform: translateY(0px);
+    transform: translate(-200px);
   }
+
+  .img-test:hover {
+    transform: translateY(-80px);
+  }
+
 
   .item-fondo2 .content-item2 {
     padding: 30px;
@@ -443,7 +844,7 @@ background-size: cover; */
     gap: 0px;
   }
 
-  .item-fondo2 .content-item2 .content-item2-text{
+  .item-fondo2 .content-item2 .content-item2-text {
     text-align: center;
     margin-top: 30px;
   }
@@ -468,7 +869,7 @@ background-size: cover; */
   }
 
   .item-fondo2 {
-height: auto;
+    height: auto;
   }
 
   .item-fondo3 {
@@ -476,24 +877,50 @@ height: auto;
 
   }
 
+  .slider-muestras {
+    height: 80vh;
+  }
+
+  .slider-progresivo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .slider-progresivo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   .slider-muestras .bg1-muestra {
     background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
-     url(/resources/slider-mymawi1-movil.png);
+      url(/resources/slider-mymawi1-movil.png);
   }
 
 
   .slider-muestras .bg2-muestra {
     background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
-     url(/resources/slider-mymawi2-movil.png);
+      url(/resources/slider-mymawi2-movil.png);
   }
 
   .slider-muestras .bg3-muestra {
     background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
-     url(/resources/mymawi-new.jpg);
+      url(/resources/mymawi-new.jpg);
   }
 
   .slider-muestras .bg4-muestra {
     background-image: linear-gradient(to bottom, #1F253A, rgba(0, 0, 0, 0)),
-     url(/resources/fondo-rojo.jpg);
+      url(/resources/fondo-rojo.jpg);
+  }
+
+  .content-item2 .content-tarjeta {
+    width: 100%;
+    height: 100%;
   }
 }

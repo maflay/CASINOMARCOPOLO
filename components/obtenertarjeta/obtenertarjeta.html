@@ -27,7 +27,7 @@
     <div class="img-test-container titulol">
       <img class="img-test" src="/resources/ruleta.png" />
     </div>
-    
+
     <section class="slider-muestras">
       <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
         <div class="slide-muestras bg5-muestra"></div>
@@ -68,7 +68,7 @@
         <input type="radio" name="slider-muestras" id="trigger4-muestra">
         <label for="trigger4-muestra"></label>
         <input type="radio" name="slider-muestras" id="trigger5-muestra">
-        <label for="trigger4-muestra"></label>
+        <label for="trigger5-muestra"></label>
       </div>
       <!-- 
       <button class="arrow left" id="prevBtn">&#8249;</button>
@@ -78,12 +78,102 @@
       <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
       <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
     </section>
+    <section class="fondo-grid">
+      <div class="container">
+        <div class="parent">
+          <div class="div1">
+            <section class="slider-grid">
+              <div class="slider-wrapper-grid" id="sliderTrackGrid">
+                <div class="slide-grid bg1-grid"></div>
+                <div class="slide-grid bg2-grid"></div>
+                <div class="slide-grid bg3-grid"></div>
+                <div class="slide-grid bg4-grid">
+                  <div class="slider-progresivo-content container">
+                    <div class="slider-progresivo">
+                      <div class="slider-progresivos-actions">
+                        <h1 class="type3-h1">Conoce nuestros progresivos.</h1>
+                        <h1 class="type3-h1">¡Descubre los premios que están cambiando vidas!.</h1>
+                        <h1 class="type3-h1">Progresivos que no paran de crecer.</h1>
+                      </div>
+                      <div>
+                        <button class="purple-button" onclick="toprogresivos()">Saber más</button>
+                      </div>
+                                <!-- <div class="slider-progresivo-img">
+                          <img src="/resources/progresivos2.png" />
+                        </div> -->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Radios -->
+              <div class="navigation-grid">
+                <input type="radio" name="slider-grid" id="trigger1-grid" checked>
+                <label for="trigger1-grid"></label>
+
+                <input type="radio" name="slider-grid" id="trigger2-grid">
+                <label for="trigger2-grid"></label>
+
+                <input type="radio" name="slider-grid" id="trigger3-grid">
+                <label for="trigger3-grid"></label>
+
+                <input type="radio" name="slider-grid" id="trigger4-grid">
+                <label for="trigger4-grid"></label>
+              </div>
+              <button class="arrow-grid arrow-left-grid" id="prevBtnGrid">&#8249;</button>
+              <button class="arrow-grid arrow-right-grid" id="nextBtnGrid">&#8250;</button>
+            </section>
+          </div>
+          <div class="div2">
+            <div class="content-div2">
+              <h1>Sumergete a experiencias que puedes vivir...</h1>
+              <a href="#experiencias">
+                EXPERIENCIAS QUE TE PUEDAN GUSTAR...
+              </a>
+            </div>
+          </div>
+          <div class="div3">
+            <div class="content-div3">
+              <h1>Conoce nuestras promociones y más de tu interés</h1>
+              <a href="#promociones">
+                SABER MAS...
+              </a>
+            </div>
+          </div>
+          <div class="div4">
+            <div class="content-div4">
+              <button class="purple-button" onclick="toprogresivos()" >
+                PROGRESIVOS...
+              </button>
+            </div>
+          </div>
+          <div class="div5">
+            <div class="content-div5">
+              <h1>SUPERCASH</h1>
+              <a href="#home?id=section-cash">
+                TE PUEDE INTERESAR...
+              </a>
+            </div>
+          </div>
+          <div class="div6">
+            <div class="content-div6">
+              <h1>ACERCA DE NUESTROS CASINOS...</h1>
+              <a href="#casino">
+                SABER MAS...
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="item-fondo2">
       <div class="container">
         <div class="content-item2">
           <div class="content-tarjeta titulo">
-              <img src="/resources/tarjeta-mymawi-prueba.png" />
-            </div>
+              <img id="miImagen" src="/resources/tarjeta-mymawi-negraV2.png" />
+              <button class="purple-button" id="cambiarFondoBtn">Rojo</button>
+          </div>
           <div class="content-item2-text titulo">
             <h1 class="type3-h1">MAS CERCA DE TENERLA.</h1>
             <h1 class="type3-h1">AHORA TU PUEDES TENER UNA.</h1>
@@ -99,13 +189,15 @@
                 <input type="tel" id="telefono-tarjeta" name="telefono" placeholder="Teléfono" required>
                 <input type="text" id="direccion-tarjeta" name="direccion" placeholder="Dirección" required>
                 <input type="text" id="ciudad-tarjeta" name="ciudad" placeholder="Ciudad" required>
-                <select name="tipo_tarjeta" required>
+                <!-- <select name="tipo_tarjeta" required>
                   <option value="">Selecciona un tipo de tarjeta</option>
                   <option value="1">Tarjeta Oro</option>
                   <option value="2">Tarjeta Platino</option>
                   <option value="3">Tarjeta VIP</option>
-                </select>
-                <button class="purple-button" type="button" onclick="enviarFormularioTarjeta()">Solicitar</button>
+                </select> -->
+                <div style="text-align: center;">
+                  <button class="purple-button" type="button" onclick="enviarFormularioTarjeta()">Solicitar</button>
+                </div>
               </form>
               <div id="form-message-tarjeta"></div>
             </div>
@@ -122,10 +214,9 @@
           <img src="/resources/carta1.png" alt="Tarjeta izquierda" />
         </div>
         <div class="frases-tarjeta ">
-          <h1>OBTEN LA TUYA Y,</h1>
-          <h1>AHORA VISÍTANOS EN NUESTROS CASINOS.</h1>
-          <h1>MARCO POLO.</h1>
-          <h1>DISFRUTA Y GANA.</h1>
+          <h1>OBTEN LA TUYA,</h1>
+          <h1>ACTIVA TU EXPERIENCIA EXCLUSIVA CON LA TARJETA MYMAWI</h1>
+          <h1>Y FORMA PARTE DE ESTE GRAN BENEFICIO.</h1>
         </div>
         <div class="imagen-lateral titulor">
           <img src="/resources/carta2.png" alt="Tarjeta derecha" />
