@@ -25,19 +25,39 @@ const rutasLimpias = {
     js: "/components/clubnavegantes/clubnavegantes.js",
   },
   contacto: {
-    html:"/components/contacto/contacto.html",
-    css:"/components/contacto/contacto.css",
-    js:"/components/contacto/contacto.js",
+    html: "/components/contacto/contacto.html",
+    css: "/components/contacto/contacto.css",
+    js: "/components/contacto/contacto.js",
   },
   obtenertarjeta: {
-    html :"/components/obtenertarjeta/obtenertarjeta.html",
-    css :"/components/obtenertarjeta/obtenertarjeta.css",
-    js :"/components/obtenertarjeta/obtenertarjeta.js",
+    html: "/components/obtenertarjeta/obtenertarjeta.html",
+    css: "/components/obtenertarjeta/obtenertarjeta.css",
+    js: "/components/obtenertarjeta/obtenertarjeta.js",
   },
   asociado: {
-    html:"/components/asociado/aosciado.html",
-    css:"/components/asociado/asociado.css",
-    js:"/components/asociado/asociado.js",
+    html: "/components/asociado/aosciado.html",
+    css: "/components/asociado/asociado.css",
+    js: "/components/asociado/asociado.js",
+  },
+  blackjack: {
+    html: "/components/blackjack/index.html",
+    css: [
+      "/components/blackjack/assets/css/game.css",
+      "/components/blackjack/assets/css/home.css",
+      "/components/blackjack/assets/css/reset.css",
+      "/components/blackjack/assets/css/visit-counter.css",
+    ],
+    js: [
+      "/components/blackjack/assets/js/alerts.js",
+      "/components/blackjack/assets/js/change-language.js",
+      "/components/blackjack/assets/js/game-buttons-actions.js",
+      "/components/blackjack/assets/js/game-statistics.js",
+      "/components/blackjack/assets/js/game.js",
+      "/components/blackjack/assets/js/home.js",
+      "/components/blackjack/assets/js/local-storage-items.js",
+      "/components/blackjack/assets/js/screen-loading.js",
+      "/components/blackjack/assets/js/underscore-min.js",
+    ],
   },
 };
 
@@ -47,26 +67,51 @@ window.addEventListener("load", function () {
     loading.style.display = "none";
   }, 550);
 });
-function cargarEstiloVista(cssUrl) {
-  const oldLink = document.getElementById("vista-css");
-  if (oldLink) oldLink.remove();
+function cargarEstiloVista(cssUrls) {
+  // Eliminar cualquier estilo anterior de vista
+  const oldLinks = document.querySelectorAll("link[data-vista-css]");
+  oldLinks.forEach((link) => link.remove());
 
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = cssUrl;
-  link.id = "vista-css";
-  document.head.appendChild(link);
+  // Cargar nuevos estilos
+  if (Array.isArray(cssUrls)) {
+    cssUrls.forEach((url, i) => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = url;
+      link.setAttribute("data-vista-css", `vista-css-${i}`);
+      document.head.appendChild(link);
+    });
+  } else {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssUrls;
+    link.setAttribute("data-vista-css", "vista-css");
+    document.head.appendChild(link);
+  }
 }
 
-function cargarScriptVista(scriptUrl) {
-  const oldScript = document.getElementById("vista-script");
-  if (oldScript) oldScript.remove();
+function cargarScriptVista(scriptUrls) {
+  // Elimina todos los scripts anteriores de vista
+  const oldScripts = document.querySelectorAll("script[data-vista-script]");
+  oldScripts.forEach((script) => script.remove());
 
-  const script = document.createElement("script");
-  script.src = scriptUrl;
-  script.id = "vista-script";
-  script.defer = true;
-  document.body.appendChild(script);
+  // Cargar nuevos scripts (uno o varios)
+  if (Array.isArray(scriptUrls)) {
+    scriptUrls.forEach((url, i) => {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = url;
+      script.defer = true;
+      script.setAttribute("data-vista-script", `vista-script-${i}`);
+      document.body.appendChild(script);
+    });
+  } else {
+    const script = document.createElement("script");
+    script.src = scriptUrls;
+    script.defer = true;
+    script.setAttribute("data-vista-script", "vista-script");
+    document.body.appendChild(script);
+  }
 }
 
 const PageLoader = {
@@ -108,7 +153,7 @@ function navegarA(valor) {
     console.error("Ruta no definida:", clave);
     return;
   }
-  window.location.hash = valor; 
+  window.location.hash = valor;
 }
 
 window.addEventListener("hashchange", () => {
@@ -132,7 +177,6 @@ window.addEventListener("hashchange", () => {
     }
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
@@ -320,7 +364,6 @@ function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
   const url = new URL("http://anyurl.com" + hash.slice(1)); // usar un dominio falso
   const email = url.searchParams.get("email");
-
 
   const inputCorreo = document.getElementById("correo");
 

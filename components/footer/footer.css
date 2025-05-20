@@ -23,7 +23,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    margin-right: 200px;
+    margin-right: 227px;
   }
   
   .footer .footer-logo img {
@@ -128,12 +128,11 @@
   .footer .footer-logos-legales {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
     margin-top: 10%;
     margin-bottom: 5%;
-    gap: 8%;
   }
   
   @media (max-width :1300px) {

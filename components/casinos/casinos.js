@@ -34,3 +34,9 @@ function vidanocturna() {
     console.error("No se encontró el contenedor content-area");
   }
 }
+
+
+function toBlackjack() {
+  window.scrollTo(0, 0);
+  navegarA(`blackjack`);
+}
