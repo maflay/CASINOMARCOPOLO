@@ -22,18 +22,55 @@ function toprogresivos() {
   navegarA("clubnavegante?id=section-progresivos");
 }
 
+// ENVIO DE CASH
+
+const form = document.getElementById("cash-unico");
+const message = document.getElementById("form-message");
+const loading = document.getElementById("loading");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevenir redirección
+
+    const formData = new FormData(form);
+    loading.style.display = "flex";
+    fetch("/components/home/guardar.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        setTimeout(() => {
+          loading.style.display = "none"; //Oculta el loader
+          message.innerHTML =
+            '<div class="success-message">' +
+            "<strong>¡Éxito!</strong> Datos enviados correctamente.</div>";
+        }, 1000);
+
+        form.reset();
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+        setTimeout(() => {
+          message.innerHTML = "";
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error("Error al enviar:", error);
+        message.innerHTML =
+          "<p style='color: red;'>Hubo un error al enviar el formulario.</p>";
+      });
+  });
+}
+
 // Slider Principal
 
-
-
-function sliderMain(){
- const track = document.getElementById("sliderTrack");
-  const radios = document.querySelectorAll(
-    'input[name="slider"]'
-  );
-  const labels = document.querySelectorAll(
-    ".navigation label"
-  );
+function sliderMain() {
+  const track = document.getElementById("sliderTrack");
+  const radios = document.querySelectorAll('input[name="slider"]');
+  const labels = document.querySelectorAll(".navigation label");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
@@ -53,8 +90,7 @@ function sliderMain(){
   }
 
   function prevSlide() {
-    let index =
-      (currentIndex - 1 + totalSlides) % totalSlides;
+    let index = (currentIndex - 1 + totalSlides) % totalSlides;
     goToSlide(index);
   }
 
@@ -80,12 +116,9 @@ function sliderMain(){
     });
   });
   interval = setInterval(nextSlide, 3000);
-
 }
 
-
 sliderMain();
-
 
 // Slider Muestras
 function slidermuestra() {
