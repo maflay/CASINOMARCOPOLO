@@ -22,60 +22,70 @@ function toprogresivos() {
   navegarA("clubnavegante?id=section-progresivos");
 }
 
-// // Slider Principal
-// const track = document.getElementById("sliderTrack");
-// const dots = document.querySelectorAll(".dot");
-// const prevBtn = document.getElementById("prevBtn");
-// const nextBtn = document.getElementById("nextBtn");
+// Slider Principal
 
-// let currentIndex = 0;
-// const totalSlides = dots.length;
-// let interval;
 
-// function goToSlide(index) {
-//   track.style.transform = `translateX(-${index * 100}vw)`;
-//   dots.forEach(dot => dot.classList.remove("active"));
-//   dots[index].classList.add("active");
-//   currentIndex = index;
-// }
 
-// function nextSlide() {
-//   let index = (currentIndex + 1) % totalSlides;
-//   goToSlide(index);
-// }
+function sliderMain(){
+ const track = document.getElementById("sliderTrack");
+  const radios = document.querySelectorAll(
+    'input[name="slider"]'
+  );
+  const labels = document.querySelectorAll(
+    ".navigation label"
+  );
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-// function prevSlide() {
-//   let index = (currentIndex - 1 + totalSlides) % totalSlides;
-//   goToSlide(index);
-// }
+  let currentIndex = 0;
+  const totalSlides = radios.length;
+  let interval;
 
-// function resetInterval() {
-//   clearInterval(interval);
-//   interval = setInterval(nextSlide, 5000);
-// }
+  function goToSlide(index) {
+    track.style.transform = `translateX(-${index * 100}vw)`;
+    radios[index].checked = true;
+    currentIndex = index;
+  }
 
-// // Botones
-// nextBtn.addEventListener("click", () => {
-//   nextSlide();
-//   resetInterval();
-// });
+  function nextSlide() {
+    let index = (currentIndex + 1) % totalSlides;
+    goToSlide(index);
+  }
 
-// prevBtn.addEventListener("click", () => {
-//   prevSlide();
-//   resetInterval();
-// });
+  function prevSlide() {
+    let index =
+      (currentIndex - 1 + totalSlides) % totalSlides;
+    goToSlide(index);
+  }
 
-// // Dots
-// dots.forEach(dot => {
-//   dot.addEventListener("click", () => {
-//     let index = parseInt(dot.dataset.index);
-//     goToSlide(index);
-//     resetInterval();
-//   });
-// });
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 3000);
+  }
 
-// // Auto Slide
-// interval = setInterval(nextSlide, 5000);
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  labels.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlide(index);
+      resetInterval();
+    });
+  });
+  interval = setInterval(nextSlide, 3000);
+
+}
+
+
+sliderMain();
+
 
 // Slider Muestras
 function slidermuestra() {

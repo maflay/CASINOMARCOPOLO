@@ -7,235 +7,235 @@
 
 <body>
 
-  <div class="container-ini">
+  <div>
 
-    <!-- PRIMERA SECTION -->
-    <div class="first-section" id="inicio">
-      <!-- <div class="slider-track" id="sliderTrack">
-        <div class="slide slide1">
-          <h1 class="type2-h1">¡La suerte</h1>
-          <h1 class="type2-h1"> te está </h1>
-          <h1 class="type2-h1"> esperando!</h1>
-        </div>
-        <div class="slide slide2">
-          <h1 class="type2-h1">Donde</h1>
-          <h1 class="type2-h1">la adrenalina </h1>
-          <h1 class="type2-h1">nunca se detiene</h1>
-        </div>
-        <div class="slide slide3">
-          <h1 class="type2-h1">Lujo, </h1>
-          <h1 class="type2-h1">juego y diversión</h1>
-          <h1 class="type2-h1">en un solo lugar</h1>
-        </div>
-      </div> -->
-      <!-- 
-      <button class="arrow left" id="prevBtn">&#8249;</button>
-      <button class="arrow right" id="nextBtn">&#8250;</button> -->
-
-      <!-- <div class="dots" id="dotsContainer">
-        <div class="dot active" data-index="0"></div>
-        <div class="dot" data-index="1"></div>
-        <div class="dot" data-index="2"></div>
-      </div> -->
-      <video autoplay muted loop class="video-bg">
-        <source src="/resources/prueba.mp4" type="video/mp4">
-        Tu navegador no soportó el contenido.
-      </video>
-      <div class="first-content">
-        <h1></h1>
-      </div>
-    </div>
-
-
-    <!-- SUPER CASH -->
-    <section id="section-cash" class="container-box">
-      <div class="box-content container">
-        <div class="box-cash">
-          <div class="box-left">
-            <h1 class="titulo">Regístrate<br />
-              y obtén un bono<br />
-              Super cash<br />
-              de $40.000 pesos<br />
-              para que comiences<br />
-              a disfrutar de casino<br />
-              Marco Polo.</h1>
-            <br />
-            <p class="titulo">
-              En Casino Marco Polo encuéntras más que<br />
-              casino, encuentras diversión, <br />
-              entretenimiento, amigos y muchos espacios<br />
-              para que la emoción nunca se detenga.
-            </p>
-          </div>
-        </div>
-        <div class="box-right titulo">
-          <img src="/resources/Recurso-7@2x.png" alt="logo"></img>
-
-          <form class="contact-form" id="cash-unico">
-            <input type="email" name="correo" placeholder="Correo electrónico" required />
-            <input type="tel" name="telefono" placeholder="Teléfono" required />
-            <div class="datos-form">
-              <input type="checkbox" id="acepto-datos" name="acepto_datos" value="1" required />
-              <label for="acepto-datos">Acepto tratamientos de datos</label>
-            </div>
-            <div class="btn-form">
-              <button type="submit" class="purple-button">Enviar</button>
-            </div>
-          </form>
-          <div id="form-message"></div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- TARJETA-MYMAWI -->
-    <section class="container-tarjeta">
-      <div class='box-container-tarjeta container'>
-        <div class='box-left-tarjeta '>
-          <div class='box-left-tarjeta-content titulor' id="get-tarjeta">
-            <h1>Obtén<br />
-              tu tarjeta<br />
-              Mymawi</h1>
-            <br />
-            <p>Con la Mymawi card siempre ganas,<br />
-              regístrate y obtén beneficios exclusivos para<br />
-              que tengas una experiencia completa en<br />
-              casino Marco Polo.</p>
-            <br />
-            <button class='btn-design1' onclick="ObtenerTarjeta()">Quiero mi tarjeta</button>
-          </div>
-        </div>
-        <div class='box-rigth-tarjeta'>
-          <img src="/resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
-        </div>
-      </div>
-    </section>
-    <!-- SLIDER -->
-
-    <section class="slider-muestras">
-      <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
-        <div class="slide-muestras bg1-muestra"></div>
-        <div class="slide-muestras bg4-muestra">
-          <div class="slider-progresivo-content container">
-            <div class="slider-progresivo">
-              <div class="slider-progresivos-actions">
-                <h1 class="type3-h1">Conoce nuestros progresivos.</h1>
-                <h1 class="type3-h1">¡Descubre los premios que están cambiando vidas!.</h1>
-                <h1 class="type3-h1">Progresivos que no paran de crecer.</h1>
-              </div>
-              <div>
-                <button class="purple-button" onclick="toprogresivos()">Saber más</button>
-              </div>
-              <!-- <div class="slider-progresivo-img">
-                <img src="/resources/progresivos2.png" />
-              </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="slide-muestras bg2-muestra"></div>
-        <div class="slide-muestras bg3-muestra"></div>
-        
+    <section id="inicio" class="slider">
+      <div class="slider-wrapper" id="sliderTrack">
+        <div class="slide bg1"></div>
+        <div class="slide bg2"></div>
+        <div class="slide bg3"></div>
       </div>
 
       <!-- Radios -->
-      <div class="navigation-muestras">
-        <input type="radio" name="slider-muestras" id="trigger1-muestra" checked>
-        <label for="trigger1-muestra"></label>
+      <div class="navigation">
+        <input type="radio" name="slider" id="trigger1" checked>
+        <label for="trigger1"></label>
 
-        <input type="radio" name="slider-muestras" id="trigger2-muestra">
-        <label for="trigger2-muestra"></label>
+        <input type="radio" name="slider" id="trigger2">
+        <label for="trigger2"></label>
 
-        <input type="radio" name="slider-muestras" id="trigger3-muestra">
-        <label for="trigger3-muestra"></label>
-
-        <input type="radio" name="slider-muestras" id="trigger4-muestra">
-        <label for="trigger4-muestra"></label>
+        <input type="radio" name="slider" id="trigger3">
+        <label for="trigger3"></label>
       </div>
       <!-- 
       <button class="arrow left" id="prevBtn">&#8249;</button>
       <button class="arrow right" id="nextBtn">&#8250;</button> -->
 
       <!-- Flechas -->
-      <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
-      <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
+      <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
+      <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
     </section>
 
+    <video autoplay muted loop class="video-bg">
+      <source src="/resources/prueba.mp4" type="video/mp4">
+      Tu navegador no soportó el contenido.
+    </video>
 
 
-    <!-- PROMOCIONES -->
+  </div>
 
-    <section class="promocion-container">
-      <div class="promo">
-        <h1>PROMOCIONES</h1>
+
+
+
+  <!-- SUPER CASH -->
+  <section id="section-cash" class="container-box">
+    <div class="box-content container">
+      <div class="box-cash">
+        <div class="box-left">
+          <h1 class="titulo">Regístrate<br />
+            y obtén un bono<br />
+            Super cash<br />
+            de $40.000 pesos<br />
+            para que comiences<br />
+            a disfrutar de casino<br />
+            Marco Polo.</h1>
+          <br />
+          <p class="titulo">
+            En Casino Marco Polo encuéntras más que<br />
+            casino, encuentras diversión, <br />
+            entretenimiento, amigos y muchos espacios<br />
+            para que la emoción nunca se detenga.
+          </p>
+        </div>
       </div>
-      <section class="card-view titulo">
-        <article class="card">
-          <div class="card-image">
-            <img src="/resources/Recurso-4@2x.png" alt="Imagen 1" />
-          </div>
-          <div class="card-divider"></div>
-          <div class="card-content">
-            <h1>Ruleta de premios</h1>
-            <p>
-              En Casino Marco Polo encuentras
-              más que casino, encuentras
-              diversión, entretenimiento, amigos
-              y muchos espacios para que la
-              emoción nunca se detenga.
-            </p>
-            <button class="purple-button" onclick="saberMasPromo()">Ver más</button>
-          </div>
-        </article>
+      <div class="box-right titulo">
+        <img src="/resources/Recurso-7@2x.png" alt="logo"></img>
 
-        <article class="card">
-          <div class="card-image">
-            <img src="/resources/Recurso-5@2x.png" alt="Imagen 2" />
+        <form class="contact-form" id="cash-unico">
+          <input type="email" name="correo" placeholder="Correo electrónico" required />
+          <input type="tel" name="telefono" placeholder="Teléfono" required />
+          <div class="datos-form">
+            <input type="checkbox" id="acepto-datos" name="acepto_datos" value="1" required />
+            <label for="acepto-datos">Acepto tratamientos de datos</label>
           </div>
-          <div class="card-divider"></div>
-          <div class="card-content">
-            <h1>
-              Mr. Bonus
-            </h1>
-            <p>
-              En Casino Marco Polo encuentras
-              más que casino, encuentras
-              diversión, entretenimiento, amigos
-              y muchos espacios para que la
-              emoción nunca se detenga.
-            </p>
-            <button class="purple-button" onclick="saberMasPromo()">Ver más</button>
+          <div class="btn-form">
+            <button type="submit" class="purple-button">Enviar</button>
           </div>
-        </article>
-      </section>
-    </section>
+        </form>
+        <div id="form-message"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ASOCIADOS -->
 
-    <section>
-      <div class="container-asociar ">
-        <div class="box-container-asociar container">
-          <div class="box-left-asociar">
-            <div class="box-img-asociar">
-              <img src="/resources/fondo-asociado.png" alt="fondo-club">
+  <!-- TARJETA-MYMAWI -->
+  <section class="container-tarjeta">
+    <div class='box-container-tarjeta container'>
+      <div class='box-left-tarjeta '>
+        <div class='box-left-tarjeta-content titulor' id="get-tarjeta">
+          <h1>Obtén<br />
+            tu tarjeta<br />
+            Mymawi</h1>
+          <br />
+          <p>Con la Mymawi card siempre ganas,<br />
+            regístrate y obtén beneficios exclusivos para<br />
+            que tengas una experiencia completa en<br />
+            casino Marco Polo.</p>
+          <br />
+          <button class='btn-design1' onclick="ObtenerTarjeta()">Quiero mi tarjeta</button>
+        </div>
+      </div>
+      <div class='box-rigth-tarjeta'>
+        <img src="/resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
+      </div>
+    </div>
+  </section>
+  <!-- SLIDER -->
+
+  <section class="slider-muestras">
+    <div class="slider-wrapper-muestras" id="sliderTrackMuestras">
+      <div class="slide-muestras bg1-muestra"></div>
+      <div class="slide-muestras bg4-muestra">
+        <div class="slider-progresivo-content container">
+          <div class="slider-progresivo">
+            <div class="slider-progresivos-actions">
+              <h1 class="type3-h1">Conoce nuestros progresivos.</h1>
+              <h1 class="type3-h1">¡Descubre los premios que están cambiando vidas!.</h1>
+              <h1 class="type3-h1">Progresivos que no paran de crecer.</h1>
             </div>
-              <div class="box-left-asociar-content titulol">
-                <img class="img-club" src="/resources/Recurso-8@2x.png" alt="img-asociar">
-                <h2>
-                  Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
-                  como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
-                  ahora.
-                </h2>
-                <div class="club-content">
-                  <button class="btn-design2" onclick="asociarse()">Quiero asociarme</button>
-                </div>
-              </div>
-          </div>
-          <div class="box-rigth-asociar">
-            <img src="/resources/Recurso-2@2x.png" alt="img-asociar">
+            <div>
+              <button class="purple-button" onclick="toprogresivos()">Saber más</button>
+            </div>
+            <!-- <div class="slider-progresivo-img">
+                <img src="/resources/progresivos2.png" />
+              </div> -->
           </div>
         </div>
       </div>
+      <div class="slide-muestras bg2-muestra"></div>
+      <div class="slide-muestras bg3-muestra"></div>
+
+    </div>
+
+    <!-- Radios -->
+    <div class="navigation-muestras">
+      <input type="radio" name="slider-muestras" id="trigger1-muestra" checked>
+      <label for="trigger1-muestra"></label>
+
+      <input type="radio" name="slider-muestras" id="trigger2-muestra">
+      <label for="trigger2-muestra"></label>
+
+      <input type="radio" name="slider-muestras" id="trigger3-muestra">
+      <label for="trigger3-muestra"></label>
+
+      <input type="radio" name="slider-muestras" id="trigger4-muestra">
+      <label for="trigger4-muestra"></label>
+    </div>
+    <!-- 
+      <button class="arrow left" id="prevBtn">&#8249;</button>
+      <button class="arrow right" id="nextBtn">&#8250;</button> -->
+
+    <!-- Flechas -->
+    <button class="arrow-muestra arrow-left-muestra" id="prevBtnMuestra">&#8249;</button>
+    <button class="arrow-muestra arrow-right-muestra" id="nextBtnMuestra">&#8250;</button>
+  </section>
+
+
+
+  <!-- PROMOCIONES -->
+
+  <section class="promocion-container">
+    <div class="promo">
+      <h1>PROMOCIONES</h1>
+    </div>
+    <section class="card-view titulo">
+      <article class="card">
+        <div class="card-image">
+          <img src="/resources/Recurso-4@2x.png" alt="Imagen 1" />
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-content">
+          <h1>Ruleta de premios</h1>
+          <p>
+            En Casino Marco Polo encuentras
+            más que casino, encuentras
+            diversión, entretenimiento, amigos
+            y muchos espacios para que la
+            emoción nunca se detenga.
+          </p>
+          <button class="purple-button" onclick="saberMasPromo()">Ver más</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="/resources/Recurso-5@2x.png" alt="Imagen 2" />
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-content">
+          <h1>
+            Mr. Bonus
+          </h1>
+          <p>
+            En Casino Marco Polo encuentras
+            más que casino, encuentras
+            diversión, entretenimiento, amigos
+            y muchos espacios para que la
+            emoción nunca se detenga.
+          </p>
+          <button class="purple-button" onclick="saberMasPromo()">Ver más</button>
+        </div>
+      </article>
     </section>
+  </section>
+
+  <!-- ASOCIADOS -->
+
+  <section>
+    <div class="container-asociar ">
+      <div class="box-container-asociar container">
+        <div class="box-left-asociar">
+          <div class="box-img-asociar">
+            <img src="/resources/fondo-asociado.png" alt="fondo-club">
+          </div>
+          <div class="box-left-asociar-content titulol">
+            <img class="img-club" src="/resources/Recurso-8@2x.png" alt="img-asociar">
+            <h2>
+              Cuando haces parte del Club Navegantes Marco Polo accedes a múltiples beneficios
+              como descuentos en tiendas, hotelería y gastronomía. Asóciate y comienza a disfrutar
+              ahora.
+            </h2>
+            <div class="club-content">
+              <button class="btn-design2" onclick="asociarse()">Quiero asociarme</button>
+            </div>
+          </div>
+        </div>
+        <div class="box-rigth-asociar">
+          <img src="/resources/Recurso-2@2x.png" alt="img-asociar">
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   </div>
