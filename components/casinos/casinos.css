@@ -588,14 +588,14 @@
     color: white;
 }
 
-.con-cas .section-live-result .sports-result{
-display: flex;
-justify-content: center;
-align-items: center;
+.con-cas .section-live-result .sports-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.con-cas .section-live-result .sports-result .sports-result-content{
-text-align: center;
+.con-cas .section-live-result .sports-result .sports-result-content {
+    text-align: center;
 }
 
 /* Responsive styles */

@@ -40,24 +40,13 @@ const rutasLimpias = {
     js: "/components/asociado/asociado.js",
   },
   blackjack: {
-    html: "/components/blackjack/index.html",
-    css: [
-      "/components/blackjack/assets/css/game.css",
-      "/components/blackjack/assets/css/home.css",
-      "/components/blackjack/assets/css/reset.css",
-      "/components/blackjack/assets/css/visit-counter.css",
-    ],
-    js: [
-      "/components/blackjack/assets/js/alerts.js",
-      "/components/blackjack/assets/js/change-language.js",
-      "/components/blackjack/assets/js/game-buttons-actions.js",
-      "/components/blackjack/assets/js/game-statistics.js",
-      "/components/blackjack/assets/js/game.js",
-      "/components/blackjack/assets/js/home.js",
-      "/components/blackjack/assets/js/local-storage-items.js",
-      "/components/blackjack/assets/js/screen-loading.js",
-      "/components/blackjack/assets/js/underscore-min.js",
-    ],
+    html: "/components/blackjack/blackjack.html",
+    css: 
+      "/components/blackjack/blackjack.css",
+    
+    js: 
+      "/components/blackjack/blackjack.js",
+    
   },
 };
 
@@ -382,3 +371,4 @@ function capturarCorreoDesdeURL() {
     inputCorreo.value = decodeURIComponent(email);
   }
 }
+

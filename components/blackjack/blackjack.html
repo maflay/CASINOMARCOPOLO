@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Marco polo</title>
+</head>
+
+<body>
+    <div class="content-blackjack">
+        <h1 style="text-align: center;" class="type-h1">♠️<br /> Blackjack Marco polo</h1>
+        <div class="score type3-h1">Dealer: <span class="type5-h1" id="dealer-score">0</span></div>
+        <div class="cards" id="dealer-cards"></div>
+        <div class="score type3-h1">Jugador: <span class="type5-h1" id="player-score">0</span></div>
+        <div class="cards" id="player-cards"></div>
+        <h2 id="message"></h2>
+    </div>
+    <div class="actions-blackjack">
+        <div class="buttons">
+            <button class="purple-button" id="btn-new">Nuevo Juego</button>
+            <button class="purple-button" id="btn-hit">Pedir Carta</button>
+            <button class="purple-button" id="btn-stand" disabled>Plantarse</button>
+        </div>
+        <div class="bet-controls">
+            <!-- <label for="bet-amount">💰 Apuesta:</label>
+            <input type="number" id="bet-amount" min="10" step="10" value="50" />
+            <button id="place-bet">Apostar</button> -->
+            <h1 style="text-align: center;padding: 5px;" class="type5-h1">Apuesta a tu gústo</h1>
+            <div class="chips-container">
+                <img src="/resources/poker-chip-10.png" class="chip" data-value="10" alt="chip 10" />
+                <img src="/resources/poker-chip-25.png" class="chip" data-value="25" alt="chip 25" />
+                <img src="/resources/poker-chip-50.png" class="chip" data-value="50" alt="chip 50" />
+                <img src="/resources/poker-chip-100.png" class="chip" data-value="100" alt="chip 100" />
+                <img src="/resources/poker-chip-250.png" class="chip" data-value="250" alt="chip 250" />
+            </div>
+        </div>
+        <div class="result-blackjack">
+            <p class="type5-h1">Saldo: $<span class="type3-h1" id="balance">1000</span></p>
+            <div class="result-blackjack-current">
+                <p class="type5-h1">
+                    Apuesta actual: $
+                </p>
+                <span class="type3-h1" id="current-bet">
+                    0
+                </span>
+            </div>
+        </div>
+        <!-- <button onclick="alertLose()">prueba</button> -->
+    </div>
+</body>
+
+</html>
