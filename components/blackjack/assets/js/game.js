@@ -1,18 +1,9 @@
-import "/components/blackjack/assets/js/home.js";
-import * as underscore from "/components/blackjack/assets/js/underscore-min.js";
-import {
-  alertMessage,
-  alertLose,
-} from "/components/blackjack/assets/js/alerts.js";
-import {
-  statisticsCounter,
-  saveStatistics,
-} from "/components/blackjack/assets/js/game-statistics.js";
-import {
-  btnsEnabled,
-  btnsDisabled,
-} from "/components/blackjack/assets/js/game-buttons-actions.js";
-import { saveMaxAmountPlayerScoreCounter } from "/components/blackjack/assets/js/local-storage-items.js";
+import "./home.js";
+import * as underscore from "./underscore-min.js";
+import { alertMessage, alertLose } from "./alerts.js";
+import { statisticsCounter, saveStatistics } from "./game-statistics.js";
+import { btnsEnabled, btnsDisabled } from "./game-buttons-actions.js";
+import { saveMaxAmountPlayerScoreCounter } from "./local-storage-items.js";
 import {
   drawEqualGame,
   finishGame,
@@ -20,7 +11,7 @@ import {
   moneyTotalWon,
   moneyTotalLost,
   validatePlayerMoney,
-} from "/components/blackjack/assets/js/home.js";
+} from "./home.js";
 
 const dealerScoreContainer = document.querySelector(".dealer__score");
 const playerScore = document.getElementById("player-score");
@@ -28,6 +19,9 @@ const dealerScore = document.getElementById("dealer-score");
 const playerCardsContainer = document.querySelector(".player__cards");
 const dealerCardsContainer = document.querySelector(".dealer__cards");
 const betAmountCenter = document.querySelector(".bet-amount-center");
+
+// Audios del juego
+
 
 // llamamos la funcion para crear las cartas iniciales al recargar la pagina
 window.addEventListener("load", () => {
@@ -82,12 +76,8 @@ const createCardsInitial = () => {
   for (let i = 0; i < 2; i++) {
     createCard("player");
     createCard("dealer");
-    setTimeout(() => {
-      activeCards(1, dealerCardsContainer); // ✅ activa si ya está renderizada
-    }, 600);
   }
-  dealerCardsContainer.children[1].src =
-    "/components/blackjack/assets/cards/red_back-alt.png";
+  dealerCardsContainer.children[1].src = "./components/blackjack/assets/cards/red_back-alt.png";
 };
 
 // Esta función me permite tomar una carta
@@ -154,7 +144,6 @@ const finishGameCase = (winner = "player") => {
 const createCard = (whoPlay) => {
   const card = takeCard();
   const cardValue = valueCard(card);
-  console.log(card,"card de created card");
   whoPlay === "player"
     ? (playerPoints += cardValue)
     : (dealerPoints += cardValue);
@@ -162,7 +151,8 @@ const createCard = (whoPlay) => {
     ? (playerScore.innerText = playerPoints)
     : (dealerScore.innerText = dealerPoints);
   const cardImg = document.createElement("img");
-  cardImg.src = `/components/blackjack/assets/cards/${card}.png`;
+  cardImg.src = `assets/cards/${card}.png`;
+  console.log(cardImg.src, "la supuesta url");
   whoPlay === "player"
     ? playerCardsContainer.append(cardImg)
     : dealerCardsContainer.append(cardImg);
@@ -173,19 +163,17 @@ const createCard = (whoPlay) => {
 
 // Esta función me permite Activar las cartas del jugador y del dealer de acuerdo al parametro que le pase
 const activeCards = (cardPosition, container) => {
+  console.log(cardPosition, container, "que es esto");
   const cards = container.children;
   const card = cards[cardPosition];
-
-  if (!card) {
-    console.warn(
-      `❗ No se encontró la carta en posición ${cardPosition} del contenedor`,
-      container
-    );
-    return;
+  if (card) {
+    card.classList.add("active");
+  } else {
+    console.warn(`No se pudo activar la carta en la posición ${cardPosition}`);
   }
-
-  card.classList.add("active");
 };
+
+
 
 // Esta función me permite controlar cuando el jugador gana o pierde solo con las 4 cartas iniciales
 // que se acivan automaticamente al iniciar el juego
@@ -215,7 +203,7 @@ const gameEndConditionIntialCards = () => {
 
 // Esta funcion me permite reemplazar la carta del dealer por la carta oculta al iniciar el juego
 const flipCardBack = () => {
-  dealerCardsContainer.children[1].src = `/components/blackjack/assets/cards/${playedCards[3]}.png`;
+  dealerCardsContainer.children[1].src = `./assets/cards/${playedCards[3]}.png`;
   dealerCardsContainer.children[1].classList.add("flip-vertical-left");
   dealerCardsContainer.children[1].classList.add("active");
 };

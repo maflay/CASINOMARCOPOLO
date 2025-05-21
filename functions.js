@@ -61,6 +61,17 @@ const rutasLimpias = {
   },
 };
 
+document.addEventListener("click", function (e) {
+  const link = e.target.closest("a[data-page]"); // solo si tiene data-page
+
+  if (link) {
+    e.preventDefault(); // Evita la navegación por defecto
+    const clave = link.getAttribute("data-page"); // Ej: "blackjack"
+    PageLoader.cargarPagina(clave);
+  }
+});
+
+
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {

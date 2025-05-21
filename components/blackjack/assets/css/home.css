@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(/components/blackjack/assets/images/background-blackjack-2.png);
+  background-image: url(../images/background-blackjack-2.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -12,16 +12,16 @@ body {
 }
 
 body.game-start {
-  background-image: url(/components/blackjack/assets/images/background-blackjack-active.png);
+  background-image: url(../images/background-blackjack-active.png);
 }
 
 @media (max-width: 480px) {
   body.game-start {
-    background-image: url(/components/blackjack/assets/images/background-blackjack-mobile-home.png);
+    background-image: url(../images/background-blackjack-mobile-home.png);
   }
 
   body {
-    background-image: url(/components/blackjack/assets/images/background-blackjack-mobile-home.png);
+    background-image: url(../images/background-blackjack-mobile-home.png);
   }
 }
 
@@ -497,7 +497,7 @@ main {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-image: url(/components/blackjack/assets/images/background-blackjack-bottom.png);
+  background-image: url(../images/background-blackjack-bottom.png);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.63);
 }
 
@@ -576,7 +576,7 @@ main {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: url(/components/blackjack/assets/images/background-blackjack-loading.png);
+  background-image: url(../images/background-blackjack-loading.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

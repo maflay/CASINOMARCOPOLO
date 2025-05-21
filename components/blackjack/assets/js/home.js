@@ -1,13 +1,13 @@
-import "/components/blackjack/assets/js/change-language.js";
+import "./change-language.js";
 
-import { alertMessage } from "/components/blackjack/assets/js/alerts.js";
-import { statisticsCounter, saveStatistics } from "/components/blackjack/assets/js/game-statistics.js";
-import { restartPlayerScore } from "/components/blackjack/assets/js/local-storage-items.js";
+import { alertMessage } from "./alerts.js";
+import { statisticsCounter, saveStatistics } from "./game-statistics.js";
+import { restartPlayerScore } from "./local-storage-items.js";
 import {
   restartGame,
   activeCards,
   gameEndConditionIntialCards,
-} from "/components/blackjack/assets/js/game.js";
+} from "./game.js";
 
 const betAmountContainer = document.querySelector(".bet-amount-container");
 const betAmount = document.getElementById("bet-amount-home");
@@ -33,6 +33,20 @@ const playerCardsContainer = document.querySelector(".player__cards");
 const dealerCardsContainer = document.querySelector(".dealer__cards");
 const languageChangeBtn = document.querySelector(".languaje-change-btn");
 
+// 🔽 Aquí colocas la función
+const esperarCartaYActivar = (cardPosition, container, delay = 0) => {
+  setTimeout(() => {
+    const interval = setInterval(() => {
+      const cards = container.children;
+      const card = cards[cardPosition];
+      if (card) {
+        clearInterval(interval);
+        card.classList.add("active");
+      }
+    }, 50);
+  }, delay);
+};
+
 const fixDecimal = (number) => {
   return parseFloat(number.toFixed(2));
 };
@@ -51,7 +65,6 @@ const restoreBalance = () => {
   }
 };
 restoreBalance();
-
 
 
 const audioCliclBtns = () => {
@@ -203,7 +216,6 @@ btnRestartGame.addEventListener("click", () => {
 
 // funcion para doblar la apuesta
 const doubleBet = () => {
-
   let betAmountDouble = betAmount.innerHTML * 2;
   betAmount.innerHTML = betAmountDouble;
   betBalance.innerHTML = betBalance.innerHTML - betAmount.innerHTML;
@@ -211,7 +223,6 @@ const doubleBet = () => {
   btnDouble.classList.add("disabled");
   saveBalance();
 };
-
 
 
 const playerWinGame = () => {

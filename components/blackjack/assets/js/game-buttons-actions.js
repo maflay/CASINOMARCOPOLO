@@ -6,8 +6,8 @@ import {
   flipCardBack,
   finishGameCase,
   dealerTurn,
-} from "/components/blackjack/assets/js/game.js";
-import { doubleBet } from "/components/blackjack/assets/js/home.js";
+} from "./game.js";
+import { doubleBet } from "./home.js";
 
 const btnHit = document.getElementById("btn-hit");
 const btnStand = document.getElementById("btn-stand");

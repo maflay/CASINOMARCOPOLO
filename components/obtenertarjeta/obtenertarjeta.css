@@ -359,7 +359,7 @@ border-radius: 10px;
 }
 
 .parent {
-  height: 100vh;
+  height: auto;
   margin-top: 30px;
   margin-bottom: 30px;
   display: grid;
