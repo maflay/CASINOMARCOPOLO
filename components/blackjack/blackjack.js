@@ -104,13 +104,6 @@ balanceSpan.textContent = balance;
   };
 
   const checkWinner = () => {
-
-    console.log(balance,"texto1");
-    console.log(currentBet,"texto2");
-    console.log(balanceSpan,"texto3");
-    console.log(currentBetSpan,"texto4");
-
-
     setTimeout(() => {
       if (playerPoints > 21) {
         message.textContent = "❌ Te pasaste, pierdes";
