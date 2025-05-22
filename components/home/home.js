@@ -25,7 +25,6 @@ function toprogresivos() {
 // ENVIO DE CASH
 function enviocash() {
   const form = document.getElementById("cash-unico");
-  const message = document.getElementById("form-message");
   const loading = document.getElementById("loading");
 
   if (form) {
@@ -36,32 +35,26 @@ function enviocash() {
       fetch("/components/home/guardar.php", {
         method: "POST",
         body: formData,
+      }).then((response) => {
+        if (response.status == 200) {
+          Swal.fire({
+            icon: "success",
+            title: "¡Éxito!",
+            text: "Datos enviados correctamente, Gracias.",
+          });
+          loading.style.display = "none"; //Oculta el loader
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "¡Error!",
+            text: "!Lo sentimos ha ocurrido un error. Inténtalo más tarde",
+          });
+          loading.style.display = "none"; //Oculta el loader
+        }
       })
-        .then((response) => response.text())
-        .then((data) => {
-          setTimeout(() => {
-            loading.style.display = "none"; //Oculta el loader
-            Swal.fire({
-              icon: "success",
-              title: "¡Éxito!",
-              text: "Datos enviados correctamente, Gracias.",
-            });
-          }, 1000);
-          form.reset();
-          window.history.replaceState(
-            {},
-            document.title,
-            window.location.pathname
-          );
-          setTimeout(() => {
-            message.innerHTML = "";
-          }, 5000);
-        })
-        .catch((error) => {
-          console.error("Error al enviar:", error);
-          message.innerHTML =
-            "<p style='color: red;'>Hubo un error al enviar el formulario.</p>";
-        });
+      .catch((error)=> {
+        alert("Error. Inténtalo más tarde",error.text)
+      });
     });
   }
 }

@@ -192,6 +192,7 @@ balanceSpan.textContent = balance;
 
 function alertLose() {
   Swal.fire({
+    position: "top-end",
     icon: "error",
     title: "❌ Has perdido",
     showConfirmButton: false,
@@ -201,6 +202,7 @@ function alertLose() {
 
 function alertWin() {
   Swal.fire({
+    position: "top-end",
     icon: "success",
     title: "✅ ¡Ganaste!",
     showConfirmButton: false,
@@ -210,6 +212,7 @@ function alertWin() {
 
 function alertEmpate() {
   Swal.fire({
+    position: "top-end",
     icon: "warining",
     title: "🤝 Empate",
     showConfirmButton: false,
