@@ -7,10 +7,9 @@ function enviarAsociado() {
   const telefono = document.getElementById("telefono-asociado").value.trim();
   const direccion = document.getElementById("direccion-asociado").value.trim();
   const ciudad = document.getElementById("ciudad-asociado").value.trim();
-  const tipoTarjeta = document.querySelector("select[name='tipo_tarjeta']").value;
 
   // Validación
-  if (!nombre || !email || !telefono || !direccion || !ciudad || !tipoTarjeta) {
+  if (!nombre || !email || !telefono || !direccion || !ciudad) {
     alert("Por favor completa todos los campos antes de solicitar.");
     return;
   }
@@ -20,25 +19,26 @@ function enviarAsociado() {
   loading.style.display = "flex";
   fetch("/components/asociado/guardar-asociado.php", {
     method: "POST",
-    body: formData
+    body: formData,
   })
-    .then(response => response.text())
-    .then(data => {
-        setTimeout(() => {
-            loading.style.display = "none";
-            message.innerHTML =
-              '<div class="success-message">' +
-              "<strong>¡Éxito!</strong> Datos enviados correctamente.</div>";
-          }, 1000);
-          window.history.replaceState({}, document.title, window.location.pathname);
-          form.reset();
-          setTimeout(() => {
-            message.innerHTML = "";
-          }, 5000);
+    .then((response) => response.text())
+    .then((data) => {
+      setTimeout(() => {
+        loading.style.display = "none";
+        Swal.fire({
+          icon: "success",
+          title: "¡Éxito!",
+          text: "Datos enviados correctamente.",
+        });
+      }, 1000);
+      window.history.replaceState({}, document.title, window.location.pathname);
+      form.reset();
+      setTimeout(() => {
+        message.innerHTML = "";
+      }, 5000);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error al enviar el formulario:", error);
       alert("Hubo un error al enviar tus datos.");
     });
 }
-

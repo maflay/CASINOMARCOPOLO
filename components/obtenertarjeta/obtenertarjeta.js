@@ -24,9 +24,11 @@ function enviarFormularioTarjeta() {
     .then((data) => {
       setTimeout(() => {
         loading.style.display = "none";
-        message.innerHTML =
-          '<div class="success-message">' +
-          "<strong>¡Éxito!</strong> Datos enviados correctamente.</div>";
+        Swal.fire({
+          icon: "success",
+          title: "¡Éxito!",
+          text: "Datos enviados correctamente.",
+        });
       }, 1000);
       window.history.replaceState({}, document.title, window.location.pathname);
       form.reset();

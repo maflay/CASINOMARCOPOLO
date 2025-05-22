@@ -23,47 +23,50 @@ function toprogresivos() {
 }
 
 // ENVIO DE CASH
+function enviocash() {
+  const form = document.getElementById("cash-unico");
+  const message = document.getElementById("form-message");
+  const loading = document.getElementById("loading");
 
-const form = document.getElementById("cash-unico");
-const message = document.getElementById("form-message");
-const loading = document.getElementById("loading");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevenir redirección
-
-    const formData = new FormData(form);
-    loading.style.display = "flex";
-    fetch("/components/home/guardar.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        setTimeout(() => {
-          loading.style.display = "none"; //Oculta el loader
-          message.innerHTML =
-            '<div class="success-message">' +
-            "<strong>¡Éxito!</strong> Datos enviados correctamente.</div>";
-        }, 1000);
-
-        form.reset();
-        window.history.replaceState(
-          {},
-          document.title,
-          window.location.pathname
-        );
-        setTimeout(() => {
-          message.innerHTML = "";
-        }, 5000);
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevenir redirección
+      const formData = new FormData(form);
+      loading.style.display = "flex";
+      fetch("/components/home/guardar.php", {
+        method: "POST",
+        body: formData,
       })
-      .catch((error) => {
-        console.error("Error al enviar:", error);
-        message.innerHTML =
-          "<p style='color: red;'>Hubo un error al enviar el formulario.</p>";
-      });
-  });
+        .then((response) => response.text())
+        .then((data) => {
+          setTimeout(() => {
+            loading.style.display = "none"; //Oculta el loader
+            Swal.fire({
+              icon: "success",
+              title: "¡Éxito!",
+              text: "Datos enviados correctamente, Gracias.",
+            });
+          }, 1000);
+          form.reset();
+          window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+          );
+          setTimeout(() => {
+            message.innerHTML = "";
+          }, 5000);
+        })
+        .catch((error) => {
+          console.error("Error al enviar:", error);
+          message.innerHTML =
+            "<p style='color: red;'>Hubo un error al enviar el formulario.</p>";
+        });
+    });
+  }
 }
+
+enviocash();
 
 // Slider Principal
 
