@@ -131,15 +131,13 @@ const PageLoader = {
     fetch(ruta.html)
       .then((response) => response.text())
       .then((html) => {
-        mainContent.innerHTML = html;
-
+        
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
+        mainContent.innerHTML = html;
 
         capturarCorreoDesdeURL();
-        setTimeout(() => {
           loading.style.display = "none";
-        }, 50);
       })
       .catch((error) => {
         mainContent.innerHTML = "<p>Error al cargar la página.</p>";
