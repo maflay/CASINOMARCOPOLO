@@ -171,6 +171,49 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="container">
+            
+            <div class="content-questions">
+                <div class="faq">
+                    <div style="text-align: center;margin-top: 20px;margin-bottom: 20px;">
+                <h1 class="type3-h1">Preguntas frecuentes</h1>
+            </div>
+                    <div class="faq-item">
+                        
+                        <button class="faq-question">
+                            <div class="type5-h1">¿Qué tipo de experiencias puedes vivir con nosotros?</div>
+                        </button>
+                        <div class="faq-answer">
+                           Ofrecemos una experiencia integral pensada para sorprenderte desde el primer momento.
+                            Desde entretenimiento exclusivo, atención personalizada, zonas VIP y eventos especiales, 
+                           todo está diseñado para que cada visita sea única, emocionante y llena de estilo. </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <div class="type5-h1">¿Es una experiencia para cualquier tipo de persona?</div>
+                        </button>
+                        <div class="faq-answer">
+                            Sí, nuestras experiencias están pensadas tanto
+                            para quienes buscan diversión con amigos como para quienes prefieren un ambiente más exclusivo o relajado.
+                             Ya sea que vengas por primera vez o seas parte de nuestros clientes frecuentes, tenemos algo especial para ti.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                             <div class="type5-h1">¿Qué hace diferente nuestra experiencia frente a otros lugares?</div>
+                        </button>
+                        <div class="faq-answer">
+                            Nos enfocamos en cada detalle: desde la ambientación de nuestros espacios hasta la atención personalizada que recibirás.
+                             Aquí no solo vienes a disfrutar, vienes a vivir momentos memorables con un servicio que realmente marca la diferencia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- <section>
         <div class="container">
@@ -189,19 +232,6 @@
 
 
     <!-- SCRIPTS -->
-    <script>
-        const formularioMember = document.getElementById('member-card');
-        if (formularioMember) {
-            formularioMember.addEventListener('submit', function (event) {
-                event.preventDefault(); // Evita el envío del formulario por defecto
-                loading.style.display = "flex";
-                window.scrollTo(0, 0);
-                navegarA(`/components/contacto/contacto.html`);
-                window.location.hash = '';
-                // Aquí puedes agregar la lógica para enviar el correo electrónico a tu servidor
-            });
-        }
-    </script>
 </body>
 
 </html>

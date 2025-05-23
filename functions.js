@@ -41,12 +41,14 @@ const rutasLimpias = {
   },
   blackjack: {
     html: "/components/blackjack/blackjack.html",
-    css: 
-      "/components/blackjack/blackjack.css",
-    
-    js: 
-      "/components/blackjack/blackjack.js",
-    
+    css: "/components/blackjack/blackjack.css",
+
+    js: "/components/blackjack/blackjack.js",
+  },
+  nosotros: {
+    html: "/components/nosotros/nosotros.html",
+    css: "/components/nosotros/nosotros.css",
+    js: "/components/nosotros/nosotros.js",
   },
 };
 
@@ -59,7 +61,6 @@ document.addEventListener("click", function (e) {
     PageLoader.cargarPagina(clave);
   }
 });
-
 
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
@@ -131,13 +132,13 @@ const PageLoader = {
     fetch(ruta.html)
       .then((response) => response.text())
       .then((html) => {
-        
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
         mainContent.innerHTML = html;
-
         capturarCorreoDesdeURL();
+        setTimeout(() => {
           loading.style.display = "none";
+        }, 400);
       })
       .catch((error) => {
         mainContent.innerHTML = "<p>Error al cargar la página.</p>";
@@ -371,4 +372,3 @@ function capturarCorreoDesdeURL() {
     inputCorreo.value = decodeURIComponent(email);
   }
 }
-

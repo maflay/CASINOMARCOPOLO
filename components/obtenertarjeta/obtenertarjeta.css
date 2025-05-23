@@ -820,7 +820,7 @@ border-radius: 10px;
 
 
   .img-test-container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }

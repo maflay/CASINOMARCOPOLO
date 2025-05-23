@@ -19,45 +19,28 @@ function enviarFormularioContacto(e) {
   fetch("/components/contacto/guardar_contacto.php", {
     method: "POST",
     body: formData,
-  }).then((res) => {
-    console.log(res.status, "status");
-    if (res.status == 200) {
-      loading.style.display = "none"; //Oculta el loader
-      Swal.fire({
-        icon: "success",
-        title: "Exito!",
-        text: "Los datos se enviaron correctamente. Gracias jugador",
-      });
-    } else {
-      loading.style.display = "none"; //Oculta el loader
-      Swal.fire({
-        icon: "error",
-        title: "¡Érror!",
-        text: "Lo siento jugador, los datos no se enviaron correctamente, intentalo mas tarde.",
-      });
-    }
-  });
-
-  // .then((data) => {
-  //   setTimeout(() => {
-  //     if (loading) loading.style.display = "none";
-  //     Swal.fire({
-  //       icon: "success",
-  //       title: "¡Éxito!",
-  //       text: "Datos enviados correctamente.",
-  //     });
-  //   }, 1000);
-  //   window.history.replaceState({}, document.title, window.location.pathname);
-  //   form.reset();
-
-  //   setTimeout(() => {
-  //     mensaje.innerHTML = "";
-  //   }, 5000);
-  // })
-  // .catch((err) => {
-  //   mensaje.innerHTML = `<div style="color: red;">Error de red al enviar.</div>`;
-  //   console.error(err);
-  // });
+  })
+    .then((res) => {
+      console.log(res.status, "status");
+      if (res.status == 200) {
+        loading.style.display = "none";
+        Swal.fire({
+          icon: "success",
+          title: "Exito!",
+          text: "Los datos se enviaron correctamente. Gracias jugador",
+        });
+      } else {
+        loading.style.display = "none";
+        Swal.fire({
+          icon: "error",
+          title: "¡Érror!",
+          text: "Lo siento jugador, los datos no se enviaron correctamente, intentalo mas tarde.",
+        });
+      }
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });
 
   return false; // Previene el envío por defecto
 }

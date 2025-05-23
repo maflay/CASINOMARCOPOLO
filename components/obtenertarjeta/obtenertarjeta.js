@@ -15,36 +15,39 @@ function enviarFormularioTarjeta() {
   if (!form) return;
 
   const formData = new FormData(form);
+
   loading.style.display = "flex";
   fetch("/components/obtenertarjeta/guardar_tarjeta.php", {
     method: "POST",
     body: formData,
   })
-    .then((response) => response.text())
-    .then((data) => {
-      setTimeout(() => {
+    .then((response) => {
+      console.log(response.status, "status");
+      if (response.status == 200) {
         loading.style.display = "none";
         Swal.fire({
           icon: "success",
           title: "¡Éxito!",
           text: "Datos enviados correctamente.",
         });
-      }, 1000);
-      window.history.replaceState({}, document.title, window.location.pathname);
-      form.reset();
-      setTimeout(() => {
-        message.innerHTML = "";
-      }, 5000);
+        form.reset();
+      } else {
+        loading.style.display = "none";
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Los datos no fueron enviados correctamente. Intentalo mas tarde.",
+        });
+        form.reset();
+      }
     })
     .catch((error) => {
-      console.error("Error al enviar el formulario de tarjeta:", error);
-      alert("Ocurrió un error al enviar tus datos.");
+      console.error("Error:", error);
     });
 }
 
-
-function slidertarjeta(){
- const trackMuestras = document.getElementById("sliderTrackMuestras");
+function slidertarjeta() {
+  const trackMuestras = document.getElementById("sliderTrackMuestras");
   const radiosMuestras = document.querySelectorAll(
     'input[name="slider-muestras"]'
   );
@@ -97,23 +100,14 @@ function slidertarjeta(){
     });
   });
   intervalMuestra = setInterval(nextSlideMuestra, 3000);
-
 }
-
 
 slidertarjeta();
 
-
-
-
-function slidergrid(){
- const trackGrid = document.getElementById("sliderTrackGrid");
-  const radiosGrid = document.querySelectorAll(
-    'input[name="slider-grid"]'
-  );
-  const labelsGrid = document.querySelectorAll(
-    ".navigation-grid label"
-  );
+function slidergrid() {
+  const trackGrid = document.getElementById("sliderTrackGrid");
+  const radiosGrid = document.querySelectorAll('input[name="slider-grid"]');
+  const labelsGrid = document.querySelectorAll(".navigation-grid label");
   const prevBtnGrid = document.getElementById("prevBtnGrid");
   const nextBtnGrid = document.getElementById("nextBtnGrid");
 
@@ -133,8 +127,7 @@ function slidergrid(){
   }
 
   function prevSlideGrid() {
-    let index =
-      (currentIndexGrid - 1 + totalSlidesGrid) % totalSlidesGrid;
+    let index = (currentIndexGrid - 1 + totalSlidesGrid) % totalSlidesGrid;
     goToSlideGrid(index);
   }
 
@@ -160,16 +153,13 @@ function slidergrid(){
     });
   });
   intervalGrid = setInterval(nextSlideGrid, 4000);
-
 }
-
 
 slidergrid();
 
 function toprogresivos() {
   navegarA("clubnavegante?id=section-progresivos");
 }
-
 
 document.getElementById("cambiarFondoBtn").addEventListener("click", () => {
   const img = document.getElementById("miImagen");
@@ -179,8 +169,6 @@ document.getElementById("cambiarFondoBtn").addEventListener("click", () => {
     btn.textContent = "Negro";
   } else {
     img.src = "/resources/tarjeta-mymawi-negraV2.png";
-     btn.textContent = "Rojo";
+    btn.textContent = "Rojo";
   }
 });
-
-
