@@ -52,16 +52,6 @@ const rutasLimpias = {
   },
 };
 
-document.addEventListener("click", function (e) {
-  const link = e.target.closest("a[data-page]"); // solo si tiene data-page
-
-  if (link) {
-    e.preventDefault(); // Evita la navegación por defecto
-    const clave = link.getAttribute("data-page"); // Ej: "blackjack"
-    PageLoader.cargarPagina(clave);
-  }
-});
-
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
@@ -212,20 +202,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      const navLinks = document.querySelectorAll(
-        ".Navbar .nav-items a[data-target]"
-      );
+      const navLinks = document.querySelectorAll(".nav-link");
+
       navLinks.forEach((link) => {
-        link.addEventListener("click", function (event) {
-          event.preventDefault();
+        link.addEventListener("click", function () {
+          // Elimina clases activas del resto
           navLinks.forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
-          const targetPage = this.getAttribute("data-target");
+
+          // Cerrar menú móvil si está abierto
           if (navItems.classList.contains("open")) {
             navToggle.classList.remove("open");
             navItems.classList.remove("open");
+            document.body.style.overflow = ""; // opcional si lo habías bloqueado
           }
-          // loadContent(targetPage);
+
+          // NO uses preventDefault, así cambia el hash y functions.js puede cargar la vista
+          // Y no uses data-target si estás usando href="#..."
         });
       });
     })
@@ -372,3 +365,22 @@ function capturarCorreoDesdeURL() {
     inputCorreo.value = decodeURIComponent(email);
   }
 }
+
+function actualizarMenuActivo() {
+  const hashActual = window.location.hash.split("?")[0] || "#inicio";
+  const enlaces = document.querySelectorAll(".nav-link");
+
+  enlaces.forEach((enlace) => {
+    const enlaceHash = enlace.getAttribute("href").split("?")[0];
+
+    if (enlaceHash === hashActual) {
+      enlace.classList.add("active");
+    } else {
+      enlace.classList.remove("active");
+    }
+  });
+}
+
+// Ejecutar al cargar y al cambiar hash
+window.addEventListener("load", actualizarMenuActivo);
+window.addEventListener("hashchange", actualizarMenuActivo);

@@ -163,6 +163,8 @@ html {
   animation: aparecer 0.8s ease forwards;
 }
 
+
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -264,6 +266,13 @@ html {
   }
 }
 
+.imagen-lateral{
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 0;
+}
+
 
 
 @media (max-width: 768px) {
@@ -286,4 +295,8 @@ html {
   .progress-bar {
     width: 30%;
   }
+
+  .imagen-lateral{
+    visibility: hidden;
+}
 }

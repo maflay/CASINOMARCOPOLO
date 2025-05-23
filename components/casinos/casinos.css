@@ -30,26 +30,6 @@
     text-align: center;
 }
 
-/* .con-cas .hero-casinos .hero-content h1 {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-image: linear-gradient(to right, #f3ec78, #af4261);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: movimiento-gradiente 2s linear infinite alternate;
-}
-
-@keyframes movimiento-gradiente {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-} */
 
 .con-cas .hero-casinos .hero-content p {
     color: #fff;
@@ -88,7 +68,7 @@
     color: #fff;
     height: auto;
     padding-top: 30px;
-
+position: relative;
 }
 
 .second-section .caspian-content {

@@ -152,7 +152,9 @@ border-radius: 10px;
   }
 
   .video-bg {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    position: absolute;
   }
 }
 

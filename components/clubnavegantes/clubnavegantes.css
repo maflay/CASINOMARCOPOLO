@@ -50,6 +50,7 @@
 }
 
 .container-clubnavegantes .sports-club .sports-club-content {
+    align-items: center;
     display: flex;
     width: 100%;
 }
@@ -61,7 +62,6 @@
 
 .container-clubnavegantes .sports-club p {
     padding-left: 20px;
-    margin-right: 10%;
 }
 
 /* SEGUNDA SECTION */
