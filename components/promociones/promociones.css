@@ -108,23 +108,16 @@
   justify-content: space-between;
 }
 
-.container-promo .deal-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: #27314F;
-}
-
 .container-promo .deal-content .subtitle {
   font-size: 0.85rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #1F253A;
 }
 
 .container-promo .deal-content p {
   font-size: 0.9rem;
   margin-bottom: 15px;
-  color: #1F253A;
+  color: #27314F;
 }
 
 .container-promo .section-start .content-start {
@@ -408,6 +401,7 @@
 
   .container-promo .container-section-promo .apuesta-deportiva {
     flex-direction: column-reverse;
+margin-top: 20px;
 margin-bottom: 20px;
 
   }
@@ -434,15 +428,19 @@ margin-bottom: 20px;
     background-image: url(/resources/fondo-color-global2.png);
     background-size: cover;
     background-position: center;
-    padding: 20px;
   }
 
   .promo-title .content-img img {
     width: 100%;
   }
 
+   .promo-title .content-img img {
+    width: 100%;
+  }
+
   .promo-title .content-text {
     display: contents;
+
   }
 
 }

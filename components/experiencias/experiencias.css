@@ -125,12 +125,6 @@
   padding: 12px;
 }
 
-.container-experiences .card-content h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #06113C;
-}
-
 .container-experiences .card-content p {
   margin: 2px 0;
   font-size: 14px;
@@ -250,11 +244,12 @@
 }
 
 .section-suerte .card-suerte .card-content-suerte {
-  height: 200px;
+  height: auto;
 }
 
 .section-suerte .card-suerte h3 {
   padding: 5%;
+  line-height: 1rem;
 }
 
 .section-suerte .card-suerte p {
@@ -424,7 +419,7 @@
 
   .diagonal-bg {
     height: auto;
-    background: linear-gradient(180deg, #27314F 55%, #fff 45%);
+    background: transparent;
   }
 
 
@@ -438,6 +433,7 @@
 
   .experiences-title .text1 {
     width: 100%;
+    padding-bottom: 50px;
   }
 
   .experiences-title .text1 h1 {}
@@ -448,11 +444,19 @@
     align-items: flex-end;
     margin-top: 0;
     margin-left: 0%;
+    position: relative;
+    background-color: white;
+    width: 100vw;
+    right: 50px;
+    padding: 45px;
   }
 
   .experiences-title .text2 h1 {
     width: 100%;
   }
 
+  .content-questions {
+  height: auto;
+}
 
 }
