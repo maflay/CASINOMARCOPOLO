@@ -77,6 +77,7 @@ balanceSpan.textContent = balance;
     // 🔄 Reiniciar saldo y apuesta
     balance = initialBalance;
     currentBet = 0;
+    verificarSaldo();
     updateScores();
   };
 
