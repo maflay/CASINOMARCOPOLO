@@ -50,6 +50,11 @@ const rutasLimpias = {
     css: "/components/nosotros/nosotros.css",
     js: "/components/nosotros/nosotros.js",
   },
+    ruleta: {
+    html: "/components/ruleta/ruleta.html",
+    css: "/components/ruleta/ruleta.css",
+    js: "/components/ruleta/ruleta.js",
+  },
 };
 
 window.addEventListener("load", function () {

@@ -1,0 +1,45 @@
+.container-ruleta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    color: azure;
+    gap: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-ruleta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content2-ruleta{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-ruleta {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .content-ruleta {
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

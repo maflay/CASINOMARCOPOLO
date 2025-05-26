@@ -1,18 +1,13 @@
-// const formularioFooter = document.getElementById("footer-form-action");
+function footerRegister() {
+  const emailInput = document.getElementById("email-footer");
+  const email = encodeURIComponent(emailInput.value); // Codifica el correo
+  const loading = document.getElementById("loading");
 
-// if (formularioFooter) {
-//   formularioFooter.addEventListener("submit", function (event) {
-//     event.preventDefault(); // Evita el envío del formulario por defecto
-
-//     const emailInput = formularioFooter.querySelector('#email-footer');
-//     const email = encodeURIComponent(emailInput.value); // Codificar el correo para la URL
-
-//     // Mostrar loader
-//     loading.style.display = "flex";
-
-//     // Espera un momento para mostrar el loader antes de redirigir
-//     setTimeout(() => {
-//       window.location.href = `/components/registro/registro.html?email=${email}`;
-//     }, 1000);
-//   });
-// }
+  if (!email) {
+    alert("Por favor ingresa un correo válido.");
+    return;
+  }
+  window.scrollTo(0, 0);
+  navegarA(`contacto?email=${email}`);
+  document.getElementById("email-footer").value = "";
+}

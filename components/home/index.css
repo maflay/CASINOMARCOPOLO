@@ -42,19 +42,6 @@
   display: none;
 }
 
-/* 
-.slider-progresivo .slider-progresivo-img{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.slider-progresivo .slider-progresivo-img img{
-height: 100%;
-border-radius: 10px;
-} */
-
 .slider .slider-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;

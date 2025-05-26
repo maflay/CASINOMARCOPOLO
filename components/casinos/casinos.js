@@ -9,3 +9,8 @@ function toBlackjack() {
   window.scrollTo(0, 0);
   navegarA(`blackjack`);
 }
+
+function toRuleta() {
+  window.scrollTo(0, 0);
+  navegarA(`ruleta`);
+}

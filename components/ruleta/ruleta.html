@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ruleta</title>
+</head>
+
+
+<body>
+    <section>
+        <div
+            style="background-image: url(/resources/background-blackjack-2.png);background-repeat: no-repeat;background-size: cover;">
+
+            <div class="container-ruleta">
+                <div class="content-ruleta">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                    <table id="tabla-ruleta" border="1" style="border-collapse: collapse; font-size: 14px;">
+                        <tr>
+                            <td colspan="3" data-numero="0"
+                                style="background: green; color: white; text-align: center;">0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="1">1</td>
+                            <td style="background-color: black; color: white;" data-numero="2">2</td>
+                            <td style="background-color: red; color: white;" data-numero="3">3</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="4">4</td>
+                            <td style="background-color: red; color: white;" data-numero="5">5</td>
+                            <td style="background-color: black; color: white;" data-numero="6">6</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="7">7</td>
+                            <td style="background-color: black; color: white;" data-numero="8">8</td>
+                            <td style="background-color: red; color: white;" data-numero="9">9</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="10">10</td>
+                            <td style="background-color: black; color: white;" data-numero="11">11</td>
+                            <td style="background-color: red; color: white;" data-numero="12">12</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="13">13</td>
+                            <td style="background-color: red; color: white;" data-numero="14">14</td>
+                            <td style="background-color: black; color: white;" data-numero="15">15</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="16">16</td>
+                            <td style="background-color: black; color: white;" data-numero="17">17</td>
+                            <td style="background-color: red; color: white;" data-numero="18">18</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="19">19</td>
+                            <td style="background-color: black; color: white;" data-numero="20">20</td>
+                            <td style="background-color: red; color: white;" data-numero="21">21</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="22">22</td>
+                            <td style="background-color: red; color: white;" data-numero="23">23</td>
+                            <td style="background-color: black; color: white;" data-numero="24">24</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="25">25</td>
+                            <td style="background-color: black; color: white;" data-numero="26">26</td>
+                            <td style="background-color: red; color: white;" data-numero="27">27</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="28">28</td>
+                            <td style="background-color: black; color: white;" data-numero="29">29</td>
+                            <td style="background-color: red; color: white;" data-numero="30">30</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: black; color: white;" data-numero="31">31</td>
+                            <td style="background-color: red; color: white;" data-numero="32">32</td>
+                            <td style="background-color: black; color: white;" data-numero="33">33</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: red; color: white;" data-numero="34">34</td>
+                            <td style="background-color: black; color: white;" data-numero="35">35</td>
+                            <td style="background-color: red; color: white;" data-numero="36">36</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" data-numero="00"
+                                style="background: green; color: white; text-align: center;">00
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content2-ruleta">
+                    <label for="apuesta" style="color:white; font-weight: bold;">Tu número:</label>
+                    <input type="text" id="apuesta" placeholder="Ej: 17, 00, 8" style="padding: 5px;" />
+                    <p id="resultado-apuesta" style="color: white; font-size: 18px; margin-top: 5px;"></p>
+                    <p id="ganador" style="font-size: 24px; color: #F6921E;"></p>
+                </div>
+            </div>
+            <div style="background-image: url(/resources/background-blackjack-bottom.png);" class="content2-ruleta">
+                <div style="position: relative; gap: 30px;" class="content-ruleta">
+                    <input class="btn-design1" type="button" value="GIRA LA RULETA Y GANA!" style="float:left;"
+                        id='spin' />
+                    <input class="btn-design1" type="button" value="REINICIAR JUEGO" id="reset" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

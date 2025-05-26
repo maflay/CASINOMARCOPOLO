@@ -23,7 +23,7 @@
 
   const initialBalance = 1000;
   let balance = initialBalance;
-balanceSpan.textContent = balance;
+  balanceSpan.textContent = balance;
   let currentBet = 0;
 
   const createDeck = () => {

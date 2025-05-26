@@ -35,26 +35,27 @@ function enviocash() {
       fetch("/components/home/guardar.php", {
         method: "POST",
         body: formData,
-      }).then((response) => {
-        if (response.status == 200) {
-          Swal.fire({
-            icon: "success",
-            title: "¡Éxito!",
-            text: "Datos enviados correctamente, Gracias.",
-          });
-          loading.style.display = "none"; //Oculta el loader
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "¡Error!",
-            text: "!Lo sentimos ha ocurrido un error. Inténtalo más tarde",
-          });
-          loading.style.display = "none"; //Oculta el loader
-        }
       })
-      .catch((error)=> {
-        alert("Error. Inténtalo más tarde",error.text)
-      });
+        .then((response) => {
+          if (response.status == 200) {
+            Swal.fire({
+              icon: "success",
+              title: "¡Éxito!",
+              text: "Datos enviados correctamente, Gracias.",
+            });
+            loading.style.display = "none"; //Oculta el loader
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "¡Error!",
+              text: "!Lo sentimos ha ocurrido un error. Inténtalo más tarde",
+            });
+            loading.style.display = "none"; //Oculta el loader
+          }
+        })
+        .catch((error) => {
+          alert("Error. Inténtalo más tarde", error.text);
+        });
     });
   }
 }
