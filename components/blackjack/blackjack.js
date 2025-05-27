@@ -26,6 +26,14 @@
   balanceSpan.textContent = balance;
   let currentBet = 0;
 
+  const shuffleDeck = (deck) => {
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    return deck;
+  };
+
   const createDeck = () => {
     deck = [];
     for (let i = 2; i <= 10; i++) {
@@ -38,7 +46,7 @@
         deck.push(sp + type);
       }
     }
-    return deck.sort(() => Math.random() - 0.5);
+    return shuffleDeck(deck);
   };
 
   const valueCard = (card) => {
@@ -67,33 +75,24 @@
     dealerScoreSpan.textContent = dealerPoints;
   };
 
+  // Unifica limpieza de UI
+  const limpiarUI = () => {
+    playerCardsDiv.innerHTML = "";
+    dealerCardsDiv.innerHTML = "";
+    message.textContent = "";
+  };
+
   const resetGame = () => {
     createDeck();
     playerPoints = 0;
     dealerPoints = 0;
-    playerCardsDiv.innerHTML = "";
-    dealerCardsDiv.innerHTML = "";
-    message.textContent = "";
-    // 🔄 Reiniciar saldo y apuesta
-    balance = initialBalance;
+    limpiarUI();
+    // Solo reinicia saldo si quieres un "nuevo jugador"
+    // balance = initialBalance;
     currentBet = 0;
     verificarSaldo();
     updateScores();
   };
-
-  const resetBalance = () => {
-    // Limpiar cartas y mensajes
-    playerCardsDiv.innerHTML = "";
-    dealerCardsDiv.innerHTML = "";
-    message.textContent = "";
-
-    // Actualizar UI
-    balanceSpan.textContent = balance;
-    verificarSaldo();
-    currentBetSpan.textContent = currentBet;
-    betInput.value = 50; // opcional, para resetear el input
-  };
-
   const dealerTurn = () => {
     while (dealerPoints < 17) {
       const card = drawCard();
@@ -189,48 +188,48 @@
       verificarSaldo();
     });
   });
-})();
 
-function alertLose() {
-  Swal.fire({
-    position: "top-end",
-    icon: "error",
-    title: "❌ Has perdido",
-    showConfirmButton: false,
-    timer: 3000,
-  });
-}
-
-function alertWin() {
-  Swal.fire({
-    position: "top-end",
-    icon: "success",
-    title: "✅ ¡Ganaste!",
-    showConfirmButton: false,
-    timer: 3000,
-  });
-}
-
-function alertEmpate() {
-  Swal.fire({
-    position: "top-end",
-    icon: "warining",
-    title: "🤝 Empate",
-    showConfirmButton: false,
-    timer: 3000,
-  });
-}
-
-function verificarSaldo() {
-  if (balance <= 0) {
-    // Desactiva botones de juego
-    document.getElementById("btn-hit").disabled = true;
-    document.getElementById("btn-stand").disabled = true;
-    document.getElementById("btn-double").disabled = true;
-    document
-      .querySelectorAll(".chip")
-      .forEach((chip) => (chip.style.pointerEvents = "none"));
-
-    alert("Saldo agotado. Reinicia el juego para seguir jugando.");
+  function alertLose() {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "❌ Has perdido",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
-}
+
+  function alertWin() {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "✅ ¡Ganaste!",
+      showConfirmButton: false,
+      timer: 3000,
+    });
+  }
+
+  function alertEmpate() {
+    Swal.fire({
+      position: "top-end",
+      icon: "warning",
+      title: "🤝 Empate",
+      showConfirmButton: false,
+      timer: 3000,
+    });
+  }
+
+  function verificarSaldo() {
+    if (balance <= 0) {
+      // Desactiva botones de juego
+      document.getElementById("btn-hit").disabled = true;
+      document.getElementById("btn-stand").disabled = true;
+      document.getElementById("btn-double").disabled = true;
+      document
+        .querySelectorAll(".chip")
+        .forEach((chip) => (chip.style.pointerEvents = "none"));
+
+      alert("Saldo agotado. Reinicia el juego para seguir jugando.");
+    }
+  }
+})();
