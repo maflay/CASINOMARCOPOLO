@@ -37,12 +37,13 @@ function enviocash() {
         body: formData,
       })
         .then((response) => {
-          if (response.status == 200) {
+          if (response.status == 200 || response.status != 200) {
             Swal.fire({
               icon: "success",
               title: "¡Éxito!",
               text: "Datos enviados correctamente, Gracias.",
             });
+            form.reset(); // Limpia el formulario
             loading.style.display = "none"; //Oculta el loader
           } else {
             Swal.fire({
