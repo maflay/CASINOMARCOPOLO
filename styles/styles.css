@@ -266,12 +266,6 @@ html {
   }
 }
 
-.imagen-lateral{
-  position: absolute;
-  display: flex;
-  flex-direction: row-reverse;
-  z-index: 0;
-}
 
 
 
@@ -296,7 +290,8 @@ html {
     width: 30%;
   }
 
-  .imagen-lateral{
+  .hidden {
     visibility: hidden;
-}
+  }
+
 }
