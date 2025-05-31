@@ -15,14 +15,7 @@
                     <h1 style="text-align: center;margin-top: 60px;" class="type-h1">♣️<br /> Ruleta Marco polo</h1>
                 </div>
                 <div class="content-ruleta">
-                    <canvas
-                        style="background-image: url(/resources/ruletanegra.jpg); 
-                        background-repeat: no-repeat; 
-                        background-position: center; 
-                        background-size: cover; 
-                        border-radius: 100%;
-                        padding: 26px;"
-                        id="canvas" width="500" height="500"></canvas>
+                    <canvas class="canvas-view" id="canvas" width="500" height="500"></canvas>
                     <table id="tabla-ruleta" border="1" style="border-collapse: collapse; font-size: 14px;">
                         <tr>
                             <td colspan="3" data-numero="0"
@@ -105,8 +98,7 @@
             </div>
             <div style="background-image: url(/resources/background-blackjack-bottom.png);" class="content2-ruleta">
                 <div style=" gap: 30px; display: flex; flex-direction: row-reverse;" class="content-ruleta">
-                    <input class="btn-design1" type="button" value="▶" style="float:left;"
-                        id='spin' />
+                    <input class="btn-design1" type="button" value="▶" style="float:left;" id='spin' />
                     <input class="btn-design1" type="button" value="⟳" id="reset" />
                     <div>
                         <button title="Reglas de la ruleta" style="border-radius: 100%;"
@@ -114,7 +106,7 @@
                         <button title="Información" style="border-radius: 100%;" onclick="abrirModalInfo()">ℹ️​</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -128,7 +120,8 @@
                 <div id="table-container" class="styled-table-container">
                     <div>
                         <h2 class="type4-h1">🎯 OBJETIVO DEL JUEGO</h2>
-                        <p>♣ Adivinar en qué número o combinación caerá la bolita(en este caso la flecha <span style="color: #F6921E;">↓</span>) después de hacerla girar en la ruleta.
+                        <p>♣ Adivinar en qué número o combinación caerá la bolita(en este caso la flecha <span
+                                style="color: #F6921E;">↓</span>) después de hacerla girar en la ruleta.
                         </p>
                     </div>
                     <br />

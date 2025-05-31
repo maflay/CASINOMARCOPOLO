@@ -262,8 +262,9 @@ td {
     }
 
     .betButtons {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        margin-top: 60px;
         margin-bottom: 60px;
     }
 
