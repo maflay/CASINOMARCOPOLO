@@ -1,5 +1,4 @@
-
-if (typeof window.indexRecorrido === 'undefined') {
+if (typeof window.indexRecorrido === "undefined") {
   window.suits = ["H", "D", "S", "C"];
 }
 
@@ -53,10 +52,12 @@ const infoBoard = document.querySelector("#info");
 const dealButton = document.querySelector("#dealButton");
 dealButton.addEventListener("click", deal);
 const buttonSection = document.querySelector("#buttonSection");
+const contentDeshacer = document.querySelector("#content-deshacer");
 
-const drawButton = document.createElement("span");
+const drawButton = document.createElement("button");
 drawButton.id = "drawButton";
 drawButton.innerText = " Repartir";
+drawButton.style.width = "fit-content";
 drawButton.classList.add("btn-design1");
 drawButton.addEventListener("click", draw);
 
@@ -67,7 +68,6 @@ nextHandButton.style.width = "155px";
 nextHandButton.style.height = "35px";
 nextHandButton.classList.add("btn-design1");
 nextHandButton.addEventListener("click", reset);
-
 
 const decks = generateDeck(8);
 
@@ -100,10 +100,8 @@ let bankerPickups = true;
 
 let gameStart = false;
 
-
 function deal() {
   infoBoard.innerText = "Jugando...";
-
 
   if (betChoice == null) {
     infoBoard.innerText = "Primero elije el equipo.";
@@ -178,7 +176,7 @@ function whoDrawsNext() {
     }
   }
 
-  console.log(playerCards,"playerCards");
+  console.log(playerCards, "playerCards");
   if (playerScore == 8 || playerScore == 9) {
     return null;
   } else if (bankerScore == 8 || bankerScore == 9) {
@@ -296,12 +294,11 @@ const fiftyChip = document.getElementById("100_chip");
 const hundredChip = document.getElementById("250_chip");
 const chipsSection = document.getElementById("chips");
 
-
 const undoButton = document.createElement("button");
 undoButton.id = "undoButton";
-undoButton.style.height = "40px";
+undoButton.style.width = "60px";
 undoButton.classList.add("btn-design1");
-undoButton.innerText = "Deshacer";
+undoButton.innerText = "⟳";
 undoButton.addEventListener("click", undo);
 
 fiveChip.addEventListener("click", updateBet);
@@ -322,7 +319,7 @@ function updateBet() {
   if (gameStart == false) {
     const chipValue = parseInt(this.id.split("_")[0]);
     if (balanceNumber >= chipValue) {
-      chipsSection.append(undoButton);
+      contentDeshacer.append(undoButton);
       balanceNumber -= chipValue;
       balance.innerText = `${balanceNumber}`;
       betNumber += chipValue;

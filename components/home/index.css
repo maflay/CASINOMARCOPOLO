@@ -409,7 +409,6 @@
   overflow: hidden;
 }
 
-.slider-progresivo-content {}
 
 .slider-progresivo {
   display: flex;
@@ -420,21 +419,6 @@
   height: 100vh;
   gap: 30px;
 }
-
-.slider-progresivos-actions {}
-
-/* 
-.slider-progresivo .slider-progresivo-img{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.slider-progresivo .slider-progresivo-img img{
-height: 100%;
-border-radius: 10px;
-} */
 
 .slider-muestras .slider-wrapper-muestras {
   display: flex;
