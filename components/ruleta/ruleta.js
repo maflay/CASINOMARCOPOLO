@@ -128,17 +128,16 @@ function drawRouletteWheel() {
       ctx.restore();
     }
 
-    //Arrow
-    ctx.fillStyle = "#FFD700";
+    // Pelota (círculo blanco)
+    ctx.fillStyle = "white";
     ctx.beginPath();
-    ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
-    ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
-    ctx.lineTo(250 + 4, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 + 9, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 + 0, 250 - (outsideRadius - 13));
-    ctx.lineTo(250 - 9, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
-    ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
+    ctx.arc(
+      250, // X centrado
+      250 - (outsideRadius - 15), // Y más abajo que la flecha (ajusta según tu diseño)
+      10, // radio de la pelota
+      0,
+      Math.PI * 2
+    );
     ctx.fill();
   }
 }
@@ -224,8 +223,8 @@ function stopRotateWheel() {
   const apuestaInput = document.getElementById("apuesta").value.trim();
   const apuestas = apuestaInput
     .split(",")
-    .map(num => num.trim())
-    .filter(num => num !== "");
+    .map((num) => num.trim())
+    .filter((num) => num !== "");
 
   const resultadoApuesta = document.getElementById("resultado-apuesta");
 
@@ -240,12 +239,16 @@ function stopRotateWheel() {
       timer: 3000,
     });
   } else {
-    resultadoApuesta.textContent = `❌ No acertaste. Tus números: ${apuestas.join(", ")}`;
+    resultadoApuesta.textContent = `❌ No acertaste. Tus números: ${apuestas.join(
+      ", "
+    )}`;
     resultadoApuesta.style.color = "red";
     Swal.fire({
       position: "top-end",
       icon: "error",
-      title: `❌ No acertaste. Tus números: ${apuestas.join(", ")}, 🎯 Ganó el número: ${numeroGanador}`,
+      title: `❌ No acertaste. Tus números: ${apuestas.join(
+        ", "
+      )}, 🎯 Ganó el número: ${numeroGanador}`,
       showConfirmButton: false,
       timer: 3000,
     });
@@ -293,28 +296,6 @@ function reiniciarJuego() {
   // Reiniciar ángulo
   startAngle = 0;
 }
-
-// function resaltarCeldaGanadora(textoGanador) {
-//   const celdas = Array.from(document.querySelectorAll("#tabla-ruleta td"));
-//   let index = 0;
-//   let intervalo = setInterval(() => {
-//     // Limpiar todos
-//     celdas.forEach((td) => (td.style.outline = "none"));
-
-//     // Pintar la actual
-//     if (celdas[index]) {
-//       celdas[index].style.outline = "2px solid #6622F8";
-//     }
-
-//     // Si coincide con el número ganador
-//     if (celdas[index] && celdas[index].dataset.numero === textoGanador) {
-//       clearInterval(intervalo);
-//       celdas[index].style.outline = "4px solid #6622F8"; // dejar marcado el ganador
-//     } else {
-//       index = (index + 1) % celdas.length;
-//     }
-//   }, 60); // velocidad del barrido (en ms)
-// }
 
 function iniciarAnimacionTablero(numeroGanador) {
   const celdas = Array.from(document.querySelectorAll("#tabla-ruleta td"));

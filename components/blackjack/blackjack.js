@@ -249,5 +249,3 @@ function abrirModalInfo() {
 function cerrarModalInfo() {
   document.getElementById("info-blackjack-modal").style.display = "none";
 }
-
-
