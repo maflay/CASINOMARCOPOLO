@@ -552,7 +552,7 @@ position: relative;
 }
 
 .horario-casinos .card-horario .card-horario-content h3 {
-    background: linear-gradient(45deg, #FFD700, #ffef11, #a58b09, #887400);
+    background: linear-gradient(45deg,  #a58b09, #887400);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
