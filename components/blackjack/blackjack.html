@@ -8,24 +8,25 @@
 </head>
 
 <body>
-    <div class="content-blackjack">
+    <section class="content-blackjack">
         <h1 style="text-align: center;" class="type-h1">♠️<br /> Blackjack Marco polo</h1>
+        <div class="content-info container">
+            <button title="Reglas del blackjack" style="border-radius: 100%;" onclick="abrirModal()">📕​</button>
+            <button title="Información" style="border-radius: 100%;" onclick="abrirModalInfo()">ℹ️​</button>
+        </div>
         <div class="score type3-h1">Dealer: <span class="type5-h1" id="dealer-score">0</span></div>
         <div class="cards" id="dealer-cards"></div>
         <div class="score type3-h1">Jugador: <span class="type5-h1" id="player-score">0</span></div>
         <div class="cards" id="player-cards"></div>
         <h2 id="message"></h2>
-    </div>
-    <div class="actions-blackjack">
+    </section>
+    <section class="actions-blackjack">
         <div class="buttons">
             <button class="purple-button" id="btn-new">Nuevo Juego</button>
             <button class="purple-button" id="btn-hit">Pedir Carta</button>
             <button class="purple-button" id="btn-stand" disabled>Plantarse</button>
         </div>
         <div class="bet-controls">
-            <!-- <label for="bet-amount">💰 Apuesta:</label>
-            <input type="number" id="bet-amount" min="10" step="10" value="50" />
-            <button id="place-bet">Apostar</button> -->
             <h1 style="text-align: center;padding: 5px;" class="type5-h1">Apuesta a tu gústo</h1>
             <div class="chips-container">
                 <img src="/resources/poker-chip-10.png" class="chip" data-value="10" alt="chip 10" />
@@ -40,14 +41,146 @@
             <small>*el dinero no es real, es solo interactivo*</small>
             <div class="result-blackjack-current">
                 <p class="type5-h1">
-                    Apuesta actual: $
+                    Apuesta : $
                 </p>
                 <span class="type3-h1" id="current-bet">
                     0
                 </span>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="rule-blackjack-modal" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div class="modal-body">
+                <div id="table-container" class="styled-table-container">
+
+                    <div>
+                        <h2 class="type4-h1">🃏 Reglas Básicas del Blackjack</h2>
+                        <h3 class="type4-h1">🔹 Objetivo del juego</h3>
+                        <p>♣ Conseguir una mano con un valor lo más cercano posible a 21, sin pasarse.</p>
+                        <p>♣ Ganar al crupier (dealer), no a otros jugadores.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="type4-h1">📊 Valor de las cartas</h2>
+                        <table>
+                            <thead>
+                                <th>Carta</th>
+                                <th>Valor</th>
+                            </thead>
+                            <tr>
+                                <td>2 – 10</td>
+                                <td>Su valor numérico</td>
+                            </tr>
+                            <tr>
+                                <td>J, Q, K</td>
+                                <td>10 puntos</td>
+                            </tr>
+                            <tr>
+                                <td>A (As)</td>
+                                <td>1 o 11 (según convenga)</td>
+                            </tr>
+                        </table>
+                        <br />
+                        <div class="explain-values">
+                            <p>🔁 El As vale 11 a menos que eso haga que te pases de 21; entonces vale 1.</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <h2 class="type4-h1">✋ Cómo se juega una ronda</h2>
+                        <p>1. El jugador y el crupier reciben 2 cartas.</p>
+                        <p>---♠ El jugador ve ambas cartas suyas.</p>
+                        <p>---♠ El crupier muestra solo una carta (la otra está boca abajo).</p>
+                        <p>2. El jugador puede elegir:</p>
+                        <p>---♠ Pedir (Hit) → Recibe otra carta.</p>
+                        <p>---♠ Plantarse (Stand) → Se queda con lo que tiene.</p>
+                        <p>---♠ (Opcionales según la mesa: Doblar, Dividir, etc.)</p>
+                        <p>3. Si el jugador supera 21 → pierde automáticamente.</p>
+                        <p>4. Cuando el jugador se planta:</p>
+                        <p>---♠ El crupier revela su carta oculta.</p>
+                        <p>---♠ El crupier debe pedir cartas hasta llegar a 17 o más.</p>
+                        <p>---♠ Si el crupier se pasa de 21 → el jugador gana.</p>
+                    </div>
+                    <br />
+                    <div>
+                        <h2 class="type4-h1">🏆 ¿Cómo se gana?</h2>
+                        <table>
+                            <thead>
+                                <th>Resultado</th>
+                                <th>Resultado final</th>
+                            </thead>
+                            <tr>
+                                <td>Jugador tiene más que el crupier, sin pasarse</td>
+                                <td>Gana el jugador</td>
+                            </tr>
+                            <tr>
+                                <td>Crupier tiene más sin pasarse</td>
+                                <td>Gana el crupier</td>
+                            </tr>
+                            <tr>
+                                <td>Ambos tienen el mismo valor</td>
+                                <td>Empate (push)</td>
+                            </tr>
+                            <tr>
+                                <td>Jugador obtiene 21 con las 2 primeras (A + 10)</td>
+                                <td>Blackjack (pago 3:2 o 1.5x)</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <h4 class="type4-h1">💵 Pagos típicos</h4>
+                        <table>
+                            <thead>
+                                <th>Resultado</th>
+                                <th>Pago estándar</th>
+                            </thead>
+                            <tr>
+                                <td>Gana normal</td>
+                                <td>1:1</td>
+                            </tr>
+                            <tr>
+                                <td>Blackjack (21 con 2 cartas)</td>
+                                <td>3:2 (1.5x la apuesta)</td>
+                            </tr>
+                            <tr>
+                                <td>Empate</td>
+                                <td>Se devuelve la apuesta</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info-blackjack-modal" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="cerrarModalInfo()">&times;</span>
+            <h2>Información a tener en cuenta</h2>
+            <div class="modal-body">
+                <div id="table-container" class="styled-table-container">
+                    <table>
+                        <thead>
+                            <th>Contenido</th>
+                        </thead>
+                    </table>
+
+                    <p>
+                        <spam style="color: red;">*</spam> Todo el contenido que se encuentra en la pagina,
+                        solo es para uso interactivo del usuario,
+                        muchas gracias por su atención<spam style="color: red;">*</spam>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

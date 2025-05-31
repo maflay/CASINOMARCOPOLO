@@ -48,13 +48,12 @@ var spinTimeTotal = 0;
 
 var ctx;
 
-if (typeof window.indexRecorrido === 'undefined') {
+if (typeof window.indexRecorrido === "undefined") {
   window.indexRecorrido = 0;
 }
 
-if(typeof window.animacionTablero === 'undefined') {
+if (typeof window.animacionTablero === "undefined") {
   window.animacionTablero = null;
-
 }
 
 document.getElementById("spin").addEventListener("click", spin);
@@ -145,20 +144,26 @@ function drawRouletteWheel() {
 }
 
 function spin() {
-  const apuesta = document.getElementById("apuesta").value.trim();
+  const apuestaInput = document.getElementById("apuesta").value.trim();
 
-  if (apuesta === "") {
-    // alert("Ingrese un valor para apostar")
+  const apuestas = apuestaInput
+    .split(",")
+    .map((num) => num.trim())
+    .filter((num) => num !== "");
+  const apuestasValidas = apuestas.every((num) => options.includes(num));
+
+  if (apuestas.length === 0) {
     Swal.fire({
       title: "Advertencia!",
-      text: "Ni tienes saldo!",
+      text: "Debes colocar al menos un número!",
       icon: "warning",
     });
     return;
-  } else if (apuesta > 36) {
+  }
+  if (!apuestasValidas) {
     Swal.fire({
       title: "Advertencia!",
-      text: "El número debe estar entre 0 y 36 (incluye 00)!",
+      text: "Solo puedes apostar a números válidos (0-36 o 00), separados por comas.",
       icon: "warning",
     });
     return;
@@ -195,8 +200,14 @@ function stopRotateWheel() {
   var numeroGanador = options[index];
   // Mostrar en canvas
   ctx.save();
-  ctx.font = "60px Arial";
-  ctx.fillStyle = "#F6921E";
+  ctx.backgroundColor = "black";
+  ctx.font = "bold 100px sans-serif";
+  ctx.fillStyle = "#fff";
+
+  // Mover origen al centro del canvas
+
+  // Ahora (0, 0) es el centro
+  ctx.fillRect(-50, -25, 100, 50); // Esto queda centrado
   ctx.fillText(
     numeroGanador,
     250 - ctx.measureText(numeroGanador).width / 2,
@@ -209,15 +220,35 @@ function stopRotateWheel() {
     "ganador"
   ).textContent = `🎯 Ganó el número: ${numeroGanador}`;
 
-  const apuesta = document.getElementById("apuesta").value.trim();
+  // Obtener apuestas como array
+  const apuestaInput = document.getElementById("apuesta").value.trim();
+  const apuestas = apuestaInput
+    .split(",")
+    .map(num => num.trim())
+    .filter(num => num !== "");
+
   const resultadoApuesta = document.getElementById("resultado-apuesta");
 
-  if (apuesta === numeroGanador) {
-    resultadoApuesta.textContent = "✅ ¡Felicidades! ¡Acertaste!";
+  if (apuestas.includes(numeroGanador)) {
+    resultadoApuesta.textContent = `✅ ¡Felicidades! ¡Acertaste con el número ${numeroGanador}!`;
     resultadoApuesta.style.color = "lime";
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `✅ ¡Felicidades! ¡Acertaste con el número ${numeroGanador}!`,
+      showConfirmButton: false,
+      timer: 3000,
+    });
   } else {
-    resultadoApuesta.textContent = `❌ No acertaste. Tu número fue: ${apuesta}`;
+    resultadoApuesta.textContent = `❌ No acertaste. Tus números: ${apuestas.join(", ")}`;
     resultadoApuesta.style.color = "red";
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: `❌ No acertaste. Tus números: ${apuestas.join(", ")}, 🎯 Ganó el número: ${numeroGanador}`,
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
 
   setTimeout(() => {
@@ -263,27 +294,27 @@ function reiniciarJuego() {
   startAngle = 0;
 }
 
-function resaltarCeldaGanadora(textoGanador) {
-  const celdas = Array.from(document.querySelectorAll("#tabla-ruleta td"));
-  let index = 0;
-  let intervalo = setInterval(() => {
-    // Limpiar todos
-    celdas.forEach((td) => (td.style.outline = "none"));
+// function resaltarCeldaGanadora(textoGanador) {
+//   const celdas = Array.from(document.querySelectorAll("#tabla-ruleta td"));
+//   let index = 0;
+//   let intervalo = setInterval(() => {
+//     // Limpiar todos
+//     celdas.forEach((td) => (td.style.outline = "none"));
 
-    // Pintar la actual
-    if (celdas[index]) {
-      celdas[index].style.outline = "2px solid orange";
-    }
+//     // Pintar la actual
+//     if (celdas[index]) {
+//       celdas[index].style.outline = "2px solid #6622F8";
+//     }
 
-    // Si coincide con el número ganador
-    if (celdas[index] && celdas[index].dataset.numero === textoGanador) {
-      clearInterval(intervalo);
-      celdas[index].style.outline = "4px solid yellow"; // dejar marcado el ganador
-    } else {
-      index = (index + 1) % celdas.length;
-    }
-  }, 60); // velocidad del barrido (en ms)
-}
+//     // Si coincide con el número ganador
+//     if (celdas[index] && celdas[index].dataset.numero === textoGanador) {
+//       clearInterval(intervalo);
+//       celdas[index].style.outline = "4px solid #6622F8"; // dejar marcado el ganador
+//     } else {
+//       index = (index + 1) % celdas.length;
+//     }
+//   }, 60); // velocidad del barrido (en ms)
+// }
 
 function iniciarAnimacionTablero(numeroGanador) {
   const celdas = Array.from(document.querySelectorAll("#tabla-ruleta td"));
@@ -338,4 +369,20 @@ function detenerEnGanador(numeroGanador) {
       indexRecorrido = (indexRecorrido + 1) % celdas.length;
     }
   }, 1); // más lento para efecto de frenado
+}
+
+function abrirModal() {
+  document.getElementById("rule-ruleta-modal").style.display = "flex";
+}
+
+function cerrarModal() {
+  document.getElementById("rule-ruleta-modal").style.display = "none";
+}
+
+function abrirModalInfo() {
+  document.getElementById("info-ruleta-modal").style.display = "flex";
+}
+
+function cerrarModalInfo() {
+  document.getElementById("info-ruleta-modal").style.display = "none";
 }

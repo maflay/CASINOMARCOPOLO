@@ -233,3 +233,21 @@
     }
   }
 })();
+
+function abrirModal() {
+  document.getElementById("rule-blackjack-modal").style.display = "flex";
+}
+
+function cerrarModal() {
+  document.getElementById("rule-blackjack-modal").style.display = "none";
+}
+
+function abrirModalInfo() {
+  document.getElementById("info-blackjack-modal").style.display = "flex";
+}
+
+function cerrarModalInfo() {
+  document.getElementById("info-blackjack-modal").style.display = "none";
+}
+
+

@@ -55,6 +55,11 @@ const rutasLimpias = {
     css: "/components/ruleta/ruleta.css",
     js: "/components/ruleta/ruleta.js",
   },
+    baccarat: {
+    html: "/components/baccarat/baccarat.html",
+    css: "/components/baccarat/baccarat.css",
+    js: "/components/baccarat/baccarat.js",
+  },
 };
 
 window.addEventListener("load", function () {
@@ -163,13 +168,12 @@ window.addEventListener("hashchange", () => {
     const seccionId = params.get("id");
 
     if (seccionId) {
-      // Espera a que se cargue la vista antes de hacer scroll
       setTimeout(() => {
         const elemento = document.getElementById(seccionId);
         if (elemento) {
           elemento.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); // ajusta el tiempo según tu carga real
+      }, 300); 
     }
   }
 });
@@ -219,11 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
           if (navItems.classList.contains("open")) {
             navToggle.classList.remove("open");
             navItems.classList.remove("open");
-            document.body.style.overflow = ""; // opcional si lo habías bloqueado
+            document.body.style.overflow = "";
           }
-
-          // NO uses preventDefault, así cambia el hash y functions.js puede cargar la vista
-          // Y no uses data-target si estás usando href="#..."
         });
       });
     })
@@ -256,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (link) {
       event.preventDefault();
       const ruta = link.getAttribute("data-target");
-      window.location.hash = ruta; // esto actualiza la URL sin recargar
+      window.location.hash = ruta; 
     }
   });
   PageLoader.cargarPagina(clave);

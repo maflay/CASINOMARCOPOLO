@@ -37,9 +37,8 @@
 .slider {
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
-  display: none;
 }
 
 .slider .slider-wrapper {

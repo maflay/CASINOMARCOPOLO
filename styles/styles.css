@@ -135,7 +135,9 @@ html {
 }
 
 /* REVERTIR */
-.view-reverse {flex-direction: row-reverse;}
+.view-reverse {
+  flex-direction: row-reverse;
+}
 
 /* TRANSICION DE ITEMS */
 

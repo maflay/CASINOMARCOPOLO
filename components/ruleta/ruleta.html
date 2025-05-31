@@ -8,12 +8,21 @@
 
 <body>
     <section>
-        <div
-            style="background-image: url(/resources/background-blackjack-2.png);background-repeat: no-repeat;background-size: cover;">
+        <div>
 
             <div class="container-ruleta">
+                <div>
+                    <h1 style="text-align: center;margin-top: 60px;" class="type-h1">♣️<br /> Ruleta Marco polo</h1>
+                </div>
                 <div class="content-ruleta">
-                    <canvas id="canvas" width="500" height="500"></canvas>
+                    <canvas
+                        style="background-image: url(/resources/ruletanegra.jpg); 
+                        background-repeat: no-repeat; 
+                        background-position: center; 
+                        background-size: cover; 
+                        border-radius: 100%;
+                        padding: 26px;"
+                        id="canvas" width="500" height="500"></canvas>
                     <table id="tabla-ruleta" border="1" style="border-collapse: collapse; font-size: 14px;">
                         <tr>
                             <td colspan="3" data-numero="0"
@@ -87,7 +96,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="content2-ruleta">
+                <div style="display: flex;" class="content2-ruleta">
                     <label for="apuesta" style="color:white; font-weight: bold;">Tu número:</label>
                     <input type="text" id="apuesta" placeholder="Ej: 17, 00, 8" style="padding: 5px;" />
                     <p id="resultado-apuesta" style="color: white; font-size: 18px; margin-top: 5px;"></p>
@@ -95,14 +104,141 @@
                 </div>
             </div>
             <div style="background-image: url(/resources/background-blackjack-bottom.png);" class="content2-ruleta">
-                <div style="position: relative; gap: 30px;" class="content-ruleta">
-                    <input class="btn-design1" type="button" value="GIRA LA RULETA Y GANA!" style="float:left;"
+                <div style=" gap: 30px; display: flex; flex-direction: row-reverse;" class="content-ruleta">
+                    <input class="btn-design1" type="button" value="▶" style="float:left;"
                         id='spin' />
-                    <input class="btn-design1" type="button" value="REINICIAR JUEGO" id="reset" />
+                    <input class="btn-design1" type="button" value="⟳" id="reset" />
+                    <div>
+                        <button title="Reglas de la ruleta" style="border-radius: 100%;"
+                            onclick="abrirModal()">📕​</button>
+                        <button title="Información" style="border-radius: 100%;" onclick="abrirModalInfo()">ℹ️​</button>
+                    </div>
                 </div>
+                
             </div>
         </div>
 
+    </section>
+
+
+    <section id="rule-ruleta-modal" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div class="modal-body">
+                <div id="table-container" class="styled-table-container">
+                    <div>
+                        <h2 class="type4-h1">🎯 OBJETIVO DEL JUEGO</h2>
+                        <p>♣ Adivinar en qué número o combinación caerá la bolita(en este caso la flecha <span style="color: #F6921E;">↓</span>) después de hacerla girar en la ruleta.
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h2 class="type4-h1">🧩 COMPONENTES DE LA RULETA AMERICANA</h2>
+                        <p>🎡 Rueda</p>
+                        <P>♠ Tiene 38 números:</P>
+                        <p>♠ ♠ ♠ Del 1 al 36</p>
+                        <p>♠ ♠ ♠ El 0</p>
+                        <p>♠ ♠ ♠ El 00</p>
+                        <p>♠ ♠ ♠ Los números del 1 al 36 se alternan entre rojo y negro.</p>
+                        <p>♠ ♠ ♠ El 0 y el 00 son verdes.</p>
+                    </div>
+                    <br />
+                    <div>
+                        <h2 class="type4-h1">💵 TIPOS DE APUESTAS</h2>
+                        <h3 class="type4-h1">♦ Apuestas internas (mayor riesgo, mayor ganancia)</h3>
+                        <table>
+                            <thead>
+                                <th>Apuesta</th>
+                                <th>Descripción</th>
+                                <th>Pago</th>
+                            </thead>
+                            <tr>
+                                <td>Pleno (Straight Up)</td>
+                                <td>Apostar a un solo número</td>
+                                <td>35:1</td>
+                            </tr>
+                            <tr>
+                                <td>Dividida (Split)</td>
+                                <td>Entre dos números adyacentes</td>
+                                <td>17:1</td>
+                            </tr>
+                            <tr>
+                                <td>Calle (Street)</td>
+                                <td>Tres números en línea horizontal</td>
+                                <td>11:1</td>
+                            </tr>
+                            <tr>
+                                <td>Esquina (Corner)</td>
+                                <td>Cuatro números que se tocan en un punto</td>
+                                <td>8:1</td>
+                            </tr>
+                            <tr>
+                                <td>Línea doble </td>
+                                <td>Dos calles juntas (6 números)</td>
+                                <td>5:1</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                    <div>
+                        <h3 class="type4-h1">♦ Apuestas externas (más probabilidad, menos ganancia)</h3>
+                        <table>
+                            <thead>
+                                <th>Apuesta</th>
+                                <th>Descripción</th>
+                                <th>Pago</th>
+                            </thead>
+                            <tr>
+                                <td>Rojo o Negro</td>
+                                <td>Apostar al color</td>
+                                <td>1:1</td>
+                            </tr>
+                            <tr>
+                                <td>Par o Impar</td>
+                                <td>Apostar a si el número será par/impar</td>
+                                <td>1:1</td>
+                            </tr>
+                            <tr>
+                                <td>Alto (19-36) / Bajo (1-18)</td>
+                                <td>Apostar al rango de número</td>
+                                <td>1:1</td>
+                            </tr>
+                            <tr>
+                                <td>Docena</td>
+                                <td>Primera (1-12), segunda (13-24), tercera (25-36)</td>
+                                <td>2:1</td>
+                            </tr>
+                            <tr>
+                                <td>Columna</td>
+                                <td>Una de las tres columnas verticales</td>
+                                <td>2:1</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info-ruleta-modal" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="cerrarModalInfo()">&times;</span>
+            <div class="modal-body">
+                <div id="table-container" class="styled-table-container">
+                    <table>
+                        <thead>
+                            <th>Contenido</th>
+                        </thead>
+                    </table>
+                    <p>
+                        <spam style="color: red;">*</spam> Todo el contenido que se encuentra en la pagina,
+                        solo es para uso interactivo del usuario,
+                        muchas gracias por su atención<spam style="color: red;">*</spam>
+                    </p>
+
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 

@@ -14,3 +14,8 @@ function toRuleta() {
   window.scrollTo(0, 0);
   navegarA(`ruleta`);
 }
+
+function toBaccarat() {
+  window.scrollTo(0, 0);
+  navegarA(`baccarat`);
+}
