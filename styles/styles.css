@@ -269,6 +269,20 @@ html {
 }
 
 
+.levita-constante {
+  animation: levitar .5s ease-in-out infinite alternate;
+}
+
+@keyframes levitar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+
 
 
 @media (max-width: 768px) {

@@ -108,6 +108,13 @@
 
     if (betChoice == null) {
       infoBoard.innerText = "Primero elije el equipo.";
+      Swal.fire({
+        position: "top-end",
+        icon: "warning",
+        title: "Primero elije el equipo.",
+        showConfirmButton: false,
+        timer: 3000,
+      });
     } else if (betNumber > 0) {
       undoButton.remove();
       gameStart = true;

@@ -99,7 +99,7 @@ function drawRouletteWheel() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
 
-    ctx.font = "bold 12px Helvetica, Arial";
+    ctx.font = "bold 16px sans-serif";
 
     for (var i = 0; i < options.length; i++) {
       var angle = startAngle + i * arc;
@@ -183,7 +183,7 @@ function rotateWheel() {
     return;
   }
   var spinAngle =
-    spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
+  spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
   startAngle += (spinAngle * Math.PI) / 180;
   drawRouletteWheel();
   spinTimeout = setTimeout("rotateWheel()", 30);
