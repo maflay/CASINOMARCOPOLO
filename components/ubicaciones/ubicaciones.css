@@ -1,0 +1,102 @@
+.casin {
+    position: relative;
+    /* Necesario para que ::before funcione bien */
+    z-index: 0;
+    min-height: 100vh;
+    /* Asegura que tenga suficiente altura para que se vea */
+}
+
+
+.casin::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/resources/marcopolo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+
+.content-casin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: white;
+    gap: 50px;
+}
+
+.content-casin-img {
+    width: 100%;
+}
+
+.content-casin-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-casin-text {
+    text-align: center;
+    width: 100%;
+}
+
+.content-casin-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-casin-text p {
+    text-align: justify;
+    width: 100%;
+}
+
+.address-casin {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    gap: 30px;
+}
+
+.address-ubicacion iframe {
+    border-radius: 40px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* o el alto que necesites */
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px; /* o 100% según necesidad */
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}

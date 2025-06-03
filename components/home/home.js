@@ -94,7 +94,7 @@ function sliderMain() {
 
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(nextSlide, 3000);
+    interval = setInterval(nextSlide, 5000);
   }
 
   nextBtn.addEventListener("click", () => {
@@ -113,10 +113,65 @@ function sliderMain() {
       resetInterval();
     });
   });
-  interval = setInterval(nextSlide, 3000);
+  interval = setInterval(nextSlide, 5000);
 }
 
 sliderMain();
+
+
+function sliderUbicaciones() {
+  const trackubicacion = document.getElementById("sliderTrackubicacion");
+  const radiosubicacion = document.querySelectorAll('input[name="slider-ubicacion"]');
+  const labelsubicacion = document.querySelectorAll(".navigationubicacion label");
+  const prevBtnubicacion = document.getElementById("prevBtn-ubicacion");
+  const nextBtnubicacion = document.getElementById("nextBtn-ubicacion");
+
+  let currentIndex = 0;
+  const totalSlides = radiosubicacion.length;
+  let interval;
+
+  function goToSlide(index) {
+    trackubicacion.style.transform = `translateX(-${index * 100}%)`;
+    radiosubicacion[index].checked = true;
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let index = (currentIndex + 1) % totalSlides;
+    goToSlide(index);
+  }
+
+  function prevSlide() {
+    let index = (currentIndex - 1 + totalSlides) % totalSlides;
+    goToSlide(index);
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 5000);
+  }
+
+  nextBtnubicacion.addEventListener("click", () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  prevBtnubicacion.addEventListener("click", () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  labelsubicacion.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlide(index);
+      resetInterval();
+    });
+  });
+  interval = setInterval(nextSlide, 5000);
+}
+
+sliderUbicaciones();
+
 
 // Slider Muestras
 function slidermuestra() {

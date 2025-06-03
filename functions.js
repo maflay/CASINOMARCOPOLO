@@ -50,15 +50,36 @@ const rutasLimpias = {
     css: "/components/nosotros/nosotros.css",
     js: "/components/nosotros/nosotros.js",
   },
-    ruleta: {
+  ruleta: {
     html: "/components/ruleta/ruleta.html",
     css: "/components/ruleta/ruleta.css",
     js: "/components/ruleta/ruleta.js",
   },
-    baccarat: {
+  baccarat: {
     html: "/components/baccarat/baccarat.html",
     css: "/components/baccarat/baccarat.css",
     js: "/components/baccarat/baccarat.js",
+  },
+  barranquilla: {
+    html: "/components/ubicaciones/barranquilla.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    // js: "/components/baccarat/barranquilla.js",
+  },
+  bogota: {
+    html: "/components/ubicaciones/bogota.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    // js: "/components/baccarat/barranquilla.js",
+  },
+  
+  calisur: {
+    html: "/components/ubicaciones/cali-sur.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    // js: "/components/baccarat/barranquilla.js",
+  },
+  calioeste: {
+    html: "/components/ubicaciones/cali-oeste.html",
+    css: "/components/ubicaciones/ubicaciones.css",
+    // js: "/components/baccarat/barranquilla.js",
   },
 };
 
@@ -173,7 +194,7 @@ window.addEventListener("hashchange", () => {
         if (elemento) {
           elemento.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); 
+      }, 300);
     }
   }
 });
@@ -257,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (link) {
       event.preventDefault();
       const ruta = link.getAttribute("data-target");
-      window.location.hash = ruta; 
+      window.location.hash = ruta;
     }
   });
   PageLoader.cargarPagina(clave);

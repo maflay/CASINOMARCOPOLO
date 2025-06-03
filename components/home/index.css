@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   text-align: center;
   overflow: hidden;
   user-select: none;
@@ -34,10 +34,12 @@
   text-align: center;
 }
 
+
+
 .slider {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   overflow: hidden;
 }
 
@@ -131,8 +133,9 @@
 @media (max-width :768px) {
 
   .slider {
-  display: flex;
-}
+    display: flex;
+  }
+
   .container-ini .first-section {
     display: flex;
   }
@@ -158,80 +161,226 @@
 }
 
 .container-box .box-content {
-  display: flex;
   width: 100%;
-  height: 600px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.container-box .box-content .content-card-ubicaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 .card-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 img:hover {
+  transition: transform 0.4s ease;
+  transform: scale(1.1);
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 .card-text {
+  padding: 20px;
+  width: auto;
+  height: auto;
+  background-color: #27314f;
+}
+
+.container-box .box-content .content-card-ubicaciones .card2 a {
+  color: white;
+  transition: color 0.2s ease;
+
+}
+
+
+.container-box .box-content .content-card-ubicaciones .card2 a:hover {
+  color: rgb(177, 177, 177);
+  transition: color 0.2s ease;
+
+}
+
+.content-info {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.info-white {
+  background-color: transparent;
+  width: 70%;
+  height: 100%;
+}
+
+.info-ubicacion {
+  background-color: white;
+  width: 30%;
+  height: 700px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.content-iframe {}
+
+
+
+
+.content-iframe iframe {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 65%;
+  border-radius: 50px;
+
+}
+
+.content-btn {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+}
+
+.content-slider-ubicaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.sliderubicacion {
+  position: relative;
+  width: 1200px;
+  height: 700px;
   overflow: hidden;
 }
 
-.box-content .box-cash {
+.sliderubicacion .slider-wrapper-ubicacion {
   display: flex;
-  align-items: center;
-  flex: 0.5;
+  transition: transform 1s ease-in-out;
+  height: 100%;
+  width: 1200px;
+
 }
 
-.container-box .box-left {
+.sliderubicacion .slideubicacion {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.sliderubicacion .bg1ubicacion {
+  background-image: url(/resources/marcopoloBarranquilla.png);
+  border-radius: 20px;
+  overflow: hidden
+}
+
+.sliderubicacion .bg2ubicacion {
+  background-image: url(/resources/marcopoloBogota.png);
+  border-radius: 20px;
+  overflow: hidden
+}
+
+.sliderubicacion .bg3ubicacion {
+  background-image: url(/resources/marcopoloLocalInter.png);
+  border-radius: 20px;
+  overflow: hidden
+}
+
+.sliderubicacion .bg4ubicacion {
+  background-image: url(/resources/marcopoloHolguines.png);
+  border-radius: 20px;
+  overflow: hidden
+}
+
+/* Radios ocultos */
+.sliderubicacion input[type="radio"] {
+  display: none;
+}
+
+/* Botones de navegación (radios visuales) */
+.sliderubicacion label {
+  position: relative;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+/* Contenedor de los puntos */
+.navigationubicacion {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Cuando esté seleccionado */
+.navigationubicacion input[type="radio"]:checked+label {
   background: white;
 }
 
-.container-box .box-left h1 {
-  color: #2c16b0;
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 2.2rem;
+/* Flechas */
+.arrow-ubicacion {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #6622F8;
+  font-size: 10rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
 }
 
-.container-box .box-left p {
-  color: #1f253a;
+.arrow-left-ubicacion {
+  left: 0px;
 }
 
-.container-box .box-right {
-  flex: 0.5;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.arrow-right-ubicacion {
+  right: 0px;
 }
 
-.container-box .box-right img {
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.container-box .box-right h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.container-box .contact-form {
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.container-box .contact-form input {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.container-box .datos-form {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -10px 42px 15px;
-  color: gray;
-}
-
-.contact-form .btn-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 @media (max-width: 1180px) {
 
@@ -248,55 +397,11 @@
   .container-box .box-content {
     display: inline-table;
     width: 100%;
-    max-width: 1500px;
+    max-width: 0px;
     height: 600px;
     overflow: hidden;
   }
 
-  .container-box .box-left {
-    position: relative;
-    padding: 35px;
-    color: #fff;
-  }
-
-  .container-box .box-left p {
-    color: black;
-    font-size: 14px;
-  }
-
-
-  .container-box .box-right {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-  }
-
-  .container-box .box-left h1 {
-    color: #2c16b0;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 1.4rem;
-  }
-
-  .container-box .box-right h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-
-  .container-box .box-right img {
-    width: 70%;
-  }
-
-
-  .container-box .datos-form {
-    display: flex;
-    justify-content: space-around;
-    font-size: 12.5px;
-    margin: -10px 40px 15px;
-  }
 
 }
 
