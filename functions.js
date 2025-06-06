@@ -70,7 +70,7 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     // js: "/components/baccarat/barranquilla.js",
   },
-  
+
   calisur: {
     html: "/components/ubicaciones/cali-sur.html",
     css: "/components/ubicaciones/ubicaciones.css",
@@ -81,17 +81,17 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     // js: "/components/baccarat/barranquilla.js",
   },
-   lampara: {
+  lampara: {
     html: "/components/promociones/promocion/lampara-suerte.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
-   girodorado: {
+  girodorado: {
     html: "/components/promociones/promocion/giro-dorado.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
-   dadospoker: {
+  dadospoker: {
     html: "/components/promociones/promocion/dados-poker.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
@@ -164,6 +164,7 @@ const PageLoader = {
       loading.style.display = "none";
       return;
     }
+ 
 
     fetch(ruta.html)
       .then((response) => response.text())

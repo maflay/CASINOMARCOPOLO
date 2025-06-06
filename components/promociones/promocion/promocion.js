@@ -1,25 +1,23 @@
-// const fecha = new Date();
-// console.log(fecha, "fecha");
-
-// // This example takes 2 seconds to run
-// const start = Date.now();
-
-// console.log("starting timer...");
-// // Expected output: "starting timer..."
-
-// setTimeout(() => {
-//   const ms = Date.now() - start;
-
-//   console.log(`seconds elapsed = ${Math.floor(ms / 1000)}`);
-//   // Expected output: "seconds elapsed = 2"
-// }, 2000);
-
+(() => {
 const sliderTrack = document.getElementById("sliderTrack");
 const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.getElementById("dots");
+
+
+const btnPrev = document.getElementById("btn-prev");
+const btnNext = document.getElementById("btn-next");
+
+if (btnPrev) {
+  btnPrev.addEventListener("click", prevSlide);
+}
+
+if (btnNext) {
+  btnNext.addEventListener("click", nextSlide);
+}
+
+
 let currentIndex = 0;
 function updateSlider() {
-  const slideWidth = document.querySelector(".slide").offsetWidth;
   sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
 
   document.querySelectorAll(".dot").forEach((dot, i) => {
@@ -38,7 +36,6 @@ function nextSlide() {
 }
 
 function prevSlide() {
-  console.log(currentIndex, "currentIndex");
   if (currentIndex > 0) {
     currentIndex--;
     updateSlider();
@@ -66,3 +63,4 @@ createDots();
 setInterval(() => {
   nextSlide();
 }, 6000);
+})();

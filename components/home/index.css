@@ -15,10 +15,97 @@
 } */
 .video-bg {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   object-fit: cover;
   z-index: -1;
 }
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 97vh;
+  overflow: hidden;
+}
+
+.video-hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.video-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.video-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.video-content p {
+  font-size: 1.5em;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+
+.scroll-down-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+  opacity: 0.7;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.arrow:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
 
 .container-ini .first-section {
   position: relative;
@@ -146,6 +233,10 @@
     position: absolute;
     width: 0;
     height: 0;
+  }
+
+  .video-hero {
+height: 80vh;
   }
 }
 
@@ -280,7 +371,6 @@
   width: 100%;
   height: 80vh;
   overflow: hidden;
-  margin-bottom: 30px;
 }
 
 .sliderubicacion {
@@ -405,7 +495,7 @@
     justify-content: flex-start;
     text-align: center;
     width: 100%;
-    height: 185vh;
+    height: 190vh;
   }
 
   .container-box .box-content .content-card-ubicaciones {
@@ -434,7 +524,7 @@
 
 
   .container-box .box-content {
-    height: 260vh;
+    height: 310vh;
   }
 
 }
@@ -530,13 +620,22 @@
   }
 
   .container-tarjeta .box-rigth-tarjeta {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
   .container-tarjeta .box-rigth-tarjeta img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .container-tarjeta .box-container-tarjeta {
+    display: block;
+    position: relative;
+    height: 190vh;
+    overflow: hidden;
   }
 }
 

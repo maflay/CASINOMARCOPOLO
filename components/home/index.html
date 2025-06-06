@@ -7,14 +7,13 @@
 
 <body>
   <section class="section-ini">
-    <section id="inicio" class="slider">
+    <!-- <section id="inicio" class="slider">
       <div class="slider-wrapper" id="sliderTrack">
         <div class="slide bg1"></div>
         <div class="slide bg2"></div>
         <div class="slide bg3"></div>
       </div>
 
-      <!-- Radios -->
       <div class="navigation">
         <input type="radio" name="slider" id="trigger1" checked>
         <label for="trigger1"></label>
@@ -26,10 +25,26 @@
         <label for="trigger3"></label>
       </div>
 
-      <!-- Flechas -->
       <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
       <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
+    </section> -->
+    <section class="video-hero">
+      <video autoplay muted loop playsinline>
+        <source src="/resources/MarcoPolo.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="video-content">
+        <h1>Bienvenido a MARCO POLO</h1>
+        <p>Una experiencia única te espera</p>
+        <div class="scroll-down-indicator">
+          <span class="arrow"></span>
+          <span class="arrow"></span>
+          <span class="arrow"></span>
+        </div>
+      </div>
     </section>
+
   </section>
   <div class="background-ubicacion">
     <div class="container ocultar">
@@ -61,7 +76,7 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="content-btn">
+                <div style="cursor: pointer;" class="content-btn">
                   <a href="#barranquilla" class="btn-design2">Ver más</a>
                 </div>
               </div>
@@ -83,7 +98,7 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="content-btn">
+                <div style="cursor: pointer;" class="content-btn">
                   <a href="#bogota" class="btn-design2">Ver más</a>
                 </div>
               </div>
@@ -105,7 +120,7 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="content-btn">
+                <div style="cursor: pointer;" class="content-btn">
                   <a href="#calisur" class="btn-design2">Ver más</a>
                 </div>
               </div>
@@ -130,7 +145,7 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="content-btn">
+                <div style="cursor: pointer;" class="content-btn">
                   <a href="#calioeste" class="btn-design2">Ver más</a>
                 </div>
               </div>
@@ -197,8 +212,8 @@
               <img src="/resources/icon-cali.jpg" />
             </div>
             <div class="card-text">
-              <h1 class="type5-h1">Cali - Oeste - H. Intercontinental</h1>
-              <a href="##calioeste">saber más</a>
+              <h1 class="type5-h1">Cali - Oeste H. Intercontinental</h1>
+              <a href="#calioeste">saber más</a>
             </div>
           </div>
           <div class="card2">
@@ -206,7 +221,8 @@
               <img src="/resources/icon-cali.jpg" />
             </div>
             <div class="card-text">
-              <h1 class="type5-h1">Cali</h1>
+              <h1 class="type5-h1">Cali-Sur,</h1>
+              <h1 class="type5-h1">Holguines T.C.</h1>
               <a href="#calisur">saber más</a>
             </div>
           </div>

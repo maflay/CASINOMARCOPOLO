@@ -65,58 +65,58 @@ enviocash();
 
 // Slider Principal
 
-function sliderMain() {
-  const track = document.getElementById("sliderTrack");
-  const radios = document.querySelectorAll('input[name="slider"]');
-  const labels = document.querySelectorAll(".navigation label");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+// function sliderMain() {
+//   const track = document.getElementById("sliderTrack");
+//   const radios = document.querySelectorAll('input[name="slider"]');
+//   const labels = document.querySelectorAll(".navigation label");
+//   const prevBtn = document.getElementById("prevBtn");
+//   const nextBtn = document.getElementById("nextBtn");
 
-  let currentIndex = 0;
-  const totalSlides = radios.length;
-  let interval;
+//   let currentIndex = 0;
+//   const totalSlides = radios.length;
+//   let interval;
 
-  function goToSlide(index) {
-    track.style.transform = `translateX(-${index * 100}vw)`;
-    radios[index].checked = true;
-    currentIndex = index;
-  }
+//   function goToSlide(index) {
+//     track.style.transform = `translateX(-${index * 100}vw)`;
+//     radios[index].checked = true;
+//     currentIndex = index;
+//   }
 
-  function nextSlide() {
-    let index = (currentIndex + 1) % totalSlides;
-    goToSlide(index);
-  }
+//   function nextSlide() {
+//     let index = (currentIndex + 1) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function prevSlide() {
-    let index = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(index);
-  }
+//   function prevSlide() {
+//     let index = (currentIndex - 1 + totalSlides) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
-  }
+//   function resetInterval() {
+//     clearInterval(interval);
+//     interval = setInterval(nextSlide, 5000);
+//   }
 
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-    resetInterval();
-  });
+//   nextBtn.addEventListener("click", () => {
+//     nextSlide();
+//     resetInterval();
+//   });
 
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-    resetInterval();
-  });
+//   prevBtn.addEventListener("click", () => {
+//     prevSlide();
+//     resetInterval();
+//   });
 
-  labels.forEach((label, index) => {
-    label.addEventListener("click", () => {
-      goToSlide(index);
-      resetInterval();
-    });
-  });
-  interval = setInterval(nextSlide, 5000);
-}
+//   labels.forEach((label, index) => {
+//     label.addEventListener("click", () => {
+//       goToSlide(index);
+//       resetInterval();
+//     });
+//   });
+//   interval = setInterval(nextSlide, 5000);
+// }
 
-sliderMain();
+// sliderMain();
 
 
 function sliderUbicaciones() {

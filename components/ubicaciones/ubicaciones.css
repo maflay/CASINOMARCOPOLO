@@ -105,8 +105,14 @@
 }
 
 @media (max-width: 768px) {
+
+  .casin::before {
+    opacity: 0.04;
+  }
+
   .content-casin {
     display: grid;
+    margin-top: 30px;
   }
 
   .address-casin {
@@ -118,6 +124,37 @@
 
   .address-ubicacion {
     width: 400px;
+    height: 100%;
+  }
+
+  .address-ubicacion iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .address-text {
+    height: 0;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .content-casin {
+    height: 100vh;
+    display: grid;
+    margin-top: 30px;
+  }
+
+  .address-casin {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: 100vh;
+  }
+
+  .address-ubicacion {
+    width: 100%;
     height: 100%;
   }
 
