@@ -1,0 +1,283 @@
+.promo {
+    position: relative;
+    /* Necesario para que ::before funcione bien */
+    z-index: 0;
+    min-height: 100vh;
+    /* Asegura que tenga suficiente altura para que se vea */
+}
+
+
+.promo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/resources/marcopolo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.promocion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    color: white;
+}
+
+.promocion-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.promocion-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.promocion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 45px;
+    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.promocion-img img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.terminos-condiciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: white;
+}
+
+
+.container-termi {
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.container-termi h1 {
+    color: #b8860b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.container-termi h2 {
+    color: #444;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.container-termi ul {
+    padding-left: 20px;
+}
+
+.container-termi ul li {
+    margin-bottom: 8px;
+}
+
+.container-termi .nota {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.vigencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F, #1F253A, #27314F);
+
+}
+
+/* .content-vigencia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.date-vigencia {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    border-radius: 50px;
+    border: 7px solid #FFD700;
+}
+
+.section-vigencia {
+    width: auto;
+    height: 45px;
+    color: #FFD700;
+}
+
+.section-slider-casinos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    color: white;
+}
+
+
+.slider-container {
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    /* padding: 40px 0; */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0 30px;
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #222;
+    border: 2px solid #d4af37;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card p {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #d4af37;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #d4af37;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-nav.left {
+    left: 10px;
+}
+
+.slider-nav.right {
+    right: 10px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #d4af37;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        align-items: center;
+        flex: 0 0 272vw;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .promocion {
+        height: 60vh;
+    }
+
+    .promocion-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promocion-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .terminos-condiciones {
+        text-align: center;
+    }
+
+    .section-slider-casinos {
+        text-align: center;
+        height: auto;
+    }
+
+    @media (max-width: 375px) {
+    .slide {
+        align-items: center;
+        flex: 0 0 300%;
+    }
+    }
+}

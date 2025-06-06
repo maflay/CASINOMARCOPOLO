@@ -81,6 +81,21 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     // js: "/components/baccarat/barranquilla.js",
   },
+   lampara: {
+    html: "/components/promociones/promocion/lampara-suerte.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+   girodorado: {
+    html: "/components/promociones/promocion/giro-dorado.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+   dadospoker: {
+    html: "/components/promociones/promocion/dados-poker.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
 };
 
 window.addEventListener("load", function () {
