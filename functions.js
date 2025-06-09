@@ -216,94 +216,15 @@ window.addEventListener("hashchange", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  cargarHeaderYFooter();
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
  if (!window.location.hash) {
     window.location.hash = "#home";
     setTimeout(() => {
       location.reload();
     }, 100);
-    return; // Evita cargar sin hash, y deja que el listener hashchange lo maneje
+    return;
   }
-  const contentArea = document.getElementById("content-area");
-  const mainFooter = document.getElementById("main-footer");
-  const hash = window.location.hash.slice(1) || "home";
-  const clave = hash.split("?")[0];
-
-  fetch("/components/header/header.html")
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("main-header").innerHTML = html;
-      const navToggle = document.getElementById("navToggle");
-      const navItems = document.getElementById("navItems");
-
-      if (navToggle && navItems) {
-        navToggle.addEventListener("click", () => {
-          navToggle.classList.toggle("open");
-          navItems.classList.toggle("open");
-        });
-      }
-
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".Navbar");
-        if (navbar) {
-          if (window.scrollY > 0) {
-            navbar.classList.add("navbar-scrolled");
-          } else {
-            navbar.classList.remove("navbar-scrolled");
-          }
-        }
-      });
-
-      const navLinks = document.querySelectorAll(".nav-link");
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          // Elimina clases activas del resto
-          navLinks.forEach((l) => l.classList.remove("active"));
-          this.classList.add("active");
-
-          // Cerrar menú móvil si está abierto
-          if (navItems.classList.contains("open")) {
-            navToggle.classList.remove("open");
-            navItems.classList.remove("open");
-            document.body.style.overflow = "";
-          }
-        });
-      });
-    })
-    .catch((error) => {
-      console.error("Error al cargar el header:", error);
-      document.getElementById("main-header").innerHTML =
-        "<p>Error al cargar el menú.</p>";
-    });
-
-  fetch("/components/footer/footer.html")
-    .then((response) => response.text())
-    .then((html) => {
-      mainFooter.innerHTML = html;
-      const footerScripts = mainFooter.querySelectorAll("script");
-      footerScripts.forEach((script) => {
-        const newScript = document.createElement("script");
-        if (script.src) {
-          newScript.src = script.src;
-        }
-        newScript.textContent = script.textContent;
-        document.body.appendChild(newScript);
-      });
-    })
-    .catch((error) => {
-      console.error("Error al cargar el footer:", error);
-      mainFooter.innerHTML = "<p>Error al cargar el footer.</p>";
-    });
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest(".Navbar .nav-items a[data-target]");
-    if (link) {
-      event.preventDefault();
-      const ruta = link.getAttribute("data-target");
-      window.location.hash = ruta;
-    }
-  });
-  PageLoader.cargarPagina(clave);
 
   //   ANIMACIONES
 
@@ -390,6 +311,92 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+function cargarHeaderYFooter() {
+ 
+  const mainFooter = document.getElementById("main-footer");
+  const hash = window.location.hash.slice(1) || "home";
+  const clave = hash.split("?")[0];
+
+  fetch("/components/header/header.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("main-header").innerHTML = html;
+      const navToggle = document.getElementById("navToggle");
+      const navItems = document.getElementById("navItems");
+
+      if (navToggle && navItems) {
+        navToggle.addEventListener("click", () => {
+          navToggle.classList.toggle("open");
+          navItems.classList.toggle("open");
+        });
+      }
+
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".Navbar");
+        if (navbar) {
+          if (window.scrollY > 0) {
+            navbar.classList.add("navbar-scrolled");
+          } else {
+            navbar.classList.remove("navbar-scrolled");
+          }
+        }
+      });
+
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          // Elimina clases activas del resto
+          navLinks.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+
+          // Cerrar menú móvil si está abierto
+          if (navItems.classList.contains("open")) {
+            navToggle.classList.remove("open");
+            navItems.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+    })
+    .catch((error) => {
+      console.error("Error al cargar el header:", error);
+      document.getElementById("main-header").innerHTML =
+        "<p>Error al cargar el menú.</p>";
+    });
+
+  fetch("/components/footer/footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+      mainFooter.innerHTML = html;
+      const footerScripts = mainFooter.querySelectorAll("script");
+      footerScripts.forEach((script) => {
+        const newScript = document.createElement("script");
+        if (script.src) {
+          newScript.src = script.src;
+        }
+        newScript.textContent = script.textContent;
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch((error) => {
+      console.error("Error al cargar el footer:", error);
+      mainFooter.innerHTML = "<p>Error al cargar el footer.</p>";
+    });
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest(".Navbar .nav-items a[data-target]");
+    if (link) {
+      event.preventDefault();
+      const ruta = link.getAttribute("data-target");
+      window.location.hash = ruta;
+    }
+  });
+  PageLoader.cargarPagina(clave);
+}
+
 
 function toRegister() {
   window.scrollTo(0, 0);
