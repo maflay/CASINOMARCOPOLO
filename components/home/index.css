@@ -60,12 +60,12 @@
 .video-content h1 {
   font-size: 3em;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .video-content p {
   font-size: 1.5em;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -91,36 +91,24 @@
 .arrow:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .arrow:nth-child(3) {
   animation-delay: 0.4s;
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(-45deg);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(10px) rotate(-45deg);
     opacity: 1;
   }
 }
-
-
-.container-ini .first-section {
-  position: relative;
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-
-.container-ini .first-content {
-  text-align: center;
-}
-
 
 
 .slider {
@@ -236,7 +224,7 @@
   }
 
   .video-hero {
-height: 80vh;
+    height: 80vh;
   }
 }
 
@@ -244,78 +232,8 @@ height: 80vh;
 
 /* SUPERCASH */
 
-.background-ubicacion{
+.background-ubicacion {
   background-color: #fff;
-}
-
-.container-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  display: none;
-}
-
-.container-box .box-content {
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.container-box .box-content .content-card-ubicaciones {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 30px;
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 {
-  width: 100%;
-  height: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 .card-img {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.4s ease;
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 img:hover {
-  transition: transform 0.4s ease;
-  transform: scale(1.1);
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 .card-text {
-  padding: 20px;
-  width: auto;
-  height: auto;
-  background-color: #27314f;
-}
-
-.container-box .box-content .content-card-ubicaciones .card2 a {
-  color: white;
-  transition: color 0.2s ease;
-
-}
-
-
-.container-box .box-content .content-card-ubicaciones .card2 a:hover {
-  color: rgb(177, 177, 177);
-  transition: color 0.2s ease;
-
 }
 
 .content-info {
@@ -476,34 +394,60 @@ height: 80vh;
   right: 0px;
 }
 
+.ubicaciones-ocultar {
+  display: none;
+}
 
 @media (max-width: 1180px) {
 
-  .container-box {
+  .ubicaciones-ocultar {
     display: flex;
+    background-color: white;
+  }
+
+  .ubicaciones-movil {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-height: 0;
-    background-color: #fff;
-    padding: 1%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
-
-  .container-box .box-content {
+  .ubicaciones-movil .card-ubicacion {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
     width: 100%;
-    height: 190vh;
+    gap: 30px;
+    padding: 50px;
   }
 
-  .container-box .box-content .content-card-ubicaciones {
-    flex-direction: column;
-    gap: 120px;
+  .ubicaciones-movil .card-ubicacion .card-ubicacion-img {
+    width: 120px;
+    height: 100px; 
+    width: 50%;
+    overflow: hidden;
+
   }
 
-  .ocultar{
+  .ubicaciones-movil .card-ubicacion .card-ubicacion-img img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+  }
+
+  .ubicaciones-movil .card-ubicacion .card-ubicacion-text {
+    display: grid;
+    width: 50%;
+    align-items: center;
+  }
+
+  .ubicaciones-movil .card-ubicacion .card-ubicacion-text a {
+    color: #27314f;
+  }
+
+  .ocultar {
     display: none;
   }
 
@@ -511,23 +455,7 @@ height: 80vh;
 
 
 
-@media (max-width: 380px) {
-
-  .container-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 0;
-    background-color: #fff;
-    padding: 1%;
-  }
-
-
-  .container-box .box-content {
-    height: 310vh;
-  }
-
-}
+@media (max-width: 380px) {}
 
 
 /* TARJETA-MYMAWI */
@@ -584,18 +512,12 @@ height: 80vh;
 
 @media (max-width: 950px) {
   .container-tarjeta {
-    background-color: #f5f5f5;
-    height: 100vh;
-    position: relative;
-    /* importante para elementos positioned dentro */
-    overflow: visible;
-    /* permite que el contenido se expanda */
+    height: auto;
   }
 
   .container-tarjeta .box-container-tarjeta {
-    display: block;
-    position: relative;
-    height: 100%;
+    display: flow;
+    height: 90vh;
     overflow: hidden;
   }
 
@@ -620,8 +542,9 @@ height: 80vh;
   }
 
   .container-tarjeta .box-rigth-tarjeta {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 50%;
   }
 
   .container-tarjeta .box-rigth-tarjeta img {
@@ -632,9 +555,8 @@ height: 80vh;
 
 @media (max-width: 380px) {
   .container-tarjeta .box-container-tarjeta {
-    display: block;
-    position: relative;
-    height: 190vh;
+    display: flow;
+    height: 130vh;
     overflow: hidden;
   }
 }
@@ -746,7 +668,7 @@ height: 80vh;
   }
 
   .card-view .card {
-width: 100%;
+    width: 100%;
   }
 
 }
@@ -764,7 +686,7 @@ width: 100%;
     font-size: 14px;
   }
 
-   
+
 
 }
 
