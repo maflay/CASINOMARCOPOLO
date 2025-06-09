@@ -217,7 +217,13 @@ window.addEventListener("hashchange", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
-
+ if (!window.location.hash) {
+    window.location.hash = "#home";
+    setTimeout(() => {
+      location.reload();
+    }, 100);
+    return; // Evita cargar sin hash, y deja que el listener hashchange lo maneje
+  }
   const contentArea = document.getElementById("content-area");
   const mainFooter = document.getElementById("main-footer");
   const hash = window.location.hash.slice(1) || "home";
