@@ -139,7 +139,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 380px) {
   .content-casin {
     height: 100vh;
     display: grid;

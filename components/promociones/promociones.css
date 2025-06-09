@@ -401,8 +401,8 @@
 
   .container-promo .container-section-promo .apuesta-deportiva {
     flex-direction: column-reverse;
-margin-top: 20px;
-margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
   }
 
@@ -434,7 +434,7 @@ margin-bottom: 20px;
     width: 100%;
   }
 
-   .promo-title .content-img img {
+  .promo-title .content-img img {
     width: 100%;
   }
 
