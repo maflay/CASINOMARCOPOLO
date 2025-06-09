@@ -419,7 +419,7 @@
     display: flex;
     width: 100%;
     gap: 30px;
-    padding: 50px;
+    padding: 20px;
   }
 
   .ubicaciones-movil .card-ubicacion .card-ubicacion-img {
