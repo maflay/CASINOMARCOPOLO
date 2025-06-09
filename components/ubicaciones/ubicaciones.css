@@ -134,7 +134,7 @@
   }
 
   .address-text {
-    height: 0;
+    height: auto;
     text-align: center;
   }
 
@@ -165,9 +165,8 @@
   }
 
   .address-text {
-    height: 0;
+    height: auto;
     text-align: center;
-    margin-bottom: 60px;
   }
 
 }
