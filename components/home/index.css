@@ -234,6 +234,7 @@
 
 .background-ubicacion {
   position: relative;
+  height: 100vh;
 }
 
 .background-ubicacion::before {

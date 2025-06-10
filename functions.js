@@ -220,9 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
  if (!window.location.hash) {
     window.location.hash = "#home";
-    setTimeout(() => {
-      location.reload();
-    }, 100);
     return;
   }
 
