@@ -11,17 +11,6 @@ function saberMasPromo() {
   navegarA("promociones");
 }
 
-function asociarse() {
-  navegarA("asociado");
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }, 300);
-}
-
-function toprogresivos() {
-  navegarA("clubnavegante?id=section-progresivos");
-}
-
 // ENVIO DE CASH
 function enviocash() {
   const form = document.getElementById("cash-unico");
@@ -148,6 +137,6 @@ function sliderUbicaciones() {
 
 sliderUbicaciones();
 
-function toBarranquilla() {
-  navegarA("barranquilla");
+function toGames() {
+  navegarA("juegos");
 }

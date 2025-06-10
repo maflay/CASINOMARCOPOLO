@@ -4,25 +4,10 @@ const rutasLimpias = {
     css: "/components/home/index.css",
     js: "/components/home/home.js",
   },
-  casino: {
-    html: "/components/casinos/casinos.html",
-    css: "/components/casinos/casinos.css",
-    js: "/components/casinos/casinos.js",
-  },
-  experiencias: {
-    html: "/components/experiencias/experiencias.html",
-    css: "/components/experiencias/experiencias.css",
-    js: "/components/experiencias/experiencias.js",
-  },
   promociones: {
     html: "/components/promociones/promociones.html",
     css: "/components/promociones/promociones.css",
     js: "/components/promociones/promociones.js",
-  },
-  clubnavegante: {
-    html: "/components/clubnavegantes/clubnavegantes.html",
-    css: "/components/clubnavegantes/clubnavegantes.css",
-    js: "/components/clubnavegantes/clubnavegantes.js",
   },
   contacto: {
     html: "/components/contacto/contacto.html",
@@ -33,11 +18,6 @@ const rutasLimpias = {
     html: "/components/obtenertarjeta/obtenertarjeta.html",
     css: "/components/obtenertarjeta/obtenertarjeta.css",
     js: "/components/obtenertarjeta/obtenertarjeta.js",
-  },
-  asociado: {
-    html: "/components/asociado/aosciado.html",
-    css: "/components/asociado/asociado.css",
-    js: "/components/asociado/asociado.js",
   },
   blackjack: {
     html: "/components/blackjack/blackjack.html",
@@ -95,6 +75,11 @@ const rutasLimpias = {
     html: "/components/promociones/promocion/dados-poker.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
+  },
+  juegos: {
+    html: "/components/juegos/juegos.html",
+    css: "/components/juegos/juegos.css",
+    js: "/components/juegos/juegos.js",
   },
 };
 
