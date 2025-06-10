@@ -128,6 +128,12 @@
   }
 }
 
+@media (max-width :378px) {
+  .scroll-down-indicator {
+    top: 28vh;
+  }
+}
+
 
 
 /* SUPERCASH */
