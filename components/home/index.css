@@ -234,7 +234,10 @@
 
 .background-ubicacion {
   position: relative;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
 
 .background-ubicacion::before {
@@ -302,8 +305,9 @@
   align-items: center;
   position: relative;
   width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .sliderubicacion {
@@ -316,9 +320,8 @@
 .sliderubicacion .slider-wrapper-ubicacion {
   display: flex;
   transition: transform 1s ease-in-out;
-  height: 100%;
+  height: auto;
   width: 1200px;
-
 }
 
 .sliderubicacion .slideubicacion {
