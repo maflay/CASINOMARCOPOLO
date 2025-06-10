@@ -164,7 +164,6 @@ const PageLoader = {
       loading.style.display = "none";
       return;
     }
- 
 
     fetch(ruta.html)
       .then((response) => response.text())
@@ -216,11 +215,11 @@ window.addEventListener("hashchange", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  cargarHeaderYFooter();
   // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
- if (!window.location.hash) {
-    window.location.hash = "#home";
-    return;
+  cargarHeaderYFooter();
+
+  if (!window.location.hash) {
+    navegarA("home");
   }
 
   //   ANIMACIONES
@@ -309,10 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
 function cargarHeaderYFooter() {
- 
   const mainFooter = document.getElementById("main-footer");
   const hash = window.location.hash.slice(1) || "home";
   const clave = hash.split("?")[0];
@@ -323,7 +319,7 @@ function cargarHeaderYFooter() {
       document.getElementById("main-header").innerHTML = html;
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
-
+      
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {
           navToggle.classList.toggle("open");
@@ -394,7 +390,6 @@ function cargarHeaderYFooter() {
   PageLoader.cargarPagina(clave);
 }
 
-
 function toRegister() {
   window.scrollTo(0, 0);
   navegarA(`contacto`);
@@ -409,7 +404,7 @@ function scrollToTop() {
 
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
-  const url = new URL("http://anyurl.com" + hash.slice(1)); // usar un dominio falso
+  const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
   const email = url.searchParams.get("email");
 
   const inputCorreo = document.getElementById("correo");

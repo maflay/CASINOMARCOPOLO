@@ -118,13 +118,20 @@ enviocash();
 
 // sliderMain();
 
-
 function sliderUbicaciones() {
   const trackubicacion = document.getElementById("sliderTrackubicacion");
-  const radiosubicacion = document.querySelectorAll('input[name="slider-ubicacion"]');
-  const labelsubicacion = document.querySelectorAll(".navigationubicacion label");
+  const radiosubicacion = document.querySelectorAll(
+    'input[name="slider-ubicacion"]'
+  );
+  const labelsubicacion = document.querySelectorAll(
+    ".navigationubicacion label"
+  );
   const prevBtnubicacion = document.getElementById("prevBtn-ubicacion");
   const nextBtnubicacion = document.getElementById("nextBtn-ubicacion");
+  const sedeBarra = document.getElementById("sedeBar");
+  const sedeBog = document.getElementById("sedeBog");
+  const sedeCas = document.getElementById("sedeCas");
+  const sedeCao = document.getElementById("sedeCao");
 
   let currentIndex = 0;
   const totalSlides = radiosubicacion.length;
@@ -135,7 +142,6 @@ function sliderUbicaciones() {
     radiosubicacion[index].checked = true;
     currentIndex = index;
   }
-
   function nextSlide() {
     let index = (currentIndex + 1) % totalSlides;
     goToSlide(index);
@@ -150,6 +156,30 @@ function sliderUbicaciones() {
     clearInterval(interval);
     interval = setInterval(nextSlide, 5000);
   }
+
+  sedeBarra.addEventListener("click", () => {
+     trackubicacion.style.transform = `translateX(-${0 * 100}%)`;
+    radiosubicacion[0].checked = true;
+    currentIndex = 1;
+  });
+
+  sedeBog.addEventListener("click", () => {
+     trackubicacion.style.transform = `translateX(-${1 * 100}%)`;
+    radiosubicacion[1].checked = true;
+    currentIndex = 1;
+  });
+
+  sedeCas.addEventListener("click", () => {
+     trackubicacion.style.transform = `translateX(-${2 * 100}%)`;
+    radiosubicacion[2].checked = true;
+    currentIndex = 1;
+  });
+
+  sedeCao.addEventListener("click", () => {
+     trackubicacion.style.transform = `translateX(-${3 * 100}%)`;
+    radiosubicacion[3].checked = true;
+    currentIndex = 1;
+  });
 
   nextBtnubicacion.addEventListener("click", () => {
     nextSlide();
@@ -172,6 +202,9 @@ function sliderUbicaciones() {
 
 sliderUbicaciones();
 
+function toBarranquilla() {
+  navegarA("barranquilla");
+}
 
 // Slider Muestras
 // function slidermuestra() {
@@ -230,7 +263,3 @@ sliderUbicaciones();
 //   intervalMuestra = setInterval(nextSlideMuestra, 3000);
 // }
 // slidermuestra();
-
-function toBarranquilla(){
-  navegarA("barranquilla");
-}

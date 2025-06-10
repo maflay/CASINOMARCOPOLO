@@ -30,22 +30,22 @@
     width: 120%;
   }
   
-  .footer-section ul {
+   .footer .footer-section ul {
     list-style: none;
     padding: 0;
   }
   
-  .footer-section ul li {
+   .footer .footer-section ul li {
     margin-bottom: 8px;
   }
   
-  .footer-section ul li a {
+   .footer .footer-section ul li a {
     color: #ffffff;
     text-decoration: none;
     transition: opacity 0.3s;
   }
   
-  .footer-section ul li a:hover {
+  .footer .footer-section ul li a:hover {
     opacity: 0.4;
   }
   
@@ -67,7 +67,7 @@
     color: rgb(170, 91, 250);
   }
   
-  .footer-icons {
+   .footer .footer-icons {
     display: flex;
     justify-content: center;
     padding: 0px 0px 0px 0px;
@@ -82,7 +82,7 @@
     height: 100px;
   }
   
-  .footer-subscriber-email {
+   .footer .footer-subscriber-email {
    display: flex;
   }
 
