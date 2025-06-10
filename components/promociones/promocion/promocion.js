@@ -70,6 +70,7 @@
   }
 
   function createDots() {
+    dotsContainer.innerHTML = "";
     for (let i = 0; i < slides.length; i++) {
       const dot = document.createElement("span");
       dot.classList.add("dot");
@@ -84,49 +85,58 @@
 
   createDots();
 
-  let autoSlideInterval = setInterval(() => {
+  if (window.autoSlideInterval) {
+    clearInterval(window.autoSlideInterval);
+  }
+
+  window.autoSlideInterval = setInterval(() => {
     const nextIndex = (currentIndex + 1) % slides.length;
     goToSlide(nextIndex);
   }, 6000);
 
-  sliderTrack.addEventListener("touchstart", () => {
-    clearInterval(autoSlideInterval);
-  });
+  if (!sliderTrack.dataset.initialized) {
+    sliderTrack.dataset.initialized = "true";
 
-  sliderTrack.addEventListener("touchend", () => {
-    autoSlideInterval = setInterval(() => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      goToSlide(nextIndex);
-    }, 6000);
-  });
+    sliderTrack.addEventListener("touchstart", () => {
+      clearInterval(autoSlideInterval);
+    });
 
-  sliderTrack.addEventListener("touchstart", (e) => {
-    isTouching = true;
-    startX = e.touches[0].clientX;
-    prevTranslate = currentIndex * -sliderTrack.offsetWidth;
-    cancelAnimationFrame(animationID);
-  });
+    sliderTrack.addEventListener("touchend", () => {
+      autoSlideInterval = setInterval(() => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        goToSlide(nextIndex);
+      }, 6000);
+    });
 
-  sliderTrack.addEventListener("touchmove", (e) => {
-    if (!isTouching) return;
-    const currentX = e.touches[0].clientX;
-    const delta = currentX - startX;
-    currentTranslate = prevTranslate + delta;
-    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  });
+    sliderTrack.addEventListener("touchstart", (e) => {
+      isTouching = true;
+      startX = e.touches[0].clientX;
+      prevTranslate = currentIndex * -sliderTrack.offsetWidth;
+      cancelAnimationFrame(animationID);
+    });
 
-  sliderTrack.addEventListener("touchend", () => {
-    isTouching = false;
-    const movedBy = currentTranslate - prevTranslate;
+    sliderTrack.addEventListener("touchmove", (e) => {
+      if (!isTouching) return;
+      const currentX = e.touches[0].clientX;
+      const delta = currentX - startX;
+      currentTranslate = prevTranslate + delta;
+      sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+      
+    });
 
-    const threshold = sliderTrack.offsetWidth * 0.2;
+    sliderTrack.addEventListener("touchend", () => {
+      isTouching = false;
+      const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -threshold && currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else if (movedBy > threshold && currentIndex > 0) {
-      currentIndex--;
-    }
+      const threshold = sliderTrack.offsetWidth * 0.2;
 
-    updateSlider();
-  });
+      if (movedBy < -threshold && currentIndex < slides.length - 1) {
+        currentIndex++;
+      } else if (movedBy > threshold && currentIndex > 0) {
+        currentIndex--;
+      }
+
+      updateSlider();
+    });
+  }
 })();

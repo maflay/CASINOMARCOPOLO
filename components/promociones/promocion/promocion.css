@@ -288,6 +288,7 @@
 }
 
 @media (max-width: 768px) {
+
     .slide {
         align-items: center;
         flex: 0 0 272vw;
@@ -298,7 +299,7 @@
     }
 
     .promocion {
-        height: 60vh;
+        height: 95vh;
     }
 
     .promocion-content {
@@ -323,16 +324,16 @@
         height: auto;
     }
 
-  .slider-track {
-  touch-action: pan-y;
-  user-select: none;
-  cursor: grab;
-  transition: none;
-}
+    .slider-track {
+        touch-action: pan-y;
+        user-select: none;
+        cursor: grab;
+        transition: none;
+    }
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
     .slide {
         align-items: center;
         flex: 0 0 300%;
