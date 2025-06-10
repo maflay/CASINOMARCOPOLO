@@ -230,3 +230,7 @@ sliderUbicaciones();
 //   intervalMuestra = setInterval(nextSlideMuestra, 3000);
 // }
 // slidermuestra();
+
+function toBarranquilla(){
+  navegarA("barranquilla");
+}

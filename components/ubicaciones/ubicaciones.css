@@ -59,8 +59,10 @@
 .address-casin {
   display: flex;
   justify-content: space-between;
-  height: 60vh;
+  height: auto;
   gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .address-ubicacion iframe {
