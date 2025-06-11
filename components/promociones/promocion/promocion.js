@@ -83,7 +83,8 @@
     sliderTrack.addEventListener("touchend", setupAutoSlide);
 
     sliderTrack.addEventListener("touchstart", handleTouchStart);
-    sliderTrack.addEventListener("touchmove", handleTouchMove);
+ sliderTrack.addEventListener("touchmove", handleTouchMove, { passive: false });
+
     sliderTrack.addEventListener("touchend", handleTouchEnd);
   }
 
@@ -97,13 +98,14 @@
   }
 
 
-  function handleTouchMove(e) {
-    if (!isTouching) return;
-    const currentX = e.touches[0].clientX;
-    const delta = currentX - startX;
-    currentTranslate = prevTranslate + delta;
-    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  }
+ function handleTouchMove(e) {
+  if (!isTouching) return;
+  e.preventDefault(); // <- Necesario con passive: false
+  const currentX = e.touches[0].clientX;
+  const delta = currentX - startX;
+  currentTranslate = prevTranslate + delta;
+  sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+}
 
   function handleTouchEnd() {
     isTouching = false;
