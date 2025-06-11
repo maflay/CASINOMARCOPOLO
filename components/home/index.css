@@ -45,7 +45,7 @@
 }
 
 .video-content h1 {
-  font-size: 3em;
+  font-size: 3rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
@@ -59,7 +59,7 @@
 .scroll-down-indicator {
   display: flex;
   position: absolute;
-  top: 40vh;
+  top: 37vh;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
@@ -124,6 +124,9 @@
   .scroll-down-indicator {
     top: 30vh;
   }
+  .video-content h1 {
+  font-size: 2rem;
+}
 }
 
 

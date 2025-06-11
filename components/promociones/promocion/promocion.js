@@ -3,8 +3,11 @@
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.getElementById("dots");
 
+  
+  
   const btnPrev = document.getElementById("btn-prev");
   const btnNext = document.getElementById("btn-next");
+  if (!sliderTrack || slides.length === 0 || !dotsContainer || !btnPrev || !btnNext) return;
   let currentIndex = 0;
 
   let isTouching = false;
@@ -13,29 +16,9 @@
   let prevTranslate = 0;
   let animationID;
 
-  if (btnPrev) {
-    btnPrev.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      } else {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlider();
-      }
-    });
-  }
+  btnPrev.addEventListener("click", () => changeSlide(-1));
+  btnNext.addEventListener("click", () => changeSlide(1));
 
-  if (btnNext) {
-    btnNext.addEventListener("click", () => {
-      if (currentIndex < slides.length - 3) {
-        currentIndex++;
-        updateSlider();
-      } else {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlider();
-      }
-    });
-  }
 
   function goToSlide(index) {
     currentIndex = index;
@@ -43,10 +26,7 @@
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateDots();
 
-    // restaurar la transición luego del movimiento
-    setTimeout(() => {
-      sliderTrack.style.transition = "none";
-    }, 300);
+
   }
 
   function updateDots() {
@@ -59,14 +39,9 @@
     goToSlide(currentIndex);
   }
 
-  function nextSlide() {
-    if (currentIndex < slides.length - 3) {
-      currentIndex++;
-      updateSlider();
-    } else {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlider();
-    }
+  function changeSlide(delta) {
+    currentIndex = (currentIndex + delta + slides.length) % slides.length;
+    updateSlider();
   }
 
   function createDots() {
@@ -85,58 +60,68 @@
 
   createDots();
 
-  if (window.autoSlideInterval) {
+
+  function initSlider() {
+    createDots();
+    updateSlider();
+    setupTouchEvents();
+    setupAutoSlide();
+  }
+
+  initSlider();
+
+  function setupAutoSlide() {
+    if (window.autoSlideInterval) clearInterval(window.autoSlideInterval);
+    window.autoSlideInterval = setInterval(() => changeSlide(1), 6000);
+  }
+
+  function setupTouchEvents() {
+    if (sliderTrack.dataset.initialized) return;
+    sliderTrack.dataset.initialized = "true";
+
+    sliderTrack.addEventListener("touchstart", stopAutoSlide);
+    sliderTrack.addEventListener("touchend", setupAutoSlide);
+
+    sliderTrack.addEventListener("touchstart", handleTouchStart);
+    sliderTrack.addEventListener("touchmove", handleTouchMove);
+    sliderTrack.addEventListener("touchend", handleTouchEnd);
+  }
+
+
+  function handleTouchStart(e) {
+    isTouching = true;
+    startX = e.touches[0].clientX;
+    prevTranslate = currentIndex * -sliderTrack.offsetWidth;
+    sliderTrack.style.transition = "none"; // solo aquí
+    cancelAnimationFrame(animationID);
+  }
+
+
+  function handleTouchMove(e) {
+    if (!isTouching) return;
+    const currentX = e.touches[0].clientX;
+    const delta = currentX - startX;
+    currentTranslate = prevTranslate + delta;
+    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function handleTouchEnd() {
+    isTouching = false;
+    const movedBy = currentTranslate - prevTranslate;
+    const threshold = sliderTrack.offsetWidth * 0.2;
+
+    if (movedBy < -threshold && currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else if (movedBy > threshold && currentIndex > 0) {
+      currentIndex--;
+    }
+
+    updateSlider();
+  }
+
+  function stopAutoSlide() {
     clearInterval(window.autoSlideInterval);
   }
 
-  window.autoSlideInterval = setInterval(() => {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    goToSlide(nextIndex);
-  }, 6000);
 
-  if (!sliderTrack.dataset.initialized) {
-    sliderTrack.dataset.initialized = "true";
-
-    sliderTrack.addEventListener("touchstart", () => {
-      clearInterval(autoSlideInterval);
-    });
-
-    sliderTrack.addEventListener("touchend", () => {
-      autoSlideInterval = setInterval(() => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        goToSlide(nextIndex);
-      }, 6000);
-    });
-
-    sliderTrack.addEventListener("touchstart", (e) => {
-      isTouching = true;
-      startX = e.touches[0].clientX;
-      prevTranslate = currentIndex * -sliderTrack.offsetWidth;
-      cancelAnimationFrame(animationID);
-    });
-
-    sliderTrack.addEventListener("touchmove", (e) => {
-      if (!isTouching) return;
-      const currentX = e.touches[0].clientX;
-      const delta = currentX - startX;
-      currentTranslate = prevTranslate + delta;
-      sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-      
-    });
-
-    sliderTrack.addEventListener("touchend", () => {
-      isTouching = false;
-      const movedBy = currentTranslate - prevTranslate;
-
-      const threshold = sliderTrack.offsetWidth * 0.2;
-
-      if (movedBy < -threshold && currentIndex < slides.length - 1) {
-        currentIndex++;
-      } else if (movedBy > threshold && currentIndex > 0) {
-        currentIndex--;
-      }
-
-      updateSlider();
-    });
-  }
 })();
