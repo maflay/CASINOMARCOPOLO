@@ -14,12 +14,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/resources/marcopolo.png);
+    background-image: url(/resources/fondo-color-global3.png);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.2;
     z-index: -1;
-    background-attachment: fixed;
 }
 
 .promocion {
@@ -35,11 +34,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
 }
 
 .promocion-img {
-    width: 500px;
-    height: 500px;
+    width: 35vw;
+    height: 55vh;
     object-fit: cover;
     overflow: hidden;
 }
@@ -149,7 +149,6 @@
     height: auto;
     color: white;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 
@@ -230,6 +229,7 @@
 .dots {
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 40px;
 }
 
 .dot {

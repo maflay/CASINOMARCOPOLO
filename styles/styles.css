@@ -310,4 +310,40 @@ html {
     visibility: hidden;
   }
 
+  
+.type-h1 {
+  color: #2c16b0;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
+.type2-h1 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
+.type3-h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 2.2rem;
+}
+
+.type4-h1 {
+  color: #2c16b0;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.5rem;
+}
+
+.type5-h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.5rem;
+}
+
 }

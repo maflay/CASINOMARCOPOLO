@@ -14,12 +14,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/resources/marcopolo.png);
+  background-image: url(/resources/fondo-color-global2.png);
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  background-size: cover;
   z-index: -1;
-  background-attachment: fixed;
 }
 
 
@@ -33,22 +32,25 @@
 }
 
 .content-casin-img {
-  width: 100%;
+  width: 50%;
+  margin-top: 40px;
+  overflow: hidden;
+
 }
 
 .content-casin-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .content-casin-text {
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .content-casin-text img {
   width: 100%;
-  height: 100%;
 }
 
 .content-casin-text p {
@@ -108,13 +110,9 @@
 
 @media (max-width: 768px) {
 
-  .casin::before {
-    opacity: 0.04;
-  }
-
   .content-casin {
     display: grid;
-    margin-top: 30px;
+    height: 100vh;
   }
 
   .address-casin {
@@ -127,7 +125,7 @@
   .address-ubicacion {
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 30px;
   }
 
   .address-ubicacion iframe {
@@ -136,17 +134,31 @@
   }
 
   .address-text {
-    height: auto;
+    height: 100%;
     text-align: center;
+    padding: 20px;
   }
 
+  .content-casin-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .content-casin-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-casin-text{
+    width: 100%;
+
+  }
 }
 
 @media (max-width: 380px) {
   .content-casin {
-    height: 100vh;
+    height: 150vh;
     display: grid;
-    margin-top: 30px;
   }
 
   .address-casin {
