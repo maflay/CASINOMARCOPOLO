@@ -43,23 +43,23 @@ const rutasLimpias = {
   barranquilla: {
     html: "/components/ubicaciones/barranquilla.html",
     css: "/components/ubicaciones/ubicaciones.css",
-    // js: "/components/baccarat/barranquilla.js",
+    js: "/components/ubicaciones/ubicaciones.js",
   },
   bogota: {
     html: "/components/ubicaciones/bogota.html",
     css: "/components/ubicaciones/ubicaciones.css",
-    // js: "/components/baccarat/barranquilla.js",
+        js: "/components/ubicaciones/ubicaciones.js",
   },
 
   calisur: {
     html: "/components/ubicaciones/cali-sur.html",
     css: "/components/ubicaciones/ubicaciones.css",
-    // js: "/components/baccarat/barranquilla.js",
+    js: "/components/ubicaciones/ubicaciones.js",
   },
   calioeste: {
     html: "/components/ubicaciones/cali-oeste.html",
     css: "/components/ubicaciones/ubicaciones.css",
-    // js: "/components/baccarat/barranquilla.js",
+    js: "/components/ubicaciones/ubicaciones.js",
   },
   lampara: {
     html: "/components/promociones/promocion/lampara-suerte.html",
@@ -80,6 +80,16 @@ const rutasLimpias = {
     html: "/components/juegos/juegos.html",
     css: "/components/juegos/juegos.css",
     js: "/components/juegos/juegos.js",
+  },
+  slots: {
+    html: "/components/juegos/juegos/slots/slots.html",
+    css: "/components/juegos/juegos/slots/slots.css",
+    js: "/components/juegos/juegos/slots/slots.js",
+  },
+  poker: {
+    html: "/components/juegos/juegos/poker/poker.html",
+    css: "/components/juegos/juegos/poker/poker.css",
+    js: "/components/juegos/juegos/poker/poker.js",
   },
 };
 
@@ -304,7 +314,7 @@ function cargarHeaderYFooter() {
       document.getElementById("main-header").innerHTML = html;
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
-      
+
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {
           navToggle.classList.toggle("open");

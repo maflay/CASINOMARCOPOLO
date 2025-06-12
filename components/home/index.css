@@ -10,7 +10,7 @@
 .video-hero {
   position: relative;
   width: 100%;
-  height: 97vh;
+  height: 70vh;
   overflow: hidden;
 }
 
@@ -37,21 +37,31 @@
 .video-content {
   position: relative;
   z-index: 3;
-  text-align: center;
+  text-align: left;
   color: #fff;
   top: 50%;
   transform: translateY(-50%);
   padding: 0 20px;
 }
 
+.video-content-text{
+  width: 440px;
+  line-height: 1.1rem;
+  margin-left: 100px;
+}
+
+.video-content-text img{
+  width: 100%;
+  height: 100%;
+}
+
 .video-content h1 {
-  font-size: 3rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .video-content p {
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
@@ -59,7 +69,7 @@
 .scroll-down-indicator {
   display: flex;
   position: absolute;
-  top: 37vh;
+  top: 30vh;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
@@ -116,6 +126,16 @@
     width: 0;
     height: 0;
   }
+
+  .video-content-text{
+  width: auto;
+  margin-left: 0;
+}
+
+  .video-content-text img{
+  width: 100%;
+  height: 100%;
+}
 
   .video-hero {
     height: 80vh;
@@ -179,8 +199,8 @@
 
 .info-ubicacion {
   background-color: #27314f;
-  width: 30%;
-  height: 700px;
+  width: 40%;
+  height: 550px;
   object-fit: cover;
   padding: 20px;
 }
@@ -195,8 +215,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50%;
-  height: 65%;
+  width: 60%;
+  height: 58%;
   border-radius: 50px;
 }
 
@@ -221,8 +241,8 @@
 
 .sliderubicacion {
   position: relative;
-  width: 1200px;
-  height: 700px;
+  width: 800px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -230,7 +250,8 @@
   display: flex;
   transition: transform 1s ease-in-out;
   height: auto;
-  width: 1200px;
+  width: 800px;
+  height: 550px;
 }
 
 .sliderubicacion .slideubicacion {
@@ -353,15 +374,13 @@
     width: 120px;
     height: 100px;
     width: 50%;
-    overflow: hidden;
-
+    
   }
-
+  
   .ubicaciones-movil .card-ubicacion .card-ubicacion-img img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-
   }
 
   .ubicaciones-movil .card-ubicacion .card-ubicacion-text {
@@ -467,8 +486,11 @@
 
   .container-tarjeta .box-rigth-tarjeta {
     position: relative;
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: auto;
+    left: -20px;
+    top: 10px;
+    overflow: hidden;
   }
 
   .container-tarjeta .box-rigth-tarjeta img {
@@ -542,13 +564,11 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex: 1;
 }
 
 .card-content h1 {
   font-weight: 900;
-  margin-bottom: 10px;
   font-size: 1.3rem;
 }
 
@@ -556,7 +576,6 @@
   font-size: 16px;
   color: #1f253a;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 

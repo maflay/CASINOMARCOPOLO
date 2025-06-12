@@ -362,6 +362,7 @@
   const bankerBet = document.querySelector("#bankerBet");
   const playerBet = document.querySelector("#playerBet");
   playerBet.addEventListener("click", chooseTeam);
+  bankerBet.addEventListener("click", chooseTeam);
   tie.addEventListener("click", chooseTeam);
 
   function chooseTeam() {

@@ -1,26 +1,12 @@
-function toLampara(){
-    navegarA("lampara");
-}
-
-function toGiroDorado(){
-    navegarA("girodorado");
-
-}
-
-function toDadosPoker(){
-    navegarA("dadospoker");
-
-}
-
 (() => {
-  const sliderTrack = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
+  const sliderTrack = document.getElementById("sliderTrack-promo");
+  const slides = document.querySelectorAll(".slide-promo");
   const dotsContainer = document.getElementById("dots");
 
   
   
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
+  const btnPrev = document.getElementById("btn-prev-promo");
+  const btnNext = document.getElementById("btn-next-promo");
   if (!sliderTrack || slides.length === 0 || !dotsContainer || !btnPrev || !btnNext) return;
   let currentIndex = 0;
 

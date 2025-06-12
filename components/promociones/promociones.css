@@ -304,6 +304,140 @@
 }
 
 
+
+.slider-container {
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  /* padding: 40px 0; */
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.card {
+  background: #222;
+  border: 2px solid #efb810;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  width: 30%;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #efb810;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #efb810;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-nav.left {
+  left: 10px;
+}
+
+.slider-nav.right {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background-color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #efb810;
+}
+
+.scroll-down-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 4px solid #efb810;
+  border-bottom: 4px solid #efb810;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+  opacity: 0.7;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .container-promo .section-promo .promo-content {
     margin-top: 20%;
@@ -373,4 +507,17 @@
 
   }
 
+  .slide {
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  .slide .card {
+    display: none;
+    width: 90%;
+  }
+
+  .slide .card:first-child {
+    display: block;
+  }
 }

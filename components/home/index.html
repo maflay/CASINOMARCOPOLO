@@ -14,8 +14,11 @@
       </video>
       <div class="video-overlay"></div>
       <div class="video-content">
-        <h1 class="type2-h1">Bienvenido a MARCO POLO</h1>
-        <p class="type5-h1">Una experiencia única te espera</p>
+        <div class="video-content-text">
+          <h1 style="text-align: center;" class="type3-h1">Disfrute el mundo</h1>
+          <img src="/resources/logocasino.png" />
+          <p style="text-align: center;" class="lobster-regular">La ruta de la fortuna</p>
+        </div>
         <div class="scroll-down-indicator">
           <span class="arrow"></span>
           <span class="arrow"></span>
@@ -42,7 +45,10 @@
       <div class="content-slider-ubicaciones">
         <section class="sliderubicacion">
           <div class="slider-wrapper-ubicacion" id="sliderTrackubicacion">
-            <div class="slideubicacion bg1ubicacion">
+
+
+
+            <div style="cursor: pointer;" id="toBarranquilla" class="slideubicacion bg1ubicacion">
               <div class="content-info">
                 <div class="info-white">
                 </div>
@@ -60,12 +66,9 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div style="cursor: pointer;" class="content-btn">
-                  <a href="#barranquilla" class="btn-design2">Ver más</a>
-                </div>
               </div>
             </div>
-            <div class="slideubicacion bg2ubicacion">
+            <div style="cursor: pointer;" id="toBogota" class="slideubicacion bg2ubicacion">
               <div class="content-info">
                 <div class="info-white">
                 </div>
@@ -82,12 +85,9 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div style="cursor: pointer;" class="content-btn">
-                  <a href="#bogota" class="btn-design2">Ver más</a>
-                </div>
               </div>
             </div>
-            <div class="slideubicacion bg3ubicacion">
+            <div style="cursor: pointer;" id="toCalisur" class="slideubicacion bg3ubicacion">
               <div class="content-info">
                 <div class="info-white">
                 </div>
@@ -104,12 +104,9 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div style="cursor: pointer;" class="content-btn">
-                  <a href="#calisur" class="btn-design2">Ver más</a>
-                </div>
               </div>
             </div>
-            <div class="slideubicacion bg4ubicacion">
+            <div style="cursor: pointer;" id="toCalioeste" class="slideubicacion bg4ubicacion">
               <div class="content-info">
                 <div class="info-white">
                 </div>
@@ -129,12 +126,11 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div style="cursor: pointer;" class="content-btn">
-                  <a href="#calioeste" class="btn-design2">Ver más</a>
-                </div>
               </div>
             </div>
           </div>
+
+
 
           <!-- Radios -->
           <div class="navigationubicacion">
@@ -251,12 +247,10 @@
           <p>
             Descubre la magia de la Lámpara de la Suerte,
             un símbolo de fortuna que ilumina tus mejores momentos.
-            Con solo un deseo y una chispa de esperanza,
-            esta lámpara te conecta con la energía positiva del juego,
-            atrayendo oportunidades, premios y experiencias inolvidables.
-            Déjala encendida y deja que la suerte haga el resto.
           </p>
-          <!-- <button class="purple-button" onclick="saberMasPromo()">Ver más</button> -->
+          <div style="text-align: center;margin-top: 20px;">
+            <button onclick="toLampara()" class="btn-design1">Conocer promoción</button>
+          </div>
         </div>
       </section>
 
@@ -272,11 +266,10 @@
           <p>
             Prepárate para vivir la emoción del Giro Dorado,
             donde cada vuelta puede convertir tu momento en oro.
-            Esta experiencia única combina la adrenalina del juego con el brillo de la fortuna,
-            ofreciéndote la posibilidad de ganar premios brillantes y momentos inolvidables.
-            ¡Da el giro y deja que la suerte te sorprenda!
           </p>
-          <!-- <button class="purple-button" onclick="saberMasPromo()">Ver más</button> -->
+          <div style="text-align: center;margin-top: 20px;">
+            <button onclick="toGiroDorado()" class="btn-design1">Conocer promoción</button>
+          </div>
         </div>
       </section>
       <section class="card">
@@ -290,11 +283,10 @@
           </h1>
           <p>
             Lanza los Dados de Póker y deja que la suerte defina tu jugada maestra.
-            Cada tiro es una mezcla perfecta de estrategia, azar y emoción,
-            donde los números pueden llevarte directo a la victoria.
-            Siente la adrenalina con cada lanzamiento y demuestra que en este juego,
-            el ganador eres tú.
           </p>
+          <div style="text-align: center;margin-top: 20px;">
+            <button onclick="toDadosPoker()" class="btn-design1">Conocer promoción</button>
+          </div>
         </div>
       </section>
       <div style="text-align: centers;">
@@ -311,40 +303,40 @@
         <div class="content-games">
           <div class="games">
             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/blackjack-carrusel.jpg" />
-                </div>
-                <p class="type5-h1">Blackjack</p>
+              <div class="game-img">
+                <img src="/resources/blackjack-carrusel.jpg" />
+              </div>
+              <p class="type5-h1">Blackjack</p>
             </div>
             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/ruleta.jpg" />
-                </div>
-                <p class="type5-h1">Ruleta</p>
+              <div class="game-img">
+                <img src="/resources/ruleta.jpg" />
+              </div>
+              <p class="type5-h1">Ruleta</p>
             </div>
             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/baccarat-carrusel.jpg" />
-                </div>
-                <p class="type5-h1">Baccarat</p>
+              <div class="game-img">
+                <img src="/resources/baccarat-carrusel.jpg" />
+              </div>
+              <p class="type5-h1">Baccarat</p>
             </div>
             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/hipodromo.jpg" />
-                </div>
-                <p class="type5-h1">Hipodromo</p>
+              <div class="game-img">
+                <img src="/resources/hipodromo.jpg" />
+              </div>
+              <p class="type5-h1">Hipodromo</p>
             </div>
             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/poker.jpg" />
-                </div>
-                <p class="type5-h1">Poker</p>
+              <div class="game-img">
+                <img src="/resources/poker.jpg" />
+              </div>
+              <p class="type5-h1">Poker</p>
             </div>
-             <div class="game">
-                <div class="game-img">
-                  <img src="/resources/slots.jpg" />
-                </div>
-                <p class="type5-h1">Slots</p>
+            <div class="game">
+              <div class="game-img">
+                <img src="/resources/slots.jpg" />
+              </div>
+              <p class="type5-h1">Slots</p>
             </div>
           </div>
         </div>

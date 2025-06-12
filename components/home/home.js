@@ -10,7 +10,28 @@ function saberMasPromo() {
   window.scrollTo(0, 0);
   navegarA("promociones");
 }
+(() => {
+const btnBarranquilla = document.getElementById("toBarranquilla");
+const btnBogota = document.getElementById("toBogota");
+const btnCalisur = document.getElementById("toCalisur");
+const btnCaliO = document.getElementById("toCalioeste");
 
+btnBarranquilla.addEventListener("click", () => {
+  navegarA("barranquilla");
+});
+
+btnBogota.addEventListener("click", () => {
+  navegarA("bogota");
+});
+
+btnCalisur.addEventListener("click", () => {
+  navegarA("calisur");
+});
+
+btnCaliO.addEventListener("click", () => {
+  navegarA("calioeste");
+});
+})();
 // ENVIO DE CASH
 function enviocash() {
   const form = document.getElementById("cash-unico");
@@ -52,7 +73,6 @@ function enviocash() {
 
 enviocash();
 
-
 function sliderUbicaciones() {
   const trackubicacion = document.getElementById("sliderTrackubicacion");
   const radiosubicacion = document.querySelectorAll(
@@ -93,25 +113,25 @@ function sliderUbicaciones() {
   }
 
   sedeBarra.addEventListener("click", () => {
-     trackubicacion.style.transform = `translateX(-${0 * 100}%)`;
+    trackubicacion.style.transform = `translateX(-${0 * 100}%)`;
     radiosubicacion[0].checked = true;
     currentIndex = 1;
   });
 
   sedeBog.addEventListener("click", () => {
-     trackubicacion.style.transform = `translateX(-${1 * 100}%)`;
+    trackubicacion.style.transform = `translateX(-${1 * 100}%)`;
     radiosubicacion[1].checked = true;
     currentIndex = 1;
   });
 
   sedeCas.addEventListener("click", () => {
-     trackubicacion.style.transform = `translateX(-${2 * 100}%)`;
+    trackubicacion.style.transform = `translateX(-${2 * 100}%)`;
     radiosubicacion[2].checked = true;
     currentIndex = 1;
   });
 
   sedeCao.addEventListener("click", () => {
-     trackubicacion.style.transform = `translateX(-${3 * 100}%)`;
+    trackubicacion.style.transform = `translateX(-${3 * 100}%)`;
     radiosubicacion[3].checked = true;
     currentIndex = 1;
   });
@@ -139,4 +159,16 @@ sliderUbicaciones();
 
 function toGames() {
   navegarA("juegos");
+}
+
+function toLampara() {
+  navegarA("lampara");
+}
+
+function toGiroDorado() {
+  navegarA("girodorado");
+}
+
+function toDadosPoker() {
+  navegarA("dadospoker");
 }
