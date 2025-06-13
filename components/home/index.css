@@ -198,7 +198,10 @@
 }
 
 .info-ubicacion {
-  background-color: #27314f;
+  background: linear-gradient(120deg, #27314f, #1f253a, 
+  #27314f, #1f253a, #27314f, #1f253a, #27314f, #1f253a,
+   #27314f, #1f253a, #27314f, #1f253a, #27314f, #1f253a,
+    #27314f, #1f253a);
   width: 40%;
   height: 550px;
   object-fit: cover;

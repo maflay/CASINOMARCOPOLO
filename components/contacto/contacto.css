@@ -194,7 +194,7 @@
 .container-contact .img-test-ruleta {
   position: absolute;
   right: 1200px;
-  width: 40%;
+  width: 30%;
   object-fit: cover;
 }
 
@@ -206,7 +206,7 @@
 
 .container-contact .img-test-dados {
   position: absolute;
-  left: 400px;
+  left: 300px;
   bottom: 450px;
   width: 15%;
   object-fit: cover;
@@ -341,7 +341,7 @@
 
   .container-contact .img-test-ruleta {
     position: absolute;
-    left: -170px;
+    left: -240px;
     bottom: 80px;
     width: 80%;
     object-fit: cover;
@@ -355,9 +355,9 @@
 
   .container-contact .img-test-dados {
     position: absolute;
-    left: -50px;
-    bottom: 450px;
-    width: 50%;
+    left: -40px;
+    bottom: 620px;
+    width: 45%;
     object-fit: cover;
   }
 
@@ -385,7 +385,7 @@
   .container-contact .img-test-carta2 {
     position: absolute;
     left: 300px;
-    bottom: 450px;
+    bottom: 620px;
     width: 45%;
     object-fit: cover;
   }
