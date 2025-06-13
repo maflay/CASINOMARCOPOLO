@@ -122,19 +122,90 @@ document.addEventListener("DOMContentLoaded", () => {
     navegarA("home");
   }
 
-  document.querySelectorAll(".titulo, .titulor, .titulol").forEach((el, index) => {
-  el.dataset.id = `anim-${index}`;
-});
-
-
   //   ANIMACIONES
 
   window.addEventListener("scroll", () => {
-  animarScroll(".titulo", "y");
-  animarScroll(".titulor", "x-right");
-  animarScroll(".titulol", "x-left");
-});
+    const elements = document.querySelectorAll(".titulo");
 
+    elements.forEach((el) => {
+      if (el.dataset.animated === "true") {
+        return;
+      }
+
+      const rect = el.getBoundingClientRect();
+      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (inViewport) {
+        const scrollY = window.scrollY;
+        const opacity = Math.min(scrollY / 500, 1);
+        const translateY = Math.max(50 - scrollY * 0.1, 0);
+
+        el.style.transform = `translateY(${translateY}px)`;
+        el.style.opacity = opacity;
+
+        // Cuando la animación ya llegó al máximo, marcamos como terminado
+        if (opacity >= 1) {
+          el.dataset.animated = "true";
+        }
+      }
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const elements = document.querySelectorAll(".titulor");
+
+    elements.forEach((el) => {
+      if (el.dataset.animated === "true") {
+        return;
+      }
+
+      const rect = el.getBoundingClientRect();
+      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (inViewport) {
+        const scrollY = window.scrollY;
+        const opacity = Math.min(scrollY / 500, 1);
+
+        // Horizontal: desde +100px a 0px
+        const translateX = Math.max(50 - scrollY * 0.1, 0);
+
+        el.style.transform = `translateX(${translateX}px)`;
+        el.style.opacity = opacity;
+
+        if (opacity >= 1) {
+          el.dataset.animated = "true";
+        }
+      }
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const elements = document.querySelectorAll(".titulol");
+
+    elements.forEach((el) => {
+      if (el.dataset.animated === "true") {
+        return;
+      }
+
+      const rect = el.getBoundingClientRect();
+      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (inViewport) {
+        const scrollY = window.scrollY;
+        const opacity = Math.min(scrollY / 500, 1);
+
+        // Horizontal: desde -100px a 0px (hacia la izquierda)
+        const translateX = Math.min(-50 + scrollY * 0.1, 0);
+
+        el.style.transform = `translateX(${translateX}px)`;
+        el.style.opacity = opacity;
+
+        if (opacity >= 1) {
+          el.dataset.animated = "true";
+        }
+      }
+    });
+  });
 });
 
 function animarScroll(selector, direccion = "y") {
