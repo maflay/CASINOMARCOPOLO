@@ -208,6 +208,10 @@
   padding: 20px;
 }
 
+.info-ubicacion h1{
+  line-height: 2.5rem;
+}
+
 .content-iframe {
   width: auto;
   height: auto;
@@ -219,7 +223,7 @@
   bottom: 0;
   right: 0;
   width: 60%;
-  height: 58%;
+  height: 55%;
   border-radius: 50px;
 }
 
@@ -373,10 +377,9 @@
   }
 
   .ubicaciones-movil .card-ubicacion .card-ubicacion-img {
-    width: 120px;
     height: 100px;
     width: 50%;
-    
+    padding: 5px;
   }
 
   .img-fondo1{
