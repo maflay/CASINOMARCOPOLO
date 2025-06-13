@@ -99,6 +99,10 @@
       });
       message.textContent = "🎉 ¡Ganaste!";
       message.style.color = "lime";
+      setTimeout(() => {
+        message.textContent = "";
+        message.style.color = "";
+      }, 5000);
     } else {
       Swal.fire({
         title: "Lo siento!",
@@ -109,6 +113,10 @@
       });
       message.textContent = "😢 Inténtalo de nuevo";
       message.style.color = "white";
+      setTimeout(() => {
+        message.textContent = "";
+        message.style.color = "";
+      }, 5000);
     }
   }
 

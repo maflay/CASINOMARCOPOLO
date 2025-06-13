@@ -41,13 +41,11 @@
   color: #fff;
   top: 50%;
   transform: translateY(-50%);
-  padding: 0 20px;
 }
 
 .video-content-text {
   width: 440px;
   line-height: 1.1rem;
-  margin-left: 100px;
 }
 
 .video-content-text img {

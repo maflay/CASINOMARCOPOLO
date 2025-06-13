@@ -1,97 +1,3 @@
-const rutasLimpias = {
-  home: {
-    html: "/components/home/index.html",
-    css: "/components/home/index.css",
-    js: "/components/home/home.js",
-  },
-  promociones: {
-    html: "/components/promociones/promociones.html",
-    css: "/components/promociones/promociones.css",
-    js: "/components/promociones/promociones.js",
-  },
-  contacto: {
-    html: "/components/contacto/contacto.html",
-    css: "/components/contacto/contacto.css",
-    js: "/components/contacto/contacto.js",
-  },
-  obtenertarjeta: {
-    html: "/components/obtenertarjeta/obtenertarjeta.html",
-    css: "/components/obtenertarjeta/obtenertarjeta.css",
-    js: "/components/obtenertarjeta/obtenertarjeta.js",
-  },
-  blackjack: {
-    html: "/components/blackjack/blackjack.html",
-    css: "/components/blackjack/blackjack.css",
-
-    js: "/components/blackjack/blackjack.js",
-  },
-  nosotros: {
-    html: "/components/nosotros/nosotros.html",
-    css: "/components/nosotros/nosotros.css",
-    js: "/components/nosotros/nosotros.js",
-  },
-  ruleta: {
-    html: "/components/ruleta/ruleta.html",
-    css: "/components/ruleta/ruleta.css",
-    js: "/components/ruleta/ruleta.js",
-  },
-  baccarat: {
-    html: "/components/baccarat/baccarat.html",
-    css: "/components/baccarat/baccarat.css",
-    js: "/components/baccarat/baccarat.js",
-  },
-  barranquilla: {
-    html: "/components/ubicaciones/barranquilla.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
-  bogota: {
-    html: "/components/ubicaciones/bogota.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
-  calisur: {
-    html: "/components/ubicaciones/cali-sur.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
-  calioeste: {
-    html: "/components/ubicaciones/cali-oeste.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
-  lampara: {
-    html: "/components/promociones/promocion/lampara-suerte.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
-  },
-  girodorado: {
-    html: "/components/promociones/promocion/giro-dorado.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
-  },
-  dadospoker: {
-    html: "/components/promociones/promocion/dados-poker.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
-  },
-  juegos: {
-    html: "/components/juegos/juegos.html",
-    css: "/components/juegos/juegos.css",
-    js: "/components/juegos/juegos.js",
-  },
-  slots: {
-    html: "/components/juegos/juegos/slots/slots.html",
-    css: "/components/juegos/juegos/slots/slots.css",
-    js: "/components/juegos/juegos/slots/slots.js",
-  },
-  poker: {
-    html: "/components/juegos/juegos/poker/poker.html",
-    css: "/components/juegos/juegos/poker/poker.css",
-    js: "/components/juegos/juegos/poker/poker.js",
-  },
-};
-
 window.addEventListener("load", function () {
   const loading = document.getElementById("loading");
   setTimeout(() => {
@@ -216,91 +122,67 @@ document.addEventListener("DOMContentLoaded", () => {
     navegarA("home");
   }
 
+  document.querySelectorAll(".titulo, .titulor, .titulol").forEach((el, index) => {
+  el.dataset.id = `anim-${index}`;
+});
+
+
   //   ANIMACIONES
 
   window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulo");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-        const translateY = Math.max(50 - scrollY * 0.1, 0);
-
-        el.style.transform = `translateY(${translateY}px)`;
-        el.style.opacity = opacity;
-
-        // Cuando la animación ya llegó al máximo, marcamos como terminado
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
-    });
-  });
-
-  window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulor");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-
-        // Horizontal: desde +100px a 0px
-        const translateX = Math.max(50 - scrollY * 0.1, 0);
-
-        el.style.transform = `translateX(${translateX}px)`;
-        el.style.opacity = opacity;
-
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
-    });
-  });
-
-  window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulol");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-
-        // Horizontal: desde -100px a 0px (hacia la izquierda)
-        const translateX = Math.min(-50 + scrollY * 0.1, 0);
-
-        el.style.transform = `translateX(${translateX}px)`;
-        el.style.opacity = opacity;
-
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
-    });
-  });
+  animarScroll(".titulo", "y");
+  animarScroll(".titulor", "x-right");
+  animarScroll(".titulol", "x-left");
 });
+
+});
+
+function animarScroll(selector, direccion = "y") {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach((el) => {
+    const id = el.dataset.id;
+    if (!id) return;
+
+    if (sessionStorage.getItem(id) === "true") {
+      el.dataset.animated = "true";
+      el.style.opacity = 1;
+      el.style.transform = "translate(0, 0)";
+      return;
+    }
+
+    if (el.dataset.animated === "true") return;
+
+    const rect = el.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (inViewport) {
+      const scrollY = window.scrollY;
+      const opacity = Math.min(scrollY / 500, 1);
+      let transform = "";
+
+      if (direccion === "y") {
+        const translateY = Math.max(50 - scrollY * 0.1, 0);
+        transform = `translateY(${translateY}px)`;
+      } else if (direccion === "x-right") {
+        const translateX = Math.max(50 - scrollY * 0.1, 0);
+        transform = `translateX(${translateX}px)`;
+      } else if (direccion === "x-left") {
+        const translateX = Math.min(-50 + scrollY * 0.1, 0);
+        transform = `translateX(${translateX}px)`;
+      }
+
+      el.style.transform = transform;
+      el.style.opacity = opacity;
+
+      if (opacity >= 1) {
+        el.dataset.animated = "true";
+        sessionStorage.setItem(id, "true"); // guardar como animado
+      }
+    }
+  });
+}
+
 
 function cargarHeaderYFooter() {
   const mainFooter = document.getElementById("main-footer");
