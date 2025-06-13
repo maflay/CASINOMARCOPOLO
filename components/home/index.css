@@ -353,7 +353,6 @@
 
   .ubicaciones-ocultar {
     display: flex;
-    background-color: white;
   }
 
   .ubicaciones-movil {
@@ -379,11 +378,34 @@
     width: 50%;
     
   }
+
+  .img-fondo1{
+    background-image: url(/resources/icon-barran.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+    .img-fondo2{
+    background-image: url(/resources/icon-bogota.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    .img-fondo3{
+    background-image: url(/resources/icon-cali.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    .img-fondo4{
+    background-image: url(/resources/icon-cali.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   
   .ubicaciones-movil .card-ubicacion .card-ubicacion-img img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
+    border-radius: 50px;
   }
 
   .ubicaciones-movil .card-ubicacion .card-ubicacion-text {
@@ -393,7 +415,7 @@
   }
 
   .ubicaciones-movil .card-ubicacion .card-ubicacion-text a {
-    color: #27314f;
+    color: #fff;
   }
 
   .ocultar {
