@@ -274,13 +274,13 @@
 }
 
 .sliderubicacion .bg3ubicacion {
-  background-image: url(/resources/marcopoloLocalInter.png);
+  background-image: url(/resources/marcopoloHolguines.png);
   border-radius: 20px;
   overflow: hidden
 }
 
 .sliderubicacion .bg4ubicacion {
-  background-image: url(/resources/marcopoloHolguines.png);
+  background-image: url(/resources/marcopoloLocalInter.png);
   border-radius: 20px;
   overflow: hidden
 }
@@ -325,7 +325,7 @@
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  color: #6622F8;
+  color: #1f253a;
   font-size: 10rem;
   border: none;
   cursor: pointer;
@@ -568,14 +568,12 @@
 }
 
 .card-content h1 {
-  font-weight: 900;
   font-size: 1.3rem;
 }
 
 .card-content p {
   font-size: 16px;
   color: #1f253a;
-  font-weight: 600;
 }
 
 

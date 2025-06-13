@@ -1,12 +1,12 @@
 (() => {
-  const sliderTrack = document.getElementById("sliderTrack-promo");
-  const slides = document.querySelectorAll(".slide-promo");
+  const sliderTrack = document.getElementById("sliderTrack");
+  const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.getElementById("dots");
 
   
   
-  const btnPrev = document.getElementById("btn-prev-promo");
-  const btnNext = document.getElementById("btn-next-promo");
+  const btnPrev = document.getElementById("btn-prev");
+  const btnNext = document.getElementById("btn-next");
   if (!sliderTrack || slides.length === 0 || !dotsContainer || !btnPrev || !btnNext) return;
   let currentIndex = 0;
 

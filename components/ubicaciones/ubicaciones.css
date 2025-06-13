@@ -67,6 +67,12 @@
   margin-bottom: 50px;
 }
 
+.address-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .address-ubicacion {
   width: 50%;
   height: 200px;
@@ -139,7 +145,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 0 10px;
+    padding: 20px;
 }
 
 .card {
