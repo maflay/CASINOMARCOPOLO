@@ -11,26 +11,26 @@ function saberMasPromo() {
   navegarA("promociones");
 }
 (() => {
-const btnBarranquilla = document.getElementById("toBarranquilla");
-const btnBogota = document.getElementById("toBogota");
-const btnCalisur = document.getElementById("toCalisur");
-const btnCaliO = document.getElementById("toCalioeste");
+  const btnBarranquilla = document.getElementById("toBarranquilla");
+  const btnBogota = document.getElementById("toBogota");
+  const btnCalisur = document.getElementById("toCalisur");
+  const btnCaliO = document.getElementById("toCalioeste");
 
-btnBarranquilla.addEventListener("click", () => {
-  navegarA("barranquilla");
-});
+  btnBarranquilla.addEventListener("click", () => {
+    navegarA("barranquilla");
+  });
 
-btnBogota.addEventListener("click", () => {
-  navegarA("bogota");
-});
+  btnBogota.addEventListener("click", () => {
+    navegarA("bogota");
+  });
 
-btnCalisur.addEventListener("click", () => {
-  navegarA("calisur");
-});
+  btnCalisur.addEventListener("click", () => {
+    navegarA("calisur");
+  });
 
-btnCaliO.addEventListener("click", () => {
-  navegarA("calioeste");
-});
+  btnCaliO.addEventListener("click", () => {
+    navegarA("calioeste");
+  });
 })();
 // ENVIO DE CASH
 function enviocash() {

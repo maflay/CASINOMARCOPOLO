@@ -85,7 +85,7 @@
     animation: fadeInCard 0.5s ease-out forwards;
 }
 
-.content-info{
+.content-info {
     display: flex;
     justify-content: flex-end;
 }
@@ -235,10 +235,10 @@ td {
         flex-direction: row;
     }
 
-.card-image {
-    width: 70px;
-    margin: 5px;
-    opacity: 0;
-    animation: fadeInCard 0.5s ease-out forwards;
-}
+    .card-image {
+        width: 70px;
+        margin: 5px;
+        opacity: 0;
+        animation: fadeInCard 0.5s ease-out forwards;
+    }
 }

@@ -48,9 +48,8 @@ const rutasLimpias = {
   bogota: {
     html: "/components/ubicaciones/bogota.html",
     css: "/components/ubicaciones/ubicaciones.css",
-        js: "/components/ubicaciones/ubicaciones.js",
+    js: "/components/ubicaciones/ubicaciones.js",
   },
-
   calisur: {
     html: "/components/ubicaciones/cali-sur.html",
     css: "/components/ubicaciones/ubicaciones.css",

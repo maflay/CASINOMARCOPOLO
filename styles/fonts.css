@@ -15,6 +15,7 @@
 @font-face {
   font-family: 'TT Interphases Variable';
   src: url('/fonts/TT-Interphases-Pro-Trial-Variable.ttf') format('truetype');
-  font-weight: 100 900; /* Rango de pesos si es variable */
+  font-weight: 100 900;
+  /* Rango de pesos si es variable */
   font-style: normal;
 }

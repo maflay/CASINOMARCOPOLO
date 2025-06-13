@@ -183,7 +183,7 @@ function rotateWheel() {
     return;
   }
   var spinAngle =
-  spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
+    spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
   startAngle += (spinAngle * Math.PI) / 180;
   drawRouletteWheel();
   spinTimeout = setTimeout("rotateWheel()", 30);

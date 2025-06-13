@@ -132,16 +132,15 @@
     }
   }
 
-  function doBet (){
+  function doBet() {
     Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "❌ Necesitas realizar una apuesta, para poder jugar.",
-        showConfirmButton: false,
-        timer: 3000,
-      });
+      position: "top-end",
+      icon: "error",
+      title: "❌ Necesitas realizar una apuesta, para poder jugar.",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
-
 
   function scoreUpdater() {
     if (playerScore > 9) {
@@ -344,18 +343,18 @@
       }
     } else {
       infoBoard.innerText = "No puedes cambiar tu apuesta a mitad del juego.";
-     changeBet();
+      changeBet();
     }
   }
 
-  function changeBet(){
-     Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "❌ No puedes cambiar tu apuesta a mitad del juego.",
-        showConfirmButton: false,
-        timer: 3000,
-      });
+  function changeBet() {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "❌ No puedes cambiar tu apuesta a mitad del juego.",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
 
   const tie = document.querySelector("#tie");
@@ -379,14 +378,14 @@
     }
   }
 
-  function alertchangeTeam(){
+  function alertchangeTeam() {
     Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "❌ No puedes cambiar tu equipo a mitad del juego.",
-        showConfirmButton: false,
-        timer: 3000,
-      });
+      position: "top-end",
+      icon: "error",
+      title: "❌ No puedes cambiar tu equipo a mitad del juego.",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
 
   function winBet() {

@@ -46,41 +46,45 @@ function outSlots() {
   document.getElementById("feature-slots").style.display = "none";
 }
 
-function toBaccaratGame(){
+function toBaccaratGame() {
   navegarA("baccarat");
 }
 
-function toBlackjackGame(){
+function toBlackjackGame() {
   navegarA("blackjack");
 }
 
-function toRuletaGame(){
+function toRuletaGame() {
   navegarA("ruleta");
 }
 
-function toHipodromoGame(){
+function toHipodromoGame() {
   navegarA("hipodromo");
 }
 
-function toPokerGame(){
+function toPokerGame() {
   navegarA("poker");
 }
 
-function toSlotsGame(){
+function toSlotsGame() {
   navegarA("slots");
 }
-
 
 (() => {
   const sliderTrack = document.getElementById("sliderTrack");
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.getElementById("dots");
 
-  
-  
   const btnPrev = document.getElementById("btn-prev");
   const btnNext = document.getElementById("btn-next");
-  if (!sliderTrack || slides.length === 0 || !dotsContainer || !btnPrev || !btnNext) return;
+  if (
+    !sliderTrack ||
+    slides.length === 0 ||
+    !dotsContainer ||
+    !btnPrev ||
+    !btnNext
+  )
+    return;
   let currentIndex = 0;
 
   let isTouching = false;
@@ -92,14 +96,11 @@ function toSlotsGame(){
   btnPrev.addEventListener("click", () => changeSlide(-1));
   btnNext.addEventListener("click", () => changeSlide(1));
 
-
   function goToSlide(index) {
     currentIndex = index;
     sliderTrack.style.transition = "transform 0.3s ease";
     sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateDots();
-
-
   }
 
   function updateDots() {
@@ -133,7 +134,6 @@ function toSlotsGame(){
 
   createDots();
 
-
   function initSlider() {
     createDots();
     updateSlider();
@@ -156,11 +156,12 @@ function toSlotsGame(){
     sliderTrack.addEventListener("touchend", setupAutoSlide);
 
     sliderTrack.addEventListener("touchstart", handleTouchStart);
- sliderTrack.addEventListener("touchmove", handleTouchMove, { passive: false });
+    sliderTrack.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
 
     sliderTrack.addEventListener("touchend", handleTouchEnd);
   }
-
 
   function handleTouchStart(e) {
     isTouching = true;
@@ -170,15 +171,14 @@ function toSlotsGame(){
     cancelAnimationFrame(animationID);
   }
 
-
- function handleTouchMove(e) {
-  if (!isTouching) return;
-  e.preventDefault(); // <- Necesario con passive: false
-  const currentX = e.touches[0].clientX;
-  const delta = currentX - startX;
-  currentTranslate = prevTranslate + delta;
-  sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-}
+  function handleTouchMove(e) {
+    if (!isTouching) return;
+    e.preventDefault(); // <- Necesario con passive: false
+    const currentX = e.touches[0].clientX;
+    const delta = currentX - startX;
+    currentTranslate = prevTranslate + delta;
+    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
+  }
 
   function handleTouchEnd() {
     isTouching = false;
@@ -197,6 +197,4 @@ function toSlotsGame(){
   function stopAutoSlide() {
     clearInterval(window.autoSlideInterval);
   }
-
-
 })();

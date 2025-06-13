@@ -1,243 +1,244 @@
 .footer {
-    background-color: black;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #ffffff;
-    padding: 40px 20px 20px;
-    width: 100%;
-    position: absolute;
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  width: 100%;
+  position: absolute;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  max-width: 100%;
+  margin-top: 100px;
+  font-size: 150%;
+}
+
+.footer .footer-logo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-right: 227px;
+}
+
+.footer .footer-logo img {
+  width: 120%;
+}
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer .footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer .footer-section ul li a:hover {
+  opacity: 0.4;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  opacity: 0.6;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer .footer-icons a:hover {
+  color: rgb(170, 91, 250);
+}
+
+.footer .footer-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 0px 0px;
+}
+
+
+.footer .footer-subscriber {
+  display: grid;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 100px;
+}
+
+.footer .footer-subscriber-email {
+  display: flex;
+}
+
+.footer .footer-subscriber label {
+  justify-self: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.footer .footer-subscriber input {
+  width: 600px;
+  height: 60px;
+  border-radius: 10px 0px 0px 10px;
+  border: 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.footer .footer-subscriber .boton-suscribete {
+  background-color: #fff;
+  color: #5000fc;
+  width: auto;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  height: 60px;
+  justify-self: start;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-subscriber .boton-suscribete:hover {
+  background-color: #fff;
+  color: #5000fc;
+  background-color: #5000fc;
+  color: white;
+}
+
+.footer .footer-logos-legales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+@media (max-width :1300px) {
+
+  .footer .footer-logo {
+    margin-right: 50px;
   }
-  
+
+  .footer .footer-subscriber input {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+@media (max-width :1104px) {
+  .footer {
+    height: 760px;
+  }
+
+  .footer .footer-subscriber button {
+    height: auto;
+  }
+
   .footer .footer-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4%;
-    max-width: 100%;
-    margin-top: 100px;
-    font-size: 150%;
+    font-size: 100%;
   }
-  
-  .footer .footer-logo {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-right: 227px;
-  }
-  
-  .footer .footer-logo img {
-    width: 120%;
-  }
-  
-   .footer .footer-section ul {
+
+  .footer-section ul {
     list-style: none;
     padding: 0;
+    line-height: 0.8rem;
   }
-  
-   .footer .footer-section ul li {
-    margin-bottom: 8px;
+
+  .footer .footer-bottom {
+    margin-top: 20%;
   }
-  
-   .footer .footer-section ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: opacity 0.3s;
+
+}
+
+@media (max-width: 900px) {
+
+  .footer {
+    height: auto;
+    padding: 40px 20px;
   }
-  
-  .footer .footer-section ul li a:hover {
-    opacity: 0.4;
+
+
+  .footer .footer-subscriber {
+    margin-bottom: 30px;
+    height: auto;
   }
-  
+
+  .footer .footer-subscriber input {
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .footer .footer-subscriber .boton-suscribete {
+    height: 50px;
+  }
+
+  .footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100%;
+    gap: 30px;
+  }
+
+  .footer .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer .footer-logo img {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section ul {
+    padding: 0;
+    line-height: 1.5rem;
+  }
+
+  .footer .footer-logos-legales {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .footer .footer-logos-legales img {
+    width: 100%;
+  }
+
   .footer .footer-bottom {
     text-align: center;
-    opacity: 0.6;
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+    margin-top: 60%;
   }
-  
-  .footer a {
-    color: white;
-  }
-  
-  .footer .footer-icons a:hover {
-    color: rgb(170, 91, 250);
-  }
-  
-   .footer .footer-icons {
-    display: flex;
-    justify-content: center;
-    padding: 0px 0px 0px 0px;
-  }
-  
-  
-  .footer .footer-subscriber {
-    display: grid;
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-    height: 100px;
-  }
-  
-   .footer .footer-subscriber-email {
-   display: flex;
-  }
-
-  .footer .footer-subscriber label {
-    justify-self: center;
-    padding-bottom: 10px;
-    font-size: 20px;
-  }
-  
-  .footer .footer-subscriber input {
-    width: 600px;
-    height: 60px;
-    border-radius: 10px 0px 0px 10px;
-    border: 0;
-    font-size: 40px;
-    font-weight: bold;
-    font-style: italic;
-  }
-  .footer .footer-subscriber .boton-suscribete {
-    background-color: #fff;
-    color: #5000fc;
-    width: auto;
-    border: 0;
-    padding: 10px 20px;
-    border-radius: 0 10px 10px 0; 
-    font-size: 20px;
-    cursor: pointer;
-    height: 60px; 
-   justify-self: start; 
-   transition: background-color 0.3s, color 0.3s; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  }
-
-  .footer .footer-subscriber .boton-suscribete:hover {
-    background-color: #fff;
-    color: #5000fc;
-    background-color: #5000fc; 
-    color: white;
-  }
-  
-  .footer .footer-logos-legales {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    margin-top: 10%;
-    margin-bottom: 5%;
-  }
-  
-  @media (max-width :1300px) {
-  
-    .footer .footer-logo {
-      margin-right: 50px;
-    }
-  
-    .footer .footer-subscriber input {
-      width: 100%;
-      height: 60px;
-    }
-  }
-  
-  @media (max-width :1104px) {
-    .footer {
-      height: 760px;
-    }
-  
-    .footer .footer-subscriber button {
-      height: auto;
-    }
-    
-    .footer .footer-content {
-      display: flex;
-      font-size: 100%;
-    }
-  
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-      line-height: 0.8rem;
-    }
-    .footer .footer-bottom {
-      margin-top: 20%;
-    }
-  
-  }
-  
-  @media (max-width: 900px) {
-
-    .footer {
-      height: auto;
-      padding: 40px 20px;
-    }
-  
-   
-    .footer .footer-subscriber {
-      margin-bottom: 30px;
-      height: auto;
-    }
-  
-    .footer .footer-subscriber input {
-      font-size: 20px;
-      height: 50px;
-    }
-
-    .footer .footer-subscriber .boton-suscribete {
-      height: 50px; 
-    }
-  
-    .footer .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 100%;
-      gap: 30px;
-    }
-  
-    .footer .footer-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: 0;
-    }
-  
-    .footer .footer-logo img {
-      width: 80%;
-      margin-bottom: 10px;
-    }
-  
-    .footer-section {
-      text-align: center;
-    }
-  
-    .footer-section ul {
-      padding: 0;
-      line-height: 1.5rem;
-    }
-  
-    .footer .footer-logos-legales {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 40px 0;
-    }
-  
-    .footer .footer-logos-legales img {
-      width: 100%;
-    }
-  
-    .footer .footer-bottom {
-      text-align: center;
-      margin-top: 60%;
-    }
-  }
-  
+}

@@ -27,5 +27,3 @@ document.addEventListener("click", (event) => {
     window.location.hash = ruta; // actualiza la URL
   }
 });
-
-
