@@ -142,11 +142,9 @@ html {
 /* TRANSICION DE ITEMS */
 
 .titulo {
-  opacity: 0;
-  /* Empieza oculto */
+ opacity: 0;
   transform: translateY(50px);
-  /* Opcional: empieza más abajo */
-  transition: transform 1.5s ease-out, opacity 0.2s ease-out;
+  transition: all 0.5s ease;
 }
 
 .titulor {

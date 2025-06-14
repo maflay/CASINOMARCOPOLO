@@ -89,7 +89,14 @@
     const imgB = b.split("/").pop();
     const imgC = c.split("/").pop();
 
-    if (imgA === imgB && imgB === imgC) {
+    if (
+      imgA === imgB &&
+      imgA === imgC &&
+      imgB === imgA &&
+      imgB === imgC &&
+      imgC === imgA &&
+      imgC === imgB
+    ) {
       Swal.fire({
         title: "🎉 ¡Ganaste!",
         text: "Combinacion exitosa",

@@ -369,3 +369,11 @@
     }
 
 }
+
+@media (max-width: 389px) {
+    .to-promo .next-to-promo h2 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+}
