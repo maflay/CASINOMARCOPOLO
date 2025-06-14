@@ -418,8 +418,9 @@
     align-items: center;
   }
 
-  .ubicaciones-movil .card-ubicacion .card-ubicacion-text a {
+  .ubicaciones-movil .card-ubicacion .card-ubicacion-text p {
     color: #fff;
+    text-decoration: underline;
   }
 
   .ocultar {

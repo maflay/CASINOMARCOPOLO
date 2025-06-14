@@ -50,8 +50,13 @@
 }
 
 .content-casin-text img {
-  width: 100%;
+  width: 70%;
 }
+
+.content-casin-text h1 {
+  font-size: 2.1rem;
+}
+
 
 .content-casin-text p {
   text-align: justify;
@@ -97,15 +102,6 @@
   animation: scroll 20s linear infinite;
 }
 
-.carousel-track img {
-  width: 300px;
-  /* o 100% según necesidad */
-  height: 100%;
-  object-fit: cover;
-  margin-right: 10px;
-  border-radius: 10px;
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -115,6 +111,16 @@
     transform: translateX(-50%);
   }
 }
+
+.carousel-track img {
+  width: 300px;
+  /* o 100% según necesidad */
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
 
 
 .carousel-container:hover .carousel-track {
@@ -229,7 +235,6 @@
     width: 100%;
   }
 
-
 }
 
 @media (max-width: 380px) {
@@ -264,5 +269,10 @@
     height: auto;
     text-align: center;
   }
+
+  .carousel-track .content-track {
+    height: 190px;
+  }
+
 
 }

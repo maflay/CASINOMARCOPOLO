@@ -102,18 +102,17 @@ function toDadosPoker() {
 
     sliderTrack.addEventListener("touchend", handleTouchEnd);
   }
-
   function handleTouchStart(e) {
     isTouching = true;
     startX = e.touches[0].clientX;
-    prevTranslate = currentIndex * -sliderTrack.offsetWidth;
-    sliderTrack.style.transition = "none"; // solo aquí
+    prevTranslate = -currentIndex * sliderTrack.clientWidth;
+    sliderTrack.style.transition = "none";
     cancelAnimationFrame(animationID);
   }
 
   function handleTouchMove(e) {
     if (!isTouching) return;
-    e.preventDefault(); // <- Necesario con passive: false
+    e.preventDefault();
     const currentX = e.touches[0].clientX;
     const delta = currentX - startX;
     currentTranslate = prevTranslate + delta;
@@ -123,7 +122,7 @@ function toDadosPoker() {
   function handleTouchEnd() {
     isTouching = false;
     const movedBy = currentTranslate - prevTranslate;
-    const threshold = sliderTrack.offsetWidth * 0.2;
+    const threshold = sliderTrack.clientWidth * 0.2;
 
     if (movedBy < -threshold && currentIndex < slides.length - 1) {
       currentIndex++;
@@ -131,6 +130,7 @@ function toDadosPoker() {
       currentIndex--;
     }
 
+    sliderTrack.style.transition = "transform 0.3s ease";
     updateSlider();
   }
 

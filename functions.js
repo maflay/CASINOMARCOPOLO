@@ -72,6 +72,16 @@ const PageLoader = {
         if (ruta.js) cargarScriptVista(ruta.js);
         mainContent.innerHTML = html;
         capturarCorreoDesdeURL();
+        document
+          .querySelectorAll(".titulo, .titulor, .titulol")
+          .forEach((el, index) => {
+            el.dataset.id = `anim-${index}`;
+          });
+
+        // Ejecutar animaciones iniciales tras cargar vista
+        animarScroll(".titulo", "y");
+        animarScroll(".titulor", "x-right");
+        animarScroll(".titulol", "x-left");
         setTimeout(() => {
           loading.style.display = "none";
         }, 400);
@@ -115,97 +125,30 @@ window.addEventListener("hashchange", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // PARA CARGAR EL MENU Y PIE DE PÁGINA EN EL DOM
   cargarHeaderYFooter();
 
   if (!window.location.hash) {
     navegarA("home");
   }
 
-  //   ANIMACIONES
-
-  window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulo");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-        const translateY = Math.max(50 - scrollY * 0.1, 0);
-
-        el.style.transform = `translateY(${translateY}px)`;
-        el.style.opacity = opacity;
-
-        // Cuando la animación ya llegó al máximo, marcamos como terminado
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
+  // Asignar IDs únicos a elementos animables
+  document
+    .querySelectorAll(".titulo, .titulor, .titulol")
+    .forEach((el, index) => {
+      el.dataset.id = `anim-${index}`;
     });
+
+  // Scroll
+  window.addEventListener("scroll", () => {
+    animarScroll(".titulo", "y");
+    animarScroll(".titulor", "x-right");
+    animarScroll(".titulol", "x-left");
   });
 
-  window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulor");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-
-        // Horizontal: desde +100px a 0px
-        const translateX = Math.max(50 - scrollY * 0.1, 0);
-
-        el.style.transform = `translateX(${translateX}px)`;
-        el.style.opacity = opacity;
-
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
-    });
-  });
-
-  window.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".titulol");
-
-    elements.forEach((el) => {
-      if (el.dataset.animated === "true") {
-        return;
-      }
-
-      const rect = el.getBoundingClientRect();
-      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-      if (inViewport) {
-        const scrollY = window.scrollY;
-        const opacity = Math.min(scrollY / 500, 1);
-
-        // Horizontal: desde -100px a 0px (hacia la izquierda)
-        const translateX = Math.min(-50 + scrollY * 0.1, 0);
-
-        el.style.transform = `translateX(${translateX}px)`;
-        el.style.opacity = opacity;
-
-        if (opacity >= 1) {
-          el.dataset.animated = "true";
-        }
-      }
-    });
-  });
+  // En carga inicial
+  animarScroll(".titulo", "y");
+  animarScroll(".titulor", "x-right");
+  animarScroll(".titulol", "x-left");
 });
 
 function animarScroll(selector, direccion = "y") {
@@ -253,7 +196,6 @@ function animarScroll(selector, direccion = "y") {
     }
   });
 }
-
 
 function cargarHeaderYFooter() {
   const mainFooter = document.getElementById("main-footer");

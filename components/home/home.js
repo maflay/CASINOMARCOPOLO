@@ -172,3 +172,34 @@ function toGiroDorado() {
 function toDadosPoker() {
   navegarA("dadospoker");
 }
+
+(() => {
+  const btnToBarraMvil = document.getElementById("toBarraMovil");
+  const btnToBogMvil = document.getElementById("toBogMovil");
+  const btnToCaliSMvil = document.getElementById("toCaliSMovil");
+  const btnToCaliOMvil = document.getElementById("toCaliOMovil");
+
+  if (btnToBarraMvil) {
+    btnToBarraMvil.addEventListener("click", () => {
+      navegarA("barranquilla");
+    });
+  }
+
+  if (btnToBogMvil) {
+    btnToBogMvil.addEventListener("click", () => {
+      navegarA("bogota");
+    });
+  }
+
+  if (btnToCaliSMvil) {
+    btnToCaliSMvil.addEventListener("click", () => {
+      navegarA("calisur");
+    });
+  }
+
+  if (btnToCaliOMvil) {
+    btnToCaliOMvil.addEventListener("click", () => {
+      navegarA("calioeste");
+    });
+  }
+})();

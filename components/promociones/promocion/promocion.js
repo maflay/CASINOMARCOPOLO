@@ -5,6 +5,7 @@
 
   const btnPrev = document.getElementById("btn-prev");
   const btnNext = document.getElementById("btn-next");
+
   if (
     !sliderTrack ||
     slides.length === 0 ||
@@ -124,5 +125,29 @@
 
   function stopAutoSlide() {
     clearInterval(window.autoSlideInterval);
+  }
+})();
+
+(() => {
+  const btnNext1 = document.getElementById("next-to-1");
+  const btnNext2 = document.getElementById("next-to-2");
+  const btnNext3 = document.getElementById("next-to-3");
+
+  if (btnNext1) {
+    btnNext1.addEventListener("click", () => {
+      navegarA("lampara");
+    });
+  }
+
+  if (btnNext2) {
+    btnNext2.addEventListener("click", () => {
+      navegarA("girodorado");
+    });
+  }
+
+  if (btnNext3) {
+    btnNext3.addEventListener("click", () => {
+      navegarA("dadospoker");
+    });
   }
 })();
