@@ -1,48 +1,49 @@
-function sliderUbi(){
 
-  const sliderTrack = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
-  const dotsContainer = document.getElementById("dots");
-  const visibleSlides = window.matchMedia("(max-width: 768px)").matches ? 1 : 3;
-  const totalPages = Math.ceil(slides.length / visibleSlides);
-  let currentPage = 0; // cambia este nombre para evitar confusión con slideIndex
+function sliderPromo2(){
+
+  const sliderTracklamp = document.getElementById("sliderTrackgiro");
+  const slideslamp = document.querySelectorAll(".slidegiro");
+  const btnPrevlamp = document.getElementById("btn-prevgiro");
+  const btnNextlamp = document.getElementById("btn-nextgiro");
+  const dotsContainerlamp = document.getElementById("dotsgiro");
+  const visibleSlideslamp = window.matchMedia("(max-width: 768px)").matches ? 1 : 3;
+  const totalPageslamp = Math.ceil(slideslamp.length / visibleSlideslamp);
+  let currentPagelamp = 0; // cambia este nombre para evitar confusión con slideIndex
 
   console.log(window.innerWidth, "resolucion");
   console.log(window.matchMedia("(max-width: 768px)").matches, "resolucion");
 
   function updateSlider() {
-    const percentage = (100 / visibleSlides) * currentPage;
-    sliderTrack.style.transform = `translateX(-${percentage}%)`;
+    const percentage = (100 / visibleSlideslamp) * currentPagelamp;
+    sliderTracklamp.style.transform = `translateX(-${percentage}%)`;
 
-    document.querySelectorAll(".dot").forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentPage);
+    document.querySelectorAll(".dotgiro").forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentPagelamp);
     });
   }
 
   function changeSlide(delta) {
-    currentPage = Math.max(0, Math.min(currentPage + delta, totalPages - 1));
+    currentPagelamp = Math.max(0, Math.min(currentPagelamp + delta, totalPageslamp - 1));
     updateSlider();
   }
 
   function autoSlide() {
-    currentPage = currentPage >= totalPages - 1 ? 0 : currentPage + 1;
+    currentPagelamp = currentPagelamp >= totalPageslamp - 1 ? 0 : currentPagelamp + 1;
     updateSlider();
   }
 
   function createDots() {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < totalPages; i++) {
+    dotsContainerlamp.innerHTML = "";
+    for (let i = 0; i < totalPageslamp; i++) {
       const dot = document.createElement("span");
-      dot.className = "dot";
+      dot.className = "dotgiro";
       if (i === 0) dot.classList.add("active");
       dot.addEventListener("click", () => {
-        currentPage = i;
+        currentPagelamp = i;
         resetAutoSlide();
         updateSlider();
       });
-      dotsContainer.appendChild(dot);
+      dotsContainerlamp.appendChild(dot);
     }
   }
 
@@ -54,23 +55,23 @@ function sliderUbi(){
   }
 
   // Botones
-  btnPrev.addEventListener("click", () => {
+  btnPrevlamp.addEventListener("click", () => {
     changeSlide(-1);
     resetAutoSlide();
   });
 
-  btnNext.addEventListener("click", () => {
+  btnNextlamp.addEventListener("click", () => {
     changeSlide(1);
     resetAutoSlide();
   });
 
   // Soporte touch
   let startX = 0;
-  sliderTrack.addEventListener("touchstart", (e) => {
+  sliderTracklamp.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
 
-  sliderTrack.addEventListener("touchend", (e) => {
+  sliderTracklamp.addEventListener("touchend", (e) => {
     const diff = e.changedTouches[0].clientX - startX;
     if (diff > 50) {
       changeSlide(-1);
@@ -85,7 +86,7 @@ function sliderUbi(){
   updateSlider();
 }
 
-sliderUbi();
+sliderPromo2();
 
 
 (() => {

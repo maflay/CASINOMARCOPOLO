@@ -184,40 +184,35 @@
     margin-top: 10px;
 }
 
-
 .slider-container {
-    align-items: center;
-    position: relative;
     overflow: hidden;
+    position: relative;
     width: 100%;
     max-width: 100%;
-    /* padding: 40px 0; */
 }
 
 .slider-track {
     display: flex;
-    width: 100%;
     transition: transform 0.5s ease;
+    width: 100%;
 }
 
-.slide {
-    flex: 0 0 100%;
-    min-width: 100%;
+.slide, .slidelamp, .slidegiro, .slidedados {
+    flex: 0 0 33.3333%;
     box-sizing: border-box;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 0 10px;
 }
 
 .card {
-    background: #222;
+    width: 100%;
+    background: #27314f;
     border: 2px solid #efb810;
     border-radius: 16px;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
     color: white;
-    width: 30%;
 }
 
 .card a {
@@ -228,7 +223,6 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block;
 }
 
 .card p {
@@ -247,7 +241,7 @@
     border: none;
     color: #efb810;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
 }
 
 .slider-nav.left {
@@ -261,21 +255,20 @@
 .dots {
     text-align: center;
     margin-top: 15px;
-    margin-bottom: 40px;
 }
 
-.dot {
+.dot, .dotlamp, .dotgiro, .dotdados {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 0 4px;
-    background-color: #555;
+    background: #777;
     border-radius: 50%;
+    margin: 0 5px;
     cursor: pointer;
 }
 
-.dot.active {
-    background-color: #efb810;
+.dot.active, .dotlamp.active, .dotgiro.active, .dotdados.active {
+    background: #efb810;
 }
 
 .scroll-down-indicator {
@@ -319,20 +312,14 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-    .slide {
+    .slide, .slidelamp, .slidegiro, .slidedados {
         flex: 0 0 100%;
-        justify-content: center;
     }
 
-    .slide .card {
-        display: none;
-        width: 90%;
-    }
-
-    .slide .card:first-child {
-        display: block;
+    .card {
+        width: 100%;
     }
 
     .promocion {
@@ -356,17 +343,6 @@
         margin-bottom: 20px;
     }
 
-    .section-slider-casinos {
-        text-align: center;
-        height: auto;
-    }
-
-    .slider-track {
-        touch-action: pan-y;
-        user-select: none;
-        cursor: grab;
-        transition: none;
-    }
 
 }
 

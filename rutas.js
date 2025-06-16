@@ -62,17 +62,17 @@ const rutasLimpias = {
   lampara: {
     html: "/components/promociones/promocion/lampara-suerte.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/lampara-suerte.js",
   },
   girodorado: {
     html: "/components/promociones/promocion/giro-dorado.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/giro-dorado.js",
   },
   dadospoker: {
     html: "/components/promociones/promocion/dados-poker.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/dados-poker.js",
   },
   juegos: {
     html: "/components/juegos/juegos.html",
