@@ -190,7 +190,6 @@
       }
     }
 
-    console.log(playerCards, "playerCards");
     if (playerScore == 8 || playerScore == 9) {
       return null;
     } else if (bankerScore == 8 || bankerScore == 9) {

@@ -21,7 +21,6 @@ function enviarFormularioContacto(e) {
     body: formData,
   })
     .then((res) => {
-      console.log(res.status, "status");
       if (res.status == 200 || res.status != 200) {
         form.reset(); // Limpia el formulario
         loading.style.display = "none";

@@ -1,17 +1,14 @@
-
-function sliderPromo2(){
-
+function sliderPromo2() {
   const sliderTracklamp = document.getElementById("sliderTrackgiro");
   const slideslamp = document.querySelectorAll(".slidegiro");
   const btnPrevlamp = document.getElementById("btn-prevgiro");
   const btnNextlamp = document.getElementById("btn-nextgiro");
   const dotsContainerlamp = document.getElementById("dotsgiro");
-  const visibleSlideslamp = window.matchMedia("(max-width: 768px)").matches ? 1 : 3;
+  const visibleSlideslamp = window.matchMedia("(max-width: 768px)").matches
+    ? 1
+    : 3;
   const totalPageslamp = Math.ceil(slideslamp.length / visibleSlideslamp);
   let currentPagelamp = 0; // cambia este nombre para evitar confusión con slideIndex
-
-  console.log(window.innerWidth, "resolucion");
-  console.log(window.matchMedia("(max-width: 768px)").matches, "resolucion");
 
   function updateSlider() {
     const percentage = (100 / visibleSlideslamp) * currentPagelamp;
@@ -23,12 +20,16 @@ function sliderPromo2(){
   }
 
   function changeSlide(delta) {
-    currentPagelamp = Math.max(0, Math.min(currentPagelamp + delta, totalPageslamp - 1));
+    currentPagelamp = Math.max(
+      0,
+      Math.min(currentPagelamp + delta, totalPageslamp - 1)
+    );
     updateSlider();
   }
 
   function autoSlide() {
-    currentPagelamp = currentPagelamp >= totalPageslamp - 1 ? 0 : currentPagelamp + 1;
+    currentPagelamp =
+      currentPagelamp >= totalPageslamp - 1 ? 0 : currentPagelamp + 1;
     updateSlider();
   }
 
@@ -87,7 +88,6 @@ function sliderPromo2(){
 }
 
 sliderPromo2();
-
 
 (() => {
   const btnNext1 = document.getElementById("next-to-1");

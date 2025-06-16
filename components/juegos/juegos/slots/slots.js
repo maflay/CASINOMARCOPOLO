@@ -36,10 +36,6 @@
 
     let lastSymbol = "";
 
-    // const lastVal = symbols.pop();
-    // var num = lastVal.split(".",1).pop();
-    // console.log(num, "num");
-
     // Cargar 4 símbolos
     for (let i = 0; i < symbols.length; i++) {
       const img = document.createElement("img");

@@ -9,9 +9,6 @@ function sliderUbi(){
   const totalPages = Math.ceil(slides.length / visibleSlides);
   let currentPage = 0; // cambia este nombre para evitar confusión con slideIndex
 
-  console.log(window.innerWidth, "resolucion");
-  console.log(window.matchMedia("(max-width: 768px)").matches, "resolucion");
-
   function updateSlider() {
     const percentage = (100 / visibleSlides) * currentPage;
     sliderTrack.style.transform = `translateX(-${percentage}%)`;

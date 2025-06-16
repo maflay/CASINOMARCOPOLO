@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       body: formData,
     })
       .then((response) => {
-        console.log(response.status, "status");
         if (response.status == 200) {
           loading.style.display = "none";
           Swal.fire({
@@ -65,130 +64,86 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 (() => {
-  const sliderTrack = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
-  const dotsContainer = document.getElementById("dots");
+  const sliderTrack = document.getElementById("sliderTrackpromo");
+  const slides = document.querySelectorAll(".slidepromo");
+  const btnPrev = document.getElementById("btn-prevpromo");
+  const btnNext = document.getElementById("btn-nextpromo");
+  const dotsContainer = document.getElementById("dotspromo");
 
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
-  if (
-    !sliderTrack ||
-    slides.length === 0 ||
-    !dotsContainer ||
-    !btnPrev ||
-    !btnNext
-  )
-    return;
   let currentIndex = 0;
+  const visibleSlides = window.innerWidth <= 768 ? 1 : 3;
+  const totalPages = Math.ceil(slides.length / visibleSlides);
+  const totalSteps = slides.length - visibleSlides;
 
-  let isTouching = false;
-  let startX = 0;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
-  let animationID;
+  function updateSlider() {
+    const percentage = (100 / visibleSlides) * currentIndex;
+    sliderTrack.style.transform = `translateX(-${percentage}%)`;
 
-  btnPrev.addEventListener("click", () => changeSlide(-1));
-  btnNext.addEventListener("click", () => changeSlide(1));
-
-  function goToSlide(index) {
-    currentIndex = index;
-    sliderTrack.style.transition = "transform 0.3s ease";
-    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateDots();
-  }
-
-  function updateDots() {
-    document.querySelectorAll(".dot").forEach((dot, i) => {
+    document.querySelectorAll(".dotpromo").forEach((dot, i) => {
       dot.classList.toggle("active", i === currentIndex);
     });
   }
 
-  function updateSlider() {
-    goToSlide(currentIndex);
+  function changeSlide(delta) {
+    currentIndex = Math.max(0, Math.min(currentIndex + delta, totalSteps));
+    updateSlider();
   }
 
-  function changeSlide(delta) {
-    currentIndex = (currentIndex + delta + slides.length) % slides.length;
+  function autoSlide() {
+    currentIndex = currentIndex >= totalSteps ? 0 : currentIndex + 1;
     updateSlider();
   }
 
   function createDots() {
     dotsContainer.innerHTML = "";
-    for (let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement("span");
-      dot.classList.add("dot");
+      dot.className = "dotpromo";
       if (i === 0) dot.classList.add("active");
       dot.addEventListener("click", () => {
         currentIndex = i;
         updateSlider();
+        resetAutoSlide();
       });
       dotsContainer.appendChild(dot);
     }
   }
 
-  createDots();
+  let autoSlideInterval = setInterval(autoSlide, 5000); // cada 5 segundos
 
-  function initSlider() {
-    createDots();
-    updateSlider();
-    setupTouchEvents();
-    setupAutoSlide();
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 5000);
   }
 
-  initSlider();
+  // Botones
+  btnPrev.addEventListener("click", () => {
+    changeSlide(-1);
+    resetAutoSlide();
+  });
 
-  function setupAutoSlide() {
-    if (window.autoSlideInterval) clearInterval(window.autoSlideInterval);
-    window.autoSlideInterval = setInterval(() => changeSlide(1), 6000);
-  }
+  btnNext.addEventListener("click", () => {
+    changeSlide(1);
+    resetAutoSlide();
+  });
 
-  function setupTouchEvents() {
-    if (sliderTrack.dataset.initialized) return;
-    sliderTrack.dataset.initialized = "true";
-
-    sliderTrack.addEventListener("touchstart", stopAutoSlide);
-    sliderTrack.addEventListener("touchend", setupAutoSlide);
-
-    sliderTrack.addEventListener("touchstart", handleTouchStart);
-    sliderTrack.addEventListener("touchmove", handleTouchMove, {
-      passive: false,
-    });
-
-    sliderTrack.addEventListener("touchend", handleTouchEnd);
-  }
-
-  function handleTouchStart(e) {
-    isTouching = true;
+  // Soporte touch
+  let startX = 0;
+  sliderTrack.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
-    prevTranslate = currentIndex * -sliderTrack.offsetWidth;
-    sliderTrack.style.transition = "none"; // solo aquí
-    cancelAnimationFrame(animationID);
-  }
+  });
 
-  function handleTouchMove(e) {
-    if (!isTouching) return;
-    e.preventDefault(); // <- Necesario con passive: false
-    const currentX = e.touches[0].clientX;
-    const delta = currentX - startX;
-    currentTranslate = prevTranslate + delta;
-    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  }
-
-  function handleTouchEnd() {
-    isTouching = false;
-    const movedBy = currentTranslate - prevTranslate;
-    const threshold = sliderTrack.offsetWidth * 0.2;
-
-    if (movedBy < -threshold && currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else if (movedBy > threshold && currentIndex > 0) {
-      currentIndex--;
+  sliderTrack.addEventListener("touchend", (e) => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (diff > 50) {
+      changeSlide(-1);
+      resetAutoSlide();
+    } else if (diff < -50) {
+      changeSlide(1);
+      resetAutoSlide();
     }
+  });
 
-    updateSlider();
-  }
-
-  function stopAutoSlide() {
-    clearInterval(window.autoSlideInterval);
-  }
+  createDots();
+  updateSlider();
 })();

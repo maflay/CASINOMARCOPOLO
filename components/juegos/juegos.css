@@ -199,96 +199,99 @@ td {
 }
 
 
+
 .slider-container {
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    /* padding: 40px 0; */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 .slider-track {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
 
-.slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 10px;
+.slidepromo {
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-    background: #27314f;
-    border: 2px solid #efb810;
-    border-radius: 16px;
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    width: 30%;
+  width: 100%;
+  background: #27314f;
+  border: 2px solid #efb810;
+  border-radius: 16px;
+  text-align: center;
+  overflow: hidden;
+  color: white;
 }
 
 .card a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card p {
-    padding: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #efb810;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #efb810;
 }
 
 .slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #efb810;
-    cursor: pointer;
-    z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #efb810;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .slider-nav.left {
-    left: 10px;
+  left: 10px;
 }
 
 .slider-nav.right {
-    right: 10px;
+  right: 10px;
 }
 
 .dots {
-    text-align: center;
-    margin-top: 15px;
+  text-align: center;
+  margin-top: 15px;
 }
 
-.dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    background-color: #555;
-    border-radius: 50%;
-    cursor: pointer;
+.dotpromo {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #777;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.dot.active {
-    background-color: #efb810;
+.dotpromo.active {
+  background: #efb810;
+}
+
+/* Vista móvil: mostrar solo 1 slide por vista */
+@media (max-width: 768px) {
+  .slidepromo {
+    flex: 0 0 100%;
+  }
 }
 
 
@@ -401,20 +404,6 @@ td {
 
     .title-mesas {
         height: 25vh;
-    }
-
-    .slide {
-        flex: 0 0 100%;
-        justify-content: center;
-    }
-
-    .slide .card {
-        display: none;
-        width: 90%;
-    }
-
-    .slide .card:first-child {
-        display: block;
     }
 
     .promocion-container {

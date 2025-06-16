@@ -10,9 +10,6 @@ function sliderPromo2(){
   const totalPageslamp = Math.ceil(slideslamp.length / visibleSlideslamp);
   let currentPagelamp = 0; // cambia este nombre para evitar confusión con slideIndex
 
-  console.log(window.innerWidth, "resolucion");
-  console.log(window.matchMedia("(max-width: 768px)").matches, "resolucion");
-
   function updateSlider() {
     const percentage = (100 / visibleSlideslamp) * currentPagelamp;
     sliderTracklamp.style.transform = `translateX(-${percentage}%)`;
