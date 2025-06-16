@@ -394,7 +394,7 @@
 
 /* Vista móvil: mostrar solo 1 slide por vista */
 @media (max-width: 768px) {
-  .slide {
+  .slidepromo {
     flex: 0 0 100%;
   }
 }
