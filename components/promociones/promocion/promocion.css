@@ -175,6 +175,54 @@
 }
 
 
+.scroll-down-indicator {
+  display: flex;
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: float 2s ease-in-out infinite;
+  z-index: 50;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  border: solid #efb810;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  opacity: 0.7;
+  animation: bounce 1.2s infinite ease-in-out;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(10px) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+
+
 @media (max-width: 767px) {
 
     .promocion {
