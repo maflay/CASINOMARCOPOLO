@@ -286,4 +286,14 @@ td {
     .slidepromo {
         flex: 0 0 100%;
     }
+
+    .apuesta-deportiva {
+        flex-direction: column-reverse;
+    }
+
+    .apuesta-deportiva .apuesta-rigth {
+        width: 100%;
+        height: 100%;
+    }
+
 }
