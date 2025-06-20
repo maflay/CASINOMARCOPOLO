@@ -1,7 +1,9 @@
 .fondo {
-   position: relative;
-  overflow: hidden; /* por seguridad */
-  min-height: 100vh; /* o lo que necesites */
+  position: relative;
+  overflow: hidden;
+  /* por seguridad */
+  min-height: 100vh;
+  /* o lo que necesites */
 }
 
 .fondo::before {
@@ -61,12 +63,12 @@
   height: 100%;
 }
 
-.efecto-gota-i{
+.efecto-gota-i {
   border-radius: 35% 35% 35% 0;
 }
 
 
-.efecto-gota-d{
+.efecto-gota-d {
   border-radius: 35% 35% 0 35%;
 }
 
@@ -128,7 +130,7 @@ ul {
 @media (max-width: 780px) {
 
 
-  .fondo::before{
+  .fondo::before {
     width: 100vw;
     height: 100vh;
     background-attachment: scroll;
@@ -177,6 +179,15 @@ ul {
     flex-direction: column-reverse;
   }
 
+  .efecto-gota-i {
+    border-radius: 0 0 0 0;
+  }
+
+
+  .efecto-gota-d {
+    border-radius: 0 0 0 0;
+  }
+
 }
 
 @media (max-width: 380px) {
@@ -199,4 +210,5 @@ ul {
     background-attachment: fixed;
 
   }
+
 }

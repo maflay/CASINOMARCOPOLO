@@ -1,85 +1,85 @@
-function inicializarSliderUbicaciones() {
-  const sliderTrack = document.getElementById("sliderTrackpromo");
-  const slides = document.querySelectorAll(".slidepromo");
-  const btnPrev = document.getElementById("btn-prevpromo");
-  const btnNext = document.getElementById("btn-nextpromo");
-  const dotsContainer = document.getElementById("dotspromo");
-
-  if (!sliderTrack || slides.length === 0) return;
+(() => {
+  const track = document.getElementById("sliderTrack");
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.getElementById("dotsContainer");
+  const btnPrev = document.getElementById("btn-prev");
+  const btnNext = document.getElementById("btn-next");
 
   let currentIndex = 0;
-  const visibleSlides = window.innerWidth <= 768 ? 1 : 3;
-  const totalPages = Math.ceil(slides.length / visibleSlides);
-  const totalSteps = slides.length - visibleSlides;
+
+  function getSlidesToShow() {
+    const width = window.innerWidth;
+    if (width <= 600) return 1;
+    if (width <= 1024) return 2;
+    return 3;
+  }
 
   function updateSlider() {
-    const percentage = (100 / visibleSlides) * currentIndex;
-    sliderTrack.style.transform = `translateX(-${percentage}%)`;
-
-    document.querySelectorAll(".dotpromo").forEach((dot, i) => {
+    const slidesToShow = getSlidesToShow();
+    const percentage = (100 / slidesToShow) * currentIndex;
+    track.style.transform = `translateX(-${percentage}%)`;
+    document.querySelectorAll(".dots button").forEach((dot, i) => {
       dot.classList.toggle("active", i === currentIndex);
     });
   }
 
-  function changeSlide(delta) {
-    currentIndex = Math.max(0, Math.min(currentIndex + delta, totalSteps));
+  function moveSlide(direction) {
+    const slidesToShow = getSlidesToShow();
+    const totalVisible = slides.length - slidesToShow + 1;
+
+    currentIndex += direction;
+    if (currentIndex >= totalVisible) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = totalVisible - 1;
+
     updateSlider();
   }
 
-  function autoSlide() {
-    currentIndex = currentIndex >= totalSteps ? 0 : currentIndex + 1;
-    updateSlider();
-  }
+  btnPrev.addEventListener("click", () => moveSlide(-1));
+  btnNext.addEventListener("click", () => moveSlide(1));
 
   function createDots() {
     dotsContainer.innerHTML = "";
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement("span");
-      dot.className = "dotpromo";
-      if (i === 0) dot.classList.add("active");
+    const slidesToShow = getSlidesToShow();
+    const totalVisible = slides.length - slidesToShow + 1;
+
+    for (let i = 0; i < totalVisible; i++) {
+      const dot = document.createElement("button");
       dot.addEventListener("click", () => {
         currentIndex = i;
         updateSlider();
-        resetAutoSlide();
       });
       dotsContainer.appendChild(dot);
     }
   }
 
-  let autoSlideInterval = setInterval(autoSlide, 5000);
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(autoSlide, 5000);
-  }
-
-  btnPrev.addEventListener("click", () => {
-    changeSlide(-1);
-    resetAutoSlide();
-  });
-
-  btnNext.addEventListener("click", () => {
-    changeSlide(1);
-    resetAutoSlide();
-  });
-
-  let startX = 0;
-  sliderTrack.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  sliderTrack.addEventListener("touchend", (e) => {
-    const diff = e.changedTouches[0].clientX - startX;
-    if (diff > 50) {
-      changeSlide(-1);
-      resetAutoSlide();
-    } else if (diff < -50) {
-      changeSlide(1);
-      resetAutoSlide();
-    }
+  window.addEventListener("resize", () => {
+    createDots();
+    updateSlider();
   });
 
   createDots();
   updateSlider();
-}
+})();
 
-inicializarSliderUbicaciones();
+(() => {
+  const btnToBarra = document.getElementById("toBarranUbi");
+  const btnToBog = document.getElementById("toBogotaUbi");
+  const btnToCals = document.getElementById("toCaliSUbi");
+  const btnToCali = document.getElementById("toCaliIUbi");
+
+  btnToBarra.addEventListener("click", () => {
+    navegarA("barranquilla");
+  });
+
+  btnToBog.addEventListener("click", () => {
+    navegarA("bogota");
+  });
+
+  btnToCals.addEventListener("click", () => {
+    navegarA("calisur");
+  });
+
+  btnToCali.addEventListener("click", () => {
+    navegarA("calioeste");
+  });
+})();

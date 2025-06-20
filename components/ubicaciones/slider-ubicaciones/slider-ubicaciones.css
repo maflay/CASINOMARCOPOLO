@@ -1,70 +1,52 @@
 
-.slider-container {
-  overflow: hidden;
+  .slider-container {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+  border-radius: 12px;
 }
 
-.slider-container .slider-track {
+.slider-track {
   display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.slider-container .slidepromo {
+.slide {
   flex: 0 0 33.3333%;
   box-sizing: border-box;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.slider-container .card {
-  width: 100%;
-  background: #27314f;
-  border: 2px solid #efb810;
-  border-radius: 16px;
-  text-align: center;
-  overflow: hidden;
-  color: white;
-}
-
-.slider-container .card a {
-  text-decoration: none;
-}
-
-.slider-container .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.slider-container .card p {
   padding: 10px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #efb810;
+  text-align: center;
+  color: #f0c26c;
+  font-family: sans-serif;
+  cursor: pointer;
 }
 
-.slider-container .slider-nav {
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid gold;
+}
+
+.arrowu {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 30px;
   background: none;
   border: none;
-  color: #efb810;
+  color: #f0c26c;
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 10;
 }
 
-.slider-container .slider-nav.left {
-  left: 10px;
+.arrowu.left {
+  left: 0;
 }
 
-.slider-container .slider-nav.right {
-  right: 10px;
+.arrowu.right {
+  right: 0;
 }
 
 .dots {
@@ -72,23 +54,29 @@
   margin-top: 15px;
 }
 
-.dotpromo {
-  display: inline-block;
+.dots button {
+  border: none;
+  background-color: #555;
   width: 10px;
   height: 10px;
-  background: #777;
-  border-radius: 50%;
   margin: 0 5px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.dotpromo.active {
-  background: #efb810;
+.dots .active {
+  background-color: #f0c26c;
 }
 
-/* Vista móvil: mostrar solo 1 slide por vista */
-@media (max-width: 768px) {
- .slider-container .slidepromo {
+/* Responsive */
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide {
     flex: 0 0 100%;
   }
 }

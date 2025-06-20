@@ -1,46 +1,25 @@
-<link rel="stylesheet" href="/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css">
-<section class="container">
-    <div class="section-slider-casinos">
-        <h1 style="text-align: center;" class="type2-h1">Te invitamos a conocer nuestros casinos</h1>
-        <br />
-        <div class="slider-container">
-            <button class="slider-nav left" id="btn-prevpromo">&#10094;</button>
-            <div class="slider-track" id="sliderTrackpromo">
-                <div class="slidepromo">
-                    <div class="card">
-                        <a href="#barranquilla">
-                            <img src="/resources/marcopoloBarranquilla.png" alt="" />
-                            <p>Barranquilla, Mallplaza Buenavista</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="slidepromo">
-                    <div class="card">
-                        <a href="#bogota">
-                            <img src="/resources/marcopoloBogota.png" alt="" />
-                            <p>Bogotá</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="slidepromo">
-                    <div class="card">
-                        <a href="#calisur">
-                            <img src="/resources/marcopoloHolguines.png" alt="" />
-                            <p>Cali Sur, Holguines T.C.</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="slidepromo">
-                    <div class="card">
-                        <a href="#calioeste">
-                            <img src="/resources/marcopoloLocalInter.png" alt="" />
-                            <p>Cali Oeste, Hotel Intercontinental</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <button class="slider-nav right" id="btn-nextpromo">&#10095;</button>
+<h1 style="text-align: center;" class="type2-h1">Te invitamos a conocer nuestros casinos</h1>
+<div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+        <div id="toBarranUbi" class="slide">
+            <img src="/resources/marcopoloBarranquilla.png" alt="Ruleta Digital" />
+            <p>Barranquilla, Mallplaza Buenavista</p>
         </div>
-        <div class="dots" id="dotspromo"></div>
+        <div id="toBogotaUbi" class="slide">
+            <img src="/resources/marcopoloBogota.png" alt="Ruleta" />
+            <p>Bogotá</p>
+        </div>
+        <div id="toCaliSUbi" class="slide">
+            <img src="/resources/marcopoloHolguines.png" alt="Máquinas" />
+            <p>Cali Sur, Holguines T.C.</p>
+        </div>
+        <div id="toCaliIUbi" class="slide">
+            <img src="/resources/marcopoloLocalInter.png" alt="Extra" />
+            <p>Cali Oeste, Hotel intercontinental</p>   
+        </div>
     </div>
-</section>
+    
+    <div class="dots" id="dotsContainer"></div>
+    <button id="btn-prev" class="arrowu left">⫷</button>
+    <button id="btn-next" class="arrowu right">⫸</button>
+</div>
