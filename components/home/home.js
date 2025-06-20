@@ -32,46 +32,6 @@ function saberMasPromo() {
     navegarA("calioeste");
   });
 })();
-// ENVIO DE CASH
-function enviocash() {
-  const form = document.getElementById("cash-unico");
-  const loading = document.getElementById("loading");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevenir redirección
-      const formData = new FormData(form);
-      loading.style.display = "flex";
-      fetch("/components/home/guardar.php", {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => {
-          if (response.status == 200 || response.status != 200) {
-            Swal.fire({
-              icon: "success",
-              title: "¡Éxito!",
-              text: "Datos enviados correctamente, Gracias.",
-            });
-            form.reset(); // Limpia el formulario
-            loading.style.display = "none"; //Oculta el loader
-          } else {
-            Swal.fire({
-              icon: "error",
-              title: "¡Error!",
-              text: "!Lo sentimos ha ocurrido un error. Inténtalo más tarde",
-            });
-            loading.style.display = "none"; //Oculta el loader
-          }
-        })
-        .catch((error) => {
-          alert("Error. Inténtalo más tarde", error.text);
-        });
-    });
-  }
-}
-
-enviocash();
 
 function sliderUbicaciones() {
   const trackubicacion = document.getElementById("sliderTrackubicacion");
@@ -161,18 +121,6 @@ function toGames() {
   navegarA("juegos");
 }
 
-function toLampara() {
-  navegarA("lampara");
-}
-
-function toGiroDorado() {
-  navegarA("girodorado");
-}
-
-function toDadosPoker() {
-  navegarA("dadospoker");
-}
-
 (() => {
   const btnToBarraMvil = document.getElementById("toBarraMovil");
   const btnToBogMvil = document.getElementById("toBogMovil");
@@ -202,4 +150,27 @@ function toDadosPoker() {
       navegarA("calioeste");
     });
   }
+})();
+
+(() => {
+  fetch("/components/promociones/promocion-view/promocion-view.html")
+    .then((res) => res.text())
+    .then((html) => {
+      const contenedor = document.getElementById("promocion-seccion");
+      contenedor.innerHTML = html;
+
+        const estilo = document.createElement("link");
+      estilo.rel = "stylesheet";
+      estilo.href = "/components/promociones/promocion-view/promocion-view.css";
+      document.head.appendChild(estilo);
+      // Cargar script dinámicamente
+      const script = document.createElement("script");
+      script.src = "/components/promociones/promocion-view/promocion-view.js";
+      script.onload = () => {
+        if (typeof window.inicializarSliderUbicaciones === "function") {
+          window.inicializarSliderUbicaciones();
+        }
+      };
+      document.body.appendChild(script);
+    });
 })();

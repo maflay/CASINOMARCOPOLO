@@ -1,5 +1,7 @@
 .fondo {
-  position: relative;
+   position: relative;
+  overflow: hidden; /* por seguridad */
+  min-height: 100vh; /* o lo que necesites */
 }
 
 .fondo::before {
@@ -9,14 +11,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, #1F253A, rgba(0, 0, 0, 0)),
+  background-image:
+    linear-gradient(to top, #1F253A, rgba(0, 0, 0, 0)),
     url(/resources/mymawi-mitad.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.3;
   z-index: -1;
   background-attachment: fixed;
-
 }
 
 .banner-obten-tarjeta {
@@ -45,16 +48,28 @@
   width: 100%;
   height: 100%;
   color: white;
+  gap: 30px;
 }
 
 .tarjeta-img {
   width: 40%;
+  padding: 20px;
 }
 
 .tarjeta-img img {
   width: 100%;
   height: 100%;
 }
+
+.efecto-gota-i{
+  border-radius: 35% 35% 35% 0;
+}
+
+
+.efecto-gota-d{
+  border-radius: 35% 35% 0 35%;
+}
+
 
 .tarjeta-desc {
   align-items: center;
@@ -109,116 +124,14 @@ ul {
 
 
 
-.slider-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-
-.slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
-}
-
-.slidepromo {
-  flex: 0 0 33.3333%;
-  box-sizing: border-box;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  width: 100%;
-  background: #27314f;
-  border: 2px solid #efb810;
-  border-radius: 16px;
-  text-align: center;
-  overflow: hidden;
-  color: white;
-}
-
-.card a {
-  text-decoration: none;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card p {
-  padding: 10px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #efb810;
-}
-
-.slider-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: #efb810;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.slider-nav.left {
-  left: 10px;
-}
-
-.slider-nav.right {
-  right: 10px;
-}
-
-.dots {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.dotpromo {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #777;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dotpromo.active {
-  background: #efb810;
-}
-
-
 
 @media (max-width: 780px) {
 
-  .fondo {
-    position: relative;
-  }
 
-  .fondo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, #1F253A, rgba(0, 0, 0, 0)),
-      url(/resources/fondo-movil.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.3;
-    z-index: -1;
-    background-attachment: fixed;
+  .fondo::before{
+    width: 100vw;
+    height: 100vh;
+    background-attachment: scroll;
   }
 
   .banner-obten-tarjeta .content-image {
@@ -233,12 +146,10 @@ ul {
     height: 75vh;
   }
 
-
   .content-image {
     width: 100%;
     height: 100%;
   }
-
 
   .desc-tarjeta {
     display: inline;
@@ -266,10 +177,6 @@ ul {
     flex-direction: column-reverse;
   }
 
-
-  .slidepromo {
-    flex: 0 0 100%;
-  }
 }
 
 @media (max-width: 380px) {

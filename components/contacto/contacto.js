@@ -1,5 +1,5 @@
 function enviarFormularioContacto(e) {
-  e.preventDefault(); // Evita que se recargue
+  e.preventDefault();
 
   const form = document.getElementById("formulario-contacto");
   const mensaje = document.getElementById("mensaje-contacto");
@@ -22,7 +22,7 @@ function enviarFormularioContacto(e) {
   })
     .then((res) => {
       if (res.status == 200 || res.status != 200) {
-        form.reset(); // Limpia el formulario
+        form.reset();
         loading.style.display = "none";
         Swal.fire({
           icon: "success",
@@ -42,5 +42,5 @@ function enviarFormularioContacto(e) {
       console.log("Error:", error);
     });
 
-  return false; // Previene el envío por defecto
+  return false;
 }

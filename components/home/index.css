@@ -10,9 +10,15 @@
 .video-hero {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 71vh;
   overflow: hidden;
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/resources/IMG_4653-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 .video-hero video {
   position: absolute;
@@ -136,7 +142,8 @@
   }
 
   .video-hero {
-    height: 80vh;
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/resources/IMG_4653-2-movil.jpg);
+    height: 70vh;
   }
 
   .scroll-down-indicator {
@@ -429,11 +436,6 @@
 
 }
 
-
-
-@media (max-width: 380px) {}
-
-
 /* TARJETA-MYMAWI */
 .container-tarjeta {
   display: flex;
@@ -530,125 +532,6 @@
 }
 
 
-/* PROMOCIONES */
-.promocion-container {
-  height: auto;
-  padding: 40px 20px;
-  background-color: #27314f;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.promo h1 {
-  color: white;
-  font-weight: 900;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-.card-view {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.card-view .card {
-  width: 350px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-20px);
-}
-
-.card-image {
-  height: 250px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-divider {
-  height: 2px;
-  background-color: #000;
-  width: 100%;
-}
-
-.card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-content h1 {
-  font-size: 1.3rem;
-}
-
-.card-content p {
-  font-size: 16px;
-  color: #1f253a;
-}
-
-
-@media (max-width: 768px) {
-
-  .promocion-container {
-    height: auto;
-    background-color: #27314f;
-
-  }
-
-  .card-view {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .promo h1 {
-    font-size: 2rem;
-  }
-
-  .card-view .card {
-    width: 100%;
-  }
-
-}
-
-@media (max-width: 480px) {
-  .promo h1 {
-    font-size: 1.6rem;
-  }
-
-  .card-content h1 {
-    font-size: 1.1rem;
-  }
-
-  .card-content p {
-    font-size: 14px;
-  }
-
-}
-
 .section-game {
   text-align: center;
   margin-bottom: 20px;
@@ -705,6 +588,13 @@
   .game {
     border: #6622F8 solid 5px;
     border-radius: 20px;
+    width: 150px;
+    height: 200px;
+  }
+
+  .game p {
+    width: 100%;
+    font-size: 1rem;
   }
 
   .game a {

@@ -8,10 +8,10 @@
 <body>
   <section class="section-ini">
     <section class="video-hero">
-      <video autoplay muted loop playsinline preload="none">
+      <!-- <video autoplay muted loop playsinline preload="none">
         <source src="/resources/MarcoPolo.mp4" type="video/mp4">
         Tu navegador no soporta el video.
-      </video>
+      </video> -->
       <div class="video-overlay"></div>
       <div class="video-content container">
         <div class="video-content-text item">
@@ -34,10 +34,10 @@
                 display: flex; 
                 justify-content: center;
                 padding: 20px;">
-        <h1 class="type2-h1">Ubicaciones</h1>
+        <h1 class="type2-h1 item">Ubicaciones</h1>
       </div>
       <div class="btn-ubicacion">
-        <button class="btn-design2" id="sedeBar">Barranquilla</button>
+        <button class="btn-design2 titulo" id="sedeBar">Barranquilla</button>
         <button class="btn-design2" id="sedeBog">Bogotá</button>
         <button class="btn-design2" id="sedeCas">Cali Sur</button>
         <button class="btn-design2" id="sedeCao">Cali Oeste</button>
@@ -113,8 +113,6 @@
                   <br />
                   <p class="type5-h1">📍 Av 1 oeste Nro 2-72</p>
                   <p class="type5-h1">📞 (602)28857458</p>
-
-
                 </div>
                 <div class="content-iframe">
                   <iframe
@@ -125,8 +123,6 @@
               </div>
             </div>
           </div>
-
-
 
           <!-- Radios -->
           <div class="navigationubicacion">
@@ -152,40 +148,41 @@
       </div>
     </div>
   </div>
+
   <section class="ubicaciones-ocultar">
     <div class="container">
       <div class="ubicaciones-movil">
-        <div class="card-ubicacion" id="toBarraMovil">
+        <div class="card-ubicacion titulor" id="toBarraMovil">
           <div class="card-ubicacion-text">
             <h1 class="type5-h1">Sede barranquilla</h1>
-            <p>Saber mas</p>
+            <p>Saber más</p>
           </div>
           <div class="card-ubicacion-img img-fondo1">
             <img src="/resources/marcopoloBarranquilla.png" />
           </div>
         </div>
-        <div class="card-ubicacion" id="toBogMovil">
+        <div class="card-ubicacion titulol" id="toBogMovil">
           <div class="card-ubicacion-text">
-            <h1 class="type5-h1">Sede bogota</h1>
-            <p>Saber mas</p>
+            <h1 class="type5-h1">Sede bogotá</h1>
+            <p>Saber más</p>
           </div>
           <div class="card-ubicacion-img img-fondo2">
             <img src="/resources/marcopoloBogota.png" />
           </div>
         </div>
-        <div class="card-ubicacion" id="toCaliSMovil">
+        <div class="card-ubicacion titulor" id="toCaliSMovil">
           <div class="card-ubicacion-text">
             <h1 class="type5-h1">Sede cali, sur</h1>
-            <p>Saber mas</p>
+            <p>Saber más</p>
           </div>
           <div class="card-ubicacion-img img-fondo3">
             <img src="/resources/marcopoloHolguines.png" />
           </div>
         </div>
-        <div class="card-ubicacion" id="toCaliOMovil">
+        <div class="card-ubicacion titulol" id="toCaliOMovil">
           <div class="card-ubicacion-text">
             <h1 class="type5-h1">Sede cali, Oeste</h1>
-            <p>Saber mas</p>
+            <p>Saber más</p>
           </div>
           <div class="card-ubicacion-img img-fondo4">
             <img src="/resources/marcopoloLocalInter.png" />
@@ -195,20 +192,15 @@
     </div>
   </section>
 
-
   <!-- TARJETA-MYMAWI -->
   <section class="container-tarjeta">
     <div class='box-container-tarjeta container'>
       <div class='box-left-tarjeta '>
-        <div class='box-left-tarjeta-content titulol' id="get-tarjeta" >
+        <div class='box-left-tarjeta-content titulol' id="get-tarjeta">
           <h1>Ven por<br />
             tu tarjeta<br />
             Mymawi</h1>
           <br />
-          <!-- <p>Con la Mymawi card siempre ganas,<br />
-            regístrate y obtén beneficios exclusivos para<br />
-            que tengas una experiencia completa en<br />
-            casino Marco Polo.</p> -->
           <br />
           <button class='btn-design1' onclick="ObtenerTarjeta()">Saber más</button>
         </div>
@@ -221,68 +213,13 @@
 
   <!-- PROMOCIONES -->
 
-  <section class="promocion-container">
-    <div class="promo">
-      <h1>Vive nuestras promociones</h1>
-    </div>
-    <section class="card-view titulo">
-      <section class="card">
-        <div class="card-image">
-          <img src="/resources/lamparadelasuerte.png" alt="Imagen 1" />
-        </div>
-        <div class="card-divider"></div>
-        <div class="card-content">
-          <h1 class="type4-h1">Lampara de la suerte</h1>
-          <p>
-            Descubre la magia de la Lámpara de la Suerte,
-            un símbolo de fortuna que ilumina tus mejores momentos.
-          </p>
-          <div style="text-align: center;margin-top: 20px;">
-            <button onclick="toLampara()" class="btn-design1">Conocer promoción</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-image">
-          <img src="/resources/girodorado.png" alt="Imagen 2" />
-        </div>
-        <div class="card-divider"></div>
-        <div class="card-content">
-          <h1 class="type4-h1">
-            Giro dorado
-          </h1>
-          <p>
-            Prepárate para vivir la emoción del Giro Dorado,
-            donde cada vuelta puede convertir tu momento en oro.
-          </p>
-          <div style="text-align: center;margin-top: 20px;">
-            <button onclick="toGiroDorado()" class="btn-design1">Conocer promoción</button>
-          </div>
-        </div>
-      </section>
-      <section class="card">
-        <div class="card-image">
-          <img src="/resources/dadospoker.png" alt="Imagen 2" />
-        </div>
-        <div class="card-divider"></div>
-        <div class="card-content">
-          <h1 class="type4-h1">
-            Dados de póker
-          </h1>
-          <p>
-            Lanza los Dados de Póker y deja que la suerte defina tu jugada maestra.
-          </p>
-          <div style="text-align: center;margin-top: 20px;">
-            <button onclick="toDadosPoker()" class="btn-design1">Conocer promoción</button>
-          </div>
-        </div>
-      </section>
-      <div style="text-align: centers;">
-        <button class="btn-design1" onclick="saberMasPromo()">Saber más</button>
-      </div>
+  <section style="background-color: #27314f;">
+    <section class="container"  id="promocion-seccion">
     </section>
   </section>
+
+
+  <!-- JUEGOS -->
   <section>
     <div class="container">
       <div class="section-game">
@@ -311,7 +248,7 @@
             </div>
             <div class="game">
               <div class="game-img">
-                <img src="/resources/hipodromo.jpg" />
+                <img src="/resources/IMG_4480.jpg" />
               </div>
               <p class="type5-h1">Hipódromo</p>
             </div>

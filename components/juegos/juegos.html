@@ -2,225 +2,114 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos Marco polo</title>
 </head>
 
 <body>
     <section class="fondo">
         <div class="container">
-            <div class="section-game">
-                <!-- <div class="title-game">
-                    <h1 class="type2-h1">Juegos</h1>
-                    <br />
-                    
-                </div> -->
-                <div class="content-games">
-                    <div class="mesas">
-                        <div style="text-align: center;" class="title-mesas">
-                            <h1 class="type2-h1">Juegos</h1>
-                            <br />
-                            <p class="type5-h1">En MARCO POLO puedes encontrar una gran variedad de juegos, servicios y
-                                ambientes diseñados para el entretenimiento y la emoción.</p>
-                        </div>
-                        <div class="content-mesas">
-                            <h1 style="text-align: center;" class="type2-h1">Mesas</h1>
-                            <div class="apuesta-deportiva view-reverse">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Baccarat</h1>
-                                    <p>Elegancia y sencillez con grandes emociones.
-                                        Apuesta por el jugador, la banca o el empate y deja que las cartas hablen.</p>
-                                    <div style="justify-content: flex-end;" class="apuesta-buttons">
-                                        <button onclick=" toBaccarat()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/baccarat-carrusel.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                            <div class="apuesta-deportiva">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Blackjack</h1>
-                                    <p>El clásico de los casinos. Suma 21, vence al crupier y disfruta de una
-                                        experiencia rápida, estratégica y emocionante.</p>
-                                    <div style="justify-content: flex-start;" class="apuesta-buttons">
-                                        <button onclick="toBlackjack()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/blackjack-carrusel.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                            <div class="apuesta-deportiva view-reverse">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Ruleta</h1>
-                                    <p>¡Siente la emoción de cada giro! La Ruleta Americana te espera con su doble cero,
-                                        giros vertiginosos y la adrenalina de apostar al rojo, negro o tu número de la
-                                        suerte. ¡Haz tu jugada y deja que la suerte decida!</p>
-                                    <div style="justify-content: flex-end;" class="apuesta-buttons">
-                                        <button onclick="toRuleta()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/ruleta.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                            <div class="divider-section-section"></div>
-                            <section class="promocion-container">
-                                <div class="promo">
-                                    <h1>Vive nuestras promociones</h1>
-                                </div>
-                                <section class="card-view titulo">
-                                    <section class="card2">
-                                        <div class="card-image">
-                                            <img src="/resources/lamparadelasuerte.png" alt="Imagen 1" />
-                                        </div>
-                                        <div class="card-divider"></div>
-                                        <div class="card-content">
-                                            <h1 class="type4-h1">Lampara de la suerte</h1>
-                                            <p>
-                                                Descubre la magia de la Lámpara de la Suerte,
-                                                un símbolo de fortuna que ilumina tus mejores momentos.
-                                            </p>
-                                            <div style="text-align: center;margin-top: 20px;">
-                                                <button onclick="toLampara()" class="btn-design1">Conocer
-                                                    promoción</button>
-                                            </div>
-                                        </div>
-                                    </section>
-
-                                    <section class="card2">
-                                        <div class="card-image">
-                                            <img src="/resources/girodorado.png" alt="Imagen 2" />
-                                        </div>
-                                        <div class="card-divider"></div>
-                                        <div class="card-content">
-                                            <h1 class="type4-h1">
-                                                Giro dorado
-                                            </h1>
-                                            <p>
-                                                Prepárate para vivir la emoción del Giro Dorado,
-                                                donde cada vuelta puede convertir tu momento en oro.
-                                            </p>
-                                            <div style="text-align: center;margin-top: 20px;">
-                                                <button onclick="toGiroDorado()" class="btn-design1">Conocer
-                                                    promoción</button>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <section class="card2">
-                                        <div class="card-image">
-                                            <img src="/resources/dadospoker.png" alt="Imagen 2" />
-                                        </div>
-                                        <div class="card-divider"></div>
-                                        <div class="card-content">
-                                            <h1 class="type4-h1">
-                                                Dados de póker
-                                            </h1>
-                                            <p>
-                                                Lanza los Dados de Póker y deja que la suerte defina tu jugada maestra.
-                                            </p>
-                                            <div style="text-align: center;margin-top: 20px;">
-                                                <button onclick="toDadosPoker()" class="btn-design1">Conocer
-                                                    promoción</button>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <div style="text-align: centers;">
-                                        <button class="btn-design1" onclick="saberMasPromo()">Saber más</button>
-                                    </div>
-                                </section>
-                            </section>
-                            <div class="divider-section-section"></div>
-                            <div class="apuesta-deportiva">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Hipódromo</h1>
-                                    <p>¡Vive la pasión de las carreras! Apuesta por tu caballo favorito y siente la
-                                        emoción de la velocidad y la victoria en cada galope.</p>
-                                    <div style="justify-content: flex-start;" class="apuesta-buttons">
-                                        <button onclick="toHipodromo()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/hipodromo.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                            <div class="apuesta-deportiva view-reverse">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Poker</h1>
-                                    <p>Estrategia, intuición y nervios de acero. Enfrenta a otros jugadores y demuestra
-                                        quién domina la mesa con la mejor mano.</p>
-                                    <div style="justify-content: flex-end;" class="apuesta-buttons">
-                                        <button onclick="toPoker()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/poker.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                            <h1 style="text-align: center;" class="type2-h1">Slots</h1>
-                            <div class="apuesta-deportiva">
-                                <div class="apuesta-left">
-                                    <h1 class="type2-h1">Slots</h1>
-                                    <p>Luces, sonidos y premios instantáneos. Gira los rodillos y descubre si hoy es tu
-                                        día de suerte con cada tirada.</p>
-                                    <div style="justify-content: flex-start;" class="apuesta-buttons">
-                                        <button onclick="toSlots()" class="btn-design1">Ver reglas >></button>
-                                    </div>
-                                </div>
-                                <div class="apuesta-rigth item">
-                                    <img src="/resources/slots.png" alt="Casino Marco Polo 1" />
-                                </div>
-                            </div>
-                        </div>
+            <div style="text-align: center;" class="title-mesas item">
+                <h1 class="type2-h1">Juegos</h1>
+                <br />
+                <p class="type5-h1">En MARCO POLO puedes encontrar una gran variedad de juegos, servicios y
+                    ambientes diseñados para el entretenimiento y la emoción.</p>
+            </div>
+            <h1 style="text-align: center;" class="type2-h1 item">Mesas</h1>
+            <div class="apuesta-deportiva view-reverse">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Baccarat</h1>
+                    <p>Elegancia y sencillez con grandes emociones.
+                        Apuesta por el jugador, la banca o el empate y deja que las cartas hablen.</p>
+                    <div style="justify-content: flex-end;" class="apuesta-buttons">
+                        <button onclick=" toBaccarat()" class="btn-design1 titulol">Ver reglas
+                            >></button>
                     </div>
                 </div>
+                <div class="apuesta-rigth titulol">
+                    <img src="/resources/IMG_4593.jpg" alt="Casino Marco Polo 1" />
+                </div>
             </div>
-        </div>
-        <section class="container">
-        <div class="section-slider-casinos">
-          <h1 style="text-align: center;" class="type2-h1">Te invitamos a conocer nuestros casinos</h1>
-          <br />
-          <div class="slider-container">
-            <button class="slider-nav left" id="btn-prevpromo">&#10094;</button>
-            <div class="slider-track" id="sliderTrackpromo">
-              <div class="slidepromo">
-                <div class="card">
-                  <a href="#barranquilla">
-                    <img src="/resources/marcopoloBarranquilla.png" alt="" />
-                    <p>Barranquilla, Mall plaza Buenavista</p>
-                  </a>
+            <div class="apuesta-deportiva">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Blackjack</h1>
+                    <p>El clásico de los casinos. Suma 21, vence al crupier y disfruta de una
+                        experiencia rápida, estratégica y emocionante.</p>
+                    <div style="justify-content: flex-start;" class="apuesta-buttons">
+                        <button onclick="toBlackjack()" class="btn-design1 titulor">Ver reglas
+                            >></button>
+                    </div>
                 </div>
-              </div>
-              <div class="slidepromo">
-                <div class="card">
-                  <a href="#bogota">
-                    <img src="/resources/marcopoloBogota.png" alt="" />
-                    <p>Bogotá</p>
-                  </a>
+                <div class="apuesta-rigth item">
+                    <img src="/resources/blackjack-carrusel.png" alt="Casino Marco Polo 1" />
                 </div>
-              </div>
-              <div class="slidepromo">
-                <div class="card">
-                  <a href="#calisur">
-                    <img src="/resources/marcopoloHolguines.png" alt="" />
-                    <p>Cali Sur, Holguines T.C.</p>
-                  </a>
-                </div>
-              </div>
-              <div class="slidepromo">
-                <div class="card">
-                  <a href="#calioeste">
-                    <img src="/resources/marcopoloLocalInter.png" alt="" />
-                    <p>Cali Oeste, Hotel Intercontinental</p>
-                  </a>
-                </div>
-              </div>
             </div>
-            <button class="slider-nav right" id="btn-nextpromo">&#10095;</button>
-          </div>
-          <div class="dots" id="dotspromo"></div>
+            <div class="apuesta-deportiva view-reverse">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Ruleta</h1>
+                    <p>¡Siente la emoción de cada giro! La Ruleta Americana te espera con su doble cero,
+                        giros vertiginosos y la adrenalina de apostar al rojo, negro o tu número de la
+                        suerte. ¡Haz tu jugada y deja que la suerte decida!</p>
+                    <div style="justify-content: flex-end;" class="apuesta-buttons">
+                        <button onclick="toRuleta()" class="btn-design1 titulol">Ver reglas >></button>
+                    </div>
+                </div>
+                <div class="apuesta-rigth item">
+                    <img src="/resources/ruleta.png" alt="Casino Marco Polo 1" />
+                </div>
+            </div>
+            <div class="divider-section-section"></div>
+            <section id="promocion-seccion">
+            </section>
+            <div class="divider-section-section"></div>
+
+            <div class="apuesta-deportiva">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Hipódromo</h1>
+                    <p>¡Vive la pasión de las carreras! Apuesta por tu caballo favorito y siente la
+                        emoción de la velocidad y la victoria en cada galope.</p>
+                    <div style="justify-content: flex-start;" class="apuesta-buttons">
+                        <button onclick="toHipodromo()" class="btn-design1 titulor">Ver reglas
+                            >></button>
+                    </div>
+                </div>
+                <div class="apuesta-rigth item">
+                    <img src="/resources/hipodromo.png" alt="Casino Marco Polo 1" />
+                </div>
+            </div>
+            <div class="apuesta-deportiva view-reverse">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Poker</h1>
+                    <p>Estrategia, intuición y nervios de acero. Enfrenta a otros jugadores y demuestra
+                        quién domina la mesa con la mejor mano.</p>
+                    <div style="justify-content: flex-end;" class="apuesta-buttons">
+                        <button onclick="toPoker()" class="btn-design1 titulol">Ver reglas >></button>
+                    </div>
+                </div>
+                <div class="apuesta-rigth item">
+                    <img src="/resources/poker.png" alt="Casino Marco Polo 1" />
+                </div>
+            </div>
+            <h1 style="text-align: center;" class="type2-h1">Slots</h1>
+            <div class="apuesta-deportiva">
+                <div class="apuesta-left">
+                    <h1 class="type2-h1">Slots</h1>
+                    <p>Luces, sonidos y premios instantáneos. Gira los rodillos y descubre si hoy es tu
+                        día de suerte con cada tirada.</p>
+                    <div style="justify-content: flex-start;" class="apuesta-buttons">
+                        <button onclick="toSlots()" class="btn-design1 titulor">Ver reglas >></button>
+                    </div>
+                </div>
+                <div class="apuesta-rigth item">
+                    <img src="/resources/slots.png" alt="Casino Marco Polo 1" />
+                </div>
+            </div>
+            <div class="divider-section-section"></div>
+            <section style="margin-top: 20px;margin-bottom: 20px;" id="ubicacion-seccion">
+            </section>
+            <div class="divider-section-section"></div>
+            <br /><br /><br />
         </div>
-      </section>
     </section>
 
     <section id="features-blackjack" class="modal">
@@ -327,11 +216,11 @@
                             </tr>
                         </table>
                     </div>
-                    <br />
-                    <div style="display: flex; justify-content: flex-end;">
-                        <button class="btn-design1">Quiero intentarlo</button>
-                    </div>
                 </div>
+                <br />
+                <!-- <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn-design1">Quiero intentarlo</button>
+                </div> -->
             </div>
         </div>
     </section>
@@ -458,6 +347,10 @@
                     </table>
                 </div>
             </div>
+            <br />
+            <!-- <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn-design1">Quiero intentarlo</button>
+                </div> -->
         </div>
     </section>
 
@@ -556,6 +449,10 @@
                         </table>
                     </div>
                 </div>
+                <br />
+                <!-- <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn-design1">Quiero intentarlo</button>
+                </div> -->
             </div>
         </div>
     </section>
@@ -612,6 +509,10 @@
                             juego muy llamativo.</p>
                     </div>
                 </div>
+                <br />
+                <!-- <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn-design1">Quiero intentarlo</button>
+                </div> -->
             </div>
         </div>
     </section>
@@ -684,9 +585,9 @@
                         <p>♠ Todos los demás jugadores se retiran antes</p>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: flex-end;">
+                <!-- <div style="display: flex; justify-content: flex-end;">
                     <button onclick="toPokerGame()" class="btn-design1">Quiero intentarlo</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -746,13 +647,13 @@
                             juego muy llamativo.</p>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: flex-end;">
+                <!-- <div style="display: flex; justify-content: flex-end;">
                     <button onclick="toSlotsGame()" class="btn-design1">Quiero intentarlo</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
-
 </body>
+
 
 </html>
