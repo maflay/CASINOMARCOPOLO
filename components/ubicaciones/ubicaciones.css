@@ -114,14 +114,11 @@
 
 .carousel-track img {
   width: 300px;
-  /* o 100% según necesidad */
   height: 100%;
   object-fit: cover;
   margin-right: 10px;
   border-radius: 10px;
 }
-
-
 
 .carousel-container:hover .carousel-track {
   animation-play-state: paused;

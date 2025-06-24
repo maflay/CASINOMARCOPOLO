@@ -3,19 +3,9 @@
 /* PROMOCIONES */
 .promocion-container {
   height: auto;
-  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.promocion-container .promo h1 {
-  color: white;
-  font-weight: 900;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 .promocion-container .card-view {
