@@ -237,21 +237,6 @@ html {
   }
 }
 
-
-.levita-constante {
-  animation: levitar .5s ease-in-out infinite alternate;
-}
-
-@keyframes levitar {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-10px);
-  }
-}
-
 .lobster-regular {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
