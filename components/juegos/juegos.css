@@ -20,7 +20,12 @@
     align-items: center;
     justify-content: center;
     height: auto;
-
+    background-image: url(/resources/fondo-negro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
 .mesas {
@@ -34,7 +39,25 @@
     flex-direction: column;
     height: 60vh;
     margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
+
+
+.title-mesas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+    background-image: url(/resources/fondo-negro.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
 
 .apuesta-deportiva {
     height: auto;
