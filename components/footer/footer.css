@@ -26,6 +26,9 @@
 .footer .footer-logo img {
   width: 120%;
 }
+.footer .footer-logos-legales small {
+  color: gray;
+}
 
 .footer .footer-section ul {
   list-style: none;
