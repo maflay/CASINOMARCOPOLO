@@ -148,24 +148,6 @@
   margin-top: 20px;
 }
 
-.container-contact .boton-enviar {
-  display: inline-block;
-  background-color: #5100ff;
-  padding: 10px 15px;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 900;
-  transition: background-color 0.3s ease;
-}
-
-.container-contact .boton-enviar:hover {
-  background-color: #fff;
-  color: #5100ff;
-}
-
 .contact-form .thechecks {
   display: flex;
   align-items: flex-start;
@@ -181,7 +163,7 @@
 }
 
 .checks-cliente-terminos a {
-  color: #6622F8;
+  color: #e3e4e585;
 }
 
 .container-contact .img-test-container-ruleta {

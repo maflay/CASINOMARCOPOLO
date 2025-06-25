@@ -1,9 +1,7 @@
 .fondo {
   position: relative;
   overflow: hidden;
-  /* por seguridad */
   min-height: 100vh;
-  /* o lo que necesites */
 }
 
 .fondo::before {
@@ -75,7 +73,7 @@
 
 .tarjeta-desc {
   align-items: center;
-  width: 50%;
+  width: 60%;
   height: 50%;
 }
 
@@ -131,9 +129,7 @@ ul {
 
 
   .fondo::before {
-    width: 100vw;
-    height: 100vh;
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 
   .banner-obten-tarjeta .content-image {

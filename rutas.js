@@ -89,4 +89,9 @@ const rutasLimpias = {
     css: "/components/juegos/juegos/poker/poker.css",
     js: "/components/juegos/juegos/poker/poker.js",
   },
+    juegosresponsable: {
+    html: "/components/juego-responsable/juego-responsable.html",
+    css: "/components/juego-responsable/juego-responsable.css",
+    js: "/components/juego-responsable/juego-responsable.js",
+  }
 };

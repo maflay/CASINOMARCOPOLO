@@ -10,7 +10,7 @@ html {
   overflow-x: hidden;
   background-color: #1F253A;
   scroll-behavior: auto;
-  font-family: 'TT Interphases Pro Variable', sans-serif !important;
+  font-family: 'Averta Black', sans-serif;
 }
 
 .container {
@@ -24,7 +24,7 @@ html {
 .purple-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #5100ff;
+  background-color: #1F253A;
   color: white;
   border: none;
   border-radius: 10px;
@@ -37,13 +37,13 @@ html {
 }
 
 .purple-button:hover {
-  background-color: #2C16B0;
+  background-color: #27314F;
   transition: background-color 0.3s ease;
 }
 
 .btn-design1 {
   padding: 8px 16px;
-  background-color: #5000fc;
+  background-color: #27314F;
   color: white;
   border: none;
   border-radius: 10px;
@@ -52,11 +52,13 @@ html {
   font-size: 14px;
   font-weight: 1000;
   transition: background-color 0.3s ease;
+  font-family: 'Averta Bold', sans-serif !important;
+
 }
 
 .btn-design1:hover {
   background-color: white;
-  color: #5000fc;
+  color: #1F253A;
   transition: background-color 0.3s ease;
 }
 
@@ -72,10 +74,12 @@ html {
   font-size: 14px;
   font-weight: 1000;
   transition: background-color 0.3s ease;
+  font-family: 'Averta Bold', sans-serif !important;
+
 }
 
 .btn-design2:hover {
-  background-color: #5000fc;
+  background-color: #27314F;
   color: white;
   transition: background-color 0.3s ease;
 }
@@ -83,37 +87,35 @@ html {
 /* TIPOS DE TITULOS */
 
 .type-h1 {
-  color: #2c16b0;
-  font-size: 40px;
-  font-weight: 900;
+  font-family: 'Averta ExtraBold', sans-serif !important;
+  color: white;
+    font-size: 40px;
   line-height: 2.2rem;
 }
 
 .type2-h1 {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 900;
+  font-family: 'Averta Bold', sans-serif !important;
+  color: white;
+    font-size: 40px;
   line-height: 2.2rem;
 }
 
 .type3-h1 {
+  font-family: 'Averta Black', sans-serif !important;
   color: #fff;
   font-size: 30px;
-  font-weight: 900;
   line-height: 2.2rem;
 }
 
 .type4-h1 {
-  color: #2c16b0;
+  color: #fff;
   font-size: 20px;
-  font-weight: 900;
   line-height: 1.5rem;
 }
 
 .type5-h1 {
   color: #fff;
   font-size: 20px;
-  font-weight: 900;
   line-height: 1.5rem;
 }
 
@@ -140,7 +142,7 @@ html {
 /* TRANSICION DE ITEMS */
 
 .titulo {
- opacity: 0;
+  opacity: 0;
   transform: translateY(50px);
   transition: all 0.5s ease;
 }
@@ -180,12 +182,12 @@ html {
 
 
 .divider-section-section {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #ffcc00, #ff00cc);
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ffcc00, #ff00cc);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -280,42 +282,6 @@ html {
 
   .hidden {
     visibility: hidden;
-  }
-
-
-  .type-h1 {
-    color: #2c16b0;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 2.2rem;
-  }
-
-  .type2-h1 {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 2.2rem;
-  }
-
-  .type3-h1 {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 2.2rem;
-  }
-
-  .type4-h1 {
-    color: #2c16b0;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 1.5rem;
-  }
-
-  .type5-h1 {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 1.5rem;
   }
 
 }
