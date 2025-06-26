@@ -7,74 +7,135 @@
   user-select: none;
 }
 
-.video-hero {
+.slider {
   position: relative;
   width: 100%;
-  height: 80vh;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/resources/banner-home.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
+.slider-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100vw;
+  height: 80vh;
+}
 
-
-.video-hero video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.slide {
   min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 1;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  z-index: 2;
+  background-size: cover;
+  background-position: center;
 }
 
-.video-content {
-  position: relative;
-  z-index: 3;
-  text-align: left;
-  color: #fff;
+.bg1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      /* parte superior más oscura */
+      rgba(0, 0, 0, 0.5)
+      /* parte inferior igual de oscura */
+    ), url(/resources/banner-home.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      /* parte superior más oscura */
+      rgba(0, 0, 0, 0.5)
+      /* parte inferior igual de oscura */
+    ), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      /* parte superior más oscura */
+      rgba(0, 0, 0, 0.5)
+      /* parte inferior igual de oscura */
+    ), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Ocultar radios */
+input[name="slider-radio"] {
+  display: none;
+}
+
+/* Botones navegación (puntos) */
+.slider-controls label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Contenedor de puntos */
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Punto activo */
+.slider-controls input[type="radio"]:checked+label {
+  background: white;
+}
+
+/* Flechas */
+.arrowh {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background: transparent;
+  color: #fff;
+  font-size: 5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
 }
 
-.video-content-text {
-  width: 440px;
-  line-height: 1.1rem;
-  text-align: center;
+.arrowh-left {
+  left: 0px;
 }
 
-.video-content-text img {
-  width: 100%;
-  height: 100%;
+.arrowh-right {
+  right: 0px;
 }
 
-.video-content h1 {
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+.content-slide-home {
+position: absolute;
+top: 50%;
+
 }
 
-.video-content p {
-  font-size: 2.5em;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+.content-slide-home img {
+  width: 300px;
 }
+
+.content-slide-home h1 {
+  color: white;
+  font-size: 3rem;
+  height: auto;
+ font-family: 'BillionDreams', sans-serif !important;
+}
+
 
 
 .scroll-down-indicator {
   display: flex;
   position: absolute;
-  top: 30vh;
+  top: 65vh;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
@@ -150,19 +211,53 @@
   }
 
   .scroll-down-indicator {
-    top: 30vh;
+    top: 65vh;
   }
 
-  .video-content h1 {
-    font-size: 2rem;
+  .content-slide-home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 0px;
+    top: -50vh;
+    padding: 0 0;
   }
+
+  .slider-controls{
+    position: relative;
+    top: -2vh;
+  }
+
+  .bg1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(/resources/banner-home-movil.png);
+
 }
 
+.bg2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+
+}
+
+.bg3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+
+}
+
+}
 
 @media (max-width :378px) {
 
   .scroll-down-indicator {
-    top: 25vh;
+    top: 60vh;
   }
 }
 

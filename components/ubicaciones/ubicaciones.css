@@ -38,11 +38,11 @@
 
 }
 
-.content-casin-img img {
+/* .content-casin-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 .content-casin-text {
   text-align: center;
@@ -126,60 +126,543 @@
 
 
 .navigation-ubicacionesU {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .carousel-infiniteU {
-    width: 100%;
-    overflow: hidden;
-    margin: auto;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
 }
 
 .carousel-trackU {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    width: max-content;
-    gap: 20px;
-    cursor: pointer;
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  gap: 20px;
+  cursor: pointer;
 }
 
 .carousel-trackU:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-50%);
-    }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .slideU {
-    min-width: 250px;
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  min-width: 250px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .slideU p {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .slideU img {
-    width: 250px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
+
+
+/* Slider de cada ubicacion */
+
+/* BARRANQUILLA */
+
+.sliderbarranquilla {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapperbarranquilla {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 400px;
+}
+
+.slidebarranquilla {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1barranquilla {
+  background-image: url(/resources/marcopoloBarranquilla.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg2barranquilla {
+  background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg3barranquilla {
+  background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+/* Ocultar radios */
+input[name="slider-radio-barranquilla"] {
+  display: none;
+}
+
+/* Botones navegación (puntos) */
+.slider-controlsbarranquilla label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #efb810;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Contenedor de puntos */
+.slider-controlsbarranquilla {
+  position: relative;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Punto activo */
+.slider-controlsbarranquilla input[type="radio"]:checked+label {
+  background: #efb810;
+}
+
+.content-flechabarranquilla {
+  position: relative;
+  bottom: 280px;
+}
+
+/* Flechas */
+.arrowhbarranquilla {
+  position: relative;
+  background: transparent;
+  color: #efb810;
+  font-size: 5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.arrowh-leftbarranquilla {
+  left: 0px;
+}
+
+.arrowh-rightbarranquilla {
+  left: 490px;
+}
+
+.content-slide-homebarranquilla {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 30vh;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.content-slide-homebarranquilla img {
+  width: 300px;
+}
+
+.content-slide-homebarranquilla h1 {
+  font-size: 2.2rem;
+  color: #efb810;
+}
+
+
+/* BOGOTA */
+
+.sliderbogota {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapperbogota {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 400px;
+}
+
+.slidebogota {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1bogota {
+  background-image: url(/resources/marcopoloBogota.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg2bogota {
+  background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg3bogota {
+  background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+/* Ocultar radios */
+input[name="slider-radio-bogota"] {
+  display: none;
+}
+
+/* Botones navegación (puntos) */
+.slider-controlsbogota label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #efb810;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Contenedor de puntos */
+.slider-controlsbogota {
+  position: relative;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Punto activo */
+.slider-controlsbogota input[type="radio"]:checked+label {
+  background: #efb810;
+}
+
+.content-flechabogota {
+  position: relative;
+  bottom: 280px;
+}
+
+/* Flechas */
+.arrowhbogota {
+  position: relative;
+  background: transparent;
+  color: #efb810;
+  font-size: 5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.arrowh-leftbogota {
+  left: 0px;
+}
+
+.arrowh-rightbogota {
+  left: 490px;
+}
+
+.content-slide-homebogota {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 30vh;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.content-slide-homebogota img {
+  width: 300px;
+}
+
+.content-slide-homebogota h1 {
+  font-size: 2.2rem;
+  color: #efb810;
+}
+
+/* CALI OESTE */
+
+.slideroeste {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapperoeste {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 400px;
+}
+
+.slideoeste {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1oeste {
+  background-image: url(/resources/marcopoloLocalInter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg2oeste {
+  background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg3oeste {
+  background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+/* Ocultar radios */
+input[name="slider-radio-oeste"] {
+  display: none;
+}
+
+/* Botones navegación (puntos) */
+.slider-controlsoeste label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #efb810;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Contenedor de puntos */
+.slider-controlsoeste {
+  position: relative;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Punto activo */
+.slider-controlsoeste input[type="radio"]:checked+label {
+  background: #efb810;
+}
+
+.content-flechaoeste {
+  position: relative;
+  bottom: 280px;
+}
+
+/* Flechas */
+.arrowhoeste {
+  position: relative;
+  background: transparent;
+  color: #efb810;
+  font-size: 5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.arrowh-leftoeste {
+  left: 0px;
+}
+
+.arrowh-rightoeste {
+  left: 490px;
+}
+
+.content-slide-homeoeste {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 30vh;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.content-slide-homeoeste img {
+  width: 300px;
+}
+
+.content-slide-homeoeste h1 {
+  font-size: 2.2rem;
+  color: #efb810;
+}
+
+
+/* CALI SUR */
+
+.slidersur {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrappersur {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 400px;
+}
+
+.slidesur {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg1sur {
+  background-image: url(/resources/marcopoloHolguines.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg2sur {
+  background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.bg3sur {
+  background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+/* Ocultar radios */
+input[name="slider-radio-sur"] {
+  display: none;
+}
+
+/* Botones navegación (puntos) */
+.slider-controlssur label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #efb810;
+  border-radius: 50%;
+  background: transparent;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Contenedor de puntos */
+.slider-controlssur {
+  position: relative;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Punto activo */
+.slider-controlssur input[type="radio"]:checked+label {
+  background: #efb810;
+}
+
+.content-flechasur {
+  position: relative;
+  bottom: 280px;
+}
+
+/* Flechas */
+.arrowhsur {
+  position: relative;
+  background: transparent;
+  color: #efb810;
+  font-size: 5rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.arrowh-leftsur {
+  left: 0px;
+}
+
+.arrowh-rightsur {
+  left: 490px;
+}
+
+.content-slide-homesur {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 30vh;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.content-slide-homesur img {
+  width: 300px;
+}
+
+.content-slide-homesur h1 {
+  font-size: 2.2rem;
+  color: #efb810;
+}
+
+
 
 
 @media (max-width: 768px) {

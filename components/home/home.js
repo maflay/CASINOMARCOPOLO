@@ -69,31 +69,23 @@ function sliderUbicaciones() {
 
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
+    interval = setInterval(nextSlide, 10000);
   }
 
   sedeBarra.addEventListener("click", () => {
-    trackubicacion.style.transform = `translateX(-${0 * 100}%)`;
-    radiosubicacion[0].checked = true;
-    currentIndex = 1;
+    navegarA("barranquilla");
   });
 
   sedeBog.addEventListener("click", () => {
-    trackubicacion.style.transform = `translateX(-${1 * 100}%)`;
-    radiosubicacion[1].checked = true;
-    currentIndex = 1;
+    navegarA("bogota");
   });
 
   sedeCas.addEventListener("click", () => {
-    trackubicacion.style.transform = `translateX(-${2 * 100}%)`;
-    radiosubicacion[2].checked = true;
-    currentIndex = 1;
+    navegarA("calisur");
   });
 
   sedeCao.addEventListener("click", () => {
-    trackubicacion.style.transform = `translateX(-${3 * 100}%)`;
-    radiosubicacion[3].checked = true;
-    currentIndex = 1;
+    navegarA("calioeste");
   });
 
   nextBtnubicacion.addEventListener("click", () => {
@@ -112,7 +104,7 @@ function sliderUbicaciones() {
       resetInterval();
     });
   });
-  interval = setInterval(nextSlide, 5000);
+  interval = setInterval(nextSlide, 10000);
 }
 
 sliderUbicaciones();
@@ -159,7 +151,7 @@ function toGames() {
       const contenedor = document.getElementById("promocion-seccion");
       contenedor.innerHTML = html;
 
-        const estilo = document.createElement("link");
+      const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
       estilo.href = "/components/promociones/promocion-view/promocion-view.css";
       document.head.appendChild(estilo);
@@ -174,3 +166,57 @@ function toGames() {
       document.body.appendChild(script);
     });
 })();
+
+function sliderhome() {
+  const track = document.getElementById("sliderTrack");
+  const radios = document.querySelectorAll('input[name="slider-radio"]');
+  const labels = document.querySelectorAll(".slider-controls label");
+  const prevBtnh = document.getElementById("prevBtnh");
+  const nextBtnh = document.getElementById("nextBtnh");
+
+  let currentIndex = 0;
+  const totalSlides = radios.length;
+  let interval;
+
+  function goToSlide(index) {
+    track.style.transform = `translateX(-${index * 100}vw)`;
+    radios[index].checked = true;
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let index = (currentIndex + 1) % totalSlides;
+    goToSlide(index);
+  }
+
+  function prevSlide() {
+    let index = (currentIndex - 1 + totalSlides) % totalSlides;
+    goToSlide(index);
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 11000);
+  }
+
+  nextBtnh.addEventListener("click", () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  prevBtnh.addEventListener("click", () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  labels.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlide(index);
+      resetInterval();
+    });
+  });
+
+  interval = setInterval(nextSlide, 11000);
+}
+
+sliderhome();

@@ -129,6 +129,12 @@
     overflow: hidden;
 }
 
+.modal h2,
+.modal h3,
+.modal h4 {
+    color: #1F253A;
+}
+
 
 .modal-content2 {
     background-color: #fff;
@@ -190,7 +196,7 @@ td {
 }
 
 .styled-table-container thead {
-    background: linear-gradient(to right, #6622F8, #2C16B0, #6622F8, #2C16B0, #6622F8, #2C16B0);
+    background: linear-gradient(to right, #27314f, #1F253A, #27314f, #1F253A, #27314f, #1F253A, #27314f, #1F253A, #27314f, #1F253A, #27314f, #1F253A, #27314f, #1F253A);
     /* Morado oscuro */
     color: #ffffff;
 }

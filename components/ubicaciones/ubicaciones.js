@@ -1,131 +1,4 @@
 (() => {
-  const sliderTrack = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
-  const dotsContainer = document.getElementById("dots");
-
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
-  if (
-    !sliderTrack ||
-    slides.length === 0 ||
-    !dotsContainer ||
-    !btnPrev ||
-    !btnNext
-  )
-    return;
-  let currentIndex = 0;
-
-  let isTouching = false;
-  let startX = 0;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
-  let animationID;
-
-  btnPrev.addEventListener("click", () => changeSlide(-1));
-  btnNext.addEventListener("click", () => changeSlide(1));
-
-  function goToSlide(index) {
-    currentIndex = index;
-    sliderTrack.style.transition = "transform 0.3s ease";
-    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateDots();
-  }
-
-  function updateDots() {
-    document.querySelectorAll(".dot").forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-  }
-
-  function updateSlider() {
-    goToSlide(currentIndex);
-  }
-
-  function changeSlide(delta) {
-    currentIndex = (currentIndex + delta + slides.length) % slides.length;
-    updateSlider();
-  }
-
-  function createDots() {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < slides.length; i++) {
-      const dot = document.createElement("span");
-      dot.classList.add("dot");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => {
-        currentIndex = i;
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  createDots();
-
-  function initSlider() {
-    createDots();
-    updateSlider();
-    setupTouchEvents();
-    setupAutoSlide();
-  }
-
-  initSlider();
-
-  function setupAutoSlide() {
-    if (window.autoSlideInterval) clearInterval(window.autoSlideInterval);
-    window.autoSlideInterval = setInterval(() => changeSlide(1), 6000);
-  }
-
-  function setupTouchEvents() {
-    if (sliderTrack.dataset.initialized) return;
-    sliderTrack.dataset.initialized = "true";
-
-    sliderTrack.addEventListener("touchstart", stopAutoSlide);
-    sliderTrack.addEventListener("touchend", setupAutoSlide);
-
-    sliderTrack.addEventListener("touchstart", handleTouchStart);
-    sliderTrack.addEventListener("touchmove", handleTouchMove, {
-      passive: false,
-    });
-
-    sliderTrack.addEventListener("touchend", handleTouchEnd);
-  }
-
-  function handleTouchStart(e) {
-    isTouching = true;
-    startX = e.touches[0].clientX;
-    prevTranslate = currentIndex * -sliderTrack.offsetWidth;
-    sliderTrack.style.transition = "none"; // solo aquí
-    cancelAnimationFrame(animationID);
-  }
-
-  function handleTouchMove(e) {
-    if (!isTouching) return;
-    e.preventDefault(); // <- Necesario con passive: false
-    const currentX = e.touches[0].clientX;
-    const delta = currentX - startX;
-    currentTranslate = prevTranslate + delta;
-    sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-  }
-
-  function handleTouchEnd() {
-    isTouching = false;
-    const movedBy = currentTranslate - prevTranslate;
-    const threshold = sliderTrack.offsetWidth * 0.2;
-
-    if (movedBy < -threshold && currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else if (movedBy > threshold && currentIndex > 0) {
-      currentIndex--;
-    }
-
-    updateSlider();
-  }
-
-  function stopAutoSlide() {
-    clearInterval(window.autoSlideInterval);
-  }
-
   const btntoPromo = document.getElementById("toPromo");
   btntoPromo.addEventListener("click", ToPromos);
 
@@ -134,11 +7,246 @@
   }
 })();
 
-(() => {
-  const btntoPromo = document.getElementById("toPromo");
-  btntoPromo.addEventListener("click", ToPromos);
+function sliderBarra() {
+  const trackbarranquilla = document.getElementById("sliderTrackbarranquilla");
+  const radiosbarranquilla = document.querySelectorAll(
+    'input[name="slider-radio-barranquilla"]'
+  );
+  const labelsbarranquilla = document.querySelectorAll(
+    ".slider-controlsbarranquilla label"
+  );
+  const prevBtnhbarranquilla = document.getElementById("prevBtnhbarranquilla");
+  const nextBtnhbarranquilla = document.getElementById("nextBtnhbarranquilla");
 
-  function ToPromos() {
-    navegarA("juegos");
+  let currentIndexbarranquilla = 0;
+  const totalSlidesbarranquilla = radiosbarranquilla.length;
+  let intervalbarranquilla;
+
+  function goToSlidebarranquilla(index) {
+    trackbarranquilla.style.transform = `translateX(-${index * 100}%)`;
+    radiosbarranquilla[index].checked = true;
+    currentIndexbarranquilla = index;
   }
-})();
+
+  function nextSlidebarranquilla() {
+    let index = (currentIndexbarranquilla + 1) % totalSlidesbarranquilla;
+    goToSlidebarranquilla(index);
+  }
+
+  function prevSlidebarranquilla() {
+    let index =
+      (currentIndexbarranquilla - 1 + totalSlidesbarranquilla) %
+      totalSlidesbarranquilla;
+    goToSlidebarranquilla(index);
+  }
+
+  function resetIntervalbarranquilla() {
+    clearInterval(intervalbarranquilla);
+    intervalbarranquilla = setInterval(nextSlidebarranquilla, 11000);
+  }
+
+  nextBtnhbarranquilla.addEventListener("click", () => {
+    nextSlidebarranquilla();
+    resetIntervalbarranquilla();
+  });
+
+  prevBtnhbarranquilla.addEventListener("click", () => {
+    prevSlidebarranquilla();
+    resetIntervalbarranquilla();
+  });
+
+  labelsbarranquilla.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlidebarranquilla(index);
+      resetIntervalbarranquilla();
+    });
+  });
+
+  intervalbarranquilla = setInterval(nextSlidebarranquilla, 11000);
+}
+if (document.getElementById("sliderTrackbarranquilla")) {
+  sliderBarra();
+}
+
+function sliderBogota() {
+  const trackbogota = document.getElementById("sliderTrackbogota");
+  const radiosbogota = document.querySelectorAll(
+    'input[name="slider-radio-bogota"]'
+  );
+  const labelsbogota = document.querySelectorAll(
+    ".slider-controlsbogota label"
+  );
+  const prevBtnhbogota = document.getElementById("prevBtnhbogota");
+  const nextBtnhbogota = document.getElementById("nextBtnhbogota");
+
+  let currentIndexbogota = 0;
+  const totalSlidesbogota = radiosbogota.length;
+  let intervalbogota;
+
+  function goToSlidebogota(index) {
+    trackbogota.style.transform = `translateX(-${index * 100}%)`;
+    radiosbogota[index].checked = true;
+    currentIndexbogota = index;
+  }
+
+  function nextSlidebogota() {
+    let index = (currentIndexbogota + 1) % totalSlidesbogota;
+    goToSlidebogota(index);
+  }
+
+  function prevSlidebogota() {
+    let index =
+      (currentIndexbogota - 1 + totalSlidesbogota) % totalSlidesbogota;
+    goToSlidebogota(index);
+  }
+
+  function resetIntervalbogota() {
+    clearInterval(intervalbogota);
+    intervalbogota = setInterval(nextSlidebogota, 11000);
+  }
+
+  nextBtnhbogota.addEventListener("click", () => {
+    nextSlidebogota();
+    resetIntervalbogota();
+  });
+
+  prevBtnhbogota.addEventListener("click", () => {
+    prevSlidebogota();
+    resetIntervalbogota();
+  });
+
+  labelsbogota.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlidebogota(index);
+      resetIntervalbogota();
+    });
+  });
+
+  intervalbogota = setInterval(nextSlidebogota, 11000);
+}
+
+if (document.getElementById("sliderTrackbogota")) {
+  sliderBogota();
+}
+
+
+function sliderOeste() {
+  const trackoeste = document.getElementById("sliderTrackoeste");
+  const radiosoeste = document.querySelectorAll(
+    'input[name="slider-radio-oeste"]'
+  );
+  const labelsoeste = document.querySelectorAll(
+    ".slider-controlsoeste label"
+  );
+  const prevBtnhoeste = document.getElementById("prevBtnhoeste");
+  const nextBtnhoeste = document.getElementById("nextBtnhoeste");
+
+  let currentIndexoeste = 0;
+  const totalSlidesoeste = radiosoeste.length;
+  let intervaloeste;
+
+  function goToSlideoeste(index) {
+    trackoeste.style.transform = `translateX(-${index * 100}%)`;
+    radiosoeste[index].checked = true;
+    currentIndexoeste = index;
+  }
+
+  function nextSlideoeste() {
+    let index = (currentIndexoeste + 1) % totalSlidesoeste;
+    goToSlideoeste(index);
+  }
+
+  function prevSlideoeste() {
+    let index = (currentIndexoeste - 1 + totalSlidesoeste) % totalSlidesoeste;
+    goToSlideoeste(index);
+  }
+
+  function resetIntervaloeste() {
+    clearInterval(intervaloeste);
+    intervaloeste = setInterval(nextSlideoeste, 11000);
+  }
+
+  nextBtnhoeste.addEventListener("click", () => {
+    nextSlideoeste();
+    resetIntervaloeste();
+  });
+
+  prevBtnhoeste.addEventListener("click", () => {
+    prevSlideoeste();
+    resetIntervaloeste();
+  });
+
+  labelsoeste.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlideoeste(index);
+      resetIntervaloeste();
+    });
+  });
+
+  intervaloeste = setInterval(nextSlideoeste, 11000);
+}
+
+if (document.getElementById("sliderTrackoeste")) {
+  sliderOeste();
+}
+
+
+
+function sliderSur() {
+
+  const tracksur = document.getElementById("sliderTracksur");
+  const radiososur = document.querySelectorAll(
+    'input[name="slider-radio-sur"]'
+  );
+  const labelssur = document.querySelectorAll(".slider-controlssur label");
+  const prevBtnhsur = document.getElementById("prevBtnhsur");
+  const nextBtnhsur = document.getElementById("nextBtnhsur");
+
+  let currentIndexsur = 0;
+  const totalSlidessur = radiososur.length;
+  let intervalsur;
+
+  function goToSlidesur(index) {
+    tracksur.style.transform = `translateX(-${index * 100}%)`;
+    radiososur[index].checked = true;
+    currentIndexsur = index;
+  }
+
+  function nextSlidesur() {
+    let index = (currentIndexsur + 1) % totalSlidessur;
+    goToSlidesur(index);
+  }
+
+  function prevSlidesur() {
+    let index = (currentIndexsur - 1 + totalSlidessur) % totalSlidessur;
+    goToSlidesur(index);
+  }
+
+  function resetIntervalsur() {
+    clearInterval(intervalsur);
+    intervalsur = setInterval(nextSlidesur, 11000);
+  }
+
+  nextBtnhsur.addEventListener("click", () => {
+    nextSlidesur();
+    resetIntervalsur();
+  });
+
+  prevBtnhsur.addEventListener("click", () => {
+    prevSlidesur();
+    resetIntervalsur();
+  });
+
+  labelssur.forEach((label, index) => {
+    label.addEventListener("click", () => {
+      goToSlidesur(index);
+      resetIntervalsur();
+    });
+  });
+
+  intervalsur = setInterval(nextSlidesur, 11000);
+}
+
+if (document.getElementById("sliderTracksur")) {
+  sliderSur();
+}

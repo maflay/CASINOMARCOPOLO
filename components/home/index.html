@@ -7,17 +7,25 @@
 
 <body>
   <section class="section-ini">
-    <section class="video-hero">
-      <!-- <video autoplay muted loop playsinline preload="none">
-        <source src="/resources/MarcoPolo.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video> -->
-      <div class="video-overlay"></div>
-      <div class="video-content container">
-        <div class="video-content-text item">
-          <!-- <h1 style="text-align: center;" class="type3-h1">Descubre el mundo</h1> -->
+    <section class="slider">
+      <div class="slider-wrapper" id="sliderTrack">
+        <div class="slide bg1"></div>
+        <div class="slide bg2"></div>
+        <div class="slide bg3"></div>
+      </div>
+      <!-- Controles -->
+      <div class="slider-controls">
+        <input type="radio" name="slider-radio" id="trigger1" checked>
+        <label for="trigger1"></label>
+        <input type="radio" name="slider-radio" id="trigger2">
+        <label for="trigger2"></label>
+        <input type="radio" name="slider-radio" id="trigger3">
+        <label for="trigger3"></label>
+      </div>
+      <div class="container">
+        <div class="item content-slide-home">
           <img src="/resources/logocasino.png" />
-          <img style="width: 60%;" src="/resources/OrienteSuSuerte.png" />
+          <h1>LA RUTA A LA FORTUNA</h1>
         </div>
         <div class="scroll-down-indicator">
           <span class="arrow"></span>
@@ -26,6 +34,11 @@
         </div>
       </div>
     </section>
+
+    <div style="gap: 30px;">
+      <button class="arrowh arrowh-left" id="prevBtnh">&#8249;</button>
+      <button class="arrowh arrowh-right" id="nextBtnh">&#8250;</button>
+    </div>
   </section>
   <div class="background-ubicacion ocultar">
     <div class="container ">
@@ -37,10 +50,10 @@
         <h1 class="type2-h1 item">Ubicaciones</h1>
       </div>
       <div class="item btn-ubicacion">
-        <button class="btn-design2" id="sedeBar">Barranquilla</button>
-        <button class="btn-design2" id="sedeBog">Bogotá</button>
-        <button class="btn-design2" id="sedeCas">Cali Sur</button>
-        <button class="btn-design2" id="sedeCao">Cali Oeste</button>
+        <button class="item btn-design2" id="sedeBar">Barranquilla</button>
+        <button class="item btn-design2" id="sedeBog">Bogotá</button>
+        <button class="item btn-design2" id="sedeCas">Cali Sur</button>
+        <button class="item btn-design2" id="sedeCao">Cali Oeste</button>
       </div>
       <div class="content-slider-ubicaciones">
         <section class="sliderubicacion">
@@ -53,7 +66,7 @@
                   <h1 class="type2-h1">Barranquilla,</h1>
                   <h1 class="type2-h1">Mallplaza Buenavista</h1>
                   <br />
-                  <p class="type5-h1">📍 Cra 53 N0 99 - 148 Local A2073A segundo piso</p>
+                  <p class="type5-h1">📍 Cra 53 #99-148 Local A2073A piso 2</p>
                   <p class="type5-h1">📞 (+57) 316 0859199</p>
                 </div>
                 <div class="content-iframe">
@@ -72,7 +85,7 @@
                   <h1 class="type2-h1">Bogotá,</h1>
                   <h1 class="type2-h1">100 con 15</h1>
                   <br />
-                  <p class="type5-h1">📍 Cra 15 # 100 - 76</p>
+                  <p class="type5-h1">📍 Cra 15 #100-76</p>
                   <p class="type5-h1">📞 (+57) 323 453 1657</p>
                 </div>
                 <div class="content-iframe">
@@ -89,9 +102,9 @@
                 </div>
                 <div class="info-ubicacion">
                   <h1 class="type2-h1">Cali Sur,</h1>
-                  <h1 class="type2-h1">Holguines T.C.</h1>
+                  <h1 class="type3-h1">Holguines T.C.</h1>
                   <br />
-                  <p class="type5-h1">📍 Calle 100 B # 11A - 19 local # 200.</p>
+                  <p class="type5-h1">📍 Calle 100 B #11A-19 local #200</p>
                   <p class="type5-h1">📞 (+57) 317 439 1688</p>
                 </div>
                 <div class="content-iframe">
@@ -108,10 +121,9 @@
                 </div>
                 <div class="info-ubicacion">
                   <h1 class="type2-h1">Cali Oeste,</h1>
-                  <h1 class="type2-h1">Hotel</h1>
-                  <h1 class="type3-h1">Intercontinental</h1>
+                  <h1 class="type3-h1">Hotel InterContinental</h1>
                   <br />
-                  <p class="type5-h1">📍 Av 1 oeste Nro 2-72</p>
+                  <p class="type5-h1">📍 Av 1 Oeste #2-72</p>
                   <p class="type5-h1">📞 (602)28857458</p>
                 </div>
                 <div class="content-iframe">
