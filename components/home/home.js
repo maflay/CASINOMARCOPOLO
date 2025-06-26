@@ -168,7 +168,7 @@ function toGames() {
 })();
 
 function sliderhome() {
-  const track = document.getElementById("sliderTrack");
+  const track = document.getElementById("sliderTrack2");
   const radios = document.querySelectorAll('input[name="slider-radio"]');
   const labels = document.querySelectorAll(".slider-controls label");
   const prevBtnh = document.getElementById("prevBtnh");

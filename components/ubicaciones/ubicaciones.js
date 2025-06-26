@@ -8,7 +8,7 @@
 })();
 
 function sliderBarra() {
-  const trackbarranquilla = document.getElementById("sliderTrackbarranquilla");
+  const trackbarranquilla = document.getElementById("sliderTrackbarranquilla2");
   const radiosbarranquilla = document.querySelectorAll(
     'input[name="slider-radio-barranquilla"]'
   );
@@ -69,7 +69,7 @@ if (document.getElementById("sliderTrackbarranquilla")) {
 }
 
 function sliderBogota() {
-  const trackbogota = document.getElementById("sliderTrackbogota");
+  const trackbogota = document.getElementById("sliderTrackbogota2");
   const radiosbogota = document.querySelectorAll(
     'input[name="slider-radio-bogota"]'
   );
@@ -131,7 +131,7 @@ if (document.getElementById("sliderTrackbogota")) {
 
 
 function sliderOeste() {
-  const trackoeste = document.getElementById("sliderTrackoeste");
+  const trackoeste = document.getElementById("sliderTrackoeste2");
   const radiosoeste = document.querySelectorAll(
     'input[name="slider-radio-oeste"]'
   );
@@ -194,7 +194,7 @@ if (document.getElementById("sliderTrackoeste")) {
 
 function sliderSur() {
 
-  const tracksur = document.getElementById("sliderTracksur");
+  const tracksur = document.getElementById("sliderTracksur2");
   const radiososur = document.querySelectorAll(
     'input[name="slider-radio-sur"]'
   );

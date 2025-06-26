@@ -42,7 +42,7 @@
       /* parte superior más oscura */
       rgba(0, 0, 0, 0.5)
       /* parte inferior igual de oscura */
-    ), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+    ), url(/resources/IMG_4399.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -52,7 +52,7 @@
       /* parte superior más oscura */
       rgba(0, 0, 0, 0.5)
       /* parte inferior igual de oscura */
-    ), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+    ), url(/resources/IMG_4434.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -116,7 +116,7 @@ input[name="slider-radio"] {
 .content-slide-home {
 position: absolute;
 top: 50%;
-
+line-height: 1.5rem;
 }
 
 .content-slide-home img {
@@ -127,6 +127,7 @@ top: 50%;
   color: white;
   font-size: 3rem;
   height: auto;
+  font-weight: 1;
  font-family: 'BillionDreams', sans-serif !important;
 }
 
