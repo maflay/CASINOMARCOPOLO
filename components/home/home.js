@@ -167,56 +167,56 @@ function toGames() {
     });
 })();
 
-function sliderhome() {
-  const track = document.getElementById("sliderTrack2");
-  const radios = document.querySelectorAll('input[name="slider-radio"]');
-  const labels = document.querySelectorAll(".slider-controls label");
-  const prevBtnh = document.getElementById("prevBtnh");
-  const nextBtnh = document.getElementById("nextBtnh");
+// function sliderhome() {
+//   const track = document.getElementById("sliderTrack2");
+//   const radios = document.querySelectorAll('input[name="slider-radio"]');
+//   const labels = document.querySelectorAll(".slider-controls label");
+//   const prevBtnh = document.getElementById("prevBtnh");
+//   const nextBtnh = document.getElementById("nextBtnh");
 
-  let currentIndex = 0;
-  const totalSlides = radios.length;
-  let interval;
+//   let currentIndex = 0;
+//   const totalSlides = radios.length;
+//   let interval;
 
-  function goToSlide(index) {
-    track.style.transform = `translateX(-${index * 100}vw)`;
-    radios[index].checked = true;
-    currentIndex = index;
-  }
+//   function goToSlide(index) {
+//     track.style.transform = `translateX(-${index * 100}vw)`;
+//     radios[index].checked = true;
+//     currentIndex = index;
+//   }
 
-  function nextSlide() {
-    let index = (currentIndex + 1) % totalSlides;
-    goToSlide(index);
-  }
+//   function nextSlide() {
+//     let index = (currentIndex + 1) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function prevSlide() {
-    let index = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(index);
-  }
+//   function prevSlide() {
+//     let index = (currentIndex - 1 + totalSlides) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 11000);
-  }
+//   function resetInterval() {
+//     clearInterval(interval);
+//     interval = setInterval(nextSlide, 11000);
+//   }
 
-  nextBtnh.addEventListener("click", () => {
-    nextSlide();
-    resetInterval();
-  });
+//   nextBtnh.addEventListener("click", () => {
+//     nextSlide();
+//     resetInterval();
+//   });
 
-  prevBtnh.addEventListener("click", () => {
-    prevSlide();
-    resetInterval();
-  });
+//   prevBtnh.addEventListener("click", () => {
+//     prevSlide();
+//     resetInterval();
+//   });
 
-  labels.forEach((label, index) => {
-    label.addEventListener("click", () => {
-      goToSlide(index);
-      resetInterval();
-    });
-  });
+//   labels.forEach((label, index) => {
+//     label.addEventListener("click", () => {
+//       goToSlide(index);
+//       resetInterval();
+//     });
+//   });
 
-  interval = setInterval(nextSlide, 11000);
-}
+//   interval = setInterval(nextSlide, 11000);
+// }
 
-sliderhome();
+// sliderhome();
