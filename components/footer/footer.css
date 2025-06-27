@@ -142,6 +142,32 @@ display: flex;
   padding: 20px;
 }
 
+.social-container {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .social-container p {
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .icons a:hover {
+      color: #aaa;
+    }
+
 @media (max-width :1300px) {
 
   .footer .footer-logo {
