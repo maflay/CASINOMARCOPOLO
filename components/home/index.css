@@ -274,6 +274,15 @@ text-align: center;
 
 }
 
+.content-slide-home img {
+width: 300px;
+}
+
+.content-slide-home h1 {
+  font-size: 2rem;
+}
+
+
 }
 
 @media (max-width :378px) {
