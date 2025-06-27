@@ -1,5 +1,5 @@
 .section-ini {
-    position: relative;
+  position: relative;
   height: 95vh;
   overflow: hidden;
 }
@@ -133,11 +133,11 @@ input[name="slider-radio"] {
 }
 
 .content-slide-home {
-position: absolute;
-top: 50%;
-line-height: 1.5rem;
-z-index: 2;
-text-align: center;
+  position: absolute;
+  top: 50%;
+  line-height: 1.5rem;
+  z-index: 2;
+  text-align: center;
 }
 
 .content-slide-home img {
@@ -149,7 +149,7 @@ text-align: center;
   font-size: 3rem;
   height: auto;
   font-weight: 1;
- font-family: 'BillionDreams', sans-serif !important;
+  font-family: 'BillionDreams', sans-serif !important;
 }
 
 
@@ -248,39 +248,36 @@ text-align: center;
     padding: 0 0;
   }
 
-  .slider-controls{
+  .slider-controls {
     position: relative;
     top: -2vh;
   }
 
   .bg1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), url(/resources/banner-home-movil.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url(/resources/banner-home-movil.png);
 
-}
+  }
 
-.bg2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
+  .bg2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
 
-}
+  }
 
-.bg3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
+  .bg3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
 
-}
+  }
 
-.content-slide-home img {
-width: 300px;
-}
+  .content-slide-home img {
+    width: 300px;
+  }
 
-.content-slide-home h1 {
-  font-size: 2rem;
-}
+  .content-slide-home h1 {
+    font-size: 2rem;
+  }
 
 
 }
