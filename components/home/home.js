@@ -1,7 +1,7 @@
 // TARJETA-MYMAWI
 
-function ObtenerTarjeta() {
-  navegarA("obtenertarjeta");
+function membresia() {
+  navegarA("membresia");
 }
 
 // PROMOCIONES

@@ -14,10 +14,10 @@ const rutasLimpias = {
     css: "/components/contacto/contacto.css",
     js: "/components/contacto/contacto.js",
   },
-  obtenertarjeta: {
-    html: "/components/obtenertarjeta/obtenertarjeta.html",
-    css: "/components/obtenertarjeta/obtenertarjeta.css",
-    js: "/components/obtenertarjeta/obtenertarjeta.js",
+  membresia: {
+    html: "/components/membresia/membresia.html",
+    css: "/components/membresia/membresia.css",
+    js: "/components/membresia/membresia.js",
   },
   blackjack: {
     html: "/components/juegos/juegos/blackjack/blackjack.html",
