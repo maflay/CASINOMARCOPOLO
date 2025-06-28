@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.section-start-juego-responsable img {
+width: 100%;
+}
+
 .section-start-juego-responsable p {
     text-align: center;
     padding: 20px;
