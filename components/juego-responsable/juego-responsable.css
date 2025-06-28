@@ -354,6 +354,7 @@
     }
 
     .section-consecuencias-text {
+        text-align: center;
         width: 100%;
     }
 
@@ -365,6 +366,8 @@
     .section-factores-riesgos-text {
         width: 100%;
     }
+
+    .section-factores-riesgos-text h1{text-align: center;}
 
     .section-factores-riesgos-img {
         width: 100%;
