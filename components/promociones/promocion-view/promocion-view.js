@@ -18,3 +18,19 @@ function toDadosPoker() {
 function toMymawitepremia(){
 navegarA("mymawitepremia");
 }
+
+function toCascadapremios(){
+  navegarA("cascadapremios");
+}
+
+function toGanaya(){
+  navegarA("ganaya");
+}
+
+function toBingolocura(){
+  navegarA("bingolocura");
+}
+
+function toSuperbingo(){
+  navegarA("superbingo");
+}
