@@ -59,21 +59,21 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-  lampara: {
-    html: "/components/promociones/promocion/lampara-suerte.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/lampara-suerte.js",
-  },
-  girodorado: {
-    html: "/components/promociones/promocion/giro-dorado.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/giro-dorado.js",
-  },
-  dadospoker: {
-    html: "/components/promociones/promocion/dados-poker.html",
-    css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/dados-poker.js",
-  },
+  // lampara: {
+  //   html: "/components/promociones/promocion/lampara-suerte.html",
+  //   css: "/components/promociones/promocion/promocion.css",
+  //   js: "/components/promociones/promocion/lampara-suerte.js",
+  // },
+  // girodorado: {
+  //   html: "/components/promociones/promocion/giro-dorado.html",
+  //   css: "/components/promociones/promocion/promocion.css",
+  //   js: "/components/promociones/promocion/giro-dorado.js",
+  // },
+  // dadospoker: {
+  //   html: "/components/promociones/promocion/dados-poker.html",
+  //   css: "/components/promociones/promocion/promocion.css",
+  //   js: "/components/promociones/promocion/dados-poker.js",
+  // },
   juegos: {
     html: "/components/juegos/juegos.html",
     css: "/components/juegos/juegos.css",
@@ -89,9 +89,34 @@ const rutasLimpias = {
     css: "/components/juegos/juegos/poker/poker.css",
     js: "/components/juegos/juegos/poker/poker.js",
   },
-    juegosresponsable: {
+  juegosresponsable: {
     html: "/components/juego-responsable/juego-responsable.html",
     css: "/components/juego-responsable/juego-responsable.css",
     js: "/components/juego-responsable/juego-responsable.js",
-  }
+  },
+  mymawitepremia: {
+    html: "/components/promociones/promocion/MYMAWI-te-premia.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  cascadapremios: {
+    html: "/components/promociones/promocion/cascada-premios.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  ganaya: {
+    html: "/components/promociones/promocion/ganaya.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  bingolocura: {
+    html: "/components/promociones/promocion/bingo-locura.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  superbingo: {
+    html: "/components/promociones/promocion/super-bingo.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
 };

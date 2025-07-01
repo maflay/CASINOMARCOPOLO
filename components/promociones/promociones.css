@@ -259,7 +259,7 @@
 .container-promo .container-section-promo .apuesta-deportiva .apuesta-rigth {
   overflow: hidden;
   width: 50%;
-  height: 400px;
+  height: 100%;
 }
 
 .container-promo .container-section-promo .apuesta-deportiva .apuesta-rigth img {
@@ -273,6 +273,24 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+.apuesta-rigth2 {
+  overflow: hidden;
+  width: 50%;
+}
+
+.apuesta-rigth2 img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.apuesta-rigth2 img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 
 /* ENTRADA */

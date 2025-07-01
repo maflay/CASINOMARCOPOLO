@@ -14,3 +14,7 @@ function toGiroDorado() {
 function toDadosPoker() {
   navegarA("dadospoker");
 }
+
+function toMymawitepremia(){
+navegarA("mymawitepremia");
+}
