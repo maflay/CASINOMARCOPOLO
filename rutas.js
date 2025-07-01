@@ -97,26 +97,26 @@ const rutasLimpias = {
   mymawitepremia: {
     html: "/components/promociones/promocion/MYMAWI-te-premia.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/MYMAWI-te-premia.js",
   },
   cascadapremios: {
     html: "/components/promociones/promocion/cascada-premios.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/cascada-premios.js",
   },
   ganaya: {
     html: "/components/promociones/promocion/ganaya.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/ganaya.js",
   },
   bingolocura: {
     html: "/components/promociones/promocion/bingo-locura.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/bingo-locura.js",
   },
   superbingo: {
     html: "/components/promociones/promocion/super-bingo.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/promocion.js",
+    js: "/components/promociones/promocion/super-bingo.js",
   },
 };

@@ -86,7 +86,7 @@ sliderUbi();
 
 
 (() => {
-  const btnNext1 = document.getElementById("next-to-1");
+  const btnNext1 = document.getElementById("next-to-super-bingo");
   const btnNext2 = document.getElementById("next-to-2");
   const btnNext3 = document.getElementById("next-to-3");
 
