@@ -15,6 +15,10 @@
   }
 })();
 
+function toPromos(){
+  navegarA("promociones");
+}
+
 (() => {
   fetch("/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.html")
     .then((res) => res.text())

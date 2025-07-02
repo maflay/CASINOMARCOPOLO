@@ -51,3 +51,7 @@
     });
   }
 })();
+
+function toPromos(){
+  navegarA("promociones");
+}

@@ -39,3 +39,8 @@
       document.body.appendChild(script);
     });
 })();
+
+
+function toPromos(){
+  navegarA("promociones");
+}

@@ -74,11 +74,11 @@ const rutasLimpias = {
   //   css: "/components/promociones/promocion/promocion.css",
   //   js: "/components/promociones/promocion/dados-poker.js",
   // },
-  juegos: {
-    html: "/components/juegos/juegos.html",
-    css: "/components/juegos/juegos.css",
-    js: "/components/juegos/juegos.js",
-  },
+  // juegos: {
+  //   html: "/components/juegos/juegos.html",
+  //   css: "/components/juegos/juegos.css",
+  //   js: "/components/juegos/juegos.js",
+  // },
   slots: {
     html: "/components/juegos/juegos/slots/slots.html",
     css: "/components/juegos/juegos/slots/slots.css",
