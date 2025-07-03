@@ -242,7 +242,8 @@
 .apuesta-buttons a,
 .apuesta-buttons2 a {
     text-decoration: none;
-    padding: 10px;
+     padding: 8px 16px;
+     border-radius: 10px;
     font-weight: bold;
     background-color: #fff;
     color: #1F253A;
@@ -274,5 +275,5 @@
 
 .link-flecha:hover::after {
   opacity: 1;
-  right: 10px;
+  right: 8px;
 }
