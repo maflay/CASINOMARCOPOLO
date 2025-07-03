@@ -41,6 +41,7 @@
   transform: translateX(-50%);
   padding: 10px;
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 .vigencia-promo-text{ 
