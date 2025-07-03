@@ -20,11 +20,11 @@ function toGanaya() {
   navegarA("ganaya");
 }
 
-function toBingolocura(){
+function toBingolocura() {
   navegarA("bingolocura");
 }
 
-function toSuperbingo(){
+function toSuperbingo() {
   navegarA("superbingo");
 }
 
@@ -54,3 +54,33 @@ function toSuperbingo(){
       document.body.appendChild(script);
     });
 })();
+
+
+function actualizarCuentaRegresiva() {
+  const ahora = new Date();
+  const año = ahora.getFullYear();
+  const mes = ahora.getMonth(); // 0-indexado: enero es 0
+
+  // Siguiente mes (si es diciembre, pasa a enero del siguiente año)
+  const siguienteMes = new Date(año, mes + 1, 1, 0, 0, 0);
+
+  const diferencia = siguienteMes - ahora;
+
+  if (diferencia <= 0) {
+    document.getElementById("cuenta-regresiva").innerText = "¡Ya es el nuevo mes!";
+    return;
+  }
+
+  const segundosTotales = Math.floor(diferencia / 1000);
+  const dias = Math.floor(segundosTotales / (60 * 60 * 24));
+  const horas = Math.floor((segundosTotales % (60 * 60 * 24)) / 3600);
+  const minutos = Math.floor((segundosTotales % 3600) / 60);
+  const segundos = segundosTotales % 60;
+
+  document.getElementById("cuenta-regresiva").innerText =
+    ` ${dias}d ${horas}h ${minutos}m ${segundos}s para el siguiente mes.`;
+}
+
+// Actualiza cada segundo
+actualizarCuentaRegresiva();
+setInterval(actualizarCuentaRegresiva, 1000);
