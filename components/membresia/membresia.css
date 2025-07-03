@@ -4,6 +4,13 @@
   min-height: 100vh;
 }
 
+.fondo p {
+  font-size: 22px;
+}
+.fondo li{
+font-size: 18px;
+}
+
 .fondo::before {
   content: "";
   position: absolute;

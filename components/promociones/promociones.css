@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.container-promo p {
+  font-size: 22px;
+}
+
 .container-promo .section-start::before {
   content: "";
   position: absolute;
@@ -29,7 +33,7 @@
 
 .content-vigencia-promo {
   width: 100%;
-  height: auto;
+  height: 5vh;
   max-width: 900px;
   position: absolute;
   display: flex;
@@ -42,10 +46,11 @@
   padding: 10px;
   box-sizing: border-box;
   font-weight: bold;
+  color: #343840;
 }
 
 .vigencia-promo-text{ 
-    border-right: 5px solid #27314F;
+    border-right: 5px solid #343840;
     padding-right: 15px;
 }
 
