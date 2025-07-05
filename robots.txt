@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://casinomarcopolo.netlify.app/sitemap.xml

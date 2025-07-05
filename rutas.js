@@ -1,5 +1,5 @@
 const rutasLimpias = {
-  home: {
+  inicio: {
     html: "/components/home/index.html",
     css: "/components/home/index.css",
     js: "/components/home/home.js",

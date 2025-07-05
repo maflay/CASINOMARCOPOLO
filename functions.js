@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarHeaderYFooter();
 
   if (!window.location.hash) {
-    navegarA("home");
+    navegarA("inicio");
   }
 
   // Asignar IDs únicos a elementos animables
@@ -199,7 +199,7 @@ function animarScroll(selector, direccion = "y") {
 
 function cargarHeaderYFooter() {
   const mainFooter = document.getElementById("main-footer");
-  const hash = window.location.hash.slice(1) || "home";
+  const hash = window.location.hash.slice(1) || "inicio";
   const clave = hash.split("?")[0];
 
   fetch("/components/header/header.html")
