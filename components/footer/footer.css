@@ -10,42 +10,41 @@
 
 .footer .footer-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  font-size: 150%;
+  width: 100%;
 }
 
 .footer .footer-logo {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 227px;
 }
 
 .footer .footer-logo img {
-  width: 120%;
+  width: 100%;
 }
+
 .footer .footer-logos-legales small {
   color: gray;
 }
 
-.footer .footer-section ul {
+.footer .footer-logo ul {
   list-style: none;
   padding: 0;
 }
 
-.footer .footer-section ul li {
+.footer .footer-logo ul li {
   margin-bottom: 8px;
 }
 
-.footer .footer-section ul li a {
+.footer .footer-logo ul li a {
   color: #ffffff;
   text-decoration: none;
   transition: opacity 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer .footer-logo ul li a:hover {
   opacity: 0.4;
 }
 
@@ -76,7 +75,6 @@
 .footer .footer-subscriber {
   display: grid;
   justify-content: center;
-  margin-top: 30px;
   width: 100%;
   height: 100px;
 }
@@ -126,47 +124,54 @@
 }
 
 .footer .footer-logos-legales {
-display: flex;
-}
-
-.img-legal{
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
 }
 
-.footer-logo-responsable{
+.img-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-legal img {
+  width: 80%;
+}
+
+.footer-logo-responsable {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 50%;
   padding: 20px;
 }
 
 .social-container {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-    }
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
-    .social-container p {
-      font-weight: bold;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
+.social-container p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
 
-    .icons a {
-      margin: 0 10px;
-      color: white;
-      font-size: 24px;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-    .icons a:hover {
-      color: #aaa;
-    }
+.icons a:hover {
+  color: #aaa;
+}
 
 @media (max-width :1300px) {
 

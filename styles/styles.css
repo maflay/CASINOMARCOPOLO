@@ -11,6 +11,11 @@ html {
   background-color: #1F253A;
   scroll-behavior: auto;
   font-family: 'Averta ligth', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 .container {
@@ -88,22 +93,22 @@ html {
 .type-h1 {
   font-family: 'Averta ExtraBold', sans-serif !important;
   color: white;
-    font-size: 40px;
-  line-height: 2.2rem;
+  font-size: 40px;
+  line-height: 2.5rem;
 }
 
 .type2-h1 {
   font-family: 'Averta Bold', sans-serif !important;
   color: white;
-    font-size: 40px;
-  line-height: 2.2rem;
+  font-size: 40px;
+  line-height: 2.5rem;
 }
 
 .type3-h1 {
   font-family: 'Averta Black', sans-serif !important;
   color: #fff;
   font-size: 30px;
-  line-height: 2.2rem;
+  line-height: 2.5rem;
 }
 
 .type4-h1 {
