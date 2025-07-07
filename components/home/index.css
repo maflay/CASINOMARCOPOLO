@@ -663,6 +663,12 @@ input[name="slider-radio"] {
     width: 100%;
     height: 100%;
   }
+
+  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h2 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 5rem;
+}
 }
 
 
@@ -725,7 +731,6 @@ input[name="slider-radio"] {
 
   .game p {
     width: 100%;
-    font-size: 1rem;
   }
 
   .game a {
