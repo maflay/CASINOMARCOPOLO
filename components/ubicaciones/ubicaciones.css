@@ -61,6 +61,7 @@
 .content-casin-text p {
   text-align: justify;
   width: 100%;
+  line-height: 2rem;
 }
 
 .address-casin {
