@@ -1,299 +1,31 @@
 .section-ini {
   position: relative;
-  height: 95vh;
+  height: 60vh;
   overflow: hidden;
-}
-
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.background-image-mobile {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider-wrapper {
-  display: flex;
-  transition: transform 1s ease-in-out;
-  width: 100vw;
-  height: 80vh;
-}
-
-.slide {
-  min-width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.bg1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      /* parte superior más oscura */
-      rgba(0, 0, 0, 0.5)
-      /* parte inferior igual de oscura */
-    ), url(/resources/banner-home.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      /* parte superior más oscura */
-      rgba(0, 0, 0, 0.5)
-      /* parte inferior igual de oscura */
-    ), url(/resources/IMG_4399.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      /* parte superior más oscura */
-      rgba(0, 0, 0, 0.5)
-      /* parte inferior igual de oscura */
-    ), url(/resources/IMG_4434.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Ocultar radios */
-input[name="slider-radio"] {
-  display: none;
-}
-
-/* Botones navegación (puntos) */
-.slider-controls label {
-  cursor: pointer;
-  width: 12px;
-  height: 12px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background: transparent;
-  margin: 0 5px;
-  display: inline-block;
-  transition: background 0.3s;
-}
-
-/* Contenedor de puntos */
-.slider-controls {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 5;
-}
-
-/* Punto activo */
-.slider-controls input[type="radio"]:checked+label {
-  background: white;
-}
-
-/* Flechas */
-.arrowh {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: #fff;
-  font-size: 5rem;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px 15px;
-  border-radius: 50%;
-}
-
-.arrowh-left {
-  left: 0px;
-}
-
-.arrowh-right {
-  right: 0px;
+  align-items: center;
+  background-image: url(/resources/fondo-abstracto-azul-oscuro.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content-slide-home {
-  position: absolute;
-  top: 50%;
-  line-height: 1.5rem;
-  z-index: 2;
+  position: relative;
+  color: white;
+  z-index: 3;
   text-align: center;
 }
 
-.content-slide-home img {
-  width: 450px;
-}
-
-.content-slide-home h2 {
-  color: white;
-  font-size: 3rem;
-  height: auto;
-  font-weight: 1;
-  font-family: 'BillionDreams', sans-serif !important;
-}
-
-
-
-.scroll-down-indicator {
-  display: flex;
-  position: absolute;
-  top: 80vh;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  animation: float 2s ease-in-out infinite;
-  z-index: 50;
-}
-
-.arrow {
-  width: 24px;
-  height: 24px;
-  border: solid #e3e4e5;
-  border-width: 0 4px 4px 0;
-  transform: rotate(45deg);
-  opacity: 0.7;
-  animation: bounce 1.2s infinite ease-in-out;
-  transition: opacity 0.3s ease;
-}
-
-.arrow:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.arrow:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(45deg);
-    opacity: 0.7;
-  }
-
-  50% {
-    transform: translateY(10px) rotate(45deg);
-    opacity: 1;
-  }
-}
-
-
-@media (max-width :768px) {
-
-  .container-ini .first-section {
-    display: flex;
-  }
-
-  .video-bg {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-
-  .video-content-text {
-    width: auto;
-    margin-left: 0;
-  }
-
-  .video-content-text img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-hero {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(/resources/banner-home-movil.png);
-    height: 70vh;
-    background-position: center;
-  }
-
-  .scroll-down-indicator {
-    top: 80vh;
-  }
-
-  .content-slide-home {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 0px;
-    top: 40vh;
-    padding: 0 0;
-  }
-
-  .slider-controls {
-    position: relative;
-    top: -2vh;
-  }
-
-  .bg1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), url(/resources/banner-home-movil.png);
-
-  }
-
-  .bg2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
-
-  }
-
-  .bg3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
-
-  }
-
-  .content-slide-home img {
-    width: 300px;
-  }
-
-  .content-slide-home h1 {
-    font-size: 2rem;
-  }
-
-
-}
-
-@media (max-width :378px) {
-
-  .scroll-down-indicator {
-    top: 60vh;
-  }
-}
-
-
-
-
-
 /* slider ubicacion */
+
+.background-ubicaciones {
+  background-image: linear-gradient(180deg, #1f253ac9, #27314fce), url(/resources/cuadro-fondo-estandarte-abstracto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .background-ubicacion {
   position: relative;
@@ -305,6 +37,7 @@ input[name="slider-radio"] {
 
 .btn-ubicacion {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -317,359 +50,186 @@ input[name="slider-radio"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/resources/fondo-mapa.png);
+  /* background-image: url(/resources/fondo-mapa.png);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   opacity: 0.5;
   z-index: -1;
 }
 
-.content-info {
-  display: flex;
-  overflow: hidden;
-  position: relative;
+.ubicaciones-ocultar {
+  width: 100%;
 }
 
+.card-ubicacion {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  height: auto;
+  padding: 32px;
+}
 
-.info-white {
-  background-color: transparent;
+.card-ubicacion .card-ubicacion-img {
+  width: 50%;
+}
+
+.card-ubicacion .card-ubicacion-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-ubicacion .card-ubicacion-text {
+  display: flex;
+  width: 50%;
+}
+
+.card-ubicacion-text-seccion-1 {
+  position: relative;
   width: 70%;
   height: 100%;
-}
-
-.info-ubicacion {
-  background: linear-gradient(120deg, #27314f, #1f253a,
-      #27314f, #1f253a, #27314f, #1f253a, #27314f, #1f253a,
-      #27314f, #1f253a, #27314f, #1f253a, #27314f, #1f253a,
-      #27314f, #1f253a);
-  width: 40%;
-  height: 550px;
-  object-fit: cover;
-  padding: 20px;
-}
-
-.info-ubicacion h1 {
-  line-height: 2.5rem;
-}
-
-.content-iframe {
-  width: auto;
-  height: auto;
-}
-
-.content-iframe iframe {
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 60%;
-  height: 55%;
-  border-radius: 50px;
-}
-
-.content-btn {
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-radius: 50px;
-}
-
-.content-slider-ubicaciones {
+  padding: 16px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.seccion-1-label-ubicacion {
+  display: flex;
   align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  color: white;
 }
 
-.sliderubicacion {
-  position: relative;
-  width: 800px;
-  height: 550px;
-  overflow: hidden;
-}
-
-.sliderubicacion .slider-wrapper-ubicacion {
-  display: flex;
-  transition: transform 1s ease-in-out;
-  height: auto;
-  width: 800px;
-  height: 550px;
-}
-
-.sliderubicacion .slideubicacion {
-  min-width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.sliderubicacion .bg1ubicacion {
-  background-image: url(/resources/marcopoloBarranquilla.png);
-  border-radius: 20px;
-  overflow: hidden
-}
-
-.sliderubicacion .bg2ubicacion {
-  background-image: url(/resources/marcopoloBogota.png);
-  border-radius: 20px;
-  overflow: hidden
-}
-
-.sliderubicacion .bg3ubicacion {
-  background-image: url(/resources/marcopoloHolguines.jpg);
-  border-radius: 20px;
-  overflow: hidden
-}
-
-.sliderubicacion .bg4ubicacion {
-  background-image: url(/resources/marcopoloLocalInter.png);
-  border-radius: 20px;
-  overflow: hidden
-}
-
-/* Radios ocultos */
-.sliderubicacion input[type="radio"] {
-  display: none;
-}
-
-/* Botones de navegación (radios visuales) */
-.sliderubicacion label {
-  position: relative;
-  cursor: pointer;
-  width: 12px;
-  height: 12px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background: transparent;
-  margin: 0 5px;
-  transition: background 0.3s;
+.estado {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 0;
+  border-radius: 8px;
   display: inline-block;
+  color: white;
+  margin-left: 5px;
 }
 
-/* Contenedor de los puntos */
-.navigationubicacion {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
+.abierto {
+  color: chartreuse;
+  font-size: 1.2rem;
+}
+
+.cerrado {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.desc-ubi-casino {
+  color: white;
+}
+
+.desc-ubi-casino small {
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.btn-ver-mas a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn-ver-mas a:hover {
+  color: gray;
+}
+
+.card-ubicacion-text-seccion-2 {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  padding: 16px;
   display: flex;
-  justify-content: center;
-  z-index: 5;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Cuando esté seleccionado */
-.navigationubicacion input[type="radio"]:checked+label {
-  background: white;
+.status-text {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  height: 100%;
 }
 
-/* Flechas */
-.arrow-ubicacion {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: #1f253a;
-  font-size: 10rem;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px 15px;
-  border-radius: 50%;
+.status-text p {
+  color: chartreuse;
 }
 
-.arrow-left-ubicacion {
-  left: 0px;
+.status-text small {
+  font-size: 1rem;
+  color: gray;
 }
 
-.arrow-right-ubicacion {
-  right: 0px;
+.desc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: end;
+  width: 100%;
 }
 
-.ubicaciones-ocultar {
-  display: none;
+.desc-text small {
+  font-size: 1rem;
+  color: gray;
 }
 
-@media (max-width: 780px) {
-
-  .ubicaciones-ocultar {
-    display: flex;
-  }
-
-  .ubicaciones-movil {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .ubicaciones-movil .card-ubicacion {
-    display: flex;
-    width: 100%;
-    gap: 30px;
-    padding: 20px;
-  }
-
-  .ubicaciones-movil .card-ubicacion .card-ubicacion-img {
-    height: 100px;
-    width: 150px;
-    padding: 5px;
-  }
-
-  .img-fondo1 {
-    background-image: url(/resources/icon-barran.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .img-fondo2 {
-    background-image: url(/resources/icon-bogota.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .img-fondo3 {
-    background-image: url(/resources/icon-cali.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .img-fondo4 {
-    background-image: url(/resources/icon-cali.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .ubicaciones-movil .card-ubicacion .card-ubicacion-img img {
-    object-fit: cover;
-    width: 50%;
-    height: 50%;
-    border-radius: 50px;
-  }
-
-  .ubicaciones-movil .card-ubicacion .card-ubicacion-text {
-    display: grid;
-    width: 50%;
-    align-items: center;
-  }
-
-  .ubicaciones-movil .card-ubicacion .card-ubicacion-text p {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .ocultar {
-    display: none;
-  }
-
+.desc-text a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 5px;
 }
+
 
 /* TARJETA-MYMAWI */
-.container-tarjeta {
+/* .container-tarjeta {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
-.container-tarjeta .box-container-tarjeta {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
-.container-tarjeta .box-left-tarjeta {
-  background: #1f253a;
-  color: white;
-  flex: 0.5;
+.section-start-tarjeta {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: linear-gradient(180deg, #27314fad, #27314fad), url(/resources/fondo-abstracto.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  height: 65vh;
+  padding: 20px;
+  position: relative;
 }
 
-.container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h2 {
-  font-size: 100px;
-  font-weight: 900;
-  line-height: 8.2rem;
+.section-start-tarjeta-text {
+  display: flex;
+  flex-direction: column;
 }
 
-.container-tarjeta .box-rigth-tarjeta {
-  position: absolute;
-  right: 0;
-  width: 50vw;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
+.content-tarjeta-a a {
+  text-decoration: none;
 }
 
-.container-tarjeta .box-rigth-tarjeta img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.parahacer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 65vh;
+  position: relative;
 }
 
-.content-tarjeta .bg1 {
-  background-image: url(/resources/Recurso-7@2x.png);
-}
-
-
-@media (max-width: 950px) {
-  .container-tarjeta {
-    height: auto;
-  }
-
-  .container-tarjeta .box-container-tarjeta {
-    display: flow;
-    height: auto;
-    overflow: hidden;
-  }
-
-  .container-tarjeta .box-left-tarjeta {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    padding: 50px;
-  }
-
-  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content {
-    margin-left: 0;
-  }
-
-  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h1 {
-    font-size: 60px;
-    line-height: 3.5rem;
-    font-weight: 900;
-  }
-
-  .container-tarjeta .box-rigth-tarjeta {
-    position: relative;
-    width: 100vw;
-    height: auto;
-    left: -20px;
-    top: 10px;
-    overflow: hidden;
-  }
-
-  .container-tarjeta .box-rigth-tarjeta img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h2 {
-  font-size: 50px;
-  font-weight: 900;
-  line-height: 5rem;
-}
-}
 
 
 .section-game {
@@ -721,6 +281,65 @@ input[name="slider-radio"] {
   text-decoration: none;
 }
 
+
+
+@media (max-width: 950px) {
+
+  .section-ini {
+    height: 20vh;
+  }
+
+  .container-tarjeta {
+    height: auto;
+  }
+
+  .container-tarjeta .box-container-tarjeta {
+    display: flow;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .container-tarjeta .box-left-tarjeta {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 50px;
+  }
+
+  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content {
+    margin-left: 0;
+  }
+
+  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h1 {
+    font-size: 60px;
+    line-height: 3.5rem;
+    font-weight: 900;
+  }
+
+  .container-tarjeta .box-rigth-tarjeta {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: -20px;
+    top: 10px;
+    overflow: hidden;
+  }
+
+  .container-tarjeta .box-rigth-tarjeta img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-tarjeta .box-left-tarjeta .box-left-tarjeta-content h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 5rem;
+  }
+}
+
 @media (max-width: 768px) {
 
   .game {
@@ -740,4 +359,62 @@ input[name="slider-radio"] {
   .game-img img {
     border-radius: 0px;
   }
+
+  .card-ubicacion {
+    flex-direction: column;
+  }
+
+  .card-ubicacion .card-ubicacion-img {
+    width: 100%;
+  }
+
+  .card-ubicacion .card-ubicacion-text {
+    width: 100%;
+  }
+
+  .desc-text a {
+    font-size: 0.8rem;
+  }
+
+  .card-ubicacion-text-seccion-1 {
+    width: 60%;
+    padding: 0;
+  }
+
+  .card-ubicacion-text-seccion-2 {
+    width: 40%;
+
+  }
+
+  .seccion-1-label-ubicacion p {
+    font-size: 1.2rem;
+  }
+
+  .card-ubicacion-text-seccion-1 h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .card-ubicacion-text-seccion-1 svg {
+    margin-left: 2px;
+  }
+
+  .card-ubicacion-text-seccion-2 {
+    height: auto;
+    padding: 0;
+  }
+
+  .desc-ubi-casino {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:388px) {
+
+  .desc-ubi-casino,
+  .btn-ver-mas {
+    font-size: 1.2rem;
+  }
+
 }

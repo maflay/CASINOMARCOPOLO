@@ -7,186 +7,262 @@
 
 <body>
   <section class="section-ini">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="/resources/MarcoPolo.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-
-    </video>
     <div class="container">
       <div class="item content-slide-home">
-        <img src="/resources/marcopolo.png" />
-        <h2>La ruta a la fortuna</h2>
+        <!-- <img src="/resources/marcopolo.png" /> -->
+        <h2 class="type-h1">La ruta a la fortuna</h2>
       </div>
-      <div class="scroll-down-indicator">
+      <!-- <div class="scroll-down-indicator">
         <span class="arrow"></span>
         <span class="arrow"></span>
         <span class="arrow"></span>
-      </div>
+      </div> -->
     </div>
-    <img src="/resources/banner-home-movil.png" alt="Banner móvil" class="background-image-mobile">
   </section>
-  <div class="background-ubicacion ocultar">
-    <div class="container ">
-      <div style="text-align: center; 
+  <div class="background-ubicaciones">
+    <div class="background-ubicacion ocultar">
+      <div class="container ">
+        <div style="text-align: center; 
                 align-items: center;
                 display: flex;  
                 justify-content: center;
                 padding: 20px;">
-        <h2 class="type2-h1 item">Ubicaciones</h2>
-      </div>
-      <div class="item btn-ubicacion">
-        <button class="btn-design2" id="sedeBar">Barranquilla</button>
-        <button class="btn-design2" id="sedeBog">Bogotá</button>
-        <button class="btn-design2" id="sedeCas">Cali Sur</button>
-        <button class="btn-design2" id="sedeCao">Cali Oeste</button>
-      </div>
-      <div class="content-slider-ubicaciones">
-        <section class="sliderubicacion">
-          <div class="slider-wrapper-ubicacion" id="sliderTrackubicacion">
-            <div style="cursor: pointer;" id="toBarranquilla" class="slideubicacion bg1ubicacion">
-              <div class="content-info">
-                <div class="info-white">
-                </div>
-                <div class="info-ubicacion">
-                  <h2 class="type2-h1">Barranquilla,</h2>
-                  <h2 class="type2-h1">Mallplaza Buenavista</h2>
-                  <br />
-                  <p class="type5-h1">📍 Cra 53 #99-148 Local A2073A piso 2</p>
-                  <p class="type5-h1">📞 (+57) 316 0859199</p>
-                </div>
-                <div class="content-iframe">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3166765853266!2d-74.8296131091053!3d11.014849932201688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42c4cd175908d%3A0x9b9bfcb63575d493!2sCentro%20Comercial%20Mallplaza%20Buenavista!5e0!3m2!1ses!2sco!4v1745857050019!5m2!1ses!2sco"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-            <div style="cursor: pointer;" id="toBogota" class="slideubicacion bg2ubicacion">
-              <div class="content-info">
-                <div class="info-white">
-                </div>
-                <div class="info-ubicacion">
-                  <h2 class="type2-h1">Bogotá 100</h2>
-                  <br />
-                  <p class="type5-h1">📍 Cra 15 #100-76</p>
-                  <p class="type5-h1">📞 (+57) 323 453 1657</p>
-                </div>
-                <div class="content-iframe">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4772047635433!2d-74.05000976723088!3d4.686819557814184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9abde306ddc1%3A0xd87e4a68938251c0!2zQ3JhLiAxNSAjIDEwMC03NiwgVXNhcXXDqW4sIEJvZ290w6EsIEQuQy4sIEJvZ290w6EsIEJvZ290w6EsIEQuQy4!5e0!3m2!1ses!2sco!4v1745857314522!5m2!1ses!2sco"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-            <div style="cursor: pointer;" id="toCalisur" class="slideubicacion bg3ubicacion">
-              <div class="content-info">
-                <div class="info-white">
-                </div>
-                <div class="info-ubicacion">
-                  <h2 class="type2-h1">Cali Sur,</h2>
-                  <h2 class="type3-h1">Holguines T.C.</h2>
-                  <br />
-                  <p class="type5-h1">📍 Calle 100 B #11A-19 local #200</p>
-                  <p class="type5-h1">📞 (+57) 317 439 1688</p>
-                </div>
-                <div class="content-iframe">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.908634134753!2d-76.54216163462709!3d3.3725075423425954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a17a55c60df5%3A0xf8f1ed27d927b75c!2sCra.%20100%20%2311-60%20l%20200%2C%20Ciudad%20Jard%C3%ADn%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1745857520053!5m2!1ses!2sco"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-            <div style="cursor: pointer;" id="toCalioeste" class="slideubicacion bg4ubicacion">
-              <div class="content-info">
-                <div class="info-white">
-                </div>
-                <div class="info-ubicacion">
-                  <h2 class="type2-h1">Cali Oeste,</h2>
-                  <h2 class="type3-h1">Hotel InterContinental</h2>
-                  <br />
-                  <p class="type5-h1">📍 Av 1 Oeste #2-72</p>
-                  <p class="type5-h1">📞 (602)28857458</p>
-                </div>
-                <div class="content-iframe">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7374.755703711711!2d-76.54228379878462!3d3.449849330955724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7484d6175b5%3A0xb788380f5b914c0d!2sCasino%20Marco%20Polo!5e0!3m2!1sen!2sco!4v1750865895841!5m2!1sen!2sco"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Radios -->
-          <div class="navigationubicacion">
-            <input type="radio" name="slider-ubicacion" id="trigger1-ubicacion" checked>
-            <label for="trigger1-ubicacion"></label>
-
-            <input type="radio" name="slider-ubicacion" id="trigger2-ubicacion">
-            <label for="trigger2-ubicacion"></label>
-
-            <input type="radio" name="slider-ubicacion" id="trigger3-ubicacion">
-            <label for="trigger3-ubicacion"></label>
-
-            <input type="radio" name="slider-ubicacion" id="trigger4-ubicacion">
-            <label for="trigger4-ubicacion"></label>
-          </div>
-        </section>
-
-        <!-- Flechas -->
-        <div style="gap: 30px;">
-          <button class="arrow-ubicacion arrow-left-ubicacion" id="prevBtn-ubicacion">&#8249;</button>
-          <button class="arrow-ubicacion arrow-right-ubicacion" id="nextBtn-ubicacion">&#8250;</button>
+          <h2 class="type-h1 item">Ubicaciones</h2>
         </div>
+        <div class="item btn-ubicacion">
+          <button class="btn-design2" id="sedeBar">Barranquilla</button>
+          <button class="btn-design2" id="sedeBog">Bogotá</button>
+          <button class="btn-design2" id="sedeCas">Cali Sur</button>
+          <button class="btn-design2" id="sedeCao">Cali Oeste</button>
+        </div>
+
       </div>
     </div>
+
+    <section class="ubicaciones-ocultar">
+      <div class="container">
+        <div class="card-ubicacion">
+          <div class="card-ubicacion-img"><img class="item" src="/resources/marcopoloBarranquilla.png"
+              alt="marcopoloBarranquilla">
+          </div>
+          <div class="card-ubicacion-text">
+            <div class="card-ubicacion-text-seccion-1">
+              <div class="item">
+                <h3 class="type2-h1">Sede Barranquilla
+                  <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="#FFD700">
+                    <path
+                      d="M12 .587l3.668 7.568L24 9.75l-6 5.857L19.336 24 12 20.125 4.664 24 6 15.607 0 9.75l8.332-1.595z" />
+                  </svg>
+                </h3>
+                <div class="seccion-1-label-ubicacion">
+                  <svg style="position: relative;left:-8px;" viewBox="0 0 128 128" width="32" height="32"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M98.5 42.5a34.5 34.5 0 1 0-64.3 17.2L64 120l29.8-60.3a34.2 34.2 0 0 0 4.7-17.2zM64 59.7a17.2 17.2 0 1 1 17-17 17.2 17.2 0 0 1-17 17z"
+                      fill="#fff" />
+                  </svg>
+                  <p>Casino Marco Polo</p>
+                  <spam id="estadoBarra" class="estado">Verificando...</spam>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="item desc-ubi-casino">
+                <p>Ubicado en Mallplaza Buenavista,
+                  este Marco Polo ofrece un espacio discreto pero elegante.</p>
+                <small>Cra 53 #99-148 Local A2073A piso 2</small>
+                <br />
+                <small>(+57) 316 0859199</small>
+              </div>
+              <br />
+              <br />
+              <div class="item btn-ver-mas">
+                <a href="#barranquilla">Ver más</a>
+              </div>
+            </div>
+            <div class="card-ubicacion-text-seccion-2">
+              <div class="item status-text">
+                <p>Excelente.</p>
+                <small>Para tu gusto.</small>
+              </div>
+              <div class="desc-text">
+                <div>
+                  <small>Juegos y mesas</small>
+                </div>
+                <div>
+                  <a class="btn-design1" href="#barranquilla">Más sobre este casino</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-ubicacion">
+          <div class="card-ubicacion-img"><img src="/resources/marcopoloBogota.png" alt="marcopoloBarranquilla">
+          </div>
+          <div class="card-ubicacion-text">
+            <div class="card-ubicacion-text-seccion-1">
+              <div class="titulo">
+                <h3 class="type2-h1">Sede Bogotá 100
+                  <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="#FFD700">
+                    <path
+                      d="M12 .587l3.668 7.568L24 9.75l-6 5.857L19.336 24 12 20.125 4.664 24 6 15.607 0 9.75l8.332-1.595z" />
+                  </svg>
+                </h3>
+                <div class="seccion-1-label-ubicacion">
+                  <svg style="position: relative;left:-8px;" viewBox="0 0 128 128" width="32" height="32"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M98.5 42.5a34.5 34.5 0 1 0-64.3 17.2L64 120l29.8-60.3a34.2 34.2 0 0 0 4.7-17.2zM64 59.7a17.2 17.2 0 1 1 17-17 17.2 17.2 0 0 1-17 17z"
+                      fill="#fff" />
+                  </svg>
+                  <p>Casino Marco Polo</p>
+                  <spam id="estadoBog" class="estado">Verificando...</spam>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="titulo desc-ubi-casino">
+                <p>En una de las zonas más exclusivas de la capital colombiana se levanta imponente
+                  Marco Polo 100.</p>
+                <small>Cra 15 #100-76</small>
+                <br />
+                <small>(+57) 323 453 1657</small>
+              </div>
+              <br />
+              <br />
+              <div class="titulo btn-ver-mas">
+                <a href="#bogota">Ver más</a>
+              </div>
+            </div>
+            <div class="card-ubicacion-text-seccion-2">
+              <div class="titulo status-text">
+                <p>Excelente.</p>
+                <small>Para tu gusto.</small>
+              </div>
+              <div class="desc-text">
+                <div>
+                  <small>Juegos y mesas</small>
+                </div>
+                <div>
+                  <a class="btn-design1" href="#bogota">Más sobre este casino</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-ubicacion">
+          <div class="card-ubicacion-img"><img style="border-radius: 30px;" src="/resources/marcopoloHolguines.jpg"
+              alt="marcopoloBarranquilla">
+          </div>
+          <div class="card-ubicacion-text">
+            <div class="card-ubicacion-text-seccion-1">
+              <div class="titulo">
+                <h3 class="type2-h1">Sede Cali Sur
+                  <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="#FFD700">
+                    <path
+                      d="M12 .587l3.668 7.568L24 9.75l-6 5.857L19.336 24 12 20.125 4.664 24 6 15.607 0 9.75l8.332-1.595z" />
+                  </svg>
+                </h3>
+                <div class="seccion-1-label-ubicacion">
+                  <svg style="position: relative;left:-8px;" viewBox="0 0 128 128" width="32" height="32"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M98.5 42.5a34.5 34.5 0 1 0-64.3 17.2L64 120l29.8-60.3a34.2 34.2 0 0 0 4.7-17.2zM64 59.7a17.2 17.2 0 1 1 17-17 17.2 17.2 0 0 1-17 17z"
+                      fill="#fff" />
+                  </svg>
+                  <p>Casino Marco Polo</p>
+                  <spam id="estadoCals" class="estado">Verificando...</spam>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="titulo desc-ubi-casino">
+                <p>Al Sur de la sultana del Valle, en Holguines Trade Center se estrena el más
+                  reciente Marco Polo, un lugar de gusto exquisito para los habitantes de este sector.</p>
+                <small>Calle 100 B #11A-19 local #200</small>
+                <br />
+                <small>(+57) 317 439 1688</small>
+              </div>
+              <br />
+              <br />
+              <div class="titulo btn-ver-mas">
+                <a href="#calisur">Ver más</a>
+              </div>
+            </div>
+            <div class="card-ubicacion-text-seccion-2">
+              <div class="titulo status-text">
+                <p>Excelente.</p>
+                <small>Para tu gusto.</small>
+              </div>
+              <div class="desc-text">
+                <div>
+                  <small>Juegos y mesas</small>
+                </div>
+                <div>
+                  <a class="btn-design1" href="#calisur">Más sobre este casino</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-ubicacion">
+          <div class="card-ubicacion-img"><img src="/resources/marcopoloLocalInter.png" alt="marcopoloBarranquilla">
+          </div>
+          <div class="card-ubicacion-text">
+            <div class="card-ubicacion-text-seccion-1">
+              <div class="titulo">
+                <h3 class="type2-h1">Sede Cali Oeste
+                  <svg viewBox="0 0 24 24" width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="#FFD700">
+                    <path
+                      d="M12 .587l3.668 7.568L24 9.75l-6 5.857L19.336 24 12 20.125 4.664 24 6 15.607 0 9.75l8.332-1.595z" />
+                  </svg>
+                </h3>
+                <div class="seccion-1-label-ubicacion">
+                  <svg style="position: relative;left:-8px;" viewBox="0 0 128 128" width="32" height="32"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M98.5 42.5a34.5 34.5 0 1 0-64.3 17.2L64 120l29.8-60.3a34.2 34.2 0 0 0 4.7-17.2zM64 59.7a17.2 17.2 0 1 1 17-17 17.2 17.2 0 0 1-17 17z"
+                      fill="#fff" />
+                  </svg>
+                  <p>Casino Marco Polo</p>
+                  <spam id="estadoCalo" class="estado">Verificando...</spam>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="titulo desc-ubi-casino">
+                <p>En las entrañas del afamado Hotel InterContinental de Cali se encuentra Marco
+                  Polo Inter, nuestro primer Marco Polo.</p>
+                <small>Av 1 Oeste #2-72</small>
+                <br />
+                <small>(602)28857458</small>
+              </div>
+              <br />
+              <br />
+              <div class="titulo btn-ver-mas">
+                <a href="#calioeste">Ver más</a>
+              </div>
+            </div>
+            <div class="card-ubicacion-text-seccion-2">
+              <div class="titulo status-text">
+                <p>Excelente.</p>
+                <small>Para tu gusto.</small>
+              </div>
+              <div class="desc-text">
+                <div>
+                  <small>Juegos y mesas</small>
+                </div>
+                <div>
+                  <a class="btn-design1" href="#calioeste">Más sobre este casino</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <section class="ubicaciones-ocultar">
-    <div class="container">
-      <div class="ubicaciones-movil">
-        <div class="card-ubicacion titulor" id="toBarraMovil">
-          <div class="card-ubicacion-text">
-            <h2 class="type5-h1">Sede Barranquilla</h2>
-            <p>Saber más</p>
-          </div>
-          <div class="card-ubicacion-img img-fondo1">
-            <img src="/resources/marcopoloBarranquilla.png" />
-          </div>
-        </div>
-        <div class="card-ubicacion titulol" id="toBogMovil">
-          <div class="card-ubicacion-text">
-            <h2 class="type5-h1">Sede Bogotá</h2>
-            <p>Saber más</p>
-          </div>
-          <div class="card-ubicacion-img img-fondo2">
-            <img src="/resources/marcopoloBogota.png" />
-          </div>
-        </div>
-        <div class="card-ubicacion titulor" id="toCaliSMovil">
-          <div class="card-ubicacion-text">
-            <h2 class="type5-h1">Sede Cali, Sur</h2>
-            <p>Saber más</p>
-          </div>
-          <div class="card-ubicacion-img img-fondo3">
-            <img src="/resources/marcopoloHolguines.jpg" />
-          </div>
-        </div>
-        <div class="card-ubicacion titulol" id="toCaliOMovil">
-          <div class="card-ubicacion-text">
-            <h2 class="type5-h1">Sede Cali, Oeste</h2>
-            <p>Saber más</p>
-          </div>
-          <div class="card-ubicacion-img img-fondo4">
-            <img src="/resources/marcopoloLocalInter.png" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- PROMOCIONES -->
 
@@ -196,8 +272,20 @@
   </section>
 
   <!-- TARJETA-MYMAWI -->
+
+  <section class="section-start-tarjeta">
+    <div class="titulo section-start-tarjeta-text">
+      <p class="type4-h1">¡Solo para ganadores como tú!</p>
+      <h1 class="type-h1">Una tarjeta Exclusiva</h1>
+      <br />
+      <div class="content-tarjeta-a">
+        <a class="btn-design1" href="#membresia">Aprénde a como ganar</a>
+      </div>
+    </div>
+  </section>
+
   <section class="container-tarjeta">
-    <div class='box-container-tarjeta container'>
+    <!-- <div class='box-container-tarjeta container'>
       <div class='box-left-tarjeta '>
         <div class='box-left-tarjeta-content titulol' id="get-tarjeta">
           <h2>Ven por<br />
@@ -211,7 +299,7 @@
       <div class='box-rigth-tarjeta'>
         <img src="/resources/Recurso-1@2x.jpg" alt="img-tarjeta"></img>
       </div>
-    </div>
+    </div> -->
   </section>
 
 
@@ -219,55 +307,23 @@
 
   <!-- JUEGOS -->
 
-  <section style="background-color: #27314f;">
+  <section>
     <div class="container">
-      <div class="section-game">
-        <div style="text-align: center;padding: 20px;">
-          <h2 class="type2-h1">Juegos</h2>
-        </div>
-        <div class="content-games">
-          <div class="games">
-            <div class="titulol game">
-              <div class="game-img">
-                <img src="/resources/blackjack-carrusel.jpg" />
-              </div>
-              <p class="type5-h1">Blackjack</p>
-            </div>
-            <div class="game">
-              <div class="game-img">
-                <img src="/resources/ruleta.jpg" />
-              </div>
-              <p class="type5-h1">Ruleta</p>
-            </div>
-            <div class="titulol game">
-              <div class="game-img">
-                <img src="/resources/baccarat-carrusel.jpg" />
-              </div>
-              <p class="type5-h1">Baccarat</p>
-            </div>
-            <div class="game">
-              <div class="game-img">
-                <img src="/resources/IMG_4480.jpg" />
-              </div>
-              <p class="type5-h1">Hipódromo</p>
-            </div>
-            <div class="titulol game">
-              <div class="game-img">
-                <img src="/resources/poker.jpg" />
-              </div>
-              <p class="type5-h1">Póker</p>
-            </div>
-            <div class="game">
-              <div class="game-img">
-                <img src="/resources/slots.jpg" />
-              </div>
-              <p class="type5-h1">Slots</p>
-            </div>
+      <section class="parahacer">
+        <div class="titulo container">
+          <h1 class="type-h1">¿Qué hay para hacer?</h1>
+          <br />
+          <p class="type5-h1">La diversión en Marco Polo se vive en nuestras mesas de Black Jack, Baccarat y Ruleta,
+            contamos también con máquinas individuales de juego, tanto clásicas como de última generación y
+            nuestrás máquinas colectivas de hípicas, ruleta y bingo.</p>
+          <br />
+          <p class="type5-h1">Conóce nuestra oferta de entretenimiento y descubre la ruta a la fortuna.</p>
+          <br />
+          <div class="content-ubicacion-a">
+            <a style="text-decoration: none;" class="btn-design2" href="#juegos">Saber más</a>
           </div>
         </div>
-        <br />
-        <!-- <button onclick="toGames()" class="btn-design2">Saber más</button> -->
-      </div>
+      </section>
     </div>
   </section>
   <script src="/components/home/home.js"></script>

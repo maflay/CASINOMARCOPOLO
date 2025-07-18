@@ -55,9 +55,8 @@ const PageLoader = {
   cargarPagina: function (clave, contenedorId = "content-area") {
     const loading = document.getElementById("loading");
     const mainContent = document.getElementById(contenedorId);
-    window.scrollTo(0, 0);
     loading.style.display = "flex";
-
+    window.scrollTo(0, 0);
     const ruta = rutasLimpias[clave];
     if (!ruta) {
       mainContent.innerHTML = `<p>Ruta no encontrada: ${clave}</p>`;
@@ -65,26 +64,47 @@ const PageLoader = {
       return;
     }
 
+    sessionStorage.clear();
     fetch(ruta.html)
       .then((response) => response.text())
       .then((html) => {
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
-        mainContent.innerHTML = html;
-        capturarCorreoDesdeURL();
-        document
-          .querySelectorAll(".titulo, .titulor, .titulol")
-          .forEach((el, index) => {
-            el.dataset.id = `anim-${index}`;
-          });
 
-        // Ejecutar animaciones iniciales tras cargar vista
-        animarScroll(".titulo", "y");
-        animarScroll(".titulor", "x-right");
-        animarScroll(".titulol", "x-left");
-        setTimeout(() => {
+        // Esperar a que imágenes terminen de cargar antes de animar
+        const images = mainContent.querySelectorAll("img");
+        const total = images.length;
+        let loaded = 0;
+        mainContent.innerHTML = html;
+
+        const iniciarAnimaciones = () => {
+          animarScrollConObserver(".titulo", "y");
+          animarScrollConObserver(".titulor", "x-right");
+          animarScrollConObserver(".titulol", "x-left");
           loading.style.display = "none";
-        }, 400);
+        };
+
+        if (total === 0) {
+          requestAnimationFrame(() => setTimeout(iniciarAnimaciones, 50));
+        } else {
+          images.forEach((img) => {
+            if (img.complete) {
+              loaded++;
+              if (loaded === total) iniciarAnimaciones();
+            } else {
+              img.addEventListener("load", () => {
+                loaded++;
+                if (loaded === total) iniciarAnimaciones();
+              });
+              img.addEventListener("error", () => {
+                loaded++;
+                if (loaded === total) iniciarAnimaciones();
+              });
+            }
+          });
+        }
+
+        capturarCorreoDesdeURL();
       })
       .catch((error) => {
         mainContent.innerHTML = "<p>Error al cargar la página.</p>";
@@ -126,73 +146,62 @@ window.addEventListener("hashchange", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarHeaderYFooter();
+  const loading = document.getElementById("loading");
 
   if (!window.location.hash) {
     navegarA("inicio");
   }
-
-  // Asignar IDs únicos a elementos animables
-  document
-    .querySelectorAll(".titulo, .titulor, .titulol")
-    .forEach((el, index) => {
-      el.dataset.id = `anim-${index}`;
-    });
-
-  // Scroll
-  window.addEventListener("scroll", () => {
-    animarScroll(".titulo", "y");
-    animarScroll(".titulor", "x-right");
-    animarScroll(".titulol", "x-left");
-  });
-
-  // En carga inicial
-  animarScroll(".titulo", "y");
-  animarScroll(".titulor", "x-right");
-  animarScroll(".titulol", "x-left");
 });
 
-function animarScroll(selector, direccion = "y") {
+function animarScrollConObserver(selector, direccion = "y") {
   const elements = document.querySelectorAll(selector);
 
-  elements.forEach((el) => {
-    const id = el.dataset.id;
-    if (!id) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        const id = el.dataset.id;
 
-    if (sessionStorage.getItem(id) === "true") {
-      el.dataset.animated = "true";
+        if (entry.isIntersecting && !el.dataset.animated) {
+          el.style.opacity = 1;
+
+          let transform = "";
+          if (direccion === "y") {
+            transform = "translateY(0)";
+          } else if (direccion === "x-right") {
+            transform = "translateX(0)";
+          } else if (direccion === "x-left") {
+            transform = "translateX(0)";
+          }
+
+          el.style.transform = transform;
+          el.dataset.animated = "true";
+          sessionStorage.setItem(id, "true");
+          observer.unobserve(el); // ya no necesita más observación
+        }
+      });
+    },
+    {
+      threshold: 0.2, // visible al 20%
+    }
+  );
+
+  elements.forEach((el, index) => {
+    el.dataset.id = el.dataset.id || `anim-${selector}-${index}`;
+    if (sessionStorage.getItem(el.dataset.id) === "true") {
       el.style.opacity = 1;
       el.style.transform = "translate(0, 0)";
-      return;
-    }
-
-    if (el.dataset.animated === "true") return;
-
-    const rect = el.getBoundingClientRect();
-    const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
-
-    if (inViewport) {
-      const scrollY = window.scrollY;
-      const opacity = Math.min(scrollY / 500, 1);
-      let transform = "";
-
+      el.dataset.animated = "true";
+    } else {
       if (direccion === "y") {
-        const translateY = Math.max(50 - scrollY * 0.1, 0);
-        transform = `translateY(${translateY}px)`;
+        el.style.transform = "translateY(40px)";
       } else if (direccion === "x-right") {
-        const translateX = Math.max(50 - scrollY * 0.1, 0);
-        transform = `translateX(${translateX}px)`;
+        el.style.transform = "translateX(40px)";
       } else if (direccion === "x-left") {
-        const translateX = Math.min(-50 + scrollY * 0.1, 0);
-        transform = `translateX(${translateX}px)`;
+        el.style.transform = "translateX(-40px)";
       }
 
-      el.style.transform = transform;
-      el.style.opacity = opacity;
-
-      if (opacity >= 1) {
-        el.dataset.animated = "true";
-        sessionStorage.setItem(id, "true"); // guardar como animado
-      }
+      observer.observe(el);
     }
   });
 }
@@ -215,6 +224,10 @@ function cargarHeaderYFooter() {
           navItems.classList.toggle("open");
         });
       }
+
+      document.getElementById("logo-menu").addEventListener("click", () => {
+        window.location.hash = "inicio";
+      });
 
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".Navbar");
@@ -284,13 +297,6 @@ function toRegister() {
   navegarA(`contacto`);
 }
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // hace que el scroll sea suave
-  });
-}
-
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
   const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
@@ -318,6 +324,10 @@ function actualizarMenuActivo() {
   });
 }
 
-// Ejecutar al cargar y al cambiar hash
-window.addEventListener("load", actualizarMenuActivo);
-window.addEventListener("hashchange", actualizarMenuActivo);
+window.addEventListener("load", () => {
+  actualizarMenuActivo();
+});
+
+window.addEventListener("hashchange", () => {
+  actualizarMenuActivo();
+});

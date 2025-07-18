@@ -22,6 +22,17 @@ width: 100%;
     margin-bottom: 20px;
 }
 
+h2 {
+        color: #fff;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    -webkit-text-stroke-color: #171c1e;
+    stroke: #171c1e;
+    text-shadow: 2px 2px 5px #171c1e;
+}
+
 
 
 .section-que-es {

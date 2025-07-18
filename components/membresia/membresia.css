@@ -56,10 +56,11 @@ font-size: 18px;
   height: 100%;
   color: white;
   gap: 30px;
+  padding:  32px 0;
 }
 
 .tarjeta-img {
-  width: 40%;
+  width: 50%;
   padding: 20px;
 }
 
@@ -67,7 +68,7 @@ font-size: 18px;
   width: 100%;
   height: 100%;
 }
-
+/* 
 .efecto-gota-i {
   border-radius: 35% 35% 35% 0;
 }
@@ -75,13 +76,17 @@ font-size: 18px;
 
 .efecto-gota-d {
   border-radius: 35% 35% 0 35%;
-}
+} */
 
 
 .tarjeta-desc {
   align-items: center;
-  width: 60%;
+  width: 50%;
   height: 50%;
+}
+
+.tarjeta-desc p{
+  text-align: justify;
 }
 
 ul {

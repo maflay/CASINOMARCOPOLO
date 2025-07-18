@@ -11,10 +11,10 @@ function saberMasPromo() {
   navegarA("promociones");
 }
 (() => {
-  const btnBarranquilla = document.getElementById("toBarranquilla");
-  const btnBogota = document.getElementById("toBogota");
-  const btnCalisur = document.getElementById("toCalisur");
-  const btnCaliO = document.getElementById("toCalioeste");
+  const btnBarranquilla = document.getElementById("sedeBar");
+  const btnBogota = document.getElementById("sedeBog");
+  const btnCalisur = document.getElementById("sedeCas");
+  const btnCaliO = document.getElementById("sedeCao");
 
   btnBarranquilla.addEventListener("click", () => {
     navegarA("barranquilla");
@@ -33,81 +33,81 @@ function saberMasPromo() {
   });
 })();
 
-function sliderUbicaciones() {
-  const trackubicacion = document.getElementById("sliderTrackubicacion");
-  const radiosubicacion = document.querySelectorAll(
-    'input[name="slider-ubicacion"]'
-  );
-  const labelsubicacion = document.querySelectorAll(
-    ".navigationubicacion label"
-  );
-  const prevBtnubicacion = document.getElementById("prevBtn-ubicacion");
-  const nextBtnubicacion = document.getElementById("nextBtn-ubicacion");
-  const sedeBarra = document.getElementById("sedeBar");
-  const sedeBog = document.getElementById("sedeBog");
-  const sedeCas = document.getElementById("sedeCas");
-  const sedeCao = document.getElementById("sedeCao");
+// function sliderUbicaciones() {
+//   const trackubicacion = document.getElementById("sliderTrackubicacion");
+//   const radiosubicacion = document.querySelectorAll(
+//     'input[name="slider-ubicacion"]'
+//   );
+//   const labelsubicacion = document.querySelectorAll(
+//     ".navigationubicacion label"
+//   );
+//   const prevBtnubicacion = document.getElementById("prevBtn-ubicacion");
+//   const nextBtnubicacion = document.getElementById("nextBtn-ubicacion");
+//   const sedeBarra = document.getElementById("sedeBar");
+//   const sedeBog = document.getElementById("sedeBog");
+//   const sedeCas = document.getElementById("sedeCas");
+//   const sedeCao = document.getElementById("sedeCao");
 
-  let currentIndex = 0;
-  const totalSlides = radiosubicacion.length;
-  let interval;
+//   let currentIndex = 0;
+//   const totalSlides = radiosubicacion.length;
+//   let interval;
 
-  function goToSlide(index) {
-    trackubicacion.style.transform = `translateX(-${index * 100}%)`;
-    radiosubicacion[index].checked = true;
-    currentIndex = index;
-  }
-  function nextSlide() {
-    let index = (currentIndex + 1) % totalSlides;
-    goToSlide(index);
-  }
+//   function goToSlide(index) {
+//     trackubicacion.style.transform = `translateX(-${index * 100}%)`;
+//     radiosubicacion[index].checked = true;
+//     currentIndex = index;
+//   }
+//   function nextSlide() {
+//     let index = (currentIndex + 1) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function prevSlide() {
-    let index = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(index);
-  }
+//   function prevSlide() {
+//     let index = (currentIndex - 1 + totalSlides) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 10000);
-  }
+//   function resetInterval() {
+//     clearInterval(interval);
+//     interval = setInterval(nextSlide, 10000);
+//   }
 
-  sedeBarra.addEventListener("click", () => {
-    navegarA("barranquilla");
-  });
+//   sedeBarra.addEventListener("click", () => {
+//     navegarA("barranquilla");
+//   });
 
-  sedeBog.addEventListener("click", () => {
-    navegarA("bogota");
-  });
+//   sedeBog.addEventListener("click", () => {
+//     navegarA("bogota");
+//   });
 
-  sedeCas.addEventListener("click", () => {
-    navegarA("calisur");
-  });
+//   sedeCas.addEventListener("click", () => {
+//     navegarA("calisur");
+//   });
 
-  sedeCao.addEventListener("click", () => {
-    navegarA("calioeste");
-  });
+//   sedeCao.addEventListener("click", () => {
+//     navegarA("calioeste");
+//   });
 
-  nextBtnubicacion.addEventListener("click", () => {
-    nextSlide();
-    resetInterval();
-  });
+//   nextBtnubicacion.addEventListener("click", () => {
+//     nextSlide();
+//     resetInterval();
+//   });
 
-  prevBtnubicacion.addEventListener("click", () => {
-    prevSlide();
-    resetInterval();
-  });
+//   prevBtnubicacion.addEventListener("click", () => {
+//     prevSlide();
+//     resetInterval();
+//   });
 
-  labelsubicacion.forEach((label, index) => {
-    label.addEventListener("click", () => {
-      goToSlide(index);
-      resetInterval();
-    });
-  });
-  interval = setInterval(nextSlide, 10000);
-}
+//   labelsubicacion.forEach((label, index) => {
+//     label.addEventListener("click", () => {
+//       goToSlide(index);
+//       resetInterval();
+//     });
+//   });
+//   interval = setInterval(nextSlide, 10000);
+// }
 
-sliderUbicaciones();
+// sliderUbicaciones();
 
 function toGames() {
   navegarA("juegos");
@@ -220,3 +220,50 @@ function toGames() {
 // }
 
 // sliderhome();
+
+(() => {
+  const estadoBarraEl = document.getElementById("estadoBarra");
+  const estadoBogoEl = document.getElementById("estadoBog");
+  const estadoCalsEl = document.getElementById("estadoCals");
+  const estadoCaloEl = document.getElementById("estadoCalo");
+
+  // Define horarios en formato HHMM (ej: 930 = 09:30 AM, 2415 = 12:15 AM del siguiente día)
+  const horaAperturaBarra = 900;
+  const horaCierreBarra = 2400;
+
+  const horaAperturaBogo = 930;
+  const horaCierreBogo = 2330;
+
+  const horaAperturaCals = 1000;
+  const horaCierreCals = 2200;
+
+  const horaAperturaCalo = 830;
+  const horaCierreCalo = 2230;
+
+  function verificarHorario() {
+    const ahora = new Date();
+    const horaActual = ahora.getHours(); // 0–23
+    const minutosActual = ahora.getMinutes(); // 0–59
+    const horaEnHM = horaActual * 100 + minutosActual; // ej: 14:30 -> 1430
+
+    function actualizarEstado(elemento, apertura, cierre) {
+      if (horaEnHM >= apertura && horaEnHM < cierre) {
+        elemento.textContent = "Abierto";
+        elemento.classList.add("abierto");
+        elemento.classList.remove("cerrado");
+      } else {
+        elemento.textContent = "Cerrado";
+        elemento.classList.add("cerrado");
+        elemento.classList.remove("abierto");
+      }
+    }
+
+    actualizarEstado(estadoBarraEl, horaAperturaBarra, horaCierreBarra);
+    actualizarEstado(estadoBogoEl, horaAperturaBogo, horaCierreBogo);
+    actualizarEstado(estadoCalsEl, horaAperturaCals, horaCierreCals);
+    actualizarEstado(estadoCaloEl, horaAperturaCalo, horaCierreCalo);
+  }
+
+  verificarHorario();
+  setInterval(verificarHorario, 60000); // actualiza cada minuto
+})();

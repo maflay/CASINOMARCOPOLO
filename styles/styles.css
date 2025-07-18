@@ -35,7 +35,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 700;
   width: auto;
   align-self: flex-start;
   transition: background-color 0.3s ease;
@@ -55,9 +54,7 @@ body {
   cursor: pointer;
   width: auto;
   font-size: 14px;
-  font-weight: 1000;
   transition: background-color 0.3s ease;
-  font-family: 'Averta Bold', sans-serif !important;
 
 }
 
@@ -77,9 +74,7 @@ body {
   cursor: pointer;
   width: auto;
   font-size: 14px;
-  font-weight: 1000;
   transition: background-color 0.3s ease;
-  font-family: 'Averta Bold', sans-serif !important;
 }
 
 .btn-design2:hover {
@@ -91,41 +86,49 @@ body {
 /* TIPOS DE TITULOS */
 
 .type-h1 {
-  font-family: 'Averta ExtraBold', sans-serif !important;
-  color: white;
-  font-size: 40px;
-  line-height: 2.5rem;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 300;
+    font-family: 'TT Interphases DemiBold', sans-serif;
+    text-shadow: 1px 1px 1px #171c1e;
+}
+
+.type1-h1-bold {
+    color: #fff;
+    font-size: 96px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #171c1e;
+    font-family: 'TT Interphases DemiBold', sans-serif;
 }
 
 .type2-h1 {
-  font-family: 'Averta Bold', sans-serif !important;
-  color: white;
-  font-size: 40px;
-  line-height: 2.5rem;
+     color: #fff;
+    font-size: 25px;
+    font-weight: 750;
+    -webkit-text-stroke-color: #171c1e;
+    stroke: #171c1e;
 }
 
 .type3-h1 {
-  font-family: 'Averta Black', sans-serif !important;
-  color: #fff;
-  font-size: 30px;
-  line-height: 2.5rem;
+   color: #171c1e;
+    font-size: 15px;
+    font-weight: 650;
+    -webkit-text-stroke-color: #171c1e;
+    stroke: #171c1e;
 }
 
 .type4-h1 {
   color: #fff;
   font-size: 20px;
-  line-height: 1.5rem;
 }
 
 .type5-h1 {
   color: #fff;
   font-size: 20px;
-  line-height: 1.5rem;
 }
 
 .frases-tarjeta h1 {
   transform: rotate(-6deg);
-  /* Texto en diagonal */
   color: #fff;
   font-size: 40px;
   font-weight: 900;
@@ -272,5 +275,13 @@ body {
   .hidden {
     visibility: hidden;
   }
+
+      .type-h1 {
+        font-size: 2rem;
+    }
+
+    .type1-h1-bold {
+        font-size: 2rem;
+    }
 
 }
