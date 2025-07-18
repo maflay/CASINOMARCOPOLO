@@ -104,6 +104,9 @@
     width: 100%;
   }
 
+  .content-title-promo h1 {
+    margin-bottom: 5px;
+  }
 
 }
 
