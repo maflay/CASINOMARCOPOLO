@@ -8,11 +8,11 @@
     top: 0;
     z-index: 999;
     transition: background-color 0.6s ease;
-    background-color: #171c1eb7;
+    background-color: #fff;
 }
 
 .Navbar.navbar-scrolled {
-    background-color: #171c1e;
+    background-color: #fff;
 }
 
 .Navbar>.nav-logo {
@@ -23,7 +23,7 @@
 }
 
 .Navbar .nav-items a {
-    color: #ffffff;
+    color: #1F253A;
     font-weight: 100;
     font-size: 15px;
     text-decoration: none;
@@ -39,7 +39,7 @@
     bottom: 0;
     height: 2px;
     width: 100%;
-    background: #ffffff;
+    background: #1F253A;
     transition: all 0.4s;
 }
 
@@ -55,7 +55,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: #ffffff;
+    background: #1F253A;
     transition: all .40s;
 }
 

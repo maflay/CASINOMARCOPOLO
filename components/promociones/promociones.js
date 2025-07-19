@@ -86,7 +86,7 @@ function toSuperbingo() {
     const segundos = segundosTotales % 60;
 
     horaFull.innerText =
-      ` ${dias}d ${horas}h ${minutos}m ${segundos}s para el siguiente mes.`;
+      ` ${dias}d ${horas}h ${minutos}m ${segundos}s para las próximas ven y no te las pierdas.`;
   }
   }
 
