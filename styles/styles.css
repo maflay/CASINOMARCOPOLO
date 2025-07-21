@@ -86,35 +86,35 @@ body {
 /* TIPOS DE TITULOS */
 
 .type-h1 {
-    color: #fff;
-    font-size: 55px;
-    font-weight: 300;
-    font-family: 'TT Interphases DemiBold', sans-serif;
-    text-shadow: 1px 1px 1px #171c1e;
+  color: #fff;
+  font-size: 55px;
+  font-weight: 300;
+  font-family: 'TT Interphases DemiBold', sans-serif;
+  text-shadow: 1px 1px 1px #171c1e;
 }
 
 .type1-h1-bold {
-    color: #fff;
-    font-size: 96px;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px #171c1e;
-    font-family: 'TT Interphases DemiBold', sans-serif;
+  color: #fff;
+  font-size: 96px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #171c1e;
+  font-family: 'TT Interphases DemiBold', sans-serif;
 }
 
 .type2-h1 {
-     color: #fff;
-    font-size: 25px;
-    font-weight: 750;
-    -webkit-text-stroke-color: #171c1e;
-    stroke: #171c1e;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 750;
+  -webkit-text-stroke-color: #171c1e;
+  stroke: #171c1e;
 }
 
 .type3-h1 {
-   color: #171c1e;
-    font-size: 15px;
-    font-weight: 650;
-    -webkit-text-stroke-color: #171c1e;
-    stroke: #171c1e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 650;
+  -webkit-text-stroke-color: #171c1e;
+  stroke: #171c1e;
 }
 
 .type4-h1 {
@@ -276,12 +276,12 @@ body {
     visibility: hidden;
   }
 
-      .type-h1 {
-        font-size: 3.2rem;
-    }
+  .type-h1 {
+    font-size: 3.2rem;
+  }
 
-    .type1-h1-bold {
-        font-size: 2rem;
-    }
+  .type1-h1-bold {
+    font-size: 4.2rem;
+  }
 
 }

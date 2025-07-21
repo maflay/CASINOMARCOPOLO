@@ -30,40 +30,91 @@
   background-attachment: fixed;
 }
 
-.banner-obten-tarjeta {
+.banner-membresia {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  color: white;
-}
-
-.banner-obten-tarjeta .content-image {
-  width: 600px;
-  height: 100%;
-}
-
-.banner-obten-tarjeta .content-image img {
   width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
+  height: 70vh;
+  padding: 20px;
+  background-image: url(/resources/fondo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
+.banner-membresia h1 {
+    color: #fff;
+    text-shadow:
+        0 0 6px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff;
+}
 
+.banner-membresia img {
+  width: 40%;
+  height: 100%;
+}
+
+.tarjeta-mymawi {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.content-img-mymawi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+}
+
+.content-img-mymawi img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.content-text-mymawi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.content-text-mymawi h1 {
+  line-height: 8rem;
+}
+
+.content-text-mymawi p {
+  font-weight: 300;
+  color: #86868b;
+  font-size: 25px;
+}
+
+.separator {
+  padding: 20px 0 0 0;
+}
 
 .desc-tarjeta {
- display: flex;
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
 }
 
-.separator{
-  padding: 20px 0 0 0;
-}
 
 .tarjeta-img {
-   width: 100%;
+  width: 100%;
   height: 800px;
   overflow: hidden;
   border-radius: 20px;
@@ -204,61 +255,65 @@ ul {
 
 @media (max-width: 780px) {
 
-
-  .fondo::before {
-    background-attachment: fixed;
+  .banner-membresia {
+    height: 40vh;
   }
 
-  .banner-obten-tarjeta .content-image {
-    width: 100%;
-    height: 100%;
+  .content-text-mymawi h1 {
+    line-height: normal;
   }
 
-  .banner-obten-tarjeta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-  }
-
-  .content-image {
-    width: 100%;
-    height: 100%;
-  }
-
-  .desc-tarjeta {
-    display: inline;
-    padding: 40px;
-  }
-
-  .tarjeta-desc {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
-
-  .tarjeta-img {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
-
-  .tarjeta-img img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .reverse-view {
+  .content-info-membresia {
     flex-direction: column-reverse;
   }
 
-  .efecto-gota-i {
-    border-radius: 0 0 0 0;
+  .content-desc-membresia {
+    width: 100%;
   }
 
+  .content-text-title-membresia {
+    width: 100%;
+    height: auto;
+  }
 
-  .efecto-gota-d {
-    border-radius: 0 0 0 0;
+  .video-container-membresia {
+    height: auto;
+    padding: 20px;
+  }
+
+  .content-card-title-membresia {
+    padding: 0;
+  }
+
+  .tarjeta-img {
+    height: 350px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .tarjeta-img::before {
+    opacity: 0.2;
+  }
+
+  .tarjeta-desc,
+  .tarjeta-desc-2,
+  .tarjeta-desc-3 {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+  }
+
+   .tarjeta-desc h1,
+  .tarjeta-desc-2 h1,
+  .tarjeta-desc-3 h1 {
+    text-align: center;
+  }
+
+   .tarjeta-desc{
+    right: 0;
+   }
+
+  .tarjeta-desc-2 {
+    left: 0;
   }
 
 }
