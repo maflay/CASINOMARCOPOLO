@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(180deg,#27314f1f,#27314f),url(/resources/fondo-abstracto-azul-oscuro.jpg);
+  background-image: url(/resources/fondo-ondulado-2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@
 /* slider ubicacion */
 
 .background-ubicaciones {
-  background-image: linear-gradient(180deg, #27314f, #27314fde), url(/resources/cuadro-fondo-estandarte-abstracto.jpg);
+  background-image: linear-gradient(180deg, #1F253A, #27314fde), url(/resources/cuadro-fondo-estandarte-abstracto.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
