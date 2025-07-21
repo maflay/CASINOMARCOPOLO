@@ -129,13 +129,25 @@
   align-items: center;
 }
 
-.img-legal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.img-legal .img-vig{
+display: flex;
+justify-content: start;
+align-items: center;
 }
 
-.img-legal img {
+.img-legal .img-vig img {
+  width: 80%;
+}
+
+
+
+.img-legal .img-col{
+display: flex;
+justify-content: end;
+align-items: center;
+}
+
+.img-legal .img-col img {
   width: 80%;
 }
 

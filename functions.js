@@ -81,7 +81,9 @@ const PageLoader = {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");
           animarScrollConObserver(".titulol", "x-left");
-          loading.style.display = "none";
+          setTimeout(() => {
+            loading.style.display = "none";
+          }, 350);
         };
 
         if (total === 0) {

@@ -18,6 +18,18 @@
   text-align: center;
 }
 
+.content-slide-home h2{
+     color: #fff;
+    text-shadow:
+        0 0 8px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff;
+}
+
 /* slider ubicacion */
 
 .background-ubicaciones {
