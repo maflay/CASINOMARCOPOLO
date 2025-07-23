@@ -389,4 +389,22 @@
     font-size: 1rem;
     text-align: center;
   }
+
+  .container-promo .section-start {
+    
+height: 70vh;
+  }
+  
+  .content-vigencia-promo{
+    top: 60vh;
+  }
+
+  .card-view-entretenimiento img{
+    width: 100%;
+  }
+  
+  .info-card-entretenimiento{
+    font-size: 1rem;
+    text-align: center;
+  }
 }
