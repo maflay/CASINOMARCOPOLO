@@ -1,24 +1,36 @@
 .section-ini {
   position: relative;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/resources/fondo-ondulado-2.png);
+  background-image: url(/resources/fondo-prueba.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .content-slide-home {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   color: white;
   z-index: 3;
-  text-align: center;
+  position: relative;
 }
 
-.content-slide-home h2{
+.content-home-banner{
+  width: 400px;
+}
+
+.content-home-banner img{
+position: absolute;
+top: -80px;
+left: 15%;
+transform: translateX(-50%);
+}
+
+.content-home-banner h3{
      color: #fff;
     text-shadow:
         0 0 8px #fff,
@@ -28,6 +40,42 @@
         0 0 1px #fff,
         0 0 1px #fff,
         0 0 1px #fff;
+}
+
+.content-home-banner p{
+     color: #fff;
+    text-shadow:
+        0 0 8px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff;
+}
+
+
+.content-slide-home h2{
+  padding-left: 20px;
+     color: #fff;
+    text-shadow:
+        0 0 8px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff,
+        0 0 1px #fff;
+}
+
+.content-home-banner-title{
+  width: 100%;
+  position: relative;
+  left: -5px;
+}
+
+.content-home-banner-title h3{
+  line-height: 8rem;
 }
 
 /* slider ubicacion */
@@ -77,14 +125,32 @@
 
 .card-ubicacion {
   display: flex;
+  flex-direction: column;
   gap: 32px;
   width: 100%;
   height: auto;
   padding: 32px;
+  position: relative;
 }
 
 .card-ubicacion .card-ubicacion-img {
-  width: 50%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-ubicacion .card-ubicacion-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 30px;
 }
 
 .card-ubicacion .card-ubicacion-img img {
@@ -94,7 +160,14 @@
 
 .card-ubicacion .card-ubicacion-text {
   display: flex;
-  width: 50%;
+  position: absolute;
+  padding-left: 10px;
+  left: 8%;
+  bottom: 10%;
+  width: 84%;
+  border-radius: 8px;
+  background-color: #1F253A;
+  z-index: 10;
 }
 
 .card-ubicacion-text-seccion-1 {
@@ -295,6 +368,119 @@
   text-decoration: none;
 }
 
+
+.sliderC {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapperC {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100vw;
+    height: 80vh;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: grab;
+}
+
+.slider-wrapperC:active{
+  cursor: grabbing;
+}
+
+.slideC {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/mp1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/mp2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ), url(/resources/mp3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+input[name="slider-radioC"] {
+    display: none;
+}
+
+.slider-controlsC label {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.slider-controlsC {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.slider-controlsC input[type="radio"]:checked+label {
+    background: white;
+}
+
+
+.arrowC {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.arrowC-left {
+    left: 0px;
+}
+
+.arrowC-right {
+    right: 0px;
+}
 
 
 @media (max-width: 950px) {
