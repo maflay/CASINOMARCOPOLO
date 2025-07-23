@@ -26,16 +26,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: white;
-  padding-top: 100px;
   gap: 50px;
+  position: relative;
 }
 
 .content-casin-img {
-  width: 50%;
-  margin-top: 40px;
+  width: 100vw;
   overflow: hidden;
-
+  position: relative;
 }
 
 /* .content-casin-img img {
@@ -46,15 +46,16 @@
 
 .content-casin-text {
   text-align: center;
-  width: 50%;
+  width: 100%;
+  padding-bottom: 30px;
 }
 
 .content-casin-text img {
   width: 70%;
 }
 
-.content-casin-text h1 {
-  font-size: 2.1rem;
+.content-casin-text h2 {
+  font-size: 4rem;
 }
 
 
@@ -66,6 +67,7 @@
 
 .address-casin {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: auto;
   gap: 30px;
@@ -73,21 +75,35 @@
   margin-bottom: 50px;
 }
 
+.content-ubi-icon-1{
+
+}
+
+.content-ubi-icon-1 svg{
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
 .address-text {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  background-color: #27314F;
+  border-radius: 20px;
 }
 
 .address-ubicacion {
-  width: 50%;
-  height: 200px;
+  width: 100%;
+  height: 600px;
 }
 
 .address-ubicacion iframe {
   width: 100%;
   height: 100%;
-  border-radius: 40px;
+  border-radius: 0 0 40px 40px;
 }
 
 
@@ -150,24 +166,27 @@
 }
 
 .bg1barranquilla {
-  background-image: url(/resources/marcopoloBarranquilla.png);
+  background-image: url(/resources/marcopoloBarranquilla-2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 .bg2barranquilla {
   background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 .bg3barranquilla {
   background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 /* Ocultar radios */
@@ -270,24 +289,27 @@ input[name="slider-radio-barranquilla"] {
 }
 
 .bg1bogota {
-  background-image: url(/resources/marcopoloBogota.png);
+  background-image: url(/resources/marcopoloBogota-2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 .bg2bogota {
   background-image: url(https://img.freepik.com/vector-gratis/ilustracion-realista-juegos-casino_52683-99923.jpg?semt=ais_hybrid&w=740);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 .bg3bogota {
   background-image: url(https://img.freepik.com/vector-gratis/hermoso-estandarte-juego-poquer-casino-espacio-texto_1017-54064.jpg?semt=ais_hybrid&w=740);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 /* Ocultar radios */
@@ -389,10 +411,11 @@ input[name="slider-radio-bogota"] {
 }
 
 .bg1oeste {
-  background-image: url(/resources/marcopoloLocalInter.png);
+  background-image: url(/resources/marcopoloLocalInter-3.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  background-position: top;
 }
 
 .bg2oeste {
@@ -512,7 +535,7 @@ input[name="slider-radio-oeste"] {
   background-image: url(/resources/marcopoloHolguines.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 
 .bg2sur {

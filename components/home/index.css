@@ -1,6 +1,6 @@
 .section-ini {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -121,64 +121,75 @@ transform: translateX(-50%);
 
 .ubicaciones-ocultar {
   width: 100%;
+  padding: 20px 0;
 }
 
-.card-ubicacion {
+.content-card-ubicacion{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.card-ubicacion{
+  width: 400px;
+  height: 430px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-ubicacion-img{
+  width: 100%;
+  height: 50%;
+}
+
+.card-ubicacion-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.card-ubicacion-text{
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: space-between;
+  padding: 20px;
   width: 100%;
-  height: auto;
-  padding: 32px;
-  position: relative;
-}
-
-.card-ubicacion .card-ubicacion-img {
-  position: relative;
-  width: 100%;
+  height: 50%;
+  background-color: white;
   overflow: hidden;
 }
 
-.card-ubicacion .card-ubicacion-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.4;
-  z-index: 2;
-  pointer-events: none;
-  border-radius: 30px;
+.card-ubicacion-text h3{
+  color:#27314F;
 }
 
-.card-ubicacion .card-ubicacion-img img {
-  width: 100%;
-  height: 100%;
+.card-ubicacion-text p{
+  color: #27314F;
+  font-size: 1.4rem;
 }
 
-.card-ubicacion .card-ubicacion-text {
+.card-ubicacion-text small{
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.content-a-card{
   display: flex;
-  position: absolute;
-  padding-left: 10px;
-  left: 8%;
-  bottom: 10%;
-  width: 84%;
-  border-radius: 8px;
-  background-color: #1F253A;
-  z-index: 10;
+  justify-content: flex-end;
 }
 
-.card-ubicacion-text-seccion-1 {
-  position: relative;
-  width: 70%;
-  height: 100%;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.card-ubicacion-text a{
+text-decoration: none;
+transition: all 0.4s ease;
 }
+
+.card-ubicacion-text a:hover{
+text-decoration: none;
+color: gray;
+}
+
 
 .seccion-1-label-ubicacion {
   display: flex;
@@ -216,7 +227,6 @@ transform: translateX(-50%);
 }
 
 .btn-ver-mas a {
-  color: white;
   text-decoration: none;
   transition: all 0.4s ease;
 }
@@ -305,18 +315,54 @@ transform: translateX(-50%);
 }
 
 .parahacer {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 65vh;
-  position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 65vh;
+padding: 20px 0;
+position: relative;
+z-index: 2;
 }
 
+.parahacer p {
+  text-align: center;
+}
+
+.parahacer p,
+.parahacer h1{
+  color: #fff;
+}
+
+.parahacer-img{
+width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+  
+}
+
+.parahacer-img::before{
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #27314F;
+    opacity: 0.8;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.parahacer-img img{
+  width: 100%;
+  height: 100%;
+}
 
 
 .section-game {

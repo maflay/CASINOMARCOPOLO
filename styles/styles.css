@@ -10,7 +10,7 @@ html {
   overflow-x: hidden;
   background-color: #1F253A;
   scroll-behavior: auto;
-  font-family: 'Averta ligth', sans-serif;
+   font-family: 'Josefin Sans', sans-serif;
   font-size: 62.5%;
 }
 
@@ -89,7 +89,7 @@ body {
   color: #fff;
   font-size: 55px;
   font-weight: 300;
-  font-family: 'TT Interphases DemiBold', sans-serif;
+  /* font-family: 'TT Interphases DemiBold', sans-serif; */
   text-shadow: 1px 1px 1px #171c1e;
 }
 
@@ -98,7 +98,7 @@ body {
   font-size: 96px;
   font-weight: 700;
   text-shadow: 1px 1px 1px #171c1e;
-  font-family: 'TT Interphases DemiBold', sans-serif;
+  /* font-family: 'TT Interphases DemiBold', sans-serif; */
 }
 
 .type2-h1 {
