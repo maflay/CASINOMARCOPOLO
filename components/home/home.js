@@ -10,28 +10,7 @@ function saberMasPromo() {
   window.scrollTo(0, 0);
   navegarA("promociones");
 }
-(() => {
-  const btnBarranquilla = document.getElementById("sedeBar");
-  const btnBogota = document.getElementById("sedeBog");
-  const btnCalisur = document.getElementById("sedeCas");
-  const btnCaliO = document.getElementById("sedeCao");
 
-  btnBarranquilla.addEventListener("click", () => {
-    navegarA("barranquilla");
-  });
-
-  btnBogota.addEventListener("click", () => {
-    navegarA("bogota");
-  });
-
-  btnCalisur.addEventListener("click", () => {
-    navegarA("calisur");
-  });
-
-  btnCaliO.addEventListener("click", () => {
-    navegarA("calioeste");
-  });
-})();
 
 // function sliderUbicaciones() {
 //   const trackubicacion = document.getElementById("sliderTrackubicacion");

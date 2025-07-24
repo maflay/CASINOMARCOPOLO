@@ -105,6 +105,10 @@ transform: translateX(-50%);
   gap: 15px;
 }
 
+.btn-ubicacion a{
+  text-decoration: none;
+}
+
 .background-ubicacion::before {
   content: "";
   position: absolute;

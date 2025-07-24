@@ -92,7 +92,7 @@
   padding: 25px;
   text-align: center;
   background-color: #27314F;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 
 .address-ubicacion {
