@@ -2,6 +2,14 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+    background-image:
+    linear-gradient(35deg, #1F253A, #1f253aa4),
+    url(/resources/mymawi-mitad.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 .fondo p {
@@ -12,23 +20,7 @@
   font-size: 18px;
 }
 
-.fondo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(to top, #1F253A, rgba(0, 0, 0, 0)),
-    url(/resources/mymawi-mitad.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  z-index: -1;
-  background-attachment: fixed;
-}
+
 
 .banner-membresia {
   display: flex;
