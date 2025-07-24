@@ -87,7 +87,7 @@ body {
 /* TIPOS DE TITULOS */
 
 .type-h1 {
-  color: #fff;
+  color: #1F253A;
   font-size: 55px;
   font-weight: 300;
   /* font-family: 'TT Interphases DemiBold', sans-serif; */
@@ -103,7 +103,7 @@ body {
 }
 
 .type2-h1 {
-  color: #fff;
+  color: #1F253A;
   font-size: 25px;
   font-weight: 750;
   -webkit-text-stroke-color: #171c1e;
@@ -111,7 +111,7 @@ body {
 }
 
 .type3-h1 {
-  color: #fff;
+  color: #1F253A;
   font-size: 15px;
   font-weight: 650;
   -webkit-text-stroke-color: #171c1e;
@@ -119,12 +119,12 @@ body {
 }
 
 .type4-h1 {
-  color: #fff;
+  color: #1F253A;
   font-size: 20px;
 }
 
 .type5-h1 {
-  color: #fff;
+  color: #1F253A;
   font-size: 20px;
 }
 

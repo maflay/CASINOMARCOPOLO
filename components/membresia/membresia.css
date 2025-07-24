@@ -1,121 +1,18 @@
-.fondo {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-    background-image:
-    linear-gradient(35deg, #1F253A, #1f253aa4),
-    url(/resources/mymawi-mitad.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-}
-
-.fondo p {
-  font-size: 22px;
-}
-
-.fondo li {
-  font-size: 18px;
-}
-
-
-
-.banner-membresia {
+.content-acordeon-mymawi{
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 70vh;
-  padding: 20px;
-  background-image: url(/resources/fondo.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.banner-membresia h1 {
-    color: #fff;
-    text-shadow:
-        0 0 6px #fff,
-        0 0 1px #fff,
-        0 0 1px #fff,
-        0 0 1px #fff,
-        0 0 1px #fff,
-        0 0 1px #fff,
-        0 0 1px #fff;
-}
-
-.banner-membresia img {
-  width: 40%;
-  height: 100%;
-}
-
-.tarjeta-mymawi {
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.content-img-mymawi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  overflow: hidden;
-}
-
-.content-img-mymawi img {
-  width: 50%;
-  object-fit: cover;
-}
-
-.content-text-mymawi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-}
-
-.content-text-mymawi h1 {
-  line-height: 8rem;
-}
-
-.content-text-mymawi p {
-  font-weight: 300;
-  color: #86868b;
-  font-size: 25px;
-}
-
-.separator {
-  padding: 20px 0 0 0;
-}
-
-.desc-tarjeta {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-}
-
-
-.tarjeta-img {
-  display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
-  width: 100vw;
-  height: 800px;
-  overflow: hidden;
   position: relative;
 }
 
-.tarjeta-img::before {
+.acordeon-mymawi{
+  width: 33.33%;
+  height: 450px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.acordeon-mymawi::before {
   content: "";
   position: absolute;
   top: 0;
@@ -123,212 +20,31 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 2;
   pointer-events: none;
 }
 
-.tarjeta-img img {
+
+.acordeon-mymawi img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* 
-.efecto-gota-i {
-  border-radius: 35% 35% 35% 0;
-}
-
-
-.efecto-gota-d {
-  border-radius: 35% 35% 0 35%;
-} */
-
-
-.tarjeta-desc {
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  position: absolute;
-  z-index: 10;
+.acordeon-mymawi:hover{
   width: 50%;
-  padding: 20px;
-  right: 20px;
-  bottom: 20px;
+}
+.content-title-mymawi{
+position: absolute;
+top: 25%;
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+  pointer-events: none; 
 }
 
-.tarjeta-desc-2 {
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  position: absolute;
-  z-index: 10;
-  width: 50%;
-  padding: 20px;
-  left: 20px;
-  bottom: 20px;
-}
-
-.tarjeta-desc-3 {
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  position: absolute;
-  z-index: 10;
-  width: 50%;
-  padding: 20px;
-  right: 20px;
-  bottom: 20px;
-}
-
-.tarjeta-desc p {
-  text-align: justify;
-  color: white;
-}
-
-.tarjeta-desc-2 p {
-  text-align: justify;
-  color: white;
-}
-
-.tarjeta-desc-3 p {
-  text-align: justify;
-  color: white;
-}
-
-ul {
-  padding-left: 30px;
-  color: white;
-}
-
-.scroll-down-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  animation: float 1.5s ease-in-out infinite;
-}
-
-.arrow {
-  width: 20px;
-  height: 20px;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(-45deg);
-  animation: bounce 1.5s infinite;
-  opacity: 0.7;
-}
-
-.arrow:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.arrow:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(-45deg);
-    opacity: 0.7;
-  }
-
-  50% {
-    transform: translateY(10px) rotate(-45deg);
-    opacity: 1;
-  }
-}
-
-
-
-
-@media (max-width: 780px) {
-
-  .banner-membresia {
-    height: 40vh;
-  }
-
-  .content-text-mymawi h1 {
-    line-height: normal;
-  }
-
-  .content-info-membresia {
-    flex-direction: column-reverse;
-  }
-
-  .content-desc-membresia {
-    width: 100%;
-  }
-
-  .content-text-title-membresia {
-    width: 100%;
-    height: auto;
-  }
-
-  .video-container-membresia {
-    height: auto;
-    padding: 20px;
-  }
-
-  .content-card-title-membresia {
-    padding: 0;
-  }
-
-  .tarjeta-img {
-    height: 350px;
-    border-radius: 20px 20px 0 0;
-  }
-
-  .tarjeta-img::before {
-    opacity: 0.2;
-  }
-
-  .tarjeta-desc,
-  .tarjeta-desc-2,
-  .tarjeta-desc-3 {
-    position: relative;
-    width: 100%;
-    padding: 40px;
-  }
-
-   .tarjeta-desc h1,
-  .tarjeta-desc-2 h1,
-  .tarjeta-desc-3 h1 {
-    text-align: center;
-  }
-
-   .tarjeta-desc{
-    right: 0;
-   }
-
-  .tarjeta-desc-2 {
-    left: 0;
-  }
-
-}
-
-@media (max-width: 380px) {
-
-  .fondo {
-    position: relative;
-  }
-
-  .fondo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
-    background-attachment: fixed;
-
-  }
-
+.content-text-mymawi{
+  text-align: center;
+  padding: 40px 0;
 }

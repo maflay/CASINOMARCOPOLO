@@ -100,7 +100,11 @@ transform: translateX(-50%);
 
 .background-ubicaciones {
   height: auto;
-  padding: 70px 0;
+  padding: 30px 0;
+  background-image: url(/resources/fondo-mapa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background-ubicacion {
@@ -187,12 +191,13 @@ transform: translateX(-50%);
   padding: 20px;
   width: 100%;
   height: 50%;
-  background-color: #eeeeee;
+  background-color: #fff;
   overflow: hidden;
 }
 
 .card-ubicacion-text h3 {
   color: #27314F;
+  align-items: center;
 }
 
 .card-ubicacion-text p {
@@ -235,16 +240,6 @@ transform: translateX(-50%);
   display: inline-block;
   color: white;
   margin-left: 5px;
-}
-
-.abierto {
-  color: chartreuse;
-  font-size: 1.2rem;
-}
-
-.cerrado {
-  color: red;
-  font-size: 1.2rem;
 }
 
 .desc-ubi-casino {
@@ -324,7 +319,7 @@ transform: translateX(-50%);
 .box-container-tarjeta {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 60vh;
 }
 
 .box-left-tarjeta {
@@ -352,31 +347,6 @@ transform: translateX(-50%);
   display: block;
 }
 
-
-.section-start-tarjeta {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background-image: linear-gradient(180deg, #27314fad, #27314fad), url(/resources/fondo-abstracto.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 65vh;
-  padding: 20px;
-  position: relative;
-}
-
-.section-start-tarjeta-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.content-tarjeta-a a {
-  text-decoration: none;
-}
-
 .parahacer {
   display: flex;
   justify-content: center;
@@ -387,7 +357,6 @@ transform: translateX(-50%);
 
 .parahacer-left {
   width: 30%;
-  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,6 +425,7 @@ transform: translateX(-50%);
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
   pointer-events: none;
   font-size: 2rem;
+  color: white;
 }
 
 .content-parahacer-acordeon:hover small {
@@ -468,7 +438,7 @@ transform: translateX(-50%);
   font-size: 2.5rem;
   padding: 20px;
   position: absolute;
-
+  color: white;
 }
 
 .fondo-content-mp-1 {
@@ -518,6 +488,59 @@ transform: translateX(-50%);
 
 .card-content-mp .content-mp-rigth h3 {
   font-size: 3rem;
+}
+
+.content-final-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.card-final-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  padding: 40px 0;
+}
+
+.card-final-section-left {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-final-section-left h2 {
+  font-size: 1.2rem;
+}
+
+.card-final-section-left img {
+  width: 10%;
+}
+
+
+.card-final-section-rigth {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.card-final-section-rigth p {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .section-game {
@@ -717,53 +740,5 @@ input[name="slider-radioC"] {
     width: 100%;
   }
 
-  .card-ubicacion .card-ubicacion-text {
-    width: 100%;
-  }
-
-  .desc-text a {
-    font-size: 0.8rem;
-  }
-
-  .card-ubicacion-text-seccion-1 {
-    width: 60%;
-    padding: 0;
-  }
-
-  .card-ubicacion-text-seccion-2 {
-    width: 40%;
-
-  }
-
-  .seccion-1-label-ubicacion p {
-    font-size: 1.2rem;
-  }
-
-  .card-ubicacion-text-seccion-1 h3 {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-
-  .card-ubicacion-text-seccion-1 svg {
-    margin-left: 2px;
-  }
-
-  .card-ubicacion-text-seccion-2 {
-    height: auto;
-    padding: 0;
-  }
-
-  .desc-ubi-casino {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width:388px) {
-
-  .desc-ubi-casino,
-  .btn-ver-mas {
-    font-size: 1.2rem;
-  }
-
+  
 }
