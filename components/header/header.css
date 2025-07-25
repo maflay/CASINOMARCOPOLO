@@ -8,12 +8,12 @@
     top: 0;
     z-index: 999;
     transition: background-color 0.6s ease;
-  background-color: #1f253ace;
-    
+    background-color: #1f253ace;
+
 }
 
 .Navbar.navbar-scrolled {
-      background-color: #1F253A;
+    background-color: #1F253A;
 
 }
 
@@ -185,7 +185,7 @@
 }
 
 
-@media (max-width: 1320px) {
+@media (max-width: 1220px) {
     .Navbar {
         transition: background-color 0.3s ease;
         background-color: #171c1eee;
@@ -209,10 +209,10 @@
         gap: 0;
     }
 
-    
-.Navbar .nav-items a.active::before {
-background-color: white;
-}
+
+    .Navbar .nav-items a.active::before {
+        background-color: white;
+    }
 
     .nav-items img {
         display: none;

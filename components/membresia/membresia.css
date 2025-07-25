@@ -79,3 +79,18 @@ z-index: 2;
 .beneficios-reverse{
   flex-direction: row-reverse;
 }
+
+@media(max-width: 768px) {
+.content-beneficios-mymawi.content-beneficios-mymawi{
+  flex-direction: column;
+}
+
+.beneficios-left{
+width: 100%;
+}
+
+.beneficios-rigth{
+  width: 100%;
+}
+
+}
