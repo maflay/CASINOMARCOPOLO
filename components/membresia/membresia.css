@@ -38,7 +38,7 @@
 
 .content-title-mymawi {
   position: absolute;
-  top: 35%;
+  top: 375px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
