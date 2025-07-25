@@ -18,14 +18,14 @@
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
-  color: #e3e4e5;
+  color: #27314F;
   cursor: pointer;
 }
 
 .slide img {
   width: 100%;
   border-radius: 15px;
-  border: 2px solid #e3e4e5;
+  border: 2px solid #27314F;
 }
 
 .arrowu {
@@ -34,7 +34,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #e3e4e5;
+  color: #27314F;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;

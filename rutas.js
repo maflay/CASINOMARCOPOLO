@@ -119,4 +119,14 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/super-bingo.js",
   },
+  trenpremios:{
+    html: "/components/promociones/promocion/tren-premios.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/tren-premios.js",
+  },
+  blackjackexpress: {
+    html: "/components/promociones/promocion/blackjack-express.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/blackjack-express.js",
+  },
 };

@@ -15,22 +15,30 @@ function toDadosPoker() {
   navegarA("dadospoker");
 }
 
-function toMymawitepremia(){
-navegarA("mymawitepremia");
+function toMymawitepremia() {
+  navegarA("mymawitepremia");
 }
 
-function toCascadapremios(){
+function toCascadapremios() {
   navegarA("cascadapremios");
 }
 
-function toGanaya(){
+function toGanaya() {
   navegarA("ganaya");
 }
 
-function toBingolocura(){
+function toBingolocura() {
   navegarA("bingolocura");
 }
 
-function toSuperbingo(){
+function toSuperbingo() {
   navegarA("superbingo");
+}
+
+function toBlackJackExpress() {
+  navegarA("blackjackexpress");
+}
+
+function toTrenPremios() {
+  navegarA("trenpremios");
 }
