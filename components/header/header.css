@@ -32,6 +32,7 @@
     margin: 15px;
     position: relative;
     opacity: 0.9;
+    font-size: 1.7rem;
 }
 
 .Navbar .nav-items a.active::before {
