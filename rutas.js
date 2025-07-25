@@ -129,4 +129,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/blackjack-express.js",
   },
+  ubicacioncali:{
+    html: "/components/ubicaciones/ubicacionCiudad/ubicacioncali.html",
+    css: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.css",
+    js: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.js",
+  }
 };

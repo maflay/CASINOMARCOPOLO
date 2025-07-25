@@ -60,6 +60,10 @@ h2 {
     text-align: center;
 }
 
+.section-que-es-text h1{
+    color: #fff;
+}
+
 .text-juego-responsable p {
     text-align: justify;
     color: white;
@@ -108,6 +112,12 @@ h2 {
     height: auto;
     padding: 20px;
 }
+
+.section-que-puedo-hacer h1,
+.section-que-puedo-hacer p{
+    color: white;
+}
+
 
 .section-que-puedo-hacer p {
     text-align: justify;
@@ -164,9 +174,20 @@ h2 {
     width: 50%;
 }
 
+.autoexclusion h1,
+.autoexclusion p {
+    color: white;
+}
+
 .section-content-autoexclusion .que-es-autoexclusion {
     width: 50%;
 }
+
+.que-es-autoexclusion h1,
+.que-es-autoexclusion p {
+    color: white;
+}
+
 
 .section-content-autoexclusion p {
     text-align: justify;
@@ -184,10 +205,15 @@ h2 {
     margin-bottom: 20px;
 }
 
+.section-directorios h2{
+    color: white;
+}
+
 .section-directorios p {
     text-align: justify;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 }
 
 
@@ -255,8 +281,16 @@ h2 {
     width: 50%;
 }
 
+.directorios-img h2{
+    color: white;
+}
+
 .directorios-text {
     width: 50%;
+}
+
+.directorios-text h2{
+    color: white;
 }
 
 .content-ips {

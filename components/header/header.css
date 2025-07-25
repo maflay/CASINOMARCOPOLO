@@ -57,7 +57,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: #1F253A;
+    background: #fff;
     transition: all .40s;
 }
 
@@ -69,8 +69,12 @@
     display: none;
 }
 
+.Navbar .nav-content-logo {
+    display: none;
+}
+
 .logo-menu {
-    width: 120px;
+    width: 180px;
     height: auto;
     left: 0;
     position: relative;
@@ -267,6 +271,23 @@
         align-items: center;
         cursor: pointer;
         z-index: 1000;
+    }
+
+    .Navbar .nav-content-logo {
+        display: flex;
+        width: 105px;
+        padding-left: 15px;
+    }
+
+    .Navbar .nav-content-logo a {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .Navbar .nav-content-logo img {
+        width: 100%;
+        height: 100%;
     }
 
     .logo-menu {

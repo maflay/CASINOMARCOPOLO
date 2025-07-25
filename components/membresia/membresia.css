@@ -37,7 +37,7 @@
 }
 .content-title-mymawi{
 position: absolute;
-top: 25%;
+top: 40%;
 left: 50%;
 transform: translateX(-50%);
 z-index: 2;
@@ -47,6 +47,10 @@ z-index: 2;
 .content-text-mymawi{
   text-align: center;
   padding: 40px 0;
+}
+
+.background-mymawi{
+  background-color: #1F253A;
 }
 
 .content-beneficios-mymawi{
@@ -76,6 +80,11 @@ z-index: 2;
   padding-left: 30px;
 }
 
+.background-mymawi h2,
+.background-mymawi p{
+  color: white;
+}
+
 .beneficios-reverse{
   flex-direction: row-reverse;
 }
@@ -91,6 +100,10 @@ width: 100%;
 
 .beneficios-rigth{
   width: 100%;
+}
+
+.beneficios-rigth h2{
+  text-align: center;
 }
 
 }
