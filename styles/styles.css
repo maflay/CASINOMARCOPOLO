@@ -6,10 +6,11 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: auto;
-   font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif !important;
   font-size: 62.5%;
 }
 
@@ -17,7 +18,7 @@ body {
   font-size: 1.6rem;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -59,7 +60,7 @@ a{
   width: auto;
   font-size: 14px;
   transition: background-color 0.3s ease;
-   font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
 .btn-design1:hover {
@@ -78,7 +79,7 @@ a{
   cursor: pointer;
   width: auto;
   font-size: 14px;
-  transition: background-color 0.3s ease;   
+  transition: background-color 0.3s ease;
   font-family: 'Josefin Sans', sans-serif !important;
 }
 
@@ -226,37 +227,37 @@ a{
 
 /* Barra de fondo */
 .progress-bar {
-    width: 10%;
-    height: 2px;
-    background: transparent;
-    border-radius: 5px;
-    overflow: hidden;
+  width: 10%;
+  height: 2px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 
 /* Barra que se llena */
 .progress-fill {
-    width: 100%;
-    /* Asegura que ocupe todo el ancho de la barra */
-    height: 100%;
-    --c: no-repeat linear-gradient(#1f253ac2 0 0);
-    background: var(--c), var(--c), #c5c5c5;
-    background-size: 60% 100%;
-    animation: l16 3s infinite;
+  width: 100%;
+  /* Asegura que ocupe todo el ancho de la barra */
+  height: 100%;
+  --c: no-repeat linear-gradient(#1f253ac2 0 0);
+  background: var(--c), var(--c), #c5c5c5;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
 }
 
 @keyframes l16 {
-    0% {
-        background-position: -150% 0, -150% 0
-    }
+  0% {
+    background-position: -150% 0, -150% 0
+  }
 
-    66% {
-        background-position: 250% 0, -150% 0
-    }
+  66% {
+    background-position: 250% 0, -150% 0
+  }
 
-    100% {
-        background-position: 250% 0, 250% 0
-    }
+  100% {
+    background-position: 250% 0, 250% 0
+  }
 }
 
 .lobster-regular {

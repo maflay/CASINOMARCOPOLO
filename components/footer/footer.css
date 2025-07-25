@@ -3,7 +3,6 @@
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
-  padding: 40px 20px 20px;
   width: 100%;
   position: absolute;
 }
@@ -17,12 +16,29 @@
 
 .footer .footer-logo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 33.33%;
   align-items: center;
 }
 
 .footer .footer-logo img {
-  width: 100%;
+  width: 70%;
+}
+
+.content-logos-legales{
+  display: flex;
+  gap: 20px;
+}
+
+.content-logos-legales .content-logos-legales-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-logos-legales .content-logos-legales-img img{
+  width: 50%;
 }
 
 .footer .footer-logos-legales small {
@@ -59,6 +75,9 @@
 
 .footer a {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .footer-icons a:hover {
@@ -125,8 +144,9 @@
 
 .footer .footer-logos-legales {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 
 .img-legal .img-vig{
@@ -153,10 +173,15 @@ align-items: center;
 
 .footer-logo-responsable {
   display: flex;
-  flex-direction: column;
+  justify-content: end;
   text-align: center;
-  width: 50%;
+  width: 33.33%;
   padding: 20px;
+}
+
+.footer-logo-responsable-info small{
+color: gray;
+font-size: 1rem;
 }
 
 .social-container {
@@ -170,6 +195,11 @@ align-items: center;
   font-weight: bold;
   margin-bottom: 10px;
   letter-spacing: 1px;
+}
+
+.icons{
+  display: flex;
+  gap: 10px;
 }
 
 .icons a {
@@ -262,6 +292,7 @@ align-items: center;
     align-items: center;
     text-align: center;
     margin: 0;
+    width: 100%;
   }
 
   .footer .footer-logo img {
@@ -294,4 +325,9 @@ align-items: center;
     text-align: center;
     margin-top: 20%;
   }
+
+  .content-logos-legales .content-logos-legales-img img{
+  width: 100%;
+}
+
 }

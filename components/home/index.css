@@ -272,7 +272,7 @@ padding: 20px 0;
 
 .content-parahacer-acordeon small {
   position: absolute;
-  bottom: 30%;
+  bottom: 0;
   width: 100%;
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -282,11 +282,13 @@ padding: 20px 0;
   transform: translateY(100%);
   font-size: 2rem;
   color: white;
+  font-weight: 350;
+  z-index: 3;
 }
 
 .content-parahacer-acordeon:hover small {
   opacity: 1;
-  transform: translateY(40%);
+  transform: translateY(0);
   pointer-events: auto;
   background-color: white;
   color: #1F253A;
@@ -328,6 +330,11 @@ padding: 20px 0;
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+
+.card-content-mp .content-mp-left img{
+  width: 100%;
+  height: 100%;
 }
 
 .card-content-mp .content-mp-rigth {
