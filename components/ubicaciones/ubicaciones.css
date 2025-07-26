@@ -783,6 +783,7 @@ input[name="slider-radio-sur"] {
   .content-collage p {
     bottom: 30px;
     left: 10px;
+    font-size: 1.8rem;
   }
 }
 
