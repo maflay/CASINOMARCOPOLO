@@ -6,7 +6,7 @@
   /* Asegura que tenga suficiente altura para que se vea */
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -40,6 +40,7 @@ a{
   width: 100vw;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 /* .content-casin-img img {
@@ -51,7 +52,8 @@ a{
 .content-casin-text {
   text-align: center;
   width: 100%;
-  padding-bottom: 30px;
+  padding: 40px 0;
+  position: relative;
 }
 
 .content-casin-text img {
@@ -70,12 +72,12 @@ a{
   line-height: 2rem;
 }
 
-.content-casin-text-desc{
+.content-casin-text-desc {
   display: flex;
   gap: 30px;
 }
 
-.content-casin-text-desc p{
+.content-casin-text-desc p {
   line-height: 2.5rem;
 }
 
@@ -89,7 +91,7 @@ a{
   margin-bottom: 50px;
 }
 
-.content-ubi-icon-1 svg{
+.content-ubi-icon-1 svg {
   width: 30px;
   height: 30px;
   fill: #fff;
@@ -639,7 +641,48 @@ input[name="slider-radio-sur"] {
   color: #efb810;
 }
 
+.content-collage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-bottom: 100px;
+  position: relative;
+  left: -15px;
+}
 
+.content-collage img {
+  width: 99%;
+  height: 100%;
+  position: relative;
+  box-shadow: 40px 70px 10px #1F253A;
+}
+
+.content-collage p {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+/* 
+.content-collage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/resources/IMG_4399.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1; 
+  pointer-events: none;
+  border-radius: 0;
+} */
 
 
 @media (max-width: 768px) {
@@ -672,26 +715,26 @@ input[name="slider-radio-sur"] {
     text-align: center;
     flex-direction: column;
     padding: 20px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 0 0 0 0;
   }
-  
-   .content-ubi{
+
+  .content-ubi {
     height: 150px;
-   }
+  }
 
-   .content-ubi img{
+  .content-ubi img {
     height: 50%;
-   }
+  }
 
-   .content-ubi p{
+  .content-ubi p {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
     font-size: 1rem;
-   }
+  }
 
-  .content-ubi-icon-1{
+  .content-ubi-icon-1 {
     margin-bottom: 20px;
   }
 
@@ -710,19 +753,37 @@ input[name="slider-radio-sur"] {
 
   }
 
-  .content-casin-text-desc{
+  .content-casin-text-desc {
     flex-direction: column;
   }
 
-  .content-casin-text-desc p{
+  .content-casin-text-desc p {
     line-height: 2rem;
     font-size: 1.5rem;
   }
 
   .bg1oeste {
-  background-image: url(/resources/marcopoloLocalInter-3-2.png);
-}
+    background-image: url(/resources/marcopoloLocalInter-3-2.png);
+  }
 
+
+  .content-collage {
+    padding-bottom: 100px;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+
+  .content-collage img {
+    width: 100%;
+    box-shadow: 0 100px 0 #1F253A;
+    object-fit: cover;
+  }
+
+  .content-collage p {
+    bottom: 30px;
+    left: 10px;
+  }
 }
 
 @media (max-width: 380px) {
