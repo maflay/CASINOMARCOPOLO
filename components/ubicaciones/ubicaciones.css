@@ -801,6 +801,10 @@ input[name="slider-radio-sur"] {
     left: 10px;
     font-size: 1.8rem;
   }
+
+  .content-casin-text-content{
+    padding: 0;
+  }
 }
 
 @media (max-width: 380px) {

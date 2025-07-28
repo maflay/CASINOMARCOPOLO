@@ -107,4 +107,8 @@
     text-align: center;
   }
 
+  .content-acordeon-mymawi{
+    pointer-events: none;
+  }
+
 }
