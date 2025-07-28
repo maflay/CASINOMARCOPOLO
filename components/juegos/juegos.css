@@ -222,6 +222,10 @@
     padding: 20px;
 }
 
+.content-card-title-entretenimiento h2{
+    color: white;
+}
+
 .content-card-title-entretenimiento a {
     text-decoration: none;
 }

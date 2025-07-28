@@ -32,7 +32,6 @@ a {
   align-items: center;
   flex-direction: column;
   color: white;
-  gap: 50px;
   position: relative;
 }
 
@@ -50,10 +49,18 @@ a {
 } */
 
 .content-casin-text {
-  text-align: center;
-  width: 100%;
-  padding: 40px 0;
+  width: 100vw;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #27314F;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-casin-text-content{
+  padding: 40px 0;
 }
 
 .content-casin-text img {
@@ -62,13 +69,14 @@ a {
 
 .content-casin-text h2 {
   font-size: 4rem;
-  color: #27314F;
+  color: #fff;
 }
 
 
 .content-casin-text p {
   text-align: justify;
   width: 100%;
+  color: white;
   line-height: 2rem;
 }
 
@@ -180,7 +188,6 @@ a {
   background-image: url(/resources/marcopoloBarranquilla-2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0 0;
   background-position: top;
 }
 
@@ -303,7 +310,6 @@ input[name="slider-radio-barranquilla"] {
   background-image: url(/resources/marcopoloBogota-2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0 0;
   background-position: top;
 }
 
@@ -425,7 +431,6 @@ input[name="slider-radio-bogota"] {
   background-image: url(/resources/marcopoloLocalInter-3.png);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0 0;
   background-position: top;
 }
 
@@ -546,7 +551,6 @@ input[name="slider-radio-oeste"] {
   background-image: url(/resources/marcopoloHolguines.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0 0;
 }
 
 .bg2sur {
@@ -643,27 +647,21 @@ input[name="slider-radio-sur"] {
 
 .content-collage {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
   height: 100%;
   z-index: 1;
-  padding-bottom: 100px;
-  position: relative;
-  left: -15px;
+  padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .content-collage img {
-  width: 99%;
-  height: 100%;
+  width: 100%;
+  height: 525px;
   position: relative;
-  box-shadow: 40px 70px 10px #1F253A;
-}
-
-.content-collage p {
-  position: absolute;
-  bottom: 60px;
-  left: 60px;
-  color: #fff;
-  font-size: 2.2rem;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 /* 
@@ -684,8 +682,26 @@ input[name="slider-radio-sur"] {
   border-radius: 0;
 } */
 
+.background-ubicacion-juegos{
+   width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #27314f;
+}
+
+.background-ubicacion-juegos h1,
+.background-ubicacion-juegos p{
+  color: white;
+}
+
 
 @media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
 
   .content-casin {
     padding-top: 40px;
@@ -750,7 +766,7 @@ input[name="slider-radio-sur"] {
 
   .content-casin-text {
     width: 100%;
-
+    padding: 40px 0;
   }
 
   .content-casin-text-desc {
@@ -768,7 +784,7 @@ input[name="slider-radio-sur"] {
 
 
   .content-collage {
-    padding-bottom: 100px;
+    padding-bottom: 0;
     left: 0;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
@@ -776,7 +792,7 @@ input[name="slider-radio-sur"] {
 
   .content-collage img {
     width: 100%;
-    box-shadow: 0 100px 0 #1F253A;
+    height: 100%;
     object-fit: cover;
   }
 
