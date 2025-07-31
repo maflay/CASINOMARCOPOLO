@@ -323,8 +323,8 @@ const IG_POSTS = [
   "https://www.instagram.com/marcopolo.casino/",
   "https://www.instagram.com/reel/DMvVJaGsZAA/",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
-  "https://www.instagram.com/reel/DML6Xm7sfF6/",
   "https://www.instagram.com/reel/DLc7uW4MUtT/",
+  "https://www.instagram.com/p/DMd2HOsypRg/?img_index=1"
 ];
 
 // Carga el script oficial una sola vez
