@@ -579,6 +579,15 @@ input[name="slider-radioC"] {
   right: 0px;
 }
 
+.ig-grid{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+
+
 
 @media (max-width: 950px) {
 

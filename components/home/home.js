@@ -11,7 +11,6 @@ function saberMasPromo() {
   navegarA("promociones");
 }
 
-
 // function sliderUbicaciones() {
 //   const trackubicacion = document.getElementById("sliderTrackubicacion");
 //   const radiosubicacion = document.querySelectorAll(
@@ -200,169 +199,190 @@ function toGames() {
 
 // sliderhome();
 
-(() => {
-  const estadoBarraEl = document.getElementById("estadoBarra");
-  const estadoBogoEl = document.getElementById("estadoBog");
-  const estadoCalsEl = document.getElementById("estadoCals");
-  const estadoCaloEl = document.getElementById("estadoCalo");
+// function sliderhome() {
+//   const track = document.getElementById("sliderTrackC");
+//   const radios = document.querySelectorAll('input[name="slider-radioC"]');
+//   const labels = document.querySelectorAll(".slider-controlsC label");
+//   const prevBtnh = document.getElementById("prevBtnC");
+//   const nextBtnh = document.getElementById("nextBtnC");
 
-  // Define horarios en formato HHMM (ej: 930 = 09:30 AM, 2415 = 12:15 AM del siguiente día)
-  const horaAperturaBarra = 900;
-  const horaCierreBarra = 2400;
+//   let currentIndex = 0;
+//   const totalSlides = radios.length;
+//   let interval;
+//   let startX = 0;
+//   let deltaX = 0;
+//   let isDragging = false;
 
-  const horaAperturaBogo = 930;
-  const horaCierreBogo = 2330;
+//   function goToSlide(index) {
+//     track.style.transition = "transform 0.5s ease";
+//     track.style.transform = `translateX(-${index * 100}vw)`;
+//     radios[index].checked = true;
+//     currentIndex = index;
+//   }
 
-  const horaAperturaCals = 1000;
-  const horaCierreCals = 2200;
+//   function nextSlide() {
+//     const index = (currentIndex + 1) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  const horaAperturaCalo = 830;
-  const horaCierreCalo = 2230;
+//   function prevSlide() {
+//     const index = (currentIndex - 1 + totalSlides) % totalSlides;
+//     goToSlide(index);
+//   }
 
-  function verificarHorario() {
-    const ahora = new Date();
-    const horaActual = ahora.getHours(); // 0–23
-    const minutosActual = ahora.getMinutes(); // 0–59
-    const horaEnHM = horaActual * 100 + minutosActual; // ej: 14:30 -> 1430
+//   function resetInterval() {
+//     clearInterval(interval);
+//     interval = setInterval(nextSlide, 11000);
+//   }
 
-    function actualizarEstado(elemento, apertura, cierre) {
-      if (horaEnHM >= apertura && horaEnHM < cierre) {
-        elemento.textContent = "Abierto";
-        elemento.classList.add("abierto");
-        elemento.classList.remove("cerrado");
-      } else {
-        elemento.textContent = "Cerrado";
-        elemento.classList.add("cerrado");
-        elemento.classList.remove("abierto");
-      }
-    }
+//   nextBtnh.addEventListener("click", () => {
+//     nextSlide();
+//     resetInterval();
+//   });
 
-    actualizarEstado(estadoBarraEl, horaAperturaBarra, horaCierreBarra);
-    actualizarEstado(estadoBogoEl, horaAperturaBogo, horaCierreBogo);
-    actualizarEstado(estadoCalsEl, horaAperturaCals, horaCierreCals);
-    actualizarEstado(estadoCaloEl, horaAperturaCalo, horaCierreCalo);
+//   prevBtnh.addEventListener("click", () => {
+//     prevSlide();
+//     resetInterval();
+//   });
+
+//   labels.forEach((label, index) => {
+//     label.addEventListener("click", () => {
+//       goToSlide(index);
+//       resetInterval();
+//     });
+//   });
+
+//   interval = setInterval(nextSlide, 11000);
+
+//   track.addEventListener("mousedown", (e) => {
+//     isDragging = true;
+//     startX = e.pageX;
+//     deltaX = 0;
+//     track.style.transition = "none";
+//   });
+
+//   track.addEventListener("mousemove", (e) => {
+//     if (!isDragging) return;
+//     deltaX = e.pageX - startX;
+//     track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
+//   });
+
+//   track.addEventListener("mouseup", () => {
+//     if (!isDragging) return;
+//     isDragging = false;
+//     track.style.transition = "transform 0.5s ease";
+//     handleSwipe();
+//   });
+
+//   track.addEventListener("mouseleave", () => {
+//     if (isDragging) {
+//       isDragging = false;
+//       track.style.transition = "transform 0.5s ease";
+//       handleSwipe();
+//     }
+//   });
+
+//   track.addEventListener("touchstart", (e) => {
+//     isDragging = true;
+//     startX = e.touches[0].clientX;
+//     deltaX = 0;
+//     track.style.transition = "none";
+//   }, { passive: true });
+
+//   track.addEventListener("touchmove", (e) => {
+//     if (!isDragging) return;
+//     deltaX = e.touches[0].clientX - startX;
+//     track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
+//   }, { passive: true });
+
+//   track.addEventListener("touchend", () => {
+//     if (!isDragging) return;
+//     isDragging = false;
+//     track.style.transition = "transform 0.5s ease";
+//     handleSwipe();
+//   });
+
+//   function handleSwipe() {
+//     if (deltaX > 50) {
+//       prevSlide();
+//     } else if (deltaX < -50) {
+//       nextSlide();
+//     } else {
+//       goToSlide(currentIndex);
+//     }
+//     resetInterval();
+//   }
+
+//   goToSlide(currentIndex);
+// }
+
+// sliderhome();
+
+// Lista de URLs públicas de posts/reels (permalinks)
+const IG_POSTS = [
+  "https://www.instagram.com/reel/DMvVJaGsZAA/",
+  "https://www.instagram.com/reel/DMqKhVCxa25/",
+  "https://www.instagram.com/reel/DML6Xm7sfF6/",
+  "https://www.instagram.com/reel/DLc7uW4MUtT/",
+];
+
+// Carga el script oficial una sola vez
+function ensureInstagramScript() {
+  if (
+    !document.querySelector('script[src^="https://www.instagram.com/embed.js"]')
+  ) {
+    const s = document.createElement("script");
+    s.src = "https://www.instagram.com/embed.js";
+    s.async = true;
+    document.head.appendChild(s);
   }
-
-  verificarHorario();
-  setInterval(verificarHorario, 60000); // actualiza cada minuto
-})();
-
-function sliderhome() {
-  const track = document.getElementById("sliderTrackC");
-  const radios = document.querySelectorAll('input[name="slider-radioC"]');
-  const labels = document.querySelectorAll(".slider-controlsC label");
-  const prevBtnh = document.getElementById("prevBtnC");
-  const nextBtnh = document.getElementById("nextBtnC");
-
-  let currentIndex = 0;
-  const totalSlides = radios.length;
-  let interval;
-  let startX = 0;
-  let deltaX = 0;
-  let isDragging = false;
-
-  function goToSlide(index) {
-    track.style.transition = "transform 0.5s ease";
-    track.style.transform = `translateX(-${index * 100}vw)`;
-    radios[index].checked = true;
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    const index = (currentIndex + 1) % totalSlides;
-    goToSlide(index);
-  }
-
-  function prevSlide() {
-    const index = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(index);
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 11000);
-  }
-
-  nextBtnh.addEventListener("click", () => {
-    nextSlide();
-    resetInterval();
-  });
-
-  prevBtnh.addEventListener("click", () => {
-    prevSlide();
-    resetInterval();
-  });
-
-  labels.forEach((label, index) => {
-    label.addEventListener("click", () => {
-      goToSlide(index);
-      resetInterval();
-    });
-  });
-
-  interval = setInterval(nextSlide, 11000);
-
-  track.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX;
-    deltaX = 0;
-    track.style.transition = "none";
-  });
-
-  track.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    deltaX = e.pageX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
-  });
-
-  track.addEventListener("mouseup", () => {
-    if (!isDragging) return;
-    isDragging = false;
-    track.style.transition = "transform 0.5s ease";
-    handleSwipe();
-  });
-
-  track.addEventListener("mouseleave", () => {
-    if (isDragging) {
-      isDragging = false;
-      track.style.transition = "transform 0.5s ease";
-      handleSwipe();
-    }
-  });
-
-  track.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    deltaX = 0;
-    track.style.transition = "none";
-  }, { passive: true });
-
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    deltaX = e.touches[0].clientX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
-  }, { passive: true });
-
-  track.addEventListener("touchend", () => {
-    if (!isDragging) return;
-    isDragging = false;
-    track.style.transition = "transform 0.5s ease";
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    if (deltaX > 50) {
-      prevSlide();
-    } else if (deltaX < -50) {
-      nextSlide();
-    } else {
-      goToSlide(currentIndex);
-    }
-    resetInterval();
-  }
-
-  goToSlide(currentIndex);
 }
 
+const VALID_POST =
+  /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/(reel|p|tv)\/[A-Za-z0-9_-]+\/$/;
 
-sliderhome();
+function normalizeIgUrl(url) {
+  if (!url) return "";
+  let u = url.trim().split("?")[0];
+  if (!u.endsWith("/")) u += "/";
+  return u;
+}
+
+function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
+  ensureInstagramScript();
+
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const normalized = posts.map(normalizeIgUrl);
+  const valid = normalized.filter((u) => VALID_POST.test(u));
+  const invalid = normalized.filter((u) => !VALID_POST.test(u));
+
+  if (invalid.length) {
+    console.warn(
+      "URLs IG omitidas (no son permalinks de post/reel/tv):",
+      invalid
+    );
+  }
+
+  container.innerHTML = valid
+    .map(
+      (url) => `
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="${url}"
+      data-instgrm-version="14"
+      style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;">
+    </blockquote>
+  `
+    )
+    .join("");
+
+  const tryProcess = () => {
+    if (window.instgrm?.Embeds?.process) window.instgrm.Embeds.process();
+    else setTimeout(tryProcess, 150);
+  };
+  tryProcess();
+}
+
+// Llama DESPUÉS de insertar la vista en tu SPA:
+renderInstagramEmbeds("ig-feed", IG_POSTS);
