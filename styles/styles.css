@@ -63,15 +63,15 @@ a {
 }
 
 .btn-design1:hover {
-  background-color: white;
-  color: #1F253A;
+  background-color: #020305;
+  color: white;
   transition: background-color 0.3s ease;
 }
 
 
 .btn-design2 {
   padding: 8px 16px;
-  color: black;
+  color: #27314F;
   background-color: white;
   border: none;
   border-radius: 10px;
@@ -82,8 +82,8 @@ a {
 }
 
 .btn-design2:hover {
-  background-color: #27314F;
-  color: white;
+  color: #111522;
+  background-color: white;
   transition: background-color 0.3s ease;
 }
 
@@ -262,6 +262,16 @@ a {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+@media(max-width:1366px){
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
 }
 
 

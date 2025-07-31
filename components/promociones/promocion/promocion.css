@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: auto;
     color: white;
     border-radius: 30px;
     overflow: hidden;
@@ -114,7 +114,7 @@
 
 .to-promo .next-to-promo {
     width: 50%;
-    padding: 20px;
+    padding: 10px;
     object-fit: cover;
     background: #1F253A;
     display: flex;
@@ -125,7 +125,7 @@
 }
 
 .to-promo .next-to-promo img{
-    width: 70px;
+    width: 50px;
     margin-left: 10px;
 }
 
@@ -167,7 +167,8 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    height: auto;
+    padding: 10px;
     border-radius: 50px;
     border: 7px solid #e3e4e5;
 }
