@@ -11,8 +11,7 @@
             <div class="content-contact">
                 <div class="container-formulario">
                     <h1 style="color: white;" class="type2-h1">Contáctanos</h1>
-                    <form method="POST" class="formulario-contacto" id="formulario-contacto"
-                        onsubmit="return enviarFormularioContacto(event)">
+                    <div class="formulario-contacto" id="formulario-contacto">
                         <div class="form-group">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                         </div>
@@ -52,10 +51,9 @@
                             </div>
                         </div>
                         <div class="btn-contact-send">
-                            <button type="submit" class="btn-design1">Enviar</button>
+                            <button onclick="infoSendContacto()" class="btn-design1">Enviar</button>
                         </div>
-                    </form>
-                    <div id="mensaje-contacto"></div>
+                    </div>
                 </div>
             </div>
         </section>

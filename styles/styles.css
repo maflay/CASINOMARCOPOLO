@@ -264,14 +264,14 @@ a {
   font-style: normal;
 }
 
-@media(max-width:1366px){
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-}
+@media(max-width:1366px) {
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
 }
 
 

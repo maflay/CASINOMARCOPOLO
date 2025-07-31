@@ -338,7 +338,12 @@
     }
 }
 
-/* 
+.body-lock {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .modal {
     display: none;
     justify-content: center;
@@ -441,4 +446,4 @@ td {
     padding-left: 10px;
     margin-bottom: 10px;
 }
- */
+ 

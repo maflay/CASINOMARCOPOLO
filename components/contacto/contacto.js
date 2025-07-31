@@ -44,3 +44,38 @@ function enviarFormularioContacto(e) {
 
   return false;
 }
+
+function infoSendContacto() {
+  const nombre = document.getElementById("nombre");
+  const correo = document.getElementById("correo");
+  const telefono = document.getElementById("telefono");
+  const ciudad = document.getElementById("ciudad");
+  const direccion = document.getElementById("direccion");
+  const fecha_solicitud = document.getElementById("fecha_solicitud");
+  const descripcion = document.getElementById("descripcion");
+  const es_cliente = document.getElementById("es_cliente");
+  const aceptoTerminos = document.getElementById("aceptoTerminos");
+
+  const nombreEn = nombre.value;
+  const correoEn = correo.value;
+  const telefonoEn = telefono.value;
+  const ciudadEn = ciudad.value;
+  const direccionEn = direccion.value;
+  const fecha_solicitudEn = fecha_solicitud.value;
+  const descripcionEn = descripcion.value;
+  const es_clienteEn = es_cliente.value;
+  const aceptoTerminosEn = aceptoTerminos.value;
+
+  const data = {
+    nombreEn,
+    correoEn,
+    telefonoEn,
+    ciudadEn,
+    direccionEn,
+    fecha_solicitudEn,
+    descripcionEn,
+    es_clienteEn,
+    aceptoTerminosEn,
+  };
+
+}

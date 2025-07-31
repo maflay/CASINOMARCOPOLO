@@ -1,4 +1,4 @@
-.content-acordeon-mymawi {
+/* .content-acordeon-mymawi {
   display: flex;
   width: 100%;
   position: relative;
@@ -34,15 +34,26 @@
 
 .acordeon-mymawi:hover {
   width: 50%;
-}
+} */
 
 .content-title-mymawi {
-  position: absolute;
-  top: 375px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: #1F253A;
+  /* background-image: url(/resources/benner-mymawi.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; */
+}
+
+.content-title-mymawi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content-text-mymawi {
@@ -95,6 +106,11 @@
 }
 
 @media(max-width:1366px) {
+  .content-title-mymawi{
+height: 200px;
+  }
+
+
   .beneficios-rigth h2 {
     font-size: 3.2rem;
   }
