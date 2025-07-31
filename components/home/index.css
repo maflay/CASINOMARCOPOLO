@@ -161,6 +161,17 @@
   color: gray;
 }
 
+.content-logo-social {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+width: 100%;
+}
+
+.content-logo-social img{
+  width: 300px;
+}
+
 /* TARJETA-MYMAWI */
 .container-tarjeta {
   width: 100vw;
@@ -587,7 +598,12 @@ input[name="slider-radioC"] {
 }
 
 
+@media(max-width:1250px){
+  .ig-grid{
+flex-wrap: wrap;
+  }
 
+}
 
 @media (max-width: 950px) {
 
@@ -723,6 +739,7 @@ input[name="slider-radioC"] {
   .card-final-section-rigth p {
     padding-top: 5px;
   }
+
 
 }
 

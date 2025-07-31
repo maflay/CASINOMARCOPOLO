@@ -320,6 +320,7 @@ function toGames() {
 
 // Lista de URLs públicas de posts/reels (permalinks)
 const IG_POSTS = [
+  "https://www.instagram.com/marcopolo.casino/",
   "https://www.instagram.com/reel/DMvVJaGsZAA/",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
   "https://www.instagram.com/reel/DML6Xm7sfF6/",
