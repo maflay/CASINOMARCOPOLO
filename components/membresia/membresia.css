@@ -50,10 +50,14 @@
   overflow: hidden; */
 }
 
-.content-title-mymawi img {
+.content-img-mymawi{
+  overflow: hidden;
+}
+
+.content-img-mymawi img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .content-text-mymawi {
@@ -106,8 +110,8 @@
 }
 
 @media(max-width:1366px) {
-  .content-title-mymawi{
-height: 200px;
+  .content-title-mymawi {
+    height: auto;
   }
 
 

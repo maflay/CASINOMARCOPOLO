@@ -63,7 +63,7 @@ a {
 }
 
 .btn-design1:hover {
-  background-color: #020305;
+  background-color: rgb(4, 6, 10);
   color: white;
   transition: background-color 0.3s ease;
 }
