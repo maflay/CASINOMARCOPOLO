@@ -165,10 +165,10 @@
   display: flex;
   justify-content: center;
   align-content: center;
-width: 100%;
+  width: 100%;
 }
 
-.content-logo-social img{
+.content-logo-social img {
   width: 300px;
 }
 
@@ -590,7 +590,7 @@ input[name="slider-radioC"] {
   right: 0px;
 }
 
-.ig-grid{
+.ig-grid {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -598,9 +598,10 @@ input[name="slider-radioC"] {
 }
 
 
-@media(max-width:1250px){
-  .ig-grid{
-flex-wrap: wrap;
+@media(max-width:1250px) {
+  .ig-grid {
+    flex-wrap: wrap;
+    gap: 0;
   }
 
 }
