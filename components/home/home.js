@@ -317,9 +317,10 @@ function toGames() {
 // }
 
 // sliderhome();
-
+  
 // Lista de URLs públicas de posts/reels (permalinks)
-const IG_POSTS = [
+window.IG_POSTS ??= [
+  "https://www.instagram.com/marcopolo.casino/",
   "https://www.instagram.com/reel/DMvVJaGsZAA/",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
   "https://www.instagram.com/reel/DLc7uW4MUtT/",
@@ -338,7 +339,7 @@ function ensureInstagramScript() {
   }
 }
 
-const VALID_POST =
+window.VALID_POST =
   /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/(reel|p|tv)\/[A-Za-z0-9_-]+\/$/;
 
 function normalizeIgUrl(url) {
