@@ -3,12 +3,12 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-  background-color: #1F253A;
+  background-color: #27314F;
 }
 
 .container-contact .banner-start {
   position: relative;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,6 +63,7 @@
 
 .container-contact .contact-form {
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
