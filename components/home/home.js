@@ -92,34 +92,21 @@ function toGames() {
 }
 
 (() => {
-  const btnToBarraMvil = document.getElementById("toBarraMovil");
-  const btnToBogMvil = document.getElementById("toBogMovil");
-  const btnToCaliSMvil = document.getElementById("toCaliSMovil");
-  const btnToCaliOMvil = document.getElementById("toCaliOMovil");
+  const btn_barranquilla = document.getElementById("card-barranquilla");
+  const btn_bogota = document.getElementById("card-Bogota");
+  const btn_Cali = document.getElementById("card-Cali");
 
-  if (btnToBarraMvil) {
-    btnToBarraMvil.addEventListener("click", () => {
-      navegarA("barranquilla");
-    });
-  }
+  btn_barranquilla.addEventListener("click", () => {
+    navegarA("barranquilla");
+  });
 
-  if (btnToBogMvil) {
-    btnToBogMvil.addEventListener("click", () => {
-      navegarA("bogota");
-    });
-  }
+  btn_bogota.addEventListener("click", () => {
+    navegarA("bogota");
+  });
 
-  if (btnToCaliSMvil) {
-    btnToCaliSMvil.addEventListener("click", () => {
-      navegarA("calisur");
-    });
-  }
-
-  if (btnToCaliOMvil) {
-    btnToCaliOMvil.addEventListener("click", () => {
-      navegarA("calioeste");
-    });
-  }
+  btn_Cali.addEventListener("click", () => {
+    navegarA("ubicacioncali");
+  });
 })();
 
 (() => {
