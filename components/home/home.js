@@ -317,14 +317,13 @@ function toGames() {
 // }
 
 // sliderhome();
-  
+
 // Lista de URLs públicas de posts/reels (permalinks)
 window.IG_POSTS ??= [
-  "https://www.instagram.com/marcopolo.casino/",
   "https://www.instagram.com/p/DM28HzKMoWf/?img_index=1",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
   "https://www.instagram.com/reel/DLc7uW4MUtT/",
-  "https://www.instagram.com/p/DMd2HOsypRg/?img_index=1"
+  "https://www.instagram.com/p/DMd2HOsypRg/?img_index=1",
 ];
 
 // Carga el script oficial una sola vez
@@ -348,9 +347,16 @@ function normalizeIgUrl(url) {
   if (!u.endsWith("/")) u += "/";
   return u;
 }
-
 function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
   ensureInstagramScript();
+  const loaderLocal = document.getElementById("loader-local");
+
+  loaderLocal.innerHTML = `
+    <div class="loader-local">
+      <div class="spinner"></div>
+      <p>Cargando multimedia ...</p>
+    </div>
+  `;
 
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -369,19 +375,32 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
   container.innerHTML = valid
     .map(
       (url) => `
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="${url}"
-      data-instgrm-version="14"
-      style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;">
-    </blockquote>
-  `
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="${url}"
+          data-instgrm-version="14"
+          style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;">
+        </blockquote>
+      `
     )
     .join("");
 
   const tryProcess = () => {
-    if (window.instgrm?.Embeds?.process) window.instgrm.Embeds.process();
-    else setTimeout(tryProcess, 150);
+    if (window.instgrm?.Embeds?.process) {
+      window.instgrm.Embeds.process();
+
+      // 🔄 Esperar a que al menos un iframe se genere
+      const checkLoaded = setInterval(() => {
+        const iframes = container.querySelectorAll("iframe");
+        if (iframes.length > 0) {
+          clearInterval(checkLoaded);
+          loaderLocal.innerHTML = ``;
+        }
+      }, 300);
+    } else {
+      setTimeout(tryProcess, 150);
+    }
   };
+
   tryProcess();
 }
 
