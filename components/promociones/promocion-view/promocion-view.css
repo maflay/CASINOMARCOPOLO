@@ -72,6 +72,7 @@
 .promocion-container .card-content {
   padding: 20px;
   display: flex;
+  align-items: start;
   flex-direction: column;
   flex: 1;
 }
@@ -81,8 +82,14 @@
 }
 
 .promocion-container .card-content p {
-  font-size: 16px;
-  color: #1f253a;
+  font-size: 14px;
+  color: #27314F;
+  text-align: start;
+}
+
+.content-btn-promo{
+width: 100%;
+text-align: end;margin-top: 20px;
 }
 
 
