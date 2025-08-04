@@ -321,7 +321,7 @@ function toGames() {
 // Lista de URLs públicas de posts/reels (permalinks)
 window.IG_POSTS ??= [
   "https://www.instagram.com/marcopolo.casino/",
-  "https://www.instagram.com/reel/DMvVJaGsZAA/",
+  "https://www.instagram.com/p/DM28HzKMoWf/?img_index=1",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
   "https://www.instagram.com/reel/DLc7uW4MUtT/",
   "https://www.instagram.com/p/DMd2HOsypRg/?img_index=1"
