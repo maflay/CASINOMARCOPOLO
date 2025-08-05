@@ -133,5 +133,10 @@ const rutasLimpias = {
     html: "/components/ubicaciones/ubicacionCiudad/ubicacioncali.html",
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.js",
+  },
+  tratamiento_datos: {
+    html:"/components/institucional/politica-datos.html",
+    css:"/components/institucional/politica.css",
+    js:"/components/institucional/politica.js"
   }
 };

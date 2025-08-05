@@ -4,66 +4,14 @@
   justify-content: center;
   align-items: center;
   background-color: #27314F;
-}
-
-.container-contact .banner-start {
-  position: relative;
-  height: 100vh;
+  padding-top: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.container-contact .banner-start::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(/resources/bg-home-02.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.container-contact .banner-start .banner-content {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.container-contact .banner-start .banner-content h1 {
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 10px;
-  background-image: linear-gradient(to right, #f3ec78, #af4261);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: movimiento-gradiente 2s linear infinite alternate;
-}
-
-.container-contact .section-start .content-start p {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-@keyframes movimiento-gradiente {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
+  min-height: 100vh;
 }
 
 .container-contact .contact-form {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +68,7 @@
 .container-contact input[type="tel"],
 .container-contact input[type="date"],
 .container-contact textarea {
-  width: calc(100% - 12px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;

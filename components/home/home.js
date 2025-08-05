@@ -305,7 +305,6 @@ function toGames() {
 
 // sliderhome();
 
-// Lista de URLs públicas de posts/reels (permalinks)
 window.IG_POSTS ??= [
   "https://www.instagram.com/p/DM28HzKMoWf/?img_index=1",
   "https://www.instagram.com/reel/DMqKhVCxa25/",
@@ -313,7 +312,6 @@ window.IG_POSTS ??= [
   "https://www.instagram.com/p/DMd2HOsypRg/?img_index=1",
 ];
 
-// Carga el script oficial una sola vez
 function ensureInstagramScript() {
   if (
     !document.querySelector('script[src^="https://www.instagram.com/embed.js"]')
@@ -375,12 +373,16 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
     if (window.instgrm?.Embeds?.process) {
       window.instgrm.Embeds.process();
 
-      // 🔄 Esperar a que al menos un iframe se genere
-      const checkLoaded = setInterval(() => {
+        const checkLoaded = setInterval(() => {
         const iframes = container.querySelectorAll("iframe");
         if (iframes.length > 0) {
           clearInterval(checkLoaded);
           loaderLocal.innerHTML = ``;
+
+          iframes.forEach((iframe) => {
+            iframe.style.borderRadius = "8px";
+            iframe.style.overflow = "hidden";
+          });
         }
       }, 300);
     } else {
@@ -391,5 +393,4 @@ function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
   tryProcess();
 }
 
-// Llama DESPUÉS de insertar la vista en tu SPA:
 renderInstagramEmbeds("ig-feed", IG_POSTS);
