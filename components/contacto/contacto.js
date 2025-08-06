@@ -62,8 +62,25 @@ function infoSendContacto() {
   const ciudadEn = ciudad.value;
   const direccionEn = direccion.value;
   const descripcionEn = descripcion.value;
-  const es_clienteEn = es_cliente.value;
-  const aceptoTerminosEn = aceptoTerminos.value;
+const es_clienteEn = es_cliente.checked ? "Si" : "No";
+const aceptoTerminosEn = aceptoTerminos.checked ? "Si acepto" : "No acepto";
+
+if(aceptoTerminosEn == "No acepto"){
+      Swal.fire({
+          icon: "warning",
+          title: "Advertencia",
+          html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
+          confirmButtonColor: "#1F253A",
+           customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        })
+        return;
+}
+
+
 
   const url =
     "https://script.google.com/macros/s/AKfycbwatZBZdXwAjc1VkNqywr4CENX7ipZA8T1GHn3u6PQYoQu6YDKbRnz0PleJrtiDtSsA/exec";
@@ -94,8 +111,6 @@ function infoSendContacto() {
     cliente: es_clienteEn,
     terminos: aceptoTerminosEn,
   };
-
-  console.log(data);
 
   fetch(url, {
     method: "POST",

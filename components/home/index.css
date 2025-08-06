@@ -5,19 +5,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/resources/fondo-prueba.jpg);
+  background-image: url(/resources/dark-photo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .content-home-banner {
-  width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
-  left: 28.5%;
-  transform: translateX(-50%);
+}
+
+.content-home-banner img {
+  width: 250px;
 }
 
 
@@ -154,11 +158,12 @@
 
 .card-ubicacion-text a {
   text-decoration: none;
-  transition: all 0.4s ease;
+  transition: all 0.1s ease;
 }
 
 .card-ubicacion-text a:hover {
   text-decoration: none;
+  color: #1F253A;
 }
 
 .content-logo-social {
@@ -176,7 +181,6 @@
 .container-tarjeta {
   width: 100vw;
   height: 100%;
-  /* altura igual a la pantalla */
   position: relative;
   background-color: #1F253A;
   overflow: hidden;
@@ -591,7 +595,7 @@ input[name="slider-radioC"] {
   right: 0px;
 }
 
-.ig-grid{
+.ig-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 80px;
@@ -600,56 +604,54 @@ input[name="slider-radioC"] {
 
 
 .story-container {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding: 10px;
-    overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px;
+  overflow-x: auto;
 }
 
 .story-container a {
-    text-decoration: none;
-    /* quita subrayado */
-    color: inherit;
-    /* hereda el color sin modificar */
-    display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
 .story {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .story-ring {
-    width: 90px;
-    height: 90px;
-    padding: 3px;
-    border-radius: 50%;
-    background: conic-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
+  width: 90px;
+  height: 90px;
+  padding: 3px;
+  border-radius: 50%;
+  background: conic-gradient(#f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
 .story-ring:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .story-img {
-    width: 82px;
-    height: 82px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
 }
 
 .story-name {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
 }
 
 
@@ -674,15 +676,38 @@ input[name="slider-radioC"] {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
-@media(max-width:1250px){
-  .ig-grid{
-/* flex-wrap: wrap; */
-gap: 10px;
+@media(max-width:1366px) {
+  .ig-grid {
+    gap: 40px;
+  }
+
+  .content-parahacer-acordeon {
+    height: 400px;
+  }
+
+  .box-container-tarjeta {
+    height: 400px;
+  }
+
+  .card-ubicacion {
+    width: 310px;
+    height: 350px;
+  }
+
+  .card-ubicacion-text>p,
+  .card-ubicacion-text>small {
+    font-size: 1.1rem;
+    text-align: justify;
   }
 
 }
@@ -691,16 +716,15 @@ gap: 10px;
 
   .section-ini {
     height: 80vh;
+    background-image: url(/resources/dark-photo-mobil.jpg);
   }
 
   .content-home-banner {
-    left: 20%;
-    top: -60px;
     width: 100%;
   }
 
   .content-home-banner img {
-    width: 40%;
+    width: 180px;
   }
 
   .content-home-banner p {
@@ -756,7 +780,7 @@ gap: 10px;
     width: 70%;
   }
 
-  .parahacer-left p{
+  .parahacer-left p {
     padding-bottom: 25px;
   }
 
@@ -832,7 +856,6 @@ gap: 10px;
 @media (max-width: 800px) {
 
   .game {
-
     width: 150px;
     height: 200px;
   }
@@ -850,6 +873,8 @@ gap: 10px;
   }
 
   .card-ubicacion {
+    width: 350px;
+    height: 400px;
     flex-direction: column;
   }
 
@@ -857,32 +882,41 @@ gap: 10px;
     width: 100%;
   }
 
-  .content-logo-social img{
+  .content-logo-social img {
     width: 200px;
   }
 
-  
-    .story-container {
-        justify-content: start;
-        margin-bottom: 20px;
-    }
 
-    .content-logo-social img{
-        width: 180px;
-    }
+  .story-container {
+    justify-content: start;
+    margin-bottom: 20px;
+  }
 
-    .story-name{
-        font-size: 1.3rem;
-    }
+  .content-logo-social img {
+    width: 180px;
+  }
 
-    .story-img{
-        width: 45px;
-        height: 45px;
-    }
+  .story-name {
+    font-size: 1.3rem;
+  }
 
-    .story-ring{
-        width: 50px;
-        height: 50px;
-    }
+  .story-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .story-ring {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media (max-width: 389px) {
+
+  .section-ini {
+    height: 100vh;
+    background-image: url(/resources/dark-photo-mobil.jpg);
+  }
 
 }
