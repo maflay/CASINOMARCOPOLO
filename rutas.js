@@ -138,5 +138,40 @@ const rutasLimpias = {
     html:"/components/institucional/politica-datos.html",
     css:"/components/institucional/politica.css",
     js:"/components/institucional/politica.js"
-  }
+  },
+  blackjack: {
+    html: "/components/juegos/juegos/blackjack.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  ruleta: {
+    html: "/components/juegos/juegos/ruleta-americana.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  baccarat: {
+    html: "/components/juegos/juegos/baccarat.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  bingoelectronico: {
+    html: "/components/juegos/juegos/bingo-electronico.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  maquinasindividuales: {
+    html: "/components/juegos/juegos/maquinas-individuales.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  ruletaelectronica: {
+    html: "/components/juegos/juegos/ruleta-electronica.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
+  hipodromoelectrico: {
+    html: "/components/juegos/juegos/hipodromo-eletrico.html",
+    css: "/components/juegos/juegos/juego.css",
+    js: "/components/juegos/juegos/juego.js",
+  },
 };

@@ -3,13 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 80vh;
+    height: 600px;
+    position: relative;
 }
 
 .info-game-entretenimiento {
     width: 100%;
     height: auto;
     background-color: #1d1d1f;
+    position: absolute;
+    bottom: 0;
 }
 
 .content-info-game-entretenimiento {
@@ -40,6 +43,7 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    padding-top: 60px;
     line-height: 8.5rem;
 }
 
@@ -55,179 +59,104 @@
         0 0 1px #fff;
 }
 
-.video-container-entretenimiento {
-    position: relative;
+.content-card-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    margin-bottom: 10px;
+    padding: 20px 0;
+    gap: 32px;
 }
 
-.background-video-entretenimiento {
+.card-juegos:hover .card-juegos-text>p {
+    color: #1F253A;
+}
+
+.card-juegos:hover .card-juegos-img img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-juegos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+}
+
+.card-juegos-img {
+    width: 300px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.card-juegos-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
+    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-
-.video-container-entretenimiento::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #27314F;
-    opacity: 0.7;
-    z-index: 2;
-    pointer-events: none;
+.card-juegos-img img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.fondo-ruleta {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/ruleta-juego.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-blackjack {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/blackjack-juego.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-baccarat {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/baccarat-juego.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-ruletaE {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/ruletaE-juego.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-hipodromo {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/hipodromo-juego.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-bingoE {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/Bingo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-maquinas-indi {
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    position: absolute;
-    background-image: url(/resources/maquina-individual-juego.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.content-text-entretenimiento {
+.card-juegos-text {
     display: flex;
-    justify-content: start;
-    align-content: center;
-    text-align: center;
+    flex-direction: column;
     position: relative;
-    height: 100%;
-    z-index: 3;
+    width: 300px;
+    height: 175px;
+    padding: 20px 0;
 }
 
-.content-info-entretenimiento {
-    display: flex;
+.card-juegos-text>h2 {
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+}
+
+.card-juegos-text p {
+    font-size: 1.2rem;
+    color: rgb(153, 153, 153);
+}
+
+.divider-card {
+    position: absolute;
+    bottom: 40px;
     width: 100%;
-    height: 100%;
+    height: 1px;
+    background-color: #c2c2c2;
 }
 
-.content-info-reverse-entretenimiento {
-    flex-direction: row-reverse;
-}
-
-.content-desc-entretenimiento {
+.content-btn-game {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
-    color: white;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.content-desc-entretenimiento p {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 100;
-    -webkit-text-stroke-color: #171c1e;
-    stroke: #171c1e;
-    text-shadow: 2px 2px 2px #171c1e;
-}
+@media (max-width:768px) {
+    .card-juegos {
+        width: 90%;
+        border-radius: 15px;
+    }
 
+    .card-juegos-img {
+        width: 100%;
+    }
 
-.content-text-title-entretenimiento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 50%;
-    height: 100%;
-}
+    .card-juegos-text {
+        width: 100%;
+    }
 
-.content-card-title-entretenimiento {
-    width: auto;
-    text-align: center;
-    height: auto;
-    padding: 20px;
-}
-
-.content-card-title-entretenimiento h2{
-    color: white;
-}
-
-.content-card-title-entretenimiento a {
-    text-decoration: none;
+    .section-mesas-entretenimiento {
+        line-height: normal;
+        padding: 0;
+    }
 }
 
 .content-membresia-entretenimiento-j {
@@ -282,15 +211,11 @@
 @media (max-width:768px) {
 
     .content-banner-entretenimiento {
-        height: 80vh;
+        height: 500px;
     }
 
     .content-info-reverse-entretenimiento {
         flex-direction: row;
-    }
-
-    .section-mesas-entretenimiento {
-        line-height: normal;
     }
 
     .content-info-membresia-entretenimiento {
@@ -330,7 +255,9 @@
         width: 100%;
     }
 
-
+    .card-juegos-text p {
+        font-size: 1.4rem;
+    }
 
     .video-container-entretenimiento {
         padding: 40px;
@@ -339,9 +266,9 @@
 }
 
 .body-lock {
-  position: fixed;
-  width: 100%;
-  overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 .modal {
@@ -446,4 +373,3 @@ td {
     padding-left: 10px;
     margin-bottom: 10px;
 }
- 

@@ -97,6 +97,14 @@ a {
   text-shadow: 1px 1px 1px #171c1e;
 }
 
+.type1-h1 {
+  color: #1F253A;
+  font-size: 55px;
+  font-weight: 300;
+  /* font-family: 'TT Interphases DemiBold', sans-serif; */
+  text-shadow: 1px 1px 1px #171c1e;
+}
+
 .type1-h1-bold {
   color: #fff;
   font-size: 96px;
