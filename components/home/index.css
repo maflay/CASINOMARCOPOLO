@@ -161,11 +161,6 @@
   transition: all 0.1s ease;
 }
 
-.card-ubicacion-text a:hover {
-  text-decoration: none;
-  color: #1F253A;
-}
-
 .content-logo-social {
   display: flex;
   justify-content: center;
