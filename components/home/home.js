@@ -96,9 +96,9 @@ function toGames() {
   const btn_bogota = document.getElementById("card-Bogota");
   const btn_Cali = document.getElementById("card-Cali");
 
-  btn_barranquilla.addEventListener("click", () => {
-    navegarA("barranquilla");
-  });
+  // btn_barranquilla.addEventListener("click", () => {
+  //   navegarA("barranquilla");
+  // });
 
   btn_bogota.addEventListener("click", () => {
     navegarA("bogota");
@@ -306,10 +306,10 @@ function toGames() {
 // sliderhome();
 
 window.IG_POSTS ??= [
+  "https://www.instagram.com/p/DNO3sRHPE9i/?img_index=1",
+  "https://www.instagram.com/p/DNHGN7WNQgh/?img_index=1",
   "https://www.instagram.com/p/DNB5GHFSihm/",
   "https://www.instagram.com/p/DM28HzKMoWf/?img_index=1",
-  "https://www.instagram.com/reel/DMqKhVCxa25/",
-  "https://www.instagram.com/reel/DLc7uW4MUtT/",
 ];
 
 function ensureInstagramScript() {

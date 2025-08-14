@@ -39,11 +39,11 @@ const rutasLimpias = {
     css: "/components/juegos/juegos/baccarat/baccarat.css",
     js: "/components/juegos/juegos/baccarat/baccarat.js",
   },
-  barranquilla: {
-    html: "/components/ubicaciones/barranquilla.html",
-    css: "/components/ubicaciones/ubicaciones.css",
-    js: "/components/ubicaciones/ubicaciones.js",
-  },
+  // barranquilla: {
+  //   html: "/components/ubicaciones/barranquilla.html",
+  //   css: "/components/ubicaciones/ubicaciones.css",
+  //   js: "/components/ubicaciones/ubicaciones.js",
+  // },
   bogota: {
     html: "/components/ubicaciones/bogota.html",
     css: "/components/ubicaciones/ubicaciones.css",
