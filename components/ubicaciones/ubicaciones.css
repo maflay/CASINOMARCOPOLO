@@ -296,7 +296,7 @@ input[name="slider-radio-barranquilla"] {
 .slider-wrapperbogota {
   display: flex;
   transition: transform 1s ease-in-out;
-  height: 400px;
+  height: 500px;
 }
 
 .slidebogota {
@@ -307,7 +307,7 @@ input[name="slider-radio-barranquilla"] {
 }
 
 .bg1bogota {
-  background-image: url(/resources/marcopoloBogota-2.png);
+  background-image: url(/resources/banner_marcopolo_bogota.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

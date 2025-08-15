@@ -67,9 +67,9 @@
   const btnToCals = document.getElementById("toCaliSUbi");
   const btnToCali = document.getElementById("toCaliIUbi");
 
-  btnToBarra.addEventListener("click", () => {
-    navegarA("barranquilla");
-  });
+  // btnToBarra.addEventListener("click", () => {
+  //   navegarA("barranquilla");
+  // });
 
   btnToBog.addEventListener("click", () => {
     navegarA("bogota");
