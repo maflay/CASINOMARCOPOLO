@@ -310,7 +310,7 @@ input[name="slider-radio-barranquilla"] {
   background-image: url(/resources/banner_marcopolo_bogota.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .bg2bogota {
@@ -428,7 +428,7 @@ input[name="slider-radio-bogota"] {
 }
 
 .bg1oeste {
-  background-image: url(/resources/marcopoloLocalInter-3.png);
+  background-image: url(/resources/banner_mp_inter.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -778,9 +778,9 @@ input[name="slider-radio-sur"] {
     font-size: 1.5rem;
   }
 
-  .bg1oeste {
+  /* .bg1oeste {
     background-image: url(/resources/marcopoloLocalInter-3-2.png);
-  }
+  } */
 
 
   .content-collage {
@@ -805,6 +805,10 @@ input[name="slider-radio-sur"] {
   .content-casin-text-content{
     padding: 0;
   }
+
+  .bg1bogota {
+  background-image: url(/resources/banner_marcopolo_bogota-movil.jpeg);
+}
 }
 
 @media (max-width: 380px) {
