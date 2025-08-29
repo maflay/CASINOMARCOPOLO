@@ -53,18 +53,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  color: white;
   left: 50%;
-  top: 450px;
+  bottom: 0;
   transform: translateX(-50%);
   padding: 10px;
   box-sizing: border-box;
   font-weight: bold;
-  color: #343840;
+  background-color: #1F253A;
 }
 
 .vigencia-promo-text {
-  border-right: 5px solid #343840;
+  border-right: 5px solid #fff;
   padding-right: 15px;
 }
 

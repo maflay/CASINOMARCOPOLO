@@ -15,6 +15,7 @@
 
 .slide {
   flex: 0 0 33.3333%;
+  height: 220px;
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
@@ -55,16 +56,16 @@
 
 .dots button {
   border: none;
-  background-color: #555;
+  background-color: #fff;
   width: 10px;
   height: 10px;
   margin: 0 5px;
   border-radius: 50%;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .dots .active {
-  background-color: #e3e4e5;
+  background-color: #fff;
 }
 
 /* Responsive */

@@ -42,3 +42,11 @@ function toBlackJackExpress() {
 function toTrenPremios() {
   navegarA("trenpremios");
 }
+
+function toMatchPerfecto(){
+  navegarA("matchperfecto");
+}
+
+function toFlechazoCupido(){
+  navegarA("flechazocupido");
+}

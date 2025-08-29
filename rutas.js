@@ -129,6 +129,16 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/blackjack-express.js",
   },
+  //  matchperfecto: {
+  //   html: "/components/promociones/promocion/match-perfecto.html",
+  //   css: "/components/promociones/promocion/promocion.css",
+  //   js: "/components/promociones/promocion/match-perfecto.js",
+  // },
+  //    flechazocupido: {
+  //   html: "/components/promociones/promocion/flechazo-cupido.html",
+  //   css: "/components/promociones/promocion/promocion.css",
+  //   js: "/components/promociones/promocion/flechazo-cupido.js",
+  // },
   ubicacioncali:{
     html: "/components/ubicaciones/ubicacionCiudad/ubicacioncali.html",
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.css",

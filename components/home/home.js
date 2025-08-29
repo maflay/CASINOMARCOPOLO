@@ -306,10 +306,10 @@ function toGames() {
 // sliderhome();
 
 window.IG_POSTS ??= [
-  "https://www.instagram.com/p/DNl0zdYy6vR/?img_index=1",
-  "https://www.instagram.com/p/DNgQPQ7v7St/",
-  "https://www.instagram.com/p/DNV6gBetJzu/",
-  "https://www.instagram.com/p/DNO3sRHPE9i/?img_index=1",
+  "https://www.instagram.com/p/DN4BFbOD35R/",
+  "https://www.instagram.com/p/DN1gZ9U3pVD/",
+  "https://www.instagram.com/p/DNyvRLC5GzN/?img_index=1",
+  "https://www.instagram.com/p/DNtIRZy4lVx/",
 ];
 
 function ensureInstagramScript() {

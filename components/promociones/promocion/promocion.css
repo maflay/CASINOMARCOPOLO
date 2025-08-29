@@ -87,11 +87,13 @@
     font-size: 20px;
 }
 
-.container-termi ul {
+.container-termi ul,
+.container-termi ol {
     padding-left: 20px;
 }
 
-.container-termi ul li {
+.container-termi ul li,
+.container-termi ol li {
     margin-bottom: 8px;
 }
 
@@ -206,6 +208,10 @@
 
 .arrow:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+.note{
+    color: rgba(128, 128, 128, 0.733);
 }
 
 @keyframes bounce {

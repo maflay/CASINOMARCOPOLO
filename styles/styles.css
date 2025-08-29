@@ -10,7 +10,7 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: auto;
-  font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'JosefinSans-Medium', sans-serif !important;
   font-size: 62.5%;
 }
 
@@ -279,6 +279,18 @@ a {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
+  }
+
+  .type-h1 {
+    font-size: 3.8rem;
+  }
+
+  .type1-h1-bold {
+    font-size: 7rem;
+  }
+
+  .type3-h1 {
+    font-size: 1.4rem;
   }
 }
 

@@ -38,3 +38,75 @@
   src: url('/fonts/BillionDreams_PERSONAL.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Mirage Reguler';
+  src: url('/fonts/Mirage\ Reguler.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rosaline';
+  src: url('/fonts/Rosaline.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Rossera';
+  src: url('/fonts/Rossera.otf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Quesha';
+  src: url('/fonts/Quesha.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AlegreyaSC-Regular';
+  src: url('/fonts/AlegreyaSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Prata-Regular';
+  src: url('/fonts/Prata-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'QTGraphLite';
+  src: url('/fonts/QTGraphLite.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Williwaw-Book';
+  src: url('/fonts/Williwaw-Book.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fecske';
+  src: url('/fonts/Fecske.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KGWhenOceansRise';
+  src: url('/fonts/KGWhenOceansRise.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rolisand';
+  src: url('/fonts/Rolisand.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Qualiyun';
+  src: url('/fonts/Qualiyun.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Washington';
+  src: url('/fonts/Washington.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JosefinSans-Medium';
+  src: url('/fonts/JosefinSans-Medium.ttf') format('truetype');
+}
+

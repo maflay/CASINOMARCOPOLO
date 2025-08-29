@@ -99,7 +99,6 @@
   align-items: center;
   gap: 30px;
   padding: 0 20px;
-  cursor: pointer;
 }
 
 .card-ubicacion {
@@ -112,6 +111,7 @@
 .card-ubicacion-img {
   width: 100%;
   height: 50%;
+  cursor: pointer;
 }
 
 .card-ubicacion-img img {
@@ -149,6 +149,12 @@
   color: gray;
   font-size: 1.2rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.card-ubicacion-text>a:hover {
+  color: rgb(46, 46, 71);
 }
 
 .content-a-card {
@@ -156,10 +162,12 @@
   justify-content: flex-end;
 }
 
-.card-ubicacion-text a {
-  text-decoration: none;
-  transition: all 0.1s ease;
-}
+/* .background_social_media_mp {
+  background-image: linear-gradient(180deg, #ffffffbd, #fff), url(/resources/chair-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 
 .content-logo-social {
   display: flex;
@@ -296,7 +304,6 @@
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
   pointer-events: none;
   transform: translateY(100%);
-  font-size: 1.7rem;
   color: white;
   font-weight: 350;
   z-index: 3;
@@ -311,10 +318,14 @@
 }
 
 .content-parahacer-acordeon p {
-  font-size: 2.5rem;
   padding: 20px;
   position: absolute;
   color: white;
+  transition: font-size 0.1s ease;
+}
+
+.content-parahacer-acordeon:hover p {
+  font-size: 0;
 }
 
 .fondo-content-mp-1 {
@@ -394,6 +405,7 @@
   width: 200px;
   height: auto;
   padding: 40px 0;
+  color: #1F253A;
 }
 
 .card-final-section-left {
@@ -405,7 +417,7 @@
 }
 
 .card-final-section-left h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .card-final-section-left img {
@@ -423,7 +435,7 @@
 }
 
 .card-final-section-rigth p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -696,13 +708,28 @@ input[name="slider-radioC"] {
 
   .card-ubicacion {
     width: 310px;
-    height: 350px;
+    height: 400px;
   }
 
-  .card-ubicacion-text>p,
+  .card-ubicacion-text>p {
+    font-size: 1.08rem;
+    text-align: justify;
+  }
+
   .card-ubicacion-text>small {
     font-size: 1.1rem;
     text-align: justify;
+  }
+
+  .card-ubicacion-text>a{
+    font-size: 1.05rem;
+  }
+
+  .content-parahacer-acordeon p{
+    font-size: 1.5rem;
+  }
+  .content-parahacer-acordeon small{
+    font-size: 1.2rem;
   }
 
 }
