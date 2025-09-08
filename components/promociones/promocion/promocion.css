@@ -157,12 +157,9 @@
 
 }
 
-/* .content-vigencia
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.content-vigencia h3{
+    font-size: 16px;
+} 
 
 .date-vigencia {
     display: flex;

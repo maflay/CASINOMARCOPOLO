@@ -103,7 +103,7 @@
 
 .card-ubicacion {
   width: 400px;
-  height: 430px;
+  height: 460px;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -137,17 +137,17 @@
 
 .card-ubicacion-text p {
   color: #27314F;
-  font-size: 1.4rem;
+  font-size: 16px;
 }
 
 .card-ubicacion-text small {
   color: gray;
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 
 .card-ubicacion-text>a {
   color: gray;
-  font-size: 1.2rem;
+  font-size: 16px;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.1s ease;
@@ -243,7 +243,7 @@
 }
 
 .parahacer-left p {
-  font-size: 2.5rem;
+  font-size: 16px;
   color: #27314F;
 }
 
@@ -322,6 +322,11 @@
   position: absolute;
   color: white;
   transition: font-size 0.1s ease;
+  font-size: 16px;
+}
+
+.content-parahacer-acordeon small{
+  font-size: 16px;
 }
 
 .content-parahacer-acordeon:hover p {
@@ -384,7 +389,7 @@
 }
 
 .card-content-mp .content-mp-rigth p {
-  font-size: 2.5rem;
+  font-size: 16px;
 }
 
 .content-final-section {
@@ -417,7 +422,7 @@
 }
 
 .card-final-section-left h2 {
-  font-size: 1.3rem;
+  font-size: 14px;
 }
 
 .card-final-section-left img {
@@ -435,7 +440,7 @@
 }
 
 .card-final-section-rigth p {
-  font-size: 1.2rem;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -630,6 +635,10 @@ input[name="slider-radioC"] {
   align-items: center;
 }
 
+.story p{
+  font-size: 16px;
+}
+
 .story-ring {
   width: 90px;
   height: 90px;
@@ -708,28 +717,28 @@ input[name="slider-radioC"] {
 
   .card-ubicacion {
     width: 310px;
-    height: 400px;
+    height: 450px;
   }
 
   .card-ubicacion-text>p {
-    font-size: 1.08rem;
+    font-size: 16px;
     text-align: justify;
   }
 
   .card-ubicacion-text>small {
-    font-size: 1.1rem;
+    font-size: 16px;
     text-align: justify;
   }
 
   .card-ubicacion-text>a{
-    font-size: 1.05rem;
+    font-size: 16px;
   }
 
   .content-parahacer-acordeon p{
-    font-size: 1.5rem;
+    font-size: 16px;
   }
   .content-parahacer-acordeon small{
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 
 }
