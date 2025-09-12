@@ -8,9 +8,18 @@ function enviarFormularioContacto(e) {
 
   // Validación del checkbox
   if (!checkboxTerminos.checked) {
-    alert("Debes aceptar los Términos y Condiciones antes de continuar.");
-    checkboxTerminos.focus();
-    return false;
+  Swal.fire({
+          icon: "warning",
+          title: "Advertencia",
+          html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
+          confirmButtonColor: "#1F253A",
+           customClass: {
+            popup: "mi-popup",
+            title: "mi-titulo",
+            confirmButton: "btn-Send mi-boton",
+          },
+        })
+        return;
   }
 
   const formData = new FormData(form);

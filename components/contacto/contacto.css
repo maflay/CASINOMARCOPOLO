@@ -189,12 +189,17 @@
   border-radius: 10px;
 }
 
-.a_modal{
+.mi-boton:hover {
+  color: #efb810;
+  background-color: #1F253A;
+}
+
+.a_modal {
   color: rgb(231, 231, 231);
   transition: all 0.2s ease;
 }
 
-.a_modal:hover{
+.a_modal:hover {
   color: gray;
 }
 
