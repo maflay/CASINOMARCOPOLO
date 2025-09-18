@@ -8,18 +8,18 @@ function enviarFormularioContacto(e) {
 
   // Validación del checkbox
   if (!checkboxTerminos.checked) {
-  Swal.fire({
-          icon: "warning",
-          title: "Advertencia",
-          html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
-          confirmButtonColor: "#1F253A",
-           customClass: {
-            popup: "mi-popup",
-            title: "mi-titulo",
-            confirmButton: "btn-Send mi-boton",
-          },
-        })
-        return;
+    Swal.fire({
+      icon: "warning",
+      title: "Advertencia",
+      html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
+      confirmButtonColor: "#1F253A",
+      customClass: {
+        popup: "mi-popup",
+        title: "mi-titulo",
+        confirmButton: "btn-Send mi-boton",
+      },
+    });
+    return;
   }
 
   const formData = new FormData(form);
@@ -71,32 +71,29 @@ function infoSendContacto() {
   const ciudadEn = ciudad.value;
   const direccionEn = direccion.value;
   const descripcionEn = descripcion.value;
-const es_clienteEn = es_cliente.checked ? "Si" : "No";
-const aceptoTerminosEn = aceptoTerminos.checked ? "Si acepto" : "No acepto";
+  const es_clienteEn = es_cliente.checked ? "Si" : "No";
+  const aceptoTerminosEn = aceptoTerminos.checked ? "Si acepto" : "No acepto";
 
-if(aceptoTerminosEn == "No acepto"){
-      Swal.fire({
-          icon: "warning",
-          title: "Advertencia",
-          html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
-          confirmButtonColor: "#1F253A",
-           customClass: {
-            popup: "mi-popup",
-            title: "mi-titulo",
-            confirmButton: "btn-Send mi-boton",
-          },
-        })
-        return;
-}
-
-
+  if (aceptoTerminosEn == "No acepto") {
+    Swal.fire({
+      icon: "warning",
+      title: "Advertencia",
+      html: `Para poder enviar la información debes aceptar los terminos y condiciones, te invitamos a leer los <a target="_Blank" class="a_modal" href="#tratamiento_datos">Terminos y Condiciones</a>.`,
+      confirmButtonColor: "#1F253A",
+      customClass: {
+        popup: "mi-popup",
+        title: "mi-titulo",
+        confirmButton: "btn-Send mi-boton",
+      },
+    });
+    return;
+  }
 
   const url =
     "https://script.google.com/macros/s/AKfycbwatZBZdXwAjc1VkNqywr4CENX7ipZA8T1GHn3u6PQYoQu6YDKbRnz0PleJrtiDtSsA/exec";
   loader.style.display = "flex";
 
-
-    const fechaCompleta = new Date().toLocaleString("es-CO", {
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
     timeZone: "America/Bogota",
     year: "numeric",
     month: "2-digit",
@@ -107,7 +104,6 @@ if(aceptoTerminosEn == "No acepto"){
   });
 
   const [fecha, hora] = fechaCompleta.split(", ");
-
 
   const data = {
     nombre: nombreEn,
@@ -128,7 +124,6 @@ if(aceptoTerminosEn == "No acepto"){
   })
     .then((response) => response.text())
     .then(() => {
-
       nombre.value = "";
       correo.value = "";
       telefono.value = "";
@@ -140,17 +135,17 @@ if(aceptoTerminosEn == "No acepto"){
 
       setTimeout(() => {
         loader.style.display = "none";
-          Swal.fire({
+        Swal.fire({
           icon: "success",
           title: "EXITO",
           text: "El envio de la información fue exitoso.",
           confirmButtonColor: "#1F253A",
-           customClass: {
+          customClass: {
             popup: "mi-popup",
             title: "mi-titulo",
             confirmButton: "btn-Send mi-boton",
           },
-        })
+        });
       }, 2000);
     })
     .catch((error) => {
