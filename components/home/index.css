@@ -325,7 +325,7 @@
   font-size: 16px;
 }
 
-.content-parahacer-acordeon small{
+.content-parahacer-acordeon small {
   font-size: 16px;
 }
 
@@ -635,7 +635,7 @@ input[name="slider-radioC"] {
   align-items: center;
 }
 
-.story p{
+.story p {
   font-size: 16px;
 }
 
@@ -716,7 +716,7 @@ input[name="slider-radioC"] {
   }
 
   .card-ubicacion {
-    width: 310px;
+    width: 370px;
     height: 450px;
   }
 
@@ -730,14 +730,15 @@ input[name="slider-radioC"] {
     text-align: justify;
   }
 
-  .card-ubicacion-text>a{
+  .card-ubicacion-text>a {
     font-size: 16px;
   }
 
-  .content-parahacer-acordeon p{
+  .content-parahacer-acordeon p {
     font-size: 16px;
   }
-  .content-parahacer-acordeon small{
+
+  .content-parahacer-acordeon small {
     font-size: 16px;
   }
 
