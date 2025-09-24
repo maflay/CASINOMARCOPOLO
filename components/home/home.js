@@ -304,11 +304,14 @@ function toGames() {
 // }
 
 // sliderhome();
+
+
+
 (() => {
   const IG_FETCH_URL =
-    "https://script.google.com/macros/s/AKfycbyKLtQI5keNhxCcNtTMxX9TWii5ZmPXl9K35hpuFvWgV1E3nebXYsTcpeainqDGZV00LA/exec";
+    "https://script.google.com/macros/s/AKfycbzKETj9JU9WkbTB87JzrhFxKdCc2KWxmVOBxghA4tV_3VCzwBUeuLuTS0jcgHB__VJrow/exec";
 
-  window.IG_POSTS = [];
+ window.IG_POSTS = [];
   const loaderLocal = document.getElementById("loader-local");
 
   loaderLocal.innerHTML = `
@@ -318,32 +321,24 @@ function toGames() {
       </div>
     `;
   // --- fetch posts desde Apps Script ---
-  fetch(IG_FETCH_URL)
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log("Respuesta Apps Script:", data);
+  fetch(IG_FETCH_URL) 
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Respuesta Apps Script:", data);
 
-      let posts = [];
-      if (Array.isArray(data)) {
-        posts = data;
-      } else if (Array.isArray(data.data)) {
-        posts = data.data;
-      } else if (Array.isArray(data.posts)) {
-        posts = data.posts;
-      }
+    // si data ya es un array [{url:"..."}, ...]
+    const posts = data
+    .reverse()
+      .slice(0, 4) // 👈 copia para no mutar el array original
+      .map(item => normalizeIgUrl(item.url));
 
-      // Solo strings, por si vienen objetos {link:"..."}
-      posts = posts
-        .reverse()
-        .slice(0, 4)
-        .map((item) => (typeof item === "string" ? item : item.link || ""));
+    console.log("Posts normalizados:", posts);
 
-      // console.log("Posts normalizados:", posts);
+    window.IG_POSTS = posts;
+    renderInstagramEmbeds("ig-feed", window.IG_POSTS);
+  })
+  .catch(err => console.error("Error cargando IG posts:", err));
 
-      window.IG_POSTS = posts;
-      renderInstagramEmbeds("ig-feed", window.IG_POSTS);
-    })
-    .catch((err) => console.error("Error cargando IG posts:", err));
 
   // --- helpers ---
   function ensureInstagramScript() {
