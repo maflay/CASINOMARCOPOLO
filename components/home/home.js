@@ -304,93 +304,116 @@ function toGames() {
 // }
 
 // sliderhome();
+(() => {
+  const IG_FETCH_URL =
+    "https://script.google.com/macros/s/AKfycbyKLtQI5keNhxCcNtTMxX9TWii5ZmPXl9K35hpuFvWgV1E3nebXYsTcpeainqDGZV00LA/exec";
 
-window.IG_POSTS ??= [
-  "https://www.instagram.com/p/DO6VzuLEcau/",
-  "https://www.instagram.com/p/DOtbgX5EXua/",
-  "https://www.instagram.com/p/DOtFisVDGb3/",
-  "https://www.instagram.com/p/DOhCK5TkqDu/",
-];
-
-function ensureInstagramScript() {
-  if (
-    !document.querySelector('script[src^="https://www.instagram.com/embed.js"]')
-  ) {
-    const s = document.createElement("script");
-    s.src = "https://www.instagram.com/embed.js";
-    s.async = true;
-    document.head.appendChild(s);
-  }
-}
-
-window.VALID_POST =
-  /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/(reel|p|tv)\/[A-Za-z0-9_-]+\/$/;
-
-function normalizeIgUrl(url) {
-  if (!url) return "";
-  let u = url.trim().split("?")[0];
-  if (!u.endsWith("/")) u += "/";
-  return u;
-}
-function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
-  ensureInstagramScript();
+  window.IG_POSTS = [];
   const loaderLocal = document.getElementById("loader-local");
 
   loaderLocal.innerHTML = `
-    <div class="loader-local">
-      <div class="spinner"></div>
-      <p>Cargando multimedia ...</p>
-    </div>
-  `;
+      <div class="loader-local">
+        <div class="spinner"></div>
+        <p>Cargando multimedia ...</p>
+      </div>
+    `;
+  // --- fetch posts desde Apps Script ---
+  fetch(IG_FETCH_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log("Respuesta Apps Script:", data);
 
-  const container = document.getElementById(containerId);
-  if (!container) return;
+      let posts = [];
+      if (Array.isArray(data)) {
+        posts = data;
+      } else if (Array.isArray(data.data)) {
+        posts = data.data;
+      } else if (Array.isArray(data.posts)) {
+        posts = data.posts;
+      }
 
-  const normalized = posts.map(normalizeIgUrl);
-  const valid = normalized.filter((u) => VALID_POST.test(u));
-  const invalid = normalized.filter((u) => !VALID_POST.test(u));
+      // Solo strings, por si vienen objetos {link:"..."}
+      posts = posts
+        .reverse()
+        .slice(0, 4)
+        .map((item) => (typeof item === "string" ? item : item.link || ""));
 
-  if (invalid.length) {
-    console.warn(
-      "URLs IG omitidas (no son permalinks de post/reel/tv):",
-      invalid
-    );
+      // console.log("Posts normalizados:", posts);
+
+      window.IG_POSTS = posts;
+      renderInstagramEmbeds("ig-feed", window.IG_POSTS);
+    })
+    .catch((err) => console.error("Error cargando IG posts:", err));
+
+  // --- helpers ---
+  function ensureInstagramScript() {
+    if (
+      !document.querySelector(
+        'script[src^="https://www.instagram.com/embed.js"]'
+      )
+    ) {
+      const s = document.createElement("script");
+      s.src = "https://www.instagram.com/embed.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
   }
 
-  container.innerHTML = valid
-    .map(
-      (url) => `
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="${url}"
-          data-instgrm-version="14"
-          style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;">
-        </blockquote>
-      `
-    )
-    .join("");
+  window.VALID_POST =
+    /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/(reel|p|tv)\/[A-Za-z0-9_-]+\/$/;
 
-  const tryProcess = () => {
-    if (window.instgrm?.Embeds?.process) {
-      window.instgrm.Embeds.process();
+  function normalizeIgUrl(url) {
+    if (!url || typeof url !== "string") return "";
+    let u = url.trim().split("?")[0];
+    if (!u.endsWith("/")) u += "/";
+    return u;
+  }
 
-      const checkLoaded = setInterval(() => {
-        const iframes = container.querySelectorAll("iframe");
-        if (iframes.length > 0) {
-          clearInterval(checkLoaded);
-          loaderLocal.innerHTML = ``;
+  function renderInstagramEmbeds(containerId = "ig-feed", posts = []) {
+    ensureInstagramScript();
 
-          iframes.forEach((iframe) => {
-            iframe.style.borderRadius = "8px";
-            iframe.style.overflow = "hidden";
-          });
-        }
-      }, 300);
-    } else {
-      setTimeout(tryProcess, 150);
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const normalized = posts.map(normalizeIgUrl);
+    const valid = normalized.filter((u) => VALID_POST.test(u));
+    const invalid = normalized.filter((u) => !VALID_POST.test(u));
+
+    if (invalid.length) {
+      console.warn(
+        "URLs IG omitidas (no son permalinks de post/reel/tv):",
+        invalid
+      );
     }
-  };
 
-  tryProcess();
-}
+    container.innerHTML = valid
+      .map(
+        (url) => `
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="${url}"
+            data-instgrm-version="14"
+            style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;border-radius:8px;overflow:hidden;">
+          </blockquote>
+        `
+      )
+      .join("");
 
-renderInstagramEmbeds("ig-feed", IG_POSTS);
+    const tryProcess = () => {
+      if (window.instgrm?.Embeds?.process) {
+        window.instgrm.Embeds.process();
+
+        const checkLoaded = setInterval(() => {
+          const iframes = container.querySelectorAll("iframe");
+          if (iframes.length > 0) {
+            clearInterval(checkLoaded);
+            loaderLocal.innerHTML = ``;
+          }
+        }, 300);
+      } else {
+        setTimeout(tryProcess, 150);
+      }
+    };
+
+    tryProcess();
+  }
+})();

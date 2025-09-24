@@ -119,7 +119,7 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/super-bingo.js",
   },
-  trenpremios:{
+  trenpremios: {
     html: "/components/promociones/promocion/tren-premios.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/tren-premios.js",
@@ -129,25 +129,35 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/blackjack-express.js",
   },
-   matchperfecto: {
+  matchperfecto: {
     html: "/components/promociones/promocion/match-perfecto.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/match-perfecto.js",
   },
-     flechazocupido: {
+  flechazocupido: {
     html: "/components/promociones/promocion/flechazo-cupido.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/flechazo-cupido.js",
   },
-  ubicacioncali:{
+  halloweenmisterioso: {
+    html: "/components/promociones/promocion/halloweenmisterioso.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/halloweenmisterioso.js",
+  },
+  losnueveportales: {
+    html: "/components/promociones/promocion/losnueveportales.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/losnueveportales.js",
+  },
+  ubicacioncali: {
     html: "/components/ubicaciones/ubicacionCiudad/ubicacioncali.html",
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.js",
   },
   tratamiento_datos: {
-    html:"/components/institucional/politica-datos.html",
-    css:"/components/institucional/politica.css",
-    js:"/components/institucional/politica.js"
+    html: "/components/institucional/politica-datos.html",
+    css: "/components/institucional/politica.css",
+    js: "/components/institucional/politica.js",
   },
   blackjack: {
     html: "/components/juegos/juegos/blackjack.html",
