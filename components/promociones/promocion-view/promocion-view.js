@@ -6,8 +6,6 @@
   const cubo1 = document.getElementById("cubo1-mp");
   const cubo2 = document.getElementById("cubo2-mp");
 
-  console.log(solofechaCompleta, "solofechaCompleta");
-
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
     cubo2.style.display = "none";
