@@ -98,6 +98,10 @@
   font-size: 16px;
 }
 
+.View_nuevas_promo {
+  display: none;
+}
+
 
 @media (max-width: 768px) {
 

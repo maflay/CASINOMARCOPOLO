@@ -43,10 +43,27 @@ function toTrenPremios() {
   navegarA("trenpremios");
 }
 
-function toMatchPerfecto(){
+function toMatchPerfecto() {
   navegarA("matchperfecto");
 }
 
-function toFlechazoCupido(){
+function toFlechazoCupido() {
   navegarA("flechazocupido");
 }
+
+(() => {
+  const solofechaCompleta = new Date().toLocaleString("es-CO", {
+    month: "long",
+  });
+
+  const cubo1 = document.getElementById("cubo1-mp");
+  const cubo2 = document.getElementById("cubo2-mp");
+
+  if (solofechaCompleta == "septiembre") {
+    cubo1.style.display = "flex";
+    cubo2.style.display = "none";
+  } else if (solofechaCompleta == "octubre") {
+    cubo1.style.display = "none";
+    cubo2.style.display = "flex";
+  }
+})();
