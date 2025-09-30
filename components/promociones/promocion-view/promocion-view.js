@@ -51,7 +51,7 @@ function toFlechazoCupido() {
   navegarA("flechazocupido");
 }
 
-(() => {
+
   const solofechaCompleta = new Date().toLocaleString("es-CO", {
     month: "long",
   });
@@ -66,4 +66,4 @@ function toFlechazoCupido() {
     cubo1.style.display = "none";
     cubo2.style.display = "flex";
   }
-})();
+
