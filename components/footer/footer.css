@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.footer .footer-logo img {
+.logo_footer {
   width: 200px;
 }
 
@@ -71,6 +71,7 @@
   bottom: 0;
   right: 0;
   width: 100%;
+  padding: 26px 0;
 }
 
 .footer a {
@@ -82,6 +83,28 @@
 
 .footer .footer-icons a:hover {
   color: rgb(170, 91, 250);
+}
+
+
+.content_icono_abierto {
+  padding: 5px 0;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  padding: 20px 0;
+}
+
+.content_icono_abierto a {
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.content_icono_abierto a:hover {
+  opacity: 0.7;
+}
+
+.icono_abierto {
+  width: 14px;
+  padding-left: 5px;
 }
 
 .footer .footer-icons {

@@ -154,7 +154,7 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.css",
     js: "/components/ubicaciones/ubicacionCiudad/ubicacionciudad.js",
   },
-  tratamiento_datos: {
+  politicadatos: {
     html: "/components/institucional/politica-datos.html",
     css: "/components/institucional/politica.css",
     js: "/components/institucional/politica.js",

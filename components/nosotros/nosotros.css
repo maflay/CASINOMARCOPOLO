@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/resources/marcopolo.png);
+    background-image: url(/resources/marcopolo-oscuro.png);
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.2;
@@ -39,6 +39,7 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: #1F253A;
 }
 
 .grid {
@@ -49,7 +50,7 @@
 
 .card {
     flex: 1 1 300px;
-    background: #fff;
+    background: #ffffff77;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
