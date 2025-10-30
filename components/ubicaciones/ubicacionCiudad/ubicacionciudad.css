@@ -68,8 +68,13 @@ a {
   text-decoration: none;
 }
 
+.content-a-card {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width:768px) {
   .fondo-ubicacionciudad {
-height: auto;
+    height: auto;
   }
 }

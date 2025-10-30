@@ -194,4 +194,19 @@ const rutasLimpias = {
     css: "/components/juegos/juegos/juego.css",
     js: "/components/juegos/juegos/juego.js",
   },
+    dadospoker: {
+    html: "/components/promociones/promocion/dados-poker.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/dados-poker.js",
+  },
+  acumulaygana: {
+    html: "/components/promociones/promocion/acumula-y-gana.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/acumula-y-gana.js",
+  },
+  ruledelasuerte: {
+    html: "/components/promociones/promocion/ruleta-de-premios.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/ruleta-de-premios.js",
+  },
 };

@@ -48,112 +48,113 @@
     });
 })();
 
-let _scrollY = 0;
+(() => {
+  let _scrollY = 0;
 
-function lockBodyScroll() {
-  _scrollY = window.scrollY || document.documentElement.scrollTop;
-  document.body.style.top = `-${_scrollY}px`;
-  document.body.classList.add("body-lock");
-}
+  function lockBodyScroll() {
+    _scrollY = window.scrollY || document.documentElement.scrollTop;
+    document.body.style.top = `-${_scrollY}px`;
+    document.body.classList.add("body-lock");
+  }
 
-function unlockBodyScroll() {
-  document.body.classList.remove("body-lock");
-  document.body.style.top = "";
-  window.scrollTo(0, _scrollY);
+  function unlockBodyScroll() {
+    document.body.classList.remove("body-lock");
+    document.body.style.top = "";
+    window.scrollTo(0, _scrollY);
+  }
 
-}
+  function toBlackjack() {
+    document.getElementById("features-blackjack").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toBlackjack() {
-  document.getElementById("features-blackjack").style.display = "flex";
-  lockBodyScroll();
-}
+  function outBlackjack() {
+    document.getElementById("features-blackjack").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function outBlackjack() {
-  document.getElementById("features-blackjack").style.display = "none";
-  unlockBodyScroll();
-}
+  function toBaccarat() {
+    document.getElementById("feature-baccarat").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toBaccarat() {
-  document.getElementById("feature-baccarat").style.display = "flex";
-  lockBodyScroll();
-}
+  function outBaccarat() {
+    document.getElementById("feature-baccarat").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function outBaccarat() {
-  document.getElementById("feature-baccarat").style.display = "none";
-  unlockBodyScroll();
-}
+  function toRuleta() {
+    document.getElementById("feature-ruleta").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toRuleta() {
-  document.getElementById("feature-ruleta").style.display = "flex";
-  lockBodyScroll();
-}
+  function outRuleta() {
+    document.getElementById("feature-ruleta").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function outRuleta() {
-  document.getElementById("feature-ruleta").style.display = "none";
-  unlockBodyScroll();
-}
+  function toHipodromo() {
+    document.getElementById("feature-hipodromo").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toHipodromo() {
-  document.getElementById("feature-hipodromo").style.display = "flex";
-  lockBodyScroll();
-}
+  function outHipodromo() {
+    document.getElementById("feature-hipodromo").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function outHipodromo() {
-  document.getElementById("feature-hipodromo").style.display = "none";
-  unlockBodyScroll();
-}
+  function toPoker() {
+    document.getElementById("feature-poker").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toPoker() {
-  document.getElementById("feature-poker").style.display = "flex";
-  lockBodyScroll();
-}
+  function outPoker() {
+    document.getElementById("feature-poker").style.display = "none";
+  }
 
-function outPoker() {
-  document.getElementById("feature-poker").style.display = "none";
-}
+  function toSlots() {
+    document.getElementById("feature-slots").style.display = "flex";
+    lockBodyScroll();
+  }
 
-function toSlots() {
-  document.getElementById("feature-slots").style.display = "flex";
-  lockBodyScroll();
-}
+  function outSlots() {
+    document.getElementById("feature-slots").style.display = "none";
+    unlockBodyScroll();
+  }
 
-function outSlots() {
-  document.getElementById("feature-slots").style.display = "none";
-  unlockBodyScroll();
-}
+  function toBaccaratGame() {
+    navegarA("baccarat");
+  }
 
-function toBaccaratGame() {
-  navegarA("baccarat");
-}
+  function toBlackjackGame() {
+    navegarA("blackjack");
+  }
 
-function toBlackjackGame() {
-  navegarA("blackjack");
-}
+  function toRuletaGame() {
+    navegarA("ruleta");
+  }
 
-function toRuletaGame() {
-  navegarA("ruleta");
-}
+  function toHipodromoGame() {
+    navegarA("hipodromo");
+  }
 
-function toHipodromoGame() {
-  navegarA("hipodromo");
-}
+  function toPokerGame() {
+    navegarA("poker");
+  }
 
-function toPokerGame() {
-  navegarA("poker");
-}
+  function toSlotsGame() {
+    navegarA("slots");
+  }
 
-function toSlotsGame() {
-  navegarA("slots");
-}
+  function toLampara() {
+    navegarA("lampara");
+  }
 
-function toLampara() {
-  navegarA("lampara");
-}
+  function toGiroDorado() {
+    navegarA("girodorado");
+  }
 
-function toGiroDorado() {
-  navegarA("girodorado");
-}
-
-function toDadosPoker() {
-  navegarA("dadospoker");
-}
+  function toDadosPoker() {
+    navegarA("dadospoker");
+  }
+})();

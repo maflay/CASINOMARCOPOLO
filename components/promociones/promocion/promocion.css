@@ -126,12 +126,12 @@
     transition: background 0.2s ease;
 }
 
-.to-promo .next-to-promo img{
+.to-promo .next-to-promo img {
     width: 50px;
     margin-left: 10px;
 }
 
-.to-promo .next-to-promo h2{
+.to-promo .next-to-promo h2 {
     color: white;
 }
 
@@ -157,9 +157,9 @@
 
 }
 
-.content-vigencia h3{
+.content-vigencia h3 {
     font-size: 16px;
-} 
+}
 
 .date-vigencia {
     display: flex;
@@ -181,48 +181,48 @@
 
 
 .scroll-down-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  animation: float 1.5s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    animation: float 1.5s ease-in-out infinite;
 }
 
 .arrow {
-  width: 20px;
-  height: 20px;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  transform: rotate(-45deg);
-  animation: bounce 1.5s infinite;
-  opacity: 0.7;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(-45deg);
+    animation: bounce 1.5s infinite;
+    opacity: 0.7;
 }
 
 .arrow:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .arrow:nth-child(3) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
-.note{
+.note {
     color: rgba(128, 128, 128, 0.733);
 }
 
 @keyframes bounce {
 
-  0%,
-  100% {
-    transform: translateY(0) rotate(-45deg);
-    opacity: 0.7;
-  }
+    0%,
+    100% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.7;
+    }
 
-  50% {
-    transform: translateY(10px) rotate(-45deg);
-    opacity: 1;
-  }
+    50% {
+        transform: translateY(10px) rotate(-45deg);
+        opacity: 1;
+    }
 }
 
 
@@ -282,7 +282,23 @@ td {
     margin-bottom: 10px;
 }
 
+.content_banner_promo {
+    position: relative;
+    width: 100%;
+    /* margin-top: 8%; */
+}
 
+.content_banner_promo img {
+    width: 100%;
+}
+
+.img_desk_promo_head {
+    display: block;
+}
+
+.img_movil_promo_head {
+    display: none;
+}
 
 
 @media (max-width: 767px) {
@@ -309,9 +325,18 @@ td {
         margin-bottom: 20px;
     }
 
-    .to-promo .next-to-promo{
+    .to-promo .next-to-promo {
         width: 100%;
     }
+
+    .img_desk_promo_head {
+        display: none;
+    }
+
+    .img_movil_promo_head {
+        display: block;
+    }
+
 }
 
 @media (max-width: 389px) {
