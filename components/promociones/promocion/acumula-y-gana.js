@@ -1,28 +1,4 @@
 (() => {
-  const btnNext1 = document.getElementById("next-to-1");
-  const btnNext2 = document.getElementById("next-to-2");
-  const btnNext3 = document.getElementById("next-to-3");
-
-  if (btnNext1) {
-    btnNext1.addEventListener("click", () => {
-      navegarA("dadospoker");
-    });
-  }
-
-  if (btnNext2) {
-    btnNext2.addEventListener("click", () => {
-      navegarA("ruledelasuerte");
-    });
-  }
-
-  if (btnNext3) {
-    btnNext3.addEventListener("click", () => {
-      navegarA("dadospoker");
-    });
-  }
-})();
-
-(() => {
   fetch("/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.html")
     .then((res) => res.text())
     .then((html) => {
@@ -32,12 +8,14 @@
       // Cargar CSS dinámicamente
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
-      estilo.href = "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
+      estilo.href =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
       document.head.appendChild(estilo);
 
       // Cargar script dinámicamente
       const script = document.createElement("script");
-      script.src = "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
+      script.src =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();
