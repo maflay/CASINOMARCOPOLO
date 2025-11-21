@@ -1,5 +1,4 @@
 .section-start-juego-responsable {
-    margin-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +29,6 @@ h2 {
     letter-spacing: -0.5px;
     -webkit-text-stroke-color: #171c1e;
     stroke: #171c1e;
-    text-shadow: 2px 2px 5px #171c1e;
 }
 
 
@@ -38,7 +36,6 @@ h2 {
 .section-que-es {
     width: 100%;
     display: flex;
-    background-image: linear-gradient(150deg, #27314fd3 10%, #27314F 90%);
     height: auto;
     border-radius: 20px;
     padding: 20px;
@@ -61,12 +58,16 @@ h2 {
 }
 
 .section-que-es-text h1 {
-    color: #fff;
+    color: #1F253A;
+}
+
+.p_cita_jr_m {
+    color: rgb(146, 146, 146);font-style: italic;
 }
 
 .text-juego-responsable p {
     text-align: justify;
-    color: white;
+    color: #1F253A;
 }
 
 .section-consecuencias {
@@ -108,7 +109,7 @@ h2 {
     gap: 15px;
     width: 100%;
     background-image: linear-gradient(150deg, #27314fd3 10%, #27314F 90%);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     height: auto;
     padding: 20px;
 }
@@ -160,7 +161,6 @@ h2 {
     text-align: center;
     width: 100%;
     height: auto;
-    background-image: linear-gradient(150deg, #27314fd3 10%, #27314F 90%);
     border-radius: 20px 20px 0 0;
 }
 
@@ -176,7 +176,7 @@ h2 {
 
 .autoexclusion h1,
 .autoexclusion p {
-    color: white;
+    color: #1F253A;
 }
 
 .section-content-autoexclusion .que-es-autoexclusion {
@@ -185,7 +185,7 @@ h2 {
 
 .que-es-autoexclusion h1,
 .que-es-autoexclusion p {
-    color: white;
+    color: #1F253A;
 }
 
 
@@ -198,7 +198,6 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: linear-gradient(150deg, #27314f 10%, #27314F 50%, #27314fd3 100%);
     padding: 20px;
     gap: 15px;
     margin-top: 20px;
@@ -206,14 +205,14 @@ h2 {
 }
 
 .section-directorios h2 {
-    color: white;
+    color: #1F253A;
 }
 
 .section-directorios p {
     text-align: justify;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: #1F253A;
 }
 
 
@@ -282,7 +281,7 @@ h2 {
 }
 
 .directorios-img h2 {
-    color: white;
+    color: #1F253A;
 }
 
 .directorios-text {
@@ -290,7 +289,7 @@ h2 {
 }
 
 .directorios-text h2 {
-    color: white;
+    color: #1F253A;
 }
 
 .content-ips {
@@ -303,12 +302,12 @@ h2 {
 }
 
 .content-ips a {
-    color: gray;
+    color: #1F253A;
     text-decoration: none;
 }
 
 .content-ips a:hover {
-    color: white;
+    color: #1f253a94;
 }
 
 .section-toma-control {
@@ -363,7 +362,6 @@ h2 {
 
 @media (max-width: 768px) {
     .section-start-juego-responsable {
-        margin-top: 15%;
         width: 100%;
     }
 

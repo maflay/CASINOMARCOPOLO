@@ -59,7 +59,7 @@ a {
   margin-bottom: 20px;
 }
 
-.content-casin-text-content{
+.content-casin-text-content {
   padding: 40px 0;
 }
 
@@ -683,8 +683,8 @@ input[name="slider-radio-sur"] {
   border-radius: 0;
 } */
 
-.background-ubicacion-juegos{
-   width: 100vw;
+.background-ubicacion-juegos {
+  width: 100vw;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -693,19 +693,18 @@ input[name="slider-radio-sur"] {
 }
 
 .background-ubicacion-juegos h1,
-.background-ubicacion-juegos p{
+.background-ubicacion-juegos p {
   color: white;
 }
 
 
 @media (max-width: 768px) {
 
-  body{
+  body {
     overflow-x: hidden;
   }
 
   .content-casin {
-    padding-top: 40px;
     display: grid;
     height: auto;
   }
@@ -803,13 +802,13 @@ input[name="slider-radio-sur"] {
     font-size: 1.8rem;
   }
 
-  .content-casin-text-content{
+  .content-casin-text-content {
     padding: 0;
   }
 
   .bg1bogota {
-  background-image: url(/resources/banner_marcopolo_bogota-movil.jpeg);
-}
+    background-image: url(/resources/banner_marcopolo_bogota-movil.jpeg);
+  }
 }
 
 @media (max-width: 380px) {
@@ -848,6 +847,4 @@ input[name="slider-radio-sur"] {
   .carousel-track .content-track {
     height: 190px;
   }
-
-
 }

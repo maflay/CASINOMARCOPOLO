@@ -119,10 +119,6 @@
     width: 90%;
   }
 
-  .promo h1 {
-    font-size: 2rem;
-  }
-
   .card-view .card-promo {
     width: 100%;
   }
@@ -138,9 +134,9 @@
     padding: 10px 0;
   }
 
-  .promo h1 {
+  /* .promo h1 {
     font-size: 1.6rem;
-  }
+  } */
 
   .card-content p {
     font-size: 14px;

@@ -27,7 +27,6 @@
     align-items: center;
     height: auto;
     color: white;
-    padding-top: 8%;
 }
 
 .promocion-content {
@@ -263,9 +262,6 @@
     }
 }
 
-
-
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -328,7 +324,11 @@ td {
 
 .content_banner_promo img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.promocion_paddin_head {
+    padding: 0 !important;
 }
 
 .img_desk_promo_head {
@@ -339,12 +339,14 @@ td {
     display: none;
 }
 
-
 @media (max-width: 767px) {
 
     .promocion {
-        padding-top: 15%;
         height: auto;
+    }
+
+    .content_banner_promo img {
+        border-radius: 0;
     }
 
     .promocion-content {
@@ -378,8 +380,8 @@ td {
 
     .img_movil_promo_head {
         display: block;
+        width: 100%;
     }
-
 }
 
 @media (max-width: 389px) {
@@ -387,5 +389,4 @@ td {
         font-size: 1rem;
         font-weight: 700;
     }
-
 }

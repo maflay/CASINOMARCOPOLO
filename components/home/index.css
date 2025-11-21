@@ -782,6 +782,14 @@ input[name="slider-radioC"] {
     height: auto;
   }
 
+  .container-tarjeta {
+    background-image: linear-gradient(90deg, #1f253a81, #1f253a81), url(/resources/IMG_4558.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
+  }
+
   .box-left-tarjeta {
     display: flex;
     flex-direction: row;
@@ -792,6 +800,7 @@ input[name="slider-radioC"] {
   }
 
   .box-rigth-tarjeta {
+    display: none;
     width: 100%;
   }
 

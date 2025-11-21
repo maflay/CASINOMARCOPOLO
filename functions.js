@@ -77,6 +77,23 @@ const PageLoader = {
         let loaded = 0;
         mainContent.innerHTML = html;
 
+        if (document.getElementById("soy_mayor_de_edad")) {
+          const MAYOR_EDAD = getCookie("Soy_Mayor_mp");
+          if (!MAYOR_EDAD) {
+            document.getElementById("soy_mayor_de_edad").style.display = "flex";
+          } else {
+            document.getElementById("soy_mayor_de_edad").style.display = "none";
+          }
+
+          document
+            .getElementById("close_modal_me")
+            .addEventListener("click", () => {
+              setCookie("Soy_Mayor_mp", "Soy_Mayor");
+              document.getElementById("soy_mayor_de_edad").style.display =
+                "none";
+            });
+        }
+
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");
@@ -334,4 +351,33 @@ window.addEventListener("hashchange", () => {
   actualizarMenuActivo();
 });
 
+function setCookie(name, value, opts = {}) {
+  const {
+    hours = 2,
+    path = "/",
+    sameSite = "Lax", // recomendado
+    secure = location.protocol === "https:", // true si estás en https
+  } = opts;
 
+  const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
+  const encoded = encodeURIComponent(JSON.stringify(value));
+  let cookie = `${name}=${encoded}; Expires=${expires}; Path=${path}; SameSite=${sameSite}`;
+  if (secure) cookie += `; Secure`;
+  document.cookie = cookie;
+}
+
+function getCookie(name) {
+  const parts = document.cookie ? document.cookie.split("; ") : [];
+  for (const part of parts) {
+    const [k, ...rest] = part.split("=");
+    if (k === name) {
+      const val = rest.join("=");
+      try {
+        return JSON.parse(decodeURIComponent(val));
+      } catch {
+        return decodeURIComponent(val);
+      }
+    }
+  }
+  return null;
+}
