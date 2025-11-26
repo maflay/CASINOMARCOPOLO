@@ -52,6 +52,7 @@
 .content-img-mymawi {
   display: flex;
   width: 100%;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
@@ -121,11 +122,11 @@
 
 .content_form_head {
   position: absolute;
-  width: 250px;
+  width: 316px;
   background-color: transparent;
   height: 1px;
-  top: 50%;
-  left: 70px;
+  top: 230px;
+  left: -132px;
   z-index: 100;
   transform: rotate(-90deg);
 }
@@ -154,6 +155,10 @@
   }
 }
 
+._content_divider_section {
+  padding: 20px 0;
+}
+
 @media(max-width:1366px) {
   .content-title-mymawi {
     height: auto;
@@ -162,6 +167,12 @@
 
   .beneficios-rigth h2 {
     font-size: 3.2rem;
+  }
+
+  .content_form_head {
+    width: 240px;
+    left: -100px;
+    top: 185px;
   }
 }
 
@@ -198,9 +209,13 @@
   }
 
   .content_form_head {
-    width: 74px;
-    top: 78px;
-    left: 15px;
+    width: 100px;
+    top: 98px;
+    left: -45px;
+  }
+
+  ._content_divider_section {
+    padding: 0 20px;
   }
 
 }

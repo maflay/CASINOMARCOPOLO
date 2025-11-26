@@ -209,6 +209,10 @@
     color: rgb(168, 168, 168);
 }
 
+._content_divider_section {
+    padding: 20px 0;
+}
+
 @media (max-width:768px) {
 
     .content-banner-entretenimiento {
@@ -265,6 +269,11 @@
         font-size: 52px;
         padding: 0 10px;
     }
+
+    ._content_divider_section {
+        padding: 0 20px;
+    }
+
 }
 
 .body-lock {

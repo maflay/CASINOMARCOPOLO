@@ -299,6 +299,10 @@
   text-shadow: 2px 2px 2px #171c1e;
 }
 
+._content_divider_section {
+  padding: 20px 0;
+}
+
 
 
 @media (max-width: 768px) {
@@ -343,5 +347,10 @@
   .card-view-entretenimiento img {
     width: 100%;
   }
+
+  ._content_divider_section {
+    padding: 0 20px;
+  }
+
 
 }
