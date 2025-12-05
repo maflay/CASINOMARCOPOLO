@@ -461,6 +461,10 @@ body {
         background: #fff;
     }
 
+     .info_modal_mayor_de_edad {
+        width: 380px;
+    }
+
     body {
         padding-top: 34px;
     }
