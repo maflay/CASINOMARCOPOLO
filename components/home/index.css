@@ -978,6 +978,13 @@ input[name="slider-radioC"] {
   width: 250px;
 }
 
+@media(max-width: 768px){
+  .content_marca_navidad {
+  position: relative;
+  margin-bottom: 20px;
+}
+}
+
 .content_efecto_navidad {
   display: flex;
   justify-content: center;
