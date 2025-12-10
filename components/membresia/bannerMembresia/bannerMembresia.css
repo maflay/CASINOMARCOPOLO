@@ -30,6 +30,10 @@
   color: white;
 }
 
+.info-card-entretenimiento>p {
+  text-align: center;
+}
+
 .actions-card-entretenimiento {
   display: flex;
   justify-content: center;
@@ -39,6 +43,7 @@
 }
 
 .actions-card-entretenimiento a {
+  text-align: center;
   color: white;
   transition: all 0.4s ease;
 }

@@ -5,10 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/resources/dark-photo.jpg);
+  /* background-image: linear-gradient(180deg, #1F253A, #1f253a71) ,url(/resources/home_banner_figuras.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .content-home-banner {
@@ -507,7 +507,7 @@
   display: flex;
   transition: transform 1s ease-in-out;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   touch-action: pan-y;
   user-select: none;
   cursor: grab;
@@ -526,14 +526,14 @@
 
 .bg1C {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)), url(/resources/mp1.jpg);
+      rgba(0, 0, 0, 0.5)), url(/resources/home_banner_figuras.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg2C {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)), url(/resources/mp2.jpg);
+      rgba(0, 0, 0, 0.5)), url(/resources/dark-photo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -587,7 +587,7 @@ input[name="slider-radioC"] {
 
 .arrowC {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
   background: transparent;
   color: #fff;
@@ -978,11 +978,15 @@ input[name="slider-radioC"] {
   width: 250px;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .content_marca_navidad {
-  position: relative;
-  margin-bottom: 20px;
-}
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .controls-sliderC {
+    display: none;
+  }
 }
 
 .content_efecto_navidad {
