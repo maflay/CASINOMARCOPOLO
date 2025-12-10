@@ -1037,12 +1037,3 @@ path {
     transform: translateY(0px) scale(0);
   }
 }
-
-body:after {
-  content: "done with fun by Uwe Chardon";
-  color: #fff;
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 1vh;
-  right: 1vw;
-}
