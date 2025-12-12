@@ -55,7 +55,7 @@ a {
   background-color: #27314F;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.375rem;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
@@ -74,7 +74,7 @@ a {
   color: #27314F;
   background-color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.375rem;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;

@@ -44,7 +44,6 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    flex-wrap: wrap;
     width: 100%;
     height: auto;
     line-height: 10rem;
@@ -270,7 +269,7 @@
     }
 
     .section-mesas-entretenimiento h1 {
-        font-size: 52px;
+        font-size: 42px;
         padding: 0 10px;
     }
 

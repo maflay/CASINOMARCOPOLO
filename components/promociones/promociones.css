@@ -44,6 +44,7 @@
     0 0 1px #fff,
     0 0 1px #fff,
     0 0 1px #fff;
+    font-size: 72px;
 }
 
 .content-vigencia-promo {
@@ -309,6 +310,10 @@
 
   .promo-section {
     text-align: center;
+  }
+
+  .content-start h2 {
+    font-size: 40px;
   }
 
   .card-promociones {
