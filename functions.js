@@ -4,26 +4,26 @@ window.addEventListener("load", function () {
     loading.style.display = "none";
   }, 550);
 });
+
+
 function cargarEstiloVista(cssUrls) {
   // Eliminar cualquier estilo anterior de vista
   const oldLinks = document.querySelectorAll("link[data-vista-css]");
   oldLinks.forEach((link) => link.remove());
 
-  // Cargar nuevos estilos
-  if (Array.isArray(cssUrls)) {
-    cssUrls.forEach((url, i) => {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = url;
-      link.setAttribute("data-vista-css", `vista-css-${i}`);
-      document.head.appendChild(link);
-    });
-  } else {
+  const addCss = (url, i = 0) => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = cssUrls;
-    link.setAttribute("data-vista-css", "vista-css");
+    link.href = withVersion(url);     // 👈 cache-busting
+    link.setAttribute("data-vista-css", `vista-css-${i}`);
     document.head.appendChild(link);
+  };
+
+  // Cargar nuevos estilos
+  if (Array.isArray(cssUrls)) {
+    cssUrls.forEach((url, i) => addCss(url, i));
+  } else if (cssUrls) {
+    addCss(cssUrls);
   }
 }
 
@@ -32,23 +32,32 @@ function cargarScriptVista(scriptUrls) {
   const oldScripts = document.querySelectorAll("script[data-vista-script]");
   oldScripts.forEach((script) => script.remove());
 
-  // Cargar nuevos scripts (uno o varios)
+  const addScript = (url, i = 0, isModule = false) => {
+    const script = document.createElement("script");
+    if (isModule) script.type = "module";
+    script.src = withVersion(url);       // 👈 cache-busting
+    script.defer = true;
+    script.setAttribute("data-vista-script", `vista-script-${i}`);
+    document.body.appendChild(script);
+  };
+
   if (Array.isArray(scriptUrls)) {
     scriptUrls.forEach((url, i) => {
-      const script = document.createElement("script");
-      script.type = "module";
-      script.src = url;
-      script.defer = true;
-      script.setAttribute("data-vista-script", `vista-script-${i}`);
-      document.body.appendChild(script);
+      // si quieres todos como módulo:
+      addScript(url, i, true);
+      // si algunos no son módulo, aquí podrías decidir según el nombre
     });
-  } else {
-    const script = document.createElement("script");
-    script.src = scriptUrls;
-    script.defer = true;
-    script.setAttribute("data-vista-script", "vista-script");
-    document.body.appendChild(script);
+  } else if (scriptUrls) {
+    addScript(scriptUrls, 0, false);
   }
+}
+
+const APP_VERSION = Date.now();
+
+function withVersion(url) {
+  if (!APP_VERSION) return url;
+  const sep = url.includes("?") ? "&" : "?";
+  return `${url}${sep}v=${APP_VERSION}`;
 }
 
 const PageLoader = {
@@ -65,7 +74,7 @@ const PageLoader = {
     }
 
     sessionStorage.clear();
-    fetch(ruta.html)
+    fetch(withVersion(ruta.html), { cache: "no-store" })
       .then((response) => response.text())
       .then((html) => {
         if (ruta.css) cargarEstiloVista(ruta.css);
