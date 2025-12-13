@@ -5,16 +5,14 @@ window.addEventListener("load", function () {
   }, 550);
 });
 
-
 function cargarEstiloVista(cssUrls) {
-  // Eliminar cualquier estilo anterior de vista
   const oldLinks = document.querySelectorAll("link[data-vista-css]");
   oldLinks.forEach((link) => link.remove());
 
   const addCss = (url, i = 0) => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = withVersion(url);     // 👈 cache-busting
+    link.href = withVersion(url);
     link.setAttribute("data-vista-css", `vista-css-${i}`);
     document.head.appendChild(link);
   };
@@ -28,14 +26,13 @@ function cargarEstiloVista(cssUrls) {
 }
 
 function cargarScriptVista(scriptUrls) {
-  // Elimina todos los scripts anteriores de vista
   const oldScripts = document.querySelectorAll("script[data-vista-script]");
   oldScripts.forEach((script) => script.remove());
 
   const addScript = (url, i = 0, isModule = false) => {
     const script = document.createElement("script");
     if (isModule) script.type = "module";
-    script.src = withVersion(url);       // 👈 cache-busting
+    script.src = withVersion(url);
     script.defer = true;
     script.setAttribute("data-vista-script", `vista-script-${i}`);
     document.body.appendChild(script);
@@ -43,9 +40,7 @@ function cargarScriptVista(scriptUrls) {
 
   if (Array.isArray(scriptUrls)) {
     scriptUrls.forEach((url, i) => {
-      // si quieres todos como módulo:
       addScript(url, i, true);
-      // si algunos no son módulo, aquí podrías decidir según el nombre
     });
   } else if (scriptUrls) {
     addScript(scriptUrls, 0, false);
@@ -80,7 +75,6 @@ const PageLoader = {
         if (ruta.css) cargarEstiloVista(ruta.css);
         if (ruta.js) cargarScriptVista(ruta.js);
 
-        // Esperar a que imágenes terminen de cargar antes de animar
         const images = mainContent.querySelectorAll("img");
         const total = images.length;
         let loaded = 0;
@@ -205,7 +199,7 @@ function animarScrollConObserver(selector, direccion = "y") {
           el.style.transform = transform;
           el.dataset.animated = "true";
           sessionStorage.setItem(id, "true");
-          observer.unobserve(el); // ya no necesita más observación
+          observer.unobserve(el);
         }
       });
     },
@@ -272,11 +266,9 @@ function cargarHeaderYFooter() {
 
       navLinks.forEach((link) => {
         link.addEventListener("click", function () {
-          // Elimina clases activas del resto
           navLinks.forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
 
-          // Cerrar menú móvil si está abierto
           if (navItems.classList.contains("open")) {
             navToggle.classList.remove("open");
             navItems.classList.remove("open");
@@ -327,7 +319,7 @@ function toRegister() {
 
 function capturarCorreoDesdeURL() {
   const hash = window.location.hash;
-  const url = new URL("http://prueba.com" + hash.slice(1)); // usar un dominio falso
+  const url = new URL("http://prueba.com" + hash.slice(1));
   const email = url.searchParams.get("email");
 
   const inputCorreo = document.getElementById("correo");
@@ -364,8 +356,8 @@ function setCookie(name, value, opts = {}) {
   const {
     hours = 2,
     path = "/",
-    sameSite = "Lax", // recomendado
-    secure = location.protocol === "https:", // true si estás en https
+    sameSite = "Lax",
+    secure = location.protocol === "https:",
   } = opts;
 
   const expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
