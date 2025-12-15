@@ -97,6 +97,21 @@ const PageLoader = {
             });
         }
 
+        if (document.getElementById("snow_cas")) {
+          const fechaCompleta = new Date().toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            month: "long",
+          });
+          const logo = document.getElementById("logo-menu");
+          if (fechaCompleta == "diciembre") {
+            logo.src = "/resources/logocasino_navidad.png";
+            document.getElementById("snow_cas").style.display = "flex";
+          } else {
+            logo.src = "/resources/logocasino.png";
+            document.getElementById("snow_cas").style.display = "none";
+          }
+        }
+
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
           animarScrollConObserver(".titulor", "x-right");

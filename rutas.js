@@ -209,4 +209,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/ruleta-de-premios.js",
   },
+    mr_bonus: {
+    html: "/components/promociones/promocion/mr-bonus.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/mr-bonus.js"
+  },
 };
