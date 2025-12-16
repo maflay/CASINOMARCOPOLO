@@ -116,13 +116,15 @@ function toGames() {
       const contenedor = document.getElementById("promocion-seccion");
       contenedor.innerHTML = html;
 
+      const version = Date.now();
+
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
-      estilo.href = "/components/promociones/promocion-view/promocion-view.css";
+      estilo.href = `/components/promociones/promocion-view/promocion-view.css?v=${version}`;
       document.head.appendChild(estilo);
       // Cargar script dinámicamente
       const script = document.createElement("script");
-      script.src = "/components/promociones/promocion-view/promocion-view.js";
+      script.src = `/components/promociones/promocion-view/promocion-view.js?v=${version}`;
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();
@@ -251,7 +253,9 @@ function sliderhome() {
   track.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
     deltaX = e.pageX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
+    track.style.transform = `translateX(calc(-${
+      currentIndex * 100
+    }vw + ${deltaX}px))`;
   });
 
   track.addEventListener("mouseup", () => {
@@ -269,18 +273,28 @@ function sliderhome() {
     }
   });
 
-  track.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    deltaX = 0;
-    track.style.transition = "none";
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      deltaX = 0;
+      track.style.transition = "none";
+    },
+    { passive: true }
+  );
 
-  track.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    deltaX = e.touches[0].clientX - startX;
-    track.style.transform = `translateX(calc(-${currentIndex * 100}vw + ${deltaX}px))`;
-  }, { passive: true });
+  track.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isDragging) return;
+      deltaX = e.touches[0].clientX - startX;
+      track.style.transform = `translateX(calc(-${
+        currentIndex * 100
+      }vw + ${deltaX}px))`;
+    },
+    { passive: true }
+  );
 
   track.addEventListener("touchend", () => {
     if (!isDragging) return;
@@ -305,13 +319,11 @@ function sliderhome() {
 
 sliderhome();
 
-
-
 (() => {
   const IG_FETCH_URL =
     "https://script.google.com/macros/s/AKfycbzKETj9JU9WkbTB87JzrhFxKdCc2KWxmVOBxghA4tV_3VCzwBUeuLuTS0jcgHB__VJrow/exec";
 
- window.IG_POSTS = [];
+  window.IG_POSTS = [];
   const loaderLocal = document.getElementById("loader-local");
 
   loaderLocal.innerHTML = `
@@ -321,22 +333,19 @@ sliderhome();
       </div>
     `;
   // --- fetch posts desde Apps Script ---
-  fetch(IG_FETCH_URL) 
-  .then((res) => res.json())
-  .then((data) => {
+  fetch(IG_FETCH_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      // si data ya es un array [{url:"..."}, ...]
+      const posts = data
+        .reverse()
+        .slice(0, 4) // 👈 copia para no mutar el array original
+        .map((item) => normalizeIgUrl(item.url));
 
-    // si data ya es un array [{url:"..."}, ...]
-    const posts = data
-    .reverse()
-      .slice(0, 4) // 👈 copia para no mutar el array original
-      .map(item => normalizeIgUrl(item.url));
-
-
-    window.IG_POSTS = posts;
-    renderInstagramEmbeds("ig-feed", window.IG_POSTS);
-  })
-  .catch(err => console.error("Error cargando IG posts:", err));
-
+      window.IG_POSTS = posts;
+      renderInstagramEmbeds("ig-feed", window.IG_POSTS);
+    })
+    .catch((err) => console.error("Error cargando IG posts:", err));
 
   // --- helpers ---
   function ensureInstagramScript() {
@@ -410,3 +419,16 @@ sliderhome();
     tryProcess();
   }
 })();
+
+itemnavidad();
+
+function itemnavidad() {
+  const fechaCompleta = new Date().toLocaleString("es-CO", {
+    timeZone: "America/Bogota",
+    month: "long",
+  });
+
+  if (fechaCompleta == "diciembre") {
+    document.getElementById("navidad_home").style.display = "flex";
+  }
+}

@@ -5,13 +5,15 @@
       const contenedor = document.getElementById("promocion-seccion");
       contenedor.innerHTML = html;
 
+      const version = Date.now();
+
       const estilo = document.createElement("link");
       estilo.rel = "stylesheet";
-      estilo.href = "/components/promociones/promocion-view/promocion-view.css";
+      estilo.href = `/components/promociones/promocion-view/promocion-view.css?v=${version}`;
       document.head.appendChild(estilo);
       // Cargar script dinámicamente
       const script = document.createElement("script");
-      script.src = "/components/promociones/promocion-view/promocion-view.js";
+      script.src = `/components/promociones/promocion-view/promocion-view.js?v=${version}`;
       script.onload = () => {
         if (typeof window.inicializarSliderUbicaciones === "function") {
           window.inicializarSliderUbicaciones();
