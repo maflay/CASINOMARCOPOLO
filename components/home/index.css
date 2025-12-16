@@ -618,6 +618,7 @@ input[name="slider-radioC"] {
 .story-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 14px;
   padding: 10px;
   overflow-x: auto;
@@ -890,6 +891,12 @@ input[name="slider-radioC"] {
   .card-final-section-rigth p {
     padding-top: 5px;
   }
+
+    .story-container {
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+
 
 
 }

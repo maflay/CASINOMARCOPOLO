@@ -56,7 +56,6 @@ a {
   flex-direction: column;
   background-color: #27314F;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .content-casin-text-content {
@@ -88,6 +87,16 @@ a {
 .content-casin-text-desc p {
   font-size: 16px;
   line-height: 2.1rem;
+}
+
+#content-banner-membresia {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 20px;
 }
 
 .address-casin {
@@ -808,6 +817,11 @@ input[name="slider-radio-sur"] {
 
   .bg1bogota {
     background-image: url(/resources/banner_marcopolo_bogota-movil.jpeg);
+  }
+
+  #content-banner-membresia {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
