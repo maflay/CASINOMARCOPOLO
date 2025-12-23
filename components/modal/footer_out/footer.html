@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+    <link rel="stylesheet" href="/components/modal/footer_out/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="view_footer"></div>
+    <script>
+        (() => {
+            fetch("/components/footer/footer.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    const contenedor = document.getElementById("view_footer");
+                    contenedor.innerHTML = html;
+                    const version = Date.now();
+                    const estilo = document.createElement("link");
+                    estilo.rel = "stylesheet";
+                    estilo.href = `/components/footer/footer.css?v=${version}`;
+                    document.head.appendChild(estilo);
+
+                    const script = document.createElement("script");
+                    script.src = `/components/footer/footer.js?v=${version}`;
+                    document.body.appendChild(script);
+                });
+        })();
+    </script>
+</body>
+
+</html>
