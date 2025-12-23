@@ -80,37 +80,7 @@ const PageLoader = {
         let loaded = 0;
         mainContent.innerHTML = html;
 
-        if (document.getElementById("soy_mayor_de_edad")) {
-          const MAYOR_EDAD = getCookie("Soy_Mayor_mp");
-          if (!MAYOR_EDAD) {
-            document.getElementById("soy_mayor_de_edad").style.display = "flex";
-          } else {
-            document.getElementById("soy_mayor_de_edad").style.display = "none";
-          }
-
-          document
-            .getElementById("close_modal_me")
-            .addEventListener("click", () => {
-              setCookie("Soy_Mayor_mp", "Soy_Mayor");
-              document.getElementById("soy_mayor_de_edad").style.display =
-                "none";
-            });
-        }
-
-        if (document.getElementById("snow_cas")) {
-          const fechaCompleta = new Date().toLocaleString("es-CO", {
-            timeZone: "America/Bogota",
-            month: "long",
-          });
-          const logo = document.getElementById("logo-menu");
-          if (fechaCompleta == "diciembre") {
-            logo.src = "/resources/logocasino_navidad.png";
-            document.getElementById("snow_cas").style.display = "flex";
-          } else {
-            logo.src = "/resources/logocasino.png";
-            document.getElementById("snow_cas").style.display = "none";
-          }
-        }
+        
 
         const iniciarAnimaciones = () => {
           animarScrollConObserver(".titulo", "y");
@@ -254,6 +224,38 @@ function cargarHeaderYFooter() {
       document.getElementById("main-header").innerHTML = html;
       const navToggle = document.getElementById("navToggle");
       const navItems = document.getElementById("navItems");
+
+      if (document.getElementById("soy_mayor_de_edad")) {
+          const MAYOR_EDAD = getCookie("Soy_Mayor_mp");
+          if (!MAYOR_EDAD) {
+            document.getElementById("soy_mayor_de_edad").style.display = "flex";
+          } else {
+            document.getElementById("soy_mayor_de_edad").style.display = "none";
+          }
+
+          document
+            .getElementById("close_modal_me")
+            .addEventListener("click", () => {
+              setCookie("Soy_Mayor_mp", "Soy_Mayor");
+              document.getElementById("soy_mayor_de_edad").style.display =
+                "none";
+            });
+        }
+
+        if (document.getElementById("snow_cas")) {
+          const fechaCompleta = new Date().toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            month: "long",
+          });
+          const logo = document.getElementById("logo-menu");
+          if (fechaCompleta == "diciembre") {
+            logo.src = "/resources/logocasino_navidad.png";
+            document.getElementById("snow_cas").style.display = "flex";
+          } else {
+            logo.src = "/resources/logocasino.png";
+            document.getElementById("snow_cas").style.display = "none";
+          }
+        }
 
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://casinomarcopolo.netlify.app/sitemap.xml
+Sitemap: https://marcopolocolombia.com/sitemap.xml

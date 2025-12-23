@@ -430,5 +430,7 @@ function itemnavidad() {
 
   if (fechaCompleta == "diciembre") {
     document.getElementById("navidad_home").style.display = "flex";
+  } else {
+    document.getElementById("navidad_home").style.display = "none";
   }
 }

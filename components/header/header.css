@@ -218,8 +218,7 @@ body {
     align-items: center;
     position: relative;
     background-color: #171c1e;
-    border: #27314F 8px solid;
-    border-radius: 20px;
+    border: #27314F 4px solid;
     width: 500px;
 }
 
