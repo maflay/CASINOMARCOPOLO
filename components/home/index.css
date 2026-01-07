@@ -892,7 +892,7 @@ input[name="slider-radioC"] {
     padding-top: 5px;
   }
 
-    .story-container {
+  .story-container {
     justify-content: start;
     margin-bottom: 20px;
   }
@@ -994,6 +994,12 @@ input[name="slider-radioC"] {
   .controls-sliderC {
     display: none;
   }
+
+  .bg2C {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url(/resources/dark-photo-mobil.jpg);
+  }
+
 }
 
 .content_efecto_navidad {
