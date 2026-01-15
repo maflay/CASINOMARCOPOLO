@@ -13,9 +13,11 @@ function toDadosPoker() {
 function toMymawi() {
   navegarA("mymawitepremia");
 }
+
 function toCascadapremios() {
   navegarA("cascadapremios");
 }
+
 function toGanaya() {
   navegarA("ganaya");
 }
