@@ -59,11 +59,11 @@ const rutasLimpias = {
     css: "/components/ubicaciones/ubicaciones.css",
     js: "/components/ubicaciones/ubicaciones.js",
   },
-  // lampara: {
-  //   html: "/components/promociones/promocion/lampara-suerte.html",
-  //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/lampara-suerte.js",
-  // },
+  lampara: {
+    html: "/components/promociones/promocion/lampara-suerte.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/lampara-suerte.js",
+  },
   // girodorado: {
   //   html: "/components/promociones/promocion/giro-dorado.html",
   //   css: "/components/promociones/promocion/promocion.css",
@@ -194,7 +194,7 @@ const rutasLimpias = {
     css: "/components/juegos/juegos/juego.css",
     js: "/components/juegos/juegos/juego.js",
   },
-    dadospoker: {
+  dadospoker: {
     html: "/components/promociones/promocion/dados-poker.html",
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/dados-poker.js",
@@ -209,9 +209,24 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/ruleta-de-premios.js",
   },
-    mr_bonus: {
+  mr_bonus: {
     html: "/components/promociones/promocion/mr-bonus.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/mr-bonus.js"
+    js: "/components/promociones/promocion/mr-bonus.js",
+  },
+  dadosmagicos: {
+    html: "/components/promociones/promocion/dados-magicos.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/dados-magicos.js",
+  },
+  viernesdelocura: {
+    html: "/components/promociones/promocion/viernes-locura.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/viernes-locura.js",
+  },
+    bonoexpress: {
+    html: "/components/promociones/promocion/bono-express.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/bono-express.js",
   },
 };
