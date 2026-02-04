@@ -6,7 +6,6 @@
     /* Asegura que tenga suficiente altura para que se vea */
 }
 
-
 .promo::before {
     content: "";
     position: absolute;
@@ -336,6 +335,12 @@ td {
 
 .img_movil_promo_head {
     display: none;
+}
+
+@media(max-width: 1450px) {
+    ._content_divider_section {
+        margin: 40px auto;
+    }
 }
 
 @media (max-width: 767px) {

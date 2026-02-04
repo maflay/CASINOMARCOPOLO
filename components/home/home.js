@@ -11,6 +11,44 @@ function saberMasPromo() {
   navegarA("promociones");
 }
 
+seccionUbicaciones();
+
+function seccionUbicaciones() {
+  const hash = window.location.hash;
+
+  if (hash.includes("id=ubicaciones")) {
+    irASeccionCoordenadas();
+    setTimeout(() => {
+      irASeccionCoordenadas();
+    }, 1000);
+    setTimeout(() => {
+      const hash = window.location.hash.slice(1);
+      const [ruta, query] = hash.split("?");
+
+      if (!query) return;
+
+      const params = new URLSearchParams(query);
+      if (params.get("id") === "ubicaciones") {
+        history.replaceState(null, "", `#${ruta}`);
+      }
+    }, 2000);
+  }
+
+  function irASeccionCoordenadas() {
+    const destino = document.getElementById("ubicaciones");
+
+    if (destino) {
+      const posicionY =
+        destino.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: posicionY - 200,
+        behavior: "smooth",
+      });
+    }
+  }
+}
+
 // function sliderUbicaciones() {
 //   const trackubicacion = document.getElementById("sliderTrackubicacion");
 //   const radiosubicacion = document.querySelectorAll(
