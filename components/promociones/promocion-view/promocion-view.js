@@ -5,6 +5,7 @@
 
   const promociones_enero = document.getElementById("promociones_enero");
   const promociones_febrero = document.getElementById("promociones_febrero");
+  const promociones_marzo = document.getElementById("promociones_marzo");
   const cubo1 = document.getElementById("cubo1-mp");
   const cubo2 = document.getElementById("cubo2-mp");
   const cubo4 = document.getElementById("cubo4-mp");
@@ -23,6 +24,10 @@
     promociones_febrero.style.display = "flex";
   }
 
+  if (solofechaCompleta == "marzo") {
+    promociones_marzo.style.display = "flex";
+  }
+
   if (solofechaCompleta == "septiembre") {
     cubo1.style.display = "flex";
   }
@@ -34,4 +39,18 @@
   if (solofechaCompleta == "diciembre") {
     cubo4.style.display = "flex";
   }
+})();
+
+(() => {
+  const allitem = document.querySelectorAll(".card-content p");
+
+  allitem.forEach((item) => {
+    let item_len = item.textContent;
+    let long_item = item_len.length;
+    let end_long;
+    if (long_item > 150) {
+      end_long = item_len.slice(0, 155) + "...";
+      item.textContent = end_long;
+    }
+  });
 })();
