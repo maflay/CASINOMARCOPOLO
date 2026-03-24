@@ -62,17 +62,17 @@ const rutasLimpias = {
   lampara: {
     html: "/components/promociones/promocion/lampara-suerte.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/lampara-suerte.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   // girodorado: {
   //   html: "/components/promociones/promocion/giro-dorado.html",
   //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/giro-dorado.js",
+  //   js: "/components/promociones/promocion/promocion.js",
   // },
   // dadospoker: {
   //   html: "/components/promociones/promocion/dados-poker.html",
   //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/dados-poker.js",
+  //   js: "/components/promociones/promocion/promocion.js",
   // },
   juegos: {
     html: "/components/juegos/juegos.html",
@@ -97,57 +97,57 @@ const rutasLimpias = {
   mymawitepremia: {
     html: "/components/promociones/promocion/MYMAWI-te-premia.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/MYMAWI-te-premia.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   cascadapremios: {
     html: "/components/promociones/promocion/cascada-premios.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/cascada-premios.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   ganaya: {
     html: "/components/promociones/promocion/ganaya.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/ganaya.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   bingolocura: {
     html: "/components/promociones/promocion/bingo-locura.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/bingo-locura.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   superbingo: {
     html: "/components/promociones/promocion/super-bingo.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/super-bingo.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   trenpremios: {
     html: "/components/promociones/promocion/tren-premios.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/tren-premios.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   blackjackexpress: {
     html: "/components/promociones/promocion/blackjack-express.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/blackjack-express.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   // matchperfecto: {
   //   html: "/components/promociones/promocion/match-perfecto.html",
   //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/match-perfecto.js",
+  //   js: "/components/promociones/promocion/promocion.js",
   // },
   // flechazocupido: {
   //   html: "/components/promociones/promocion/flechazo-cupido.html",
   //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/flechazo-cupido.js",
+  //   js: "/components/promociones/promocion/promocion.js",
   // },
   halloweenmisterioso: {
     html: "/components/promociones/promocion/halloweenmisterioso.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/halloweenmisterioso.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   losnueveportales: {
     html: "/components/promociones/promocion/losnueveportales.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/losnueveportales.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   ubicacioncali: {
     html: "/components/ubicaciones/ubicacionCiudad/ubicacioncali.html",
@@ -197,46 +197,56 @@ const rutasLimpias = {
   dadospoker: {
     html: "/components/promociones/promocion/dados-poker.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/dados-poker.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   acumulaygana: {
     html: "/components/promociones/promocion/acumula-y-gana.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/acumula-y-gana.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   ruledelasuerte: {
     html: "/components/promociones/promocion/ruleta-de-la-suerte.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/ruleta-de-la-suerte.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   mr_bonus: {
     html: "/components/promociones/promocion/mr-bonus.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/mr-bonus.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   dadosmagicos: {
     html: "/components/promociones/promocion/dados-magicos.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/dados-magicos.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   viernesdelocura: {
     html: "/components/promociones/promocion/viernes-locura.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/viernes-locura.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   bonoexpress: {
     html: "/components/promociones/promocion/bono-express.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/bono-express.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   vueltalmundo: {
     html: "/components/promociones/promocion/vuelta-al-mundo.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/vuelta-al-mundo.js",
+    js: "/components/promociones/promocion/promocion.js",
   },
   ruletadepremios: {
     html: "/components/promociones/promocion/ruleta-de-premios.html",
     css: "/components/promociones/promocion/promocion.css",
-    js: "/components/promociones/promocion/ruleta-de-premios.js",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  fortunes88: {
+    html: "/components/promociones/promocion/88fortunes.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  boladorada: {
+    html: "/components/promociones/promocion/bola-dorada.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
   },
 };

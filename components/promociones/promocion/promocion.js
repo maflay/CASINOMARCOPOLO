@@ -1,111 +1,77 @@
-function sliderUbi(){
+(() => {
+  fetch("/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.html")
+    .then((res) => res.text())
+    .then((html) => {
+      const contenedor = document.getElementById("ubicacion-seccion");
+      contenedor.innerHTML = html;
 
-  const sliderTrack = document.getElementById("sliderTrack");
-  const slides = document.querySelectorAll(".slide");
-  const btnPrev = document.getElementById("btn-prev");
-  const btnNext = document.getElementById("btn-next");
-  const dotsContainer = document.getElementById("dots");
-  const visibleSlides = window.matchMedia("(max-width: 768px)").matches ? 1 : 3;
-  const totalPages = Math.ceil(slides.length / visibleSlides);
-  let currentPage = 0; // cambia este nombre para evitar confusión con slideIndex
+      // Cargar CSS dinámicamente
+      const estilo = document.createElement("link");
+      estilo.rel = "stylesheet";
+      estilo.href =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.css";
+      document.head.appendChild(estilo);
 
-  function updateSlider() {
-    const percentage = (100 / visibleSlides) * currentPage;
-    sliderTrack.style.transform = `translateX(-${percentage}%)`;
-
-    document.querySelectorAll(".dot").forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentPage);
+      // Cargar script dinámicamente
+      const script = document.createElement("script");
+      script.src =
+        "/components/ubicaciones/slider-ubicaciones/slider-ubicaciones.js";
+      script.onload = () => {
+        if (typeof window.inicializarSliderUbicaciones === "function") {
+          window.inicializarSliderUbicaciones();
+        }
+      };
+      document.body.appendChild(script);
     });
-  }
-
-  function changeSlide(delta) {
-    currentPage = Math.max(0, Math.min(currentPage + delta, totalPages - 1));
-    updateSlider();
-  }
-
-  function autoSlide() {
-    currentPage = currentPage >= totalPages - 1 ? 0 : currentPage + 1;
-    updateSlider();
-  }
-
-  function createDots() {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement("span");
-      dot.className = "dot";
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => {
-        currentPage = i;
-        resetAutoSlide();
-        updateSlider();
-      });
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  let autoSlideInterval = setInterval(autoSlide, 5000); // cada 5 segundos
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(autoSlide, 5000);
-  }
-
-  // Botones
-  btnPrev.addEventListener("click", () => {
-    changeSlide(-1);
-    resetAutoSlide();
-  });
-
-  btnNext.addEventListener("click", () => {
-    changeSlide(1);
-    resetAutoSlide();
-  });
-
-  // Soporte touch
-  let startX = 0;
-  sliderTrack.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  sliderTrack.addEventListener("touchend", (e) => {
-    const diff = e.changedTouches[0].clientX - startX;
-    if (diff > 50) {
-      changeSlide(-1);
-      resetAutoSlide();
-    } else if (diff < -50) {
-      changeSlide(1);
-      resetAutoSlide();
-    }
-  });
-
-  createDots();
-  updateSlider();
-}
-
-sliderUbi();
-
+})();
 
 (() => {
-  const btnNext1 = document.getElementById("next-to-super-bingo");
-  const btnNext2 = document.getElementById("next-to-2");
-  const btnNext3 = document.getElementById("next-to-3");
+  if (document.getElementById("content-banner-membresia")) {
+    fetch("/components/membresia/bannerMembresia/bannerMembresia.html")
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("content-banner-membresia");
+        contenedor.innerHTML = html;
 
-  if (btnNext1) {
-    btnNext1.addEventListener("click", () => {
-      navegarA("lampara");
-    });
-  }
-
-  if (btnNext2) {
-    btnNext2.addEventListener("click", () => {
-      navegarA("girodorado");
-    });
-  }
-
-  if (btnNext3) {
-    btnNext3.addEventListener("click", () => {
-      navegarA("dadospoker");
-    });
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href =
+          "/components/membresia/bannerMembresia/bannerMembresia.css";
+        document.head.appendChild(estilo);
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
   }
 })();
 
+(() => {
+  if (document.getElementById("juegos-view-seccion")) {
+    fetch("/components/juegos/juegos-view/juegos-view-2.html")
+      .then((res) => res.text())
+      .then((html) => {
+        const contenedor = document.getElementById("juegos-view-seccion");
+        contenedor.innerHTML = html;
+
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href = "/components/juegos/juegos-view/juegos-view.css";
+        document.head.appendChild(estilo);
+        // Cargar script dinámicamente
+        const script = document.createElement("script");
+        script.src = "/components/juegos/juegos-view/juegos-view.js";
+        script.onload = () => {
+          if (typeof window.inicializarSliderUbicaciones === "function") {
+            window.inicializarSliderUbicaciones();
+          }
+        };
+        document.body.appendChild(script);
+      });
+  }
+})();
