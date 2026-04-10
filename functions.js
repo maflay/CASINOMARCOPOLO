@@ -188,7 +188,7 @@ function animarScrollConObserver(selector, direccion = "y") {
     },
     {
       threshold: 0.2, // visible al 20%
-    }
+    },
   );
 
   elements.forEach((el, index) => {
@@ -239,6 +239,8 @@ function cargarHeaderYFooter() {
           });
       }
 
+      // EFECTO DICIEMBRE
+
       if (document.getElementById("icono_movil")) {
         const mes = new Date().toLocaleString("es-CO", {
           timeZone: "America/Bogota",
@@ -247,6 +249,9 @@ function cargarHeaderYFooter() {
         if (mes == "diciembre") {
           document.getElementById("icono_movil").src =
             "/resources/logocasino_navidad.png";
+        } else if (mes == "junio" || mes == "julio") {
+          document.getElementById("icono_movil").src =
+            "/resources/logo_mp_mundial.png";
         } else {
           document.getElementById("icono_movil").src =
             "/resources/logocasino.png";
@@ -262,10 +267,29 @@ function cargarHeaderYFooter() {
         if (fechaCompleta == "diciembre") {
           logo.src = "/resources/logocasino_navidad.png";
           document.getElementById("snow_cas").style.display = "flex";
+        } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
+          logo.src = "/resources/logo_mp_mundial.png";
+          document.getElementById("snow_cas").style.display = "none";
         } else {
           logo.src = "/resources/logocasino.png";
           document.getElementById("snow_cas").style.display = "none";
         }
+      }
+
+      // EFECTO MUNDIAL
+      const efect_mund = document.getElementById("efect_mund");
+      if (!efect_mund) return;
+
+      try {
+        const mes = new Date().toLocaleString("es-CO", {
+          timeZone: "America/Bogota",
+          month: "long",
+        });
+
+        efect_mund.style.display =
+          mes === "junio" || mes === "julio" ? "flex" : "none";
+      } catch (e) {
+        efect_mund.style.display = "none";
       }
 
       if (navToggle && navItems) {
