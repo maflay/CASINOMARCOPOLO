@@ -65,3 +65,25 @@
     }
   });
 })();
+
+
+(() => {
+  const currentHash = window.location.hash;
+
+  if (!currentHash) return;
+
+  const cardLinks = document.querySelectorAll(".card-image > a");
+
+  cardLinks.forEach((link) => {
+    const linkHash = link.getAttribute("href");
+
+    if (linkHash === currentHash) {
+      const promoSection = link.closest(".card-promo");
+      
+      if (promoSection) {
+        promoSection.style.display = "none";
+        document.getElementById("_title_promos_view_").textContent = "Otras Promociones";
+      }
+    }
+  });
+})();
