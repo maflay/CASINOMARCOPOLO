@@ -41,11 +41,6 @@
         // Cargar script dinámicamente
         const script = document.createElement("script");
         script.src = "/components/membresia/bannerMembresia/bannerMembresia.js";
-        script.onload = () => {
-          if (typeof window.inicializarSliderUbicaciones === "function") {
-            window.inicializarSliderUbicaciones();
-          }
-        };
         document.body.appendChild(script);
       });
   }
