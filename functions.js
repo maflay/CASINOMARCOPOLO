@@ -251,7 +251,7 @@ function cargarHeaderYFooter() {
             "/resources/logocasino_navidad.png";
         } else if (mes == "junio" || mes == "julio") {
           document.getElementById("icono_movil").src =
-            "/resources/logo_mp_mundial.png";
+            "/resources/logocasino.png";
         } else {
           document.getElementById("icono_movil").src =
             "/resources/logocasino.png";
@@ -268,7 +268,7 @@ function cargarHeaderYFooter() {
           logo.src = "/resources/logocasino_navidad.png";
           document.getElementById("snow_cas").style.display = "flex";
         } else if (fechaCompleta == "junio" || fechaCompleta == "julio") {
-          logo.src = "/resources/logo_mp_mundial.png";
+          logo.src = "/resources/logocasino.png";
           document.getElementById("snow_cas").style.display = "none";
         } else {
           logo.src = "/resources/logocasino.png";

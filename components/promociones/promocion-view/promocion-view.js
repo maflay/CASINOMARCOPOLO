@@ -35,11 +35,11 @@
     promociones_abril.style.display = "flex";
   }
 
-  if(solofechaCompleta == "junio"){
+  if(solofechaCompleta == "mayo"){
     promociones_mayo.style.display = "flex";
   }
 
-  if(solofechaCompleta == "mayo"){
+  if(solofechaCompleta == "junio"){
     promociones_junio.style.display = "flex";
   }
 
