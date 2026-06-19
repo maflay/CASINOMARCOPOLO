@@ -41,6 +41,14 @@ function seccionUbicaciones() {
       const params = new URLSearchParams(query);
       if (params.get("id") === "ubicaciones") {
         history.replaceState(null, "", `#${ruta}`);
+        const currentHash = window.location.hash;
+        if (currentHash == "#inicio") {
+          history.replaceState(
+            null,
+            null,
+            window.location.pathname + window.location.search,
+          );
+        }
       }
     }, 2000);
   }
