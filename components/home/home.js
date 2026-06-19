@@ -4,6 +4,17 @@ function membresia() {
   navegarA("membresia");
 }
 
+(() => {
+  const currentHash = window.location.hash;
+  if (currentHash == "#inicio") {
+    history.replaceState(
+      null,
+      null,
+      window.location.pathname + window.location.search,
+    );
+  }
+})();
+
 // PROMOCIONES
 
 function saberMasPromo() {
@@ -319,7 +330,7 @@ function sliderhome() {
       deltaX = 0;
       track.style.transition = "none";
     },
-    { passive: true }
+    { passive: true },
   );
 
   track.addEventListener(
@@ -331,7 +342,7 @@ function sliderhome() {
         currentIndex * 100
       }vw + ${deltaX}px))`;
     },
-    { passive: true }
+    { passive: true },
   );
 
   track.addEventListener("touchend", () => {
@@ -389,7 +400,7 @@ sliderhome();
   function ensureInstagramScript() {
     if (
       !document.querySelector(
-        'script[src^="https://www.instagram.com/embed.js"]'
+        'script[src^="https://www.instagram.com/embed.js"]',
       )
     ) {
       const s = document.createElement("script");
@@ -422,7 +433,7 @@ sliderhome();
     if (invalid.length) {
       console.warn(
         "URLs IG omitidas (no son permalinks de post/reel/tv):",
-        invalid
+        invalid,
       );
     }
 
@@ -434,7 +445,7 @@ sliderhome();
             data-instgrm-version="14"
             style="background:#fff;border:0;margin:0 auto;max-width:540px;width:100%;border-radius:8px;overflow:hidden;">
           </blockquote>
-        `
+        `,
       )
       .join("");
 
