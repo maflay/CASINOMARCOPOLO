@@ -35,11 +35,15 @@
     promociones_abril.style.display = "flex";
   }
 
-  if(solofechaCompleta == "mayo"){
+  if (solofechaCompleta == "mayo") {
     promociones_mayo.style.display = "flex";
   }
 
-  if(solofechaCompleta == "junio"){
+  if (solofechaCompleta == "junio") {
+    promociones_junio.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "julio") {
     promociones_junio.style.display = "flex";
   }
 
@@ -54,7 +58,6 @@
   if (solofechaCompleta == "diciembre") {
     cubo4.style.display = "flex";
   }
-
 })();
 
 (() => {
@@ -71,7 +74,6 @@
   });
 })();
 
-
 (() => {
   const currentHash = window.location.hash;
 
@@ -84,8 +86,9 @@
 
     if (linkHash === currentHash) {
       const promoSection = link.closest(".card-promo");
-      document.getElementById("_title_promos_view_").textContent = "Otras Promociones";
-      
+      document.getElementById("_title_promos_view_").textContent =
+        "Otras Promociones";
+
       if (promoSection) {
         promoSection.style.display = "none";
       }
