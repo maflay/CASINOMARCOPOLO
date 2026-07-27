@@ -276,22 +276,6 @@ function cargarHeaderYFooter() {
         }
       }
 
-      // EFECTO MUNDIAL
-      const efect_mund = document.getElementById("efect_mund");
-      if (!efect_mund) return;
-
-      try {
-        const mes = new Date().toLocaleString("es-CO", {
-          timeZone: "America/Bogota",
-          month: "long",
-        });
-
-        efect_mund.style.display =
-          mes === "junio" || mes === "julio" ? "flex" : "none";
-      } catch (e) {
-        efect_mund.style.display = "none";
-      }
-
       if (navToggle && navItems) {
         navToggle.addEventListener("click", () => {
           navToggle.classList.toggle("open");
