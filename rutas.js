@@ -129,16 +129,16 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
-  // matchperfecto: {
-  //   html: "/components/promociones/promocion/match-perfecto.html",
-  //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/promocion.js",
-  // },
-  // flechazocupido: {
-  //   html: "/components/promociones/promocion/flechazo-cupido.html",
-  //   css: "/components/promociones/promocion/promocion.css",
-  //   js: "/components/promociones/promocion/promocion.js",
-  // },
+  matchperfecto: {
+    html: "/components/promociones/promocion/match-perfecto.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
+  flechazocupido: {
+    html: "/components/promociones/promocion/flechazo-cupido.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
   halloweenmisterioso: {
     html: "/components/promociones/promocion/halloweenmisterioso.html",
     css: "/components/promociones/promocion/promocion.css",

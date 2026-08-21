@@ -10,6 +10,9 @@
   const promociones_mayo = document.getElementById("promociones_mayo");
   const promociones_junio = document.getElementById("promociones_junio");
   const promociones_agosto = document.getElementById("promociones_agosto");
+  const promociones_septiembre = document.getElementById(
+    "promociones_septiembre",
+  );
 
   if (solofechaCompleta == "enero") {
     promociones_enero.style.display = "flex";
@@ -39,8 +42,12 @@
     promociones_junio.style.display = "flex";
   }
 
-  if(solofechaCompleta == "agosto"){
+  if (solofechaCompleta == "agosto") {
     promociones_agosto.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "septiembre") {
+    promociones_septiembre.style.display = "flex";
   }
 })();
 
