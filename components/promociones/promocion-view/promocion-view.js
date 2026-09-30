@@ -13,6 +13,7 @@
   const promociones_septiembre = document.getElementById(
     "promociones_septiembre",
   );
+  const promociones_octubre = document.getElementById("promociones_octubre");
 
   if (solofechaCompleta == "enero") {
     promociones_enero.style.display = "flex";
@@ -48,6 +49,10 @@
 
   if (solofechaCompleta == "septiembre") {
     promociones_septiembre.style.display = "flex";
+  }
+
+  if(solofechaCompleta == "octubre"){
+    promociones_octubre.style.display = "flex";
   }
 })();
 
