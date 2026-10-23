@@ -264,4 +264,9 @@ const rutasLimpias = {
     css: "/components/promociones/promocion/promocion.css",
     js: "/components/promociones/promocion/promocion.js",
   },
+  dragonimperial: {
+    html: "/components/promociones/promocion/dragon_imperial.html",
+    css: "/components/promociones/promocion/promocion.css",
+    js: "/components/promociones/promocion/promocion.js",
+  },
 };

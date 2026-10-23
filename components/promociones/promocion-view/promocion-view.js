@@ -14,6 +14,9 @@
     "promociones_septiembre",
   );
   const promociones_octubre = document.getElementById("promociones_octubre");
+  const promociones_noviembre = document.getElementById(
+    "promociones_noviembre",
+  );
 
   if (solofechaCompleta == "enero") {
     promociones_enero.style.display = "flex";
@@ -51,8 +54,12 @@
     promociones_septiembre.style.display = "flex";
   }
 
-  if(solofechaCompleta == "octubre"){
+  if (solofechaCompleta == "octubre") {
     promociones_octubre.style.display = "flex";
+  }
+
+  if (solofechaCompleta == "noviembre") {
+    promociones_noviembre.style.display = "flex";
   }
 })();
 
